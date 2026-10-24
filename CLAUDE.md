@@ -18,6 +18,13 @@ Quiz, practice and atlas for the 511 cities with ≥ 1 million people (UN WUP 20
 - Wikidata: `tools/fetch_wikidata.py` -> data/raw/wd.json (settlement-like items >= 700k). build_alt.py filters out metro
   areas/regions/districts by type label, prefers the latest census >= 2010, sums urban districts for Chinese prefecture-level
   cities, dedupes (Tokyo Metropolis vs 23 wards, "Kota X" vs "X"). Review the list after refetching; junk goes in ALT_OVERRIDES.
+- City facts ("Good to know" in the info box): `tools/fetch_wiki.py` matches every city of every db to an enwiki article
+  (search hit with coordinates < 60 km away; wikidata db via its QID) -> data/raw/wiki.json (map + intro extracts).
+  Facts are hand-written from those intros in `tools/facts/*.json` ({qid: [3-4 facts]}); `build_facts.py` -> static/data/facts.json
+  (lazy-loaded). New cities: rerun fetch_wiki.py (incremental), add facts for the QIDs build_facts reports as missing.
+- Map overlays: country/subdivision borders have a "Bold" variant (casing layer + darker, wider line). River names are placed
+  on `geo/rlines.geojson`, merged + smoothed copies of the rivers (z=0 coarse below zoom 6, z=1 fine), because the drawn
+  rivers zigzag too much for MapLibre line labels. Lake names are `t: 'l'` points in labels.geojson.
 
 Data decisions:
 - List + populations: WUP 2025 city file (Degree of Urbanisation), mid-2025 `Pop`. Data goes down to 800k (660 cities);

@@ -35,9 +35,12 @@
         <button data-v="plain">Plain</button><button data-v="terrain">Terrain</button><button data-v="physical">Physical</button><button data-v="satellite">Satellite</button>
       </div>
       <div class="lp-title">Overlays</div>
-      <label><input type="checkbox" data-layer="borders"> Country borders</label>
-      <label><input type="checkbox" data-layer="admin1"> Subdivision borders <small>(states, provinces)</small></label>
+      <div class="lp-row"><label><input type="checkbox" data-layer="borders"> Country borders</label>
+        <label class="bold" title="Thicker, darker lines"><input type="checkbox" data-layer="bordersBold" data-bold="borders"> Bold</label></div>
+      <div class="lp-row"><label title="States, provinces, regions"><input type="checkbox" data-layer="admin1"> Subdivision borders</label>
+        <label class="bold" title="Thicker, darker lines"><input type="checkbox" data-layer="admin1Bold" data-bold="admin1"> Bold</label></div>
       <label><input type="checkbox" data-layer="rivers"> Rivers &amp; lakes</label>
+      <label><input type="checkbox" data-layer="wlabels"> River &amp; lake names</label>
       <label><input type="checkbox" data-layer="clabels"> Country names</label>
       <label><input type="checkbox" data-layer="slabels"> Subdivision names</label>
       <label><input type="checkbox" data-layer="outlines"> City outlines <small>(urban extent)</small></label>

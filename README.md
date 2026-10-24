@@ -25,6 +25,8 @@ Progress is saved in your browser (localStorage).
 - **City outlines:** European Commission, JRC. *GHSL Urban Centre Database R2024A*. Where WUP splits one GHSL
   urban centre into several cities, the outline is divided so each city gets its WUP area (approximate).
 - **Alternative names and places inside each city:** [GeoNames](https://www.geonames.org/), CC BY 4.0.
+- **City facts:** short notes written with Claude from each city's English [Wikipedia](https://en.wikipedia.org/)
+  article intro (CC BY-SA 4.0); the info box links the article. Matching and texts: `tools/fetch_wiki.py`, `tools/facts/`.
 - **Borders, rivers, lakes:** [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 - **Map tiles:** terrain from AWS Terrain Tiles (Mapzen), physical and satellite maps © Esri.
 - **Map library:** [MapLibre GL JS](https://maplibre.org/) (BSD-3-Clause), fonts: Noto Sans (OFL) via OpenFreeMap.

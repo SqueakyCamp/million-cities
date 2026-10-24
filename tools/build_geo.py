@@ -64,9 +64,56 @@ build('ne_10m_admin_0_boundary_lines_land.geojson', 'borders.geojson', 0.01,
       props=lambda p: dict(k=p.get('FEATURECLA', '')))
 build('ne_10m_admin_1_states_provinces_lines.geojson', 'admin1.geojson', 0.01,
       props=lambda p: {})
+# Natural Earth mixes native and English names along some rivers
+RIVER_NAMES = {'Rhein': 'Rhine', 'Donau': 'Danube', 'Huang': 'Yellow River', 'Yellow': 'Yellow River'}
+
+
+def river_name(p):
+    n = p.get('name_en') or p.get('name')
+    return RIVER_NAMES.get(n, n)
+
+
 build('ne_10m_rivers_lake_centerlines.geojson', 'rivers.geojson', 0.01,
-      props=lambda p: dict(r=p.get('scalerank'), n=p.get('name_en') or p.get('name')),
+      props=lambda p: dict(r=p.get('scalerank'), n=river_name(p)),
       keep=lambda p: p.get('featurecla') in ('River', 'Lake Centerline') and (p.get('scalerank') or 99) <= 9)
+
+
+
+def build_river_labels():
+    # the drawn rivers zigzag too much for MapLibre to bend a name along them; labels follow a
+    # merged, much smoother copy of each named river instead (rlines.geojson, never drawn)
+    from collections import defaultdict
+    from shapely.ops import linemerge
+    from shapely.geometry import MultiLineString
+    parts, rank = defaultdict(list), {}
+    for f in json.load(open(RAW / 'ne_10m_rivers_lake_centerlines.geojson', encoding='utf-8'))['features']:
+        p = f['properties']
+        n = river_name(p)
+        r = p.get('scalerank') or 99
+        if not f.get('geometry') or not n or p.get('featurecla') not in ('River', 'Lake Centerline') or r > 9:
+            continue
+        g = shape(f['geometry'])
+        parts[n] += list(getattr(g, 'geoms', [g]))
+        rank[n] = min(rank.get(n, 99), r)
+    feats = []
+    # two copies: a coarse one for zoomed-out views (a name spans degrees there) and a finer one
+    # that stays on the drawn river when zoomed in (z = 0 / 1)
+    for n, ls in parts.items():
+        merged = linemerge(MultiLineString(ls))
+        for z, tol in ((0, 0.15), (1, 0.03)):
+            g = merged.simplify(tol)
+            for line in getattr(g, 'geoms', [g]):
+                if line.length < 0.3:
+                    continue
+                gj = mapping(line)
+                gj['coordinates'] = rnd(gj['coordinates'], 3)
+                feats.append(dict(type='Feature', properties=dict(n=n, r=rank[n], z=z), geometry=gj))
+    json.dump(dict(type='FeatureCollection', features=feats), open(OUT / 'rlines.geojson', 'w', encoding='utf-8'),
+              ensure_ascii=False, separators=(',', ':'))
+    print('rlines.geojson', len(feats), (OUT / 'rlines.geojson').stat().st_size // 1024, 'KB')
+
+
+build_river_labels()
 
 # label points (no geometry simplification needed)
 lab = []
@@ -80,6 +127,19 @@ for f in json.load(open(RAW / 'ne_10m_admin_1_states_provinces.geojson', encodin
         continue
     lab.append(dict(type='Feature', properties=dict(n=p.get('name_en') or p['name'], r=p.get('labelrank') or 9, t='s'),
                     geometry=dict(type='Point', coordinates=[round(p['longitude'], 3), round(p['latitude'], 3)])))
+# lake names: one point per lake (largest piece), inside the polygon
+lakes = {}
+for f in json.load(open(RAW / 'ne_10m_lakes.geojson', encoding='utf-8'))['features']:
+    p = f['properties']
+    if not f.get('geometry') or not p.get('name') or (p.get('scalerank') or 0) > 6:
+        continue
+    g = shape(f['geometry'])
+    if p['name'] not in lakes or g.area > lakes[p['name']][1].area:
+        lakes[p['name']] = (p.get('scalerank') or 0, g)
+for n, (r, g) in lakes.items():
+    pt = g.representative_point()
+    lab.append(dict(type='Feature', properties=dict(n=n, r=r, t='l'),
+                    geometry=dict(type='Point', coordinates=[round(pt.x, 3), round(pt.y, 3)])))
 json.dump(dict(type='FeatureCollection', features=lab), open(OUT / 'labels.geojson', 'w', encoding='utf-8'),
           ensure_ascii=False, separators=(',', ':'))
 print('labels.geojson', len(lab), (OUT / 'labels.geojson').stat().st_size // 1024, 'KB')

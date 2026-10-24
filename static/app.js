@@ -83,7 +83,7 @@ function fillScopeSelect(sel, withAllCountries) {
 // ------------------------------------------------------------------ state (shared via server)
 const DEFAULT = {
   mode: 'quiz', quizScope: 'all', pracScope: 'all', pracMode: 'name', atlasScope: 'all', atlasSort: 'pop',
-  basemap: 'terrain', layers: { borders: true, admin1: false, rivers: true, clabels: false, slabels: false, outlines: true },
+  basemap: 'terrain', layers: { borders: true, bordersBold: false, admin1: false, admin1Bold: false, rivers: true, wlabels: false, clabels: false, slabels: false, outlines: true },
   hintDots: false, flyTo: false, acceptParts: false, atlasHideNames: false,
   db: 'wup2025', // which database (DBS)
   minPop: 1e6,   // 1e6 or 8e5
@@ -169,8 +169,8 @@ $('#storageNote').textContent = local
 
 // ------------------------------------------------------------------ map
 const PAL = dark
-  ? { ocean: '#0e1a24', land: '#1d262e', lake: '#0e1a24', river: '#2b4a63', border: '#6c7a86', admin: '#46525d', text: '#c9d2da', halo: '#0e1a24', ctext: '#8c99a5' }
-  : { ocean: '#c6dbe7', land: '#f4f2ec', lake: '#c6dbe7', river: '#8fb6cf', border: '#8b8f94', admin: '#b9b6ad', text: '#22292f', halo: '#ffffff', ctext: '#6d757c' };
+  ? { ocean: '#0e1a24', land: '#1d262e', lake: '#0e1a24', river: '#2b4a63', border: '#6c7a86', admin: '#46525d', text: '#c9d2da', halo: '#0e1a24', ctext: '#8c99a5', wtext: '#7fa9c9', bold: '#e6ebef', boldAdmin: '#b8c2ca', casing: '#0e1a24' }
+  : { ocean: '#c6dbe7', land: '#f4f2ec', lake: '#c6dbe7', river: '#8fb6cf', border: '#8b8f94', admin: '#b9b6ad', text: '#22292f', halo: '#ffffff', ctext: '#6d757c', wtext: '#2f6286', bold: '#2a2a2a', boldAdmin: '#4f4a44', casing: '#ffffff' };
 const COL = dark
   ? { found: '#3ecf7a', miss: '#ff6b6b', hint: '#7b8894', atlas: '#ffcc4d', target: '#ff9f1c', outline: '#ffcc4d' }
   : { found: '#1f9d55', miss: '#d64545', hint: '#7d8790', atlas: '#c2410c', target: '#e8590c', outline: '#c2410c' };
@@ -190,7 +190,7 @@ const map = new maplibregl.Map({
       physical: { type: 'raster', tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}'], tileSize: 256, maxzoom: 8, attribution: '© Esri, US NPS' },
       satellite: { type: 'raster', tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'], tileSize: 256, maxzoom: 18, attribution: '© Esri, Maxar, Earthstar Geographics' },
       oceanpoly: { type: 'geojson', data: empty }, lakes: { type: 'geojson', data: empty }, rivers: { type: 'geojson', data: empty },
-      borders: { type: 'geojson', data: empty }, admin1: { type: 'geojson', data: empty }, labels: { type: 'geojson', data: empty },
+      rlines: { type: 'geojson', data: empty }, borders: { type: 'geojson', data: empty }, admin1: { type: 'geojson', data: empty }, labels: { type: 'geojson', data: empty },
       outlines: { type: 'geojson', data: empty, attribution: 'GHSL UCDB R2024A' },
       cities: { type: 'geojson', data: empty, attribution: 'UN WUP 2025 · GeoNames' },
       mark: { type: 'geojson', data: empty },
@@ -221,8 +221,27 @@ const map = new maplibregl.Map({
           'line-opacity': ['interpolate', ['linear'], ['zoom'], 1, ['match', ['get', 'r'], [0, 1, 2, 3, 4, 5], 0.9, 0], 3, ['match', ['get', 'r'], [0, 1, 2, 3, 4, 5, 6, 7], 0.9, 0], 5, 0.9],
         },
       },
+      // "bold" borders: a light casing under a dark line so they read on terrain/physical maps
+      { id: 'admin1-casing', type: 'line', source: 'admin1', minzoom: 1.5, layout: { visibility: 'none', 'line-join': 'round' }, paint: { 'line-color': PAL.casing, 'line-opacity': 0.6, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, 2, 8, 4] } },
+      { id: 'borders-casing', type: 'line', source: 'borders', layout: { visibility: 'none', 'line-join': 'round' }, paint: { 'line-color': PAL.casing, 'line-opacity': 0.7, 'line-width': ['interpolate', ['linear'], ['zoom'], 1, 2.6, 8, 6] } },
       { id: 'admin1', type: 'line', source: 'admin1', minzoom: 1.5, paint: { 'line-color': PAL.admin, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, 0.4, 8, 1.2], 'line-dasharray': [3, 2] } },
       { id: 'borders', type: 'line', source: 'borders', paint: { 'line-color': PAL.border, 'line-width': ['interpolate', ['linear'], ['zoom'], 1, 0.6, 8, 1.6] } },
+      // river names follow smoothed copies of the rivers (rlines): coarse below zoom 6, fine above
+      ...[[0, 3, 2], [4, 6, 4], [7, 99, 5.5]].flatMap(([lo, hi, z]) => [[z, 6, 0], [6, 24, 1]].map(([z0, z1, fine]) => ({
+        id: `rlabels${lo}-${fine}`, type: 'symbol', source: 'rlines', minzoom: Math.max(z, z0), maxzoom: z1,
+        filter: ['all', ['==', ['get', 'z'], fine], ['>=', ['get', 'r'], lo], ['<=', ['get', 'r'], hi]],
+        layout: {
+          'symbol-placement': 'line', 'symbol-spacing': 250, 'text-field': ['get', 'n'], 'text-font': ['Noto Sans Italic'],
+          'text-size': ['interpolate', ['linear'], ['zoom'], 2, 10.5, 8, 13], 'text-max-angle': 70, 'text-padding': 4, visibility: 'none',
+        },
+        paint: { 'text-color': PAL.wtext, 'text-halo-color': PAL.halo, 'text-halo-width': 1.3 },
+      }))),
+      {
+        id: 'llabels', type: 'symbol', source: 'labels', filter: ['==', ['get', 't'], 'l'], minzoom: 2.5, layout: {
+          'text-field': ['get', 'n'], 'text-font': ['Noto Sans Italic'], 'text-size': ['interpolate', ['linear'], ['zoom'], 3, 10, 8, 13],
+          'symbol-sort-key': ['get', 'r'], 'text-max-width': 7, visibility: 'none',
+        }, paint: { 'text-color': PAL.wtext, 'text-halo-color': PAL.halo, 'text-halo-width': 1.3 },
+      },
       { id: 'outline-fill', type: 'fill', source: 'outlines', filter: ['in', ['get', 'id'], ['literal', []]], paint: { 'fill-color': COL.outline, 'fill-opacity': 0.16 } },
       { id: 'outline-line', type: 'line', source: 'outlines', minzoom: 4, filter: ['in', ['get', 'id'], ['literal', []]], paint: { 'line-color': COL.outline, 'line-width': 1.2, 'line-opacity': 0.8 } },
       {
@@ -265,7 +284,7 @@ const map = new maplibregl.Map({
 });
 map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-left');
-map.touchZoomRotate.disableRotation();
+map.touchZoomRotate.disableRotation(); 
 map.dragRotate.disable();
 
 const geoLoaded = {};
@@ -277,6 +296,7 @@ async function ensureGeo(name, ...more) {
   }
 }
 let outlinesLoaded = false;
+const RLABELS = ['rlabels0-0', 'rlabels0-1', 'rlabels4-0', 'rlabels4-1', 'rlabels7-0', 'rlabels7-1'];
 
 function applyLayers() {
   const vis = (id, on) => map.getLayer(id) && map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');
@@ -292,20 +312,32 @@ function applyLayers() {
   if (L.borders) ensureGeo('borders');
   if (L.admin1) ensureGeo('admin1');
   if (L.rivers) ensureGeo('rivers', 'lakes');
-  if (L.clabels || L.slabels) ensureGeo('labels');
+  if (L.wlabels) ensureGeo('rlines');
+  if (L.clabels || L.slabels || L.wlabels) ensureGeo('labels');
   vis('borders', L.borders); vis('admin1', L.admin1); vis('rivers', L.rivers);
   vis('lakes', L.rivers && b !== 'satellite' && b !== 'physical');
   vis('clabels', L.clabels); vis('slabels', L.slabels);
+  RLABELS.forEach(id => vis(id, L.wlabels)); vis('llabels', L.wlabels);
+  vis('borders-casing', L.borders && L.bordersBold); vis('admin1-casing', L.admin1 && L.admin1Bold);
   if (L.outlines && data.outlines && !outlinesLoaded) { outlinesLoaded = true; map.getSource('outlines').setData('data/outlines.geojson'); }
   vis('outline-fill', L.outlines); vis('outline-line', L.outlines);
   // labels over imagery need a darker halo
   const sat = b === 'satellite';
   map.setPaintProperty('city-labels', 'text-halo-color', sat ? '#000' : PAL.halo);
   map.setPaintProperty('city-labels', 'text-color', ['match', ['get', 'st'], 'miss', sat ? '#ff8a8a' : COL.miss, sat ? '#fff' : PAL.text]);
-  map.setPaintProperty('borders', 'line-color', sat ? '#ffffffaa' : PAL.border);
-  map.setPaintProperty('admin1', 'line-color', sat ? '#ffffff66' : PAL.admin);
+  const bb = L.bordersBold, ab = L.admin1Bold;
+  map.setPaintProperty('borders', 'line-color', bb ? (sat ? '#fff' : PAL.bold) : sat ? '#ffffffaa' : PAL.border);
+  map.setPaintProperty('borders', 'line-width', ['interpolate', ['linear'], ['zoom'], 1, bb ? 1.3 : 0.6, 8, bb ? 3 : 1.6]);
+  map.setPaintProperty('admin1', 'line-color', ab ? (sat ? '#ffffffdd' : PAL.boldAdmin) : sat ? '#ffffff66' : PAL.admin);
+  map.setPaintProperty('admin1', 'line-width', ['interpolate', ['linear'], ['zoom'], 2, ab ? 0.9 : 0.4, 8, ab ? 2.2 : 1.2]);
+  for (const id of ['borders-casing', 'admin1-casing']) map.setPaintProperty(id, 'line-color', sat ? '#000' : PAL.casing);
+  for (const id of [...RLABELS, 'llabels']) {
+    map.setPaintProperty(id, 'text-color', sat ? '#cfe6ff' : PAL.wtext);
+    map.setPaintProperty(id, 'text-halo-color', sat ? '#000' : PAL.halo);
+  }
   $$('#basemapSeg button').forEach(x => x.classList.toggle('on', x.dataset.v === b));
   $$('#layersPop [data-layer]').forEach(x => { x.checked = !!L[x.dataset.layer]; });
+  $$('#layersPop [data-bold]').forEach(x => { x.disabled = !L[x.dataset.bold]; });
 }
 $('#layersBtn').onclick = () => { $('#layersPop').hidden = !$('#layersPop').hidden; };
 map.on('click', () => { $('#layersPop').hidden = true; });
@@ -758,8 +790,22 @@ function spark(c) {
     ${last - 2025 >= 20 ? `<text x="${x(2025)}" y="${H - 2}" text-anchor="middle">2025</text>` : ''}
     <text x="${W - pad}" y="${H - 2}" text-anchor="end">${last}: ${fmtPop(vals[vals.length - 1])}</text></svg>`;
 }
+// short facts per city (tools/build_facts.py), loaded the first time a city is opened
+let factsData = null, factsLoading = null;
+function loadFacts() {
+  return factsLoading ||= fetch('data/facts.json').then(r => r.json()).then(d => { factsData = d; }).catch(() => { factsData = { map: {}, f: {}, t: {} }; });
+}
+function factsHtml(c) {
+  const q = factsData?.map[`${S.db}:${c.id}`];
+  const f = q && factsData.f[q];
+  if (!f) return '';
+  const t = factsData.t[q];
+  return `<div class="dh">Good to know</div><ul class="cfacts">${f.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    ${t ? `<div class="small dim">From Wikipedia: <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(t.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(t)}</a></div>` : ''}`;
+}
 function selectCity(c, fly) {
   selected = c.id;
+  if (!factsData) loadFacts().then(() => { if (selected === c.id) $('#cityFacts').innerHTML = factsHtml(c); });
   const k = S.cards[ck(c.id)];
   const density = c.area ? Math.round(c.pop / c.area) : null;
   const other = c.aliases.filter(a => norm(a) !== norm(c.name) && a !== c.wup && a !== c.local).slice(0, 12);
@@ -774,6 +820,7 @@ function selectCity(c, fly) {
                : `<div><b class="def">${esc(c.concept || c.defn || '')}</b><small>${c.concept ? 'national definition' : 'counted area'}</small></div>`}
     </div>
     ${c.ts ? spark(c) : ''}
+    <div id="cityFacts">${factsHtml(c)}</div>
     ${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
     ${c.wup && c.wup !== c.name ? `<div class="small dim">Name in the UN list: ${esc(c.wup)}</div>` : ''}
     ${c.popsrc ? `<div class="small dim">Figure: ${esc(c.popsrc)}${c.popyear ? ' (' + esc(c.popyear) + ')' : ''}</div>` : ''}
