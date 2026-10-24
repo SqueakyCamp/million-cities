@@ -1,0 +1,6 @@
+*.gz
+__pycache__/
+data/raw/
+data/state.json
+data/*.tmp
+settings.local.json
