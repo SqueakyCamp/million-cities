@@ -23,22 +23,28 @@ const C = data.cities;
 const byId = new Map(C.map(c => [c.id, c]));
 const answers = data.answers, parts = data.parts, near = data.near;
 const CONTS = ['Asia', 'Africa', 'Europe', 'Latin America', 'Northern America', 'Oceania'];
-$('#subtitle').textContent = `${C.length} cities ≥ 1 million · UN WUP 2025`;
 for (const c of C) c.growth = c.ts[2000] ? c.pop / c.ts[2000] : null;
 
+// The data goes down to 800k; S.minPop (1e6 or 8e5) picks the city set used everywhere.
+const pool = () => C.filter(c => c.pop >= S.minPop);
+const setName = () => S.minPop < 1e6 ? '800k' : '1M';
 // scopes: "all", "top100", "p5", "p2", "c:<continent>", "n:<iso2>"
-const countries = new Map();
-for (const c of C) {
-  if (!countries.has(c.iso2)) countries.set(c.iso2, { name: c.country, cc: c.iso2, n: 0 });
-  countries.get(c.iso2).n++;
+let countries = new Map();
+function countCountries() {
+  countries = new Map();
+  for (const c of pool()) {
+    if (!countries.has(c.iso2)) countries.set(c.iso2, { name: c.country, cc: c.iso2, n: 0 });
+    countries.get(c.iso2).n++;
+  }
 }
 function scopeCities(key) {
-  if (key === 'top100') return C.filter(c => c.rank <= 100);
-  if (key === 'p5') return C.filter(c => c.pop >= 5e6);
-  if (key === 'p2') return C.filter(c => c.pop >= 2e6);
-  if (key.startsWith('c:')) return C.filter(c => c.cont === key.slice(2));
-  if (key.startsWith('n:')) return C.filter(c => c.iso2 === key.slice(2));
-  return C;
+  const P = pool();
+  if (key === 'top100') return P.filter(c => c.rank <= 100);
+  if (key === 'p5') return P.filter(c => c.pop >= 5e6);
+  if (key === 'p2') return P.filter(c => c.pop >= 2e6);
+  if (key.startsWith('c:')) return P.filter(c => c.cont === key.slice(2));
+  if (key.startsWith('n:')) return P.filter(c => c.iso2 === key.slice(2));
+  return P;
 }
 function scopeLabel(key) {
   const n = scopeCities(key).length;
@@ -47,7 +53,7 @@ function scopeLabel(key) {
   if (key === 'p5') return `Over 5 million (${n})`;
   if (key === 'p2') return `Over 2 million (${n})`;
   if (key.startsWith('c:')) return `${key.slice(2)} (${n})`;
-  if (key.startsWith('n:')) { const k = countries.get(key.slice(2)); return `${flag(k.cc)} ${k.name} (${n})`; }
+  if (key.startsWith('n:')) { const k = countries.get(key.slice(2)) || { cc: key.slice(2), name: key.slice(2) }; return `${flag(k.cc)} ${k.name} (${n})`; }
   return key;
 }
 function fillScopeSelect(sel, withAllCountries) {
@@ -63,7 +69,8 @@ const DEFAULT = {
   mode: 'quiz', quizScope: 'all', pracScope: 'all', pracMode: 'name', atlasScope: 'all', atlasSort: 'pop',
   basemap: 'terrain', layers: { borders: true, admin1: false, rivers: true, clabels: false, slabels: false, outlines: true },
   hintDots: false, flyTo: false, acceptParts: false, atlasHideNames: false,
-  quiz: {},      // scope -> {found: {id: ts}, ms, gaveUp}
+  minPop: 1e6,   // 1e6 or 8e5
+  quiz: {},      // scope (+ '@800k') -> {found: {id: ts}, ms, gaveUp}
   cards: {},     // id -> {box, ok, bad, last, streak}
   bigger: { ok: 0, n: 0 },
 };
@@ -344,10 +351,19 @@ function renderAll() {
 }
 
 // ------------------------------------------------------------------ QUIZ
-const QZ = () => (S.quiz[S.quizScope] ||= { found: {}, ms: 0, gaveUp: false, reset: Date.now() });
+// quiz progress is kept per selection and city set; a new 800k run starts with the 1M finds
+const qKey = () => S.quizScope + (S.minPop < 1e6 ? '@800k' : '');
+const QZ = () => {
+  const k = qKey();
+  if (!S.quiz[k]) {
+    const base = S.minPop < 1e6 ? S.quiz[S.quizScope] : null;
+    S.quiz[k] = { found: { ...(base?.found || {}) }, ms: 0, gaveUp: false, reset: Date.now() };
+  }
+  return S.quiz[k];
+};
 let lastTick = Date.now();
 function quizTick() {
-  const now = Date.now(), q = S.quiz[S.quizScope];
+  const now = Date.now(), q = S.quiz[qKey()];
   if (S.mode === 'quiz' && q && Object.keys(q.found).length && !q.gaveUp && document.visibilityState === 'visible') {
     const pool = scopeCities(S.quizScope);
     if (Object.keys(q.found).length < pool.length) q.ms = (q.ms || 0) + Math.min(now - lastTick, 5000);
@@ -358,7 +374,28 @@ function quizTick() {
 setInterval(quizTick, 1000);
 setInterval(() => { if (S.mode === 'quiz') save(); }, 20000);
 
-fillScopeSelect($('#quizScope'), true);
+function applyMinPop() {
+  countCountries();
+  const n1 = C.filter(c => c.pop >= 1e6).length, n8 = C.length;
+  $('#subtitle').textContent = S.minPop < 1e6 ? `${n8} cities ≥ 800,000 · UN WUP 2025` : `${n1} cities ≥ 1 million · UN WUP 2025`;
+  for (const [sel, key] of [['#quizScope', 'quizScope'], ['#pracScope', 'pracScope'], ['#atlasScope', 'atlasScope']]) {
+    fillScopeSelect($(sel), true);
+    if (!scopeCities(S[key]).length) S[key] = 'all';
+    $(sel).value = S[key];
+  }
+  $$('.minpop').forEach(x => {
+    x.innerHTML = `<option value="1000000">≥ 1 million (${n1})</option><option value="800000">≥ 800,000 (${n8})</option>`;
+    x.value = String(S.minPop);
+  });
+}
+$$('.minpop').forEach(x => x.onchange = () => {
+  S.minPop = +x.value;
+  applyMinPop();
+  recent.length = 0;
+  if (S.mode === 'quiz') renderQuiz(true); else if (S.mode === 'atlas') renderAtlas(true); else startPractice();
+  save();
+});
+applyMinPop();
 $('#quizScope').onchange = e => { S.quizScope = e.target.value; renderQuiz(true); save(); $('#answer').focus(); };
 for (const id of ['hintDots', 'flyTo', 'acceptParts']) {
   $('#' + id).onchange = e => { S[id] = e.target.checked; renderQuiz(); save(); };
@@ -371,7 +408,7 @@ $('#giveUp').onclick = () => {
 $('#resetQuiz').onclick = () => {
   const n = Object.keys(QZ().found).length;
   if (n && !confirm(`Restart "${scopeLabel(S.quizScope)}"? Your ${n} answers for it are cleared.`)) return;
-  S.quiz[S.quizScope] = { found: {}, ms: 0, gaveUp: false, reset: Date.now() };
+  S.quiz[qKey()] = { found: {}, ms: 0, gaveUp: false, reset: Date.now() };
   renderQuiz(true); save(); $('#answer').focus();
 };
 
@@ -407,9 +444,13 @@ function tryAnswer(final) {
   // Enter on something that isn't a new answer: explain why
   let why = 'Not on the list', cls = 'bad';
   if (ids.length) { why = `Already found: ${ids.map(id => byId.get(id).name).join(', ')}`; cls = 'warn'; }
-  else if ((answers[key] || []).length) { const c = byId.get(answers[key][0]); why = `${c.name} is a 1M+ city, but not in this selection`; cls = 'warn'; }
+  else if ((answers[key] || []).length) {
+    const c = byId.get(answers[key][0]);
+    why = c.pop < S.minPop ? `${c.name} has ${fmtPop(c.pop)} — switch the list to “≥ 800,000” to include it` : `${c.name} is on the list, but not in this selection`;
+    cls = 'warn';
+  }
   else if (parts[key]) { const c = byId.get(parts[key][0]); why = `${raw} is part of the ${c.name} agglomeration — name the agglomeration`; cls = 'warn'; }
-  else if (near[key]) { const [n, cc, p] = near[key]; why = `Close! ${n} ${flag(cc)} has ${fmtPop(p)}, just under 1 million`; cls = 'warn'; }
+  else if (near[key]) { const [n, cc, p] = near[key]; why = `Close! ${n} ${flag(cc)} has ${fmtPop(p)}, below the cutoff`; cls = 'warn'; }
   quizMsg(why, cls);
   inp.classList.remove('bad'); void inp.offsetWidth; inp.classList.add('bad');
   inp.select();
@@ -472,7 +513,6 @@ function renderQuiz(refit) {
 const BOXW = [10, 6, 2.5, 1, 0.4];
 const recent = [];
 let cur = null, session = { ok: 0, n: 0 };
-fillScopeSelect($('#pracScope'), true);
 $('#pracScope').onchange = e => { S.pracScope = e.target.value; recent.length = 0; save(); startPractice(); };
 $('#pracSeg').onclick = e => { const v = e.target.closest('button')?.dataset.v; if (v) { S.pracMode = v; save(); startPractice(); } };
 
@@ -633,7 +673,6 @@ function biggerCard(pool) {
 }
 
 // ------------------------------------------------------------------ ATLAS
-fillScopeSelect($('#atlasScope'), true);
 let selected = null;
 $('#atlasScope').onchange = e => { S.atlasScope = e.target.value; renderAtlas(true); save(); };
 $('#atlasSort').onchange = e => { S.atlasSort = e.target.value; renderAtlas(); save(); };
@@ -659,7 +698,7 @@ function renderAtlas(refit) {
   };
   list.sort(sorters[S.atlasSort]);
   $('#atlasCount').textContent = `${list.length} cities · ${fmtPop(list.reduce((a, c) => a + c.pop, 0))} people`;
-  const q = S.quiz.all?.found || {};
+  const q = S.quiz['all' + (S.minPop < 1e6 ? '@800k' : '')]?.found || {};
   $('#atlasList').innerHTML = list.map(c => {
     const right = S.atlasSort === 'growth' && c.growth ? `×${c.growth.toFixed(2)}` : fmtPop(c.pop);
     return `<li data-id="${c.id}" class="${selected === c.id ? 'sel' : ''} ${q[c.id] ? 'found' : ''}"><span class="rk">${c.rank}</span><span class="nm">${esc(c.name)} <small>${flag(c.iso2)} ${esc(c.country)}</small></span><span class="pp">${right}</span></li>`;
@@ -695,7 +734,7 @@ function selectCity(c, fly) {
   const other = c.aliases.filter(a => norm(a) !== norm(c.name) && a !== c.wup && a !== c.local).slice(0, 12);
   $('#detail').hidden = false;
   $('#detail').innerHTML = `<button class="icon-btn close" aria-label="Close">×</button>
-    <h2>${esc(c.name)}${c.cap ? '<span class="badge cap">capital</span>' : ''}${c.plaus === 'Low' ? '<span class="badge low" title="WUP 2025 plausibility rating">low plausibility</span>' : ''}</h2>
+    <h2>${esc(c.name)}${c.cap ? '<span class="badge cap">capital</span>' : ''}${c.plaus === 'Low' ? '<span class="badge low" title="WUP 2025 plausibility rating">low plausibility</span>' : ''}${c.pop < 1e6 ? '<span class="badge">800k–1M</span>' : ''}</h2>
     <div class="sub">${c.local ? esc(c.local) + ' · ' : ''}${flag(c.iso2)} ${esc(c.country)} · ${esc(c.sub || c.cont)}</div>
     <div class="facts">
       <div><b>${fmtPop(c.pop)}</b><small>people 2025</small></div>

@@ -13,12 +13,14 @@ Quiz, practice and atlas for the 511 cities with ≥ 1 million people (UN WUP 20
 - Name fixes / extra accepted answers: `tools/overrides.py` (keyed by WUP City_Name / display name). Rebuild after editing.
 
 Data decisions:
-- List + populations: WUP 2025 city file (Degree of Urbanisation), mid-2025 `Pop`, threshold 1,000 thousand.
+- List + populations: WUP 2025 city file (Degree of Urbanisation), mid-2025 `Pop`. Data goes down to 800k (660 cities);
+  the app's city-set selector (`S.minPop`, 1e6 default) switches between the 511 ≥ 1M and all 660. Quiz progress for
+  the 800k set is stored under `<scope>@800k` and starts from the 1M finds.
   WUP keeps Shenzhen/Guangzhou, Suzhou/Wuxi etc. separate, unlike the GHSL UCDB.
 - Outlines: GHSL UCDB R2024A urban centre containing the WUP centroid. If WUP splits one centre into several
   cities, the centre is divided by a power diagram whose cell sizes match WUP `AREA_km2` (approximate).
 - Answer index (`answers`): primary names win over aliases; `parts` = GeoNames places ≥ 50k inside an outline
-  (quiz explains "part of X"); `near` = WUP cities 300k–1M ("just under 1 million").
+  (quiz explains "part of X"); `near` = WUP cities 300k–800k ("just under 1 million").
 
 Hosting:
 - Public copy: GitHub repo SqueakyCamp/million-cities, `.github/workflows/pages.yml` publishes `static/` to GitHub Pages

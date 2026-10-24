@@ -70,7 +70,34 @@ OVERRIDES = {
     'Mesa': dict(note='East of Phoenix, listed separately by WUP 2025.'),
     'Fort Lauderdale': dict(note='North of Miami, listed separately by WUP 2025.'),
     'Tembisa': dict(note='North-east of Johannesburg, listed separately by WUP 2025.'),
+    # ---- 800k–1M set
+    'Shunqing': dict(name='Nanchong', aliases=['Shunqing'], note='WUP 2025 names it after Shunqing District of Nanchong.'),
+    'Haizhou District': dict(name='Lianyungang', aliases=['Haizhou'], note='WUP 2025 names it after Haizhou District of Lianyungang.'),
+    'Kotwali': dict(name='Bhagalpur', aliases=['Kotwali'], note='WUP 2025 lists it as "Kotwali"; it is the Bhagalpur area in Bihar.'),
+    'Fushan': dict(aliases=['Yantai'], note='Fushan District of Yantai; WUP 2025 splits the Yantai urban area.'),
+    'Dagupan [Lingayen]': dict(name='Dagupan', aliases=['Lingayen', 'Dagupan Lingayen']),
+    'Saint Petersburg': dict(),  # Russia; the Florida one is told apart by country below
+    'Kharameh': dict(note='Dense settlements east of Shiraz (Fars), listed separately by WUP 2025.'),
+    'Kavar': dict(note='Dense settlements south-east of Shiraz (Fars), listed separately by WUP 2025.'),
+    'Chandanaish': dict(aliases=['Satkania'], note='Between Chattogram and Cox\'s Bazar; WUP 2025 names it after Chandanaish.'),
+    'Sembawang': dict(aliases=['Woodlands', 'Yishun'], note='Northern Singapore (Woodlands, Yishun, Sembawang), listed separately by WUP 2025.'),
+    'Chenghai': dict(note='North-east of Shantou, listed separately by WUP 2025.'),
+    'Huadu': dict(note='Northern Guangzhou, listed separately from the Guangzhou agglomeration by WUP 2025.'),
+    'Bakhtiyarpur': dict(note='Dense area along the Ganges east of Patna (Bihar).'),
+    'Al Mushahidah': dict(note='North of Baghdad, listed separately by WUP 2025.'),
+    'Colachel': dict(note='Coastal Kanyakumari district (Tamil Nadu).'),
+    'Agadir': dict(drop=['Santa Cruz', 'Santa Cruz de Aguer']),
 }
+
+# Same WUP name in two countries: (WUP name, ISO2) -> override
+COUNTRY_OVERRIDES = {
+    ('Saint Petersburg', 'US'): dict(name='St. Petersburg (Florida)', aliases=['St. Petersburg FL', 'St Pete', 'Saint Pete', 'Saint Petersburg Florida'],
+                                     drop=['Leningrad', 'Sankt Petersburg', 'Saint Petersburg', 'St. Petersburg'],
+                                     note='Pinellas County, west of Tampa. Typing "Saint Petersburg" counts the Russian city.'),
+}
+
+# keys that count every city listing them, even where one has it as its main name
+ANSWER_UNION = ['Jerusalem', 'Al-Quds']
 
 # extra answers keyed by display name (German exonyms etc. GeoNames may lack)
 EXTRA_ALIASES = {

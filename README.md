@@ -2,7 +2,8 @@
 
 Learn all 511 cities in the world with more than one million inhabitants: a type-in **quiz** with a map,
 **practice** modes (name the city, find it on the map, which one is bigger?) and an **atlas** with every city's
-population, rank, growth from 1975 to 2050, and the towns it includes.
+population, rank, growth from 1975 to 2050, and the towns it includes. A selector adds the 149 cities between
+800,000 and 1 million (660 in total).
 
 **Play:** https://squeakycamp.github.io/million-cities/
 

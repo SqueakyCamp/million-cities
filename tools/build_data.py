@@ -26,9 +26,10 @@ RAW = ROOT / 'data' / 'raw'
 OUT = ROOT / 'static' / 'data'
 OUT.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(ROOT / 'tools'))
-from overrides import OVERRIDES, EXTRA_ALIASES  # noqa: E402
+from overrides import OVERRIDES, EXTRA_ALIASES, COUNTRY_OVERRIDES, ANSWER_UNION  # noqa: E402
 
-THRESHOLD = 1000  # thousands
+THRESHOLD = 1000  # thousands: the main list
+EXTENDED = 800  # optional extra set (800k–1M) the app can switch on
 YEARS = [1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050]
 
 
@@ -106,8 +107,8 @@ for code, r in all2025.items():
     uc_of[code] = i
     members[i].append(code)
 
-big = sorted([c for c, r in all2025.items() if float(r['Pop']) >= THRESHOLD], key=lambda c: -float(all2025[c]['Pop']))
-print(len(big), 'cities >= 1M')
+big = sorted([c for c, r in all2025.items() if float(r['Pop']) >= EXTENDED], key=lambda c: -float(all2025[c]['Pop']))
+print(len(big), 'cities >= 800k,', sum(float(all2025[c]['Pop']) >= THRESHOLD for c in big), '>= 1M')
 
 
 def local_xy(lat0):
@@ -213,7 +214,7 @@ for rank, code in enumerate(big, 1):
     cc = 'TW' if r['ISO3_Code'] == 'TWN' else iso2
     raw_name = r['City_Name']
     name, local = split_wup_name(raw_name)
-    ov = OVERRIDES.get(raw_name, {})
+    ov = COUNTRY_OVERRIDES.get((raw_name, cc)) or OVERRIDES.get(raw_name, {})
     aliases = {name, raw_name}
     if local:
         aliases.add(local)
@@ -267,6 +268,9 @@ for rank, code in enumerate(big, 1):
     aliases |= set(ov.get('aliases', []))
     aliases |= set(EXTRA_ALIASES.get(name, []))
     hist |= set(ov.get('historic', []))
+    drop = {norm(x) for x in ov.get('drop', [])}
+    aliases = {a for a in aliases if norm(a) not in drop}
+    hist = {h for h in hist if norm(h) not in drop}
 
     contains = []
     seen = {norm(a) for a in aliases}
@@ -326,6 +330,8 @@ for c in cities:
 answers = {}
 for k in set(primary) | set(alias):
     answers[k] = sorted(primary[k]) if k in primary else sorted(alias[k])
+for k in map(norm, ANSWER_UNION):
+    answers[k] = sorted(primary[k] | alias[k])
 parts = defaultdict(set)
 for c in cities:
     for p in c['contains']:
@@ -338,7 +344,7 @@ for c in cities:
 near = {}
 for code, r in all2025.items():
     p = float(r['Pop'])
-    if 300 <= p < THRESHOLD:
+    if 300 <= p < EXTENDED:
         nm, lc = split_wup_name(r['City_Name'])
         for a in {nm, lc, r['City_Name']} - {None}:
             k = norm(a)
@@ -346,7 +352,7 @@ for code, r in all2025.items():
                 near[k] = [nm, r['ISO2_Code'], round(p * 1000)]
 
 json.dump(dict(source='UN DESA, World Urbanization Prospects 2025 (cities, Degree of Urbanisation); outlines: GHSL UCDB R2024A; names: GeoNames',
-               year=2025, threshold=THRESHOLD * 1000, cities=cities,
+               year=2025, threshold=THRESHOLD * 1000, extended=EXTENDED * 1000, cities=cities,
                answers=answers, near=near, parts={k: sorted(v) for k, v in parts.items()}),
           open(OUT / 'cities.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 json.dump(dict(type='FeatureCollection', features=features), open(OUT / 'outlines.geojson', 'w'), separators=(',', ':'))
