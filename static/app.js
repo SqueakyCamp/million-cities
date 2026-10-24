@@ -17,13 +17,29 @@ const fmtTime = ms => { const s = Math.floor(ms / 1000), h = Math.floor(s / 3600
 const dark = matchMedia('(prefers-color-scheme: dark)').matches;
 const isPhone = () => matchMedia('(max-width: 760px)').matches;
 
-// ------------------------------------------------------------------ data
-const data = await fetch('data/cities.json').then(r => r.json());
-const C = data.cities;
-const byId = new Map(C.map(c => [c.id, c]));
-const answers = data.answers, parts = data.parts, near = data.near;
+// ------------------------------------------------------------------ databases
+// Each database is one file in data/db/ (built by tools/build_data.py and build_alt.py).
+const DBS = [
+  { key: 'wup2025', label: 'Agglomerations · UN 2025' },
+  { key: 'wup2018', label: 'National definitions · UN 2018' },
+  { key: 'wikidata', label: 'City proper · Wikidata' },
+];
 const CONTS = ['Asia', 'Africa', 'Europe', 'Latin America', 'Northern America', 'Oceania'];
-for (const c of C) c.growth = c.ts[2000] ? c.pop / c.ts[2000] : null;
+let data = {}, C = [], byId = new Map(), answers = {}, parts = {}, near = {};
+const dbCache = {};
+// ids are numbers (UN) or strings (Wikidata Q-ids); DOM data-* attributes are always strings
+const cityOf = v => byId.get(v) ?? byId.get(+v);
+async function loadDb(key) {
+  if (!DBS.some(d => d.key === key)) key = 'wup2025';
+  data = dbCache[key] ||= await fetch(`data/db/${key}.json`).then(r => r.json());
+  C = data.cities;
+  byId = new Map(C.map(c => [c.id, c]));
+  answers = data.answers; parts = data.parts || {}; near = data.near || {};
+  for (const c of C) c.growth = c.ts?.[2000] ? c.pop / c.ts[2000] : null;
+}
+// progress is kept per database; the original one (WUP 2025) keeps its unprefixed keys
+const dbPrefix = () => S.db === 'wup2025' ? '' : S.db + ':';
+const ck = id => dbPrefix() + id;
 
 // The data goes down to 800k; S.minPop (1e6 or 8e5) picks the city set used everywhere.
 const pool = () => C.filter(c => c.pop >= S.minPop);
@@ -69,9 +85,10 @@ const DEFAULT = {
   mode: 'quiz', quizScope: 'all', pracScope: 'all', pracMode: 'name', atlasScope: 'all', atlasSort: 'pop',
   basemap: 'terrain', layers: { borders: true, admin1: false, rivers: true, clabels: false, slabels: false, outlines: true },
   hintDots: false, flyTo: false, acceptParts: false, atlasHideNames: false,
+  db: 'wup2025', // which database (DBS)
   minPop: 1e6,   // 1e6 or 8e5
-  quiz: {},      // scope (+ '@800k') -> {found: {id: ts}, ms, gaveUp}
-  cards: {},     // id -> {box, ok, bad, last, streak}
+  quiz: {},      // [db:]scope[@800k] -> {found: {id: ts}, ms, gaveUp}
+  cards: {},     // [db:]id -> {box, ok, bad, last}
   bigger: { ok: 0, n: 0 },
 };
 let S = structuredClone(DEFAULT), rev = 0, saveTimer = null, saving = false;
@@ -145,6 +162,7 @@ document.addEventListener('visibilitychange', async () => {
 });
 
 await loadState();
+await loadDb(S.db);
 $('#storageNote').textContent = local
   ? 'Your progress is saved in this browser only.'
   : 'Progress is saved on the server, so all your devices share it.';
@@ -278,7 +296,7 @@ function applyLayers() {
   vis('borders', L.borders); vis('admin1', L.admin1); vis('rivers', L.rivers);
   vis('lakes', L.rivers && b !== 'satellite' && b !== 'physical');
   vis('clabels', L.clabels); vis('slabels', L.slabels);
-  if (L.outlines && !outlinesLoaded) { outlinesLoaded = true; map.getSource('outlines').setData('data/outlines.geojson'); }
+  if (L.outlines && data.outlines && !outlinesLoaded) { outlinesLoaded = true; map.getSource('outlines').setData('data/outlines.geojson'); }
   vis('outline-fill', L.outlines); vis('outline-line', L.outlines);
   // labels over imagery need a darker halo
   const sat = b === 'satellite';
@@ -305,6 +323,7 @@ function setCities(list) {
   });
 }
 function setOutlines(ids) {
+  if (!data.outlines) ids = [];
   const f = ['in', ['get', 'id'], ['literal', ids]];
   map.setFilter('outline-fill', f); map.setFilter('outline-line', f);
 }
@@ -352,11 +371,11 @@ function renderAll() {
 
 // ------------------------------------------------------------------ QUIZ
 // quiz progress is kept per selection and city set; a new 800k run starts with the 1M finds
-const qKey = () => S.quizScope + (S.minPop < 1e6 ? '@800k' : '');
+const qKey = () => dbPrefix() + S.quizScope + (S.minPop < 1e6 ? '@800k' : '');
 const QZ = () => {
   const k = qKey();
   if (!S.quiz[k]) {
-    const base = S.minPop < 1e6 ? S.quiz[S.quizScope] : null;
+    const base = S.minPop < 1e6 ? S.quiz[dbPrefix() + S.quizScope] : null;
     S.quiz[k] = { found: { ...(base?.found || {}) }, ms: 0, gaveUp: false, reset: Date.now() };
   }
   return S.quiz[k];
@@ -374,27 +393,37 @@ function quizTick() {
 setInterval(quizTick, 1000);
 setInterval(() => { if (S.mode === 'quiz') save(); }, 20000);
 
+// database + city-set selectors (shared by all modes)
 function applyMinPop() {
   countCountries();
   const n1 = C.filter(c => c.pop >= 1e6).length, n8 = C.length;
-  $('#subtitle').textContent = S.minPop < 1e6 ? `${n8} cities ≥ 800,000 · UN WUP 2025` : `${n1} cities ≥ 1 million · UN WUP 2025`;
+  $('#subtitle').textContent = `${S.minPop < 1e6 ? n8 + ' cities ≥ 800,000' : n1 + ' cities ≥ 1 million'} · ${data.name}`;
   for (const [sel, key] of [['#quizScope', 'quizScope'], ['#pracScope', 'pracScope'], ['#atlasScope', 'atlasScope']]) {
     fillScopeSelect($(sel), true);
     if (!scopeCities(S[key]).length) S[key] = 'all';
     $(sel).value = S[key];
   }
-  $$('.minpop').forEach(x => {
-    x.innerHTML = `<option value="1000000">≥ 1 million (${n1})</option><option value="800000">≥ 800,000 (${n8})</option>`;
-    x.value = String(S.minPop);
-  });
+  $('#minPopSel').innerHTML = `<option value="1000000">≥ 1 million (${n1})</option><option value="800000">≥ 800,000 (${n8})</option>`;
+  $('#minPopSel').value = String(S.minPop);
+  $('#dbSel').innerHTML = DBS.map(d => `<option value="${d.key}">${esc(d.label)}</option>`).join('');
+  $('#dbSel').value = data.key;
+  $('#dbDesc').textContent = data.desc || '';
+  // outlines exist only for the WUP 2025 cities
+  const ol = $('#layersPop [data-layer="outlines"]');
+  ol.disabled = !data.outlines;
+  ol.parentElement.title = data.outlines ? '' : 'Only available for the UN 2025 database';
+  ol.parentElement.style.opacity = data.outlines ? '' : '.5';
 }
-$$('.minpop').forEach(x => x.onchange = () => {
-  S.minPop = +x.value;
-  applyMinPop();
-  recent.length = 0;
-  if (S.mode === 'quiz') renderQuiz(true); else if (S.mode === 'atlas') renderAtlas(true); else startPractice();
-  save();
-});
+function rerenderMode() {
+  selected = null; popup?.remove(); recent.length = 0;
+  if (S.mode === 'quiz') renderQuiz(true); else if (S.mode === 'atlas') { $('#detail').hidden = true; renderAtlas(true); } else startPractice();
+}
+$('#minPopSel').onchange = e => { S.minPop = +e.target.value; applyMinPop(); rerenderMode(); save(); };
+$('#dbSel').onchange = async e => {
+  S.db = e.target.value;
+  await loadDb(S.db);
+  applyMinPop(); applyLayers(); rerenderMode(); save();
+};
 applyMinPop();
 $('#quizScope').onchange = e => { S.quizScope = e.target.value; renderQuiz(true); save(); $('#answer').focus(); };
 for (const id of ['hintDots', 'flyTo', 'acceptParts']) {
@@ -462,6 +491,7 @@ function renderQuiz(refit) {
   const q = QZ(), pool = scopeCities(S.quizScope);
   $('#quizScope').value = S.quizScope;
   $('#hintDots').checked = S.hintDots; $('#flyTo').checked = S.flyTo; $('#acceptParts').checked = S.acceptParts;
+  $('#acceptParts').parentElement.hidden = !Object.keys(parts).length;
   const found = pool.filter(c => q.found[c.id]);
   const popAll = pool.reduce((a, c) => a + c.pop, 0), popF = found.reduce((a, c) => a + c.pop, 0);
   $('#qFound').textContent = found.length; $('#qTotal').textContent = pool.length;
@@ -490,7 +520,7 @@ function renderQuiz(refit) {
   $('#qListTitle').textContent = q.gaveUp ? `Missing (${missing.length}) and found (${found.length})` : `Found (${found.length})`;
   const rows = [...missing.map(c => [c, 'miss']), ...found.sort((a, b) => q.found[b.id] - q.found[a.id]).map(c => [c, 'found'])];
   $('#qList').innerHTML = rows.map(([c, cls]) => `<li class="${cls}" data-id="${c.id}"><span class="rk">${c.rank}</span><span class="nm">${esc(c.name)} <small>${flag(c.iso2)} ${esc(c.country)}</small></span><span class="pp">${fmtPop(c.pop)}</span></li>`).join('');
-  $$('#qList li').forEach(li => li.onclick = () => { const c = byId.get(+li.dataset.id); flyToCity(c, Math.max(map.getZoom(), 5)); showPopup(c); });
+  $$('#qList li').forEach(li => li.onclick = () => { const c = cityOf(li.dataset.id); flyToCity(c, Math.max(map.getZoom(), 5)); showPopup(c); });
 
   // map
   const list = [];
@@ -516,7 +546,7 @@ let cur = null, session = { ok: 0, n: 0 };
 $('#pracScope').onchange = e => { S.pracScope = e.target.value; recent.length = 0; save(); startPractice(); };
 $('#pracSeg').onclick = e => { const v = e.target.closest('button')?.dataset.v; if (v) { S.pracMode = v; save(); startPractice(); } };
 
-function card(id) { return S.cards[id] ||= { box: 0, ok: 0, bad: 0, last: 0 }; }
+function card(id) { return S.cards[ck(id)] ||= { box: 0, ok: 0, bad: 0, last: 0 }; }
 function grade(c, ok) {
   const k = card(c.id);
   k.last = Date.now();
@@ -530,17 +560,17 @@ function pick(pool) {
   let cands = pool.filter(c => !avoid.has(c.id));
   if (!cands.length) cands = pool;
   // unseen cities come in roughly by size, so the big ones are learned first
-  const seenAny = cands.filter(c => S.cards[c.id]);
-  const unseen = cands.filter(c => !S.cards[c.id]).sort((a, b) => b.pop - a.pop).slice(0, 8);
+  const seenAny = cands.filter(c => S.cards[ck(c.id)]);
+  const unseen = cands.filter(c => !S.cards[ck(c.id)]).sort((a, b) => b.pop - a.pop).slice(0, 8);
   const pickFrom = [...seenAny, ...unseen];
-  const w = pickFrom.map(c => S.cards[c.id] ? BOXW[S.cards[c.id].box] : 5);
+  const w = pickFrom.map(c => S.cards[ck(c.id)] ? BOXW[S.cards[ck(c.id)].box] : 5);
   let r = Math.random() * w.reduce((a, b) => a + b, 0);
   for (let i = 0; i < pickFrom.length; i++) { r -= w[i]; if (r <= 0) return pickFrom[i]; }
   return pickFrom[pickFrom.length - 1];
 }
 function renderPracticeStats() {
   const pool = scopeCities(S.pracScope);
-  const known = pool.filter(c => (S.cards[c.id]?.box || 0) >= 2).length;
+  const known = pool.filter(c => (S.cards[ck(c.id)]?.box || 0) >= 2).length;
   $('#pKnown').textContent = known; $('#pTotal').textContent = pool.length;
   $('#pKnownBar').style.width = (100 * known / pool.length) + '%';
   $('#pSession').textContent = `${session.ok} / ${session.n}`;
@@ -609,7 +639,7 @@ function findCard(c, pool) {
     <div class="row"><button class="btn ghost" id="pSkip">Show me</button></div>`;
   const done = (ll) => {
     map.off('click', findHandler); findHandler = null;
-    const radius = Math.max(50, Math.sqrt(c.area / Math.PI) * 1.4);
+    const radius = c.area ? Math.max(50, Math.sqrt(c.area / Math.PI) * 1.4) : 60;
     let extra = '', ok = false;
     if (ll) {
       const d = haversine(ll.lat, ll.lng, c.lat, c.lon);
@@ -648,18 +678,18 @@ function biggerCard(pool) {
   setCities(pair.map(c => ({ c, st: 'target', label: c.name })));
   setOutlines(pair.map(c => c.id));
   fitCities(pair, 5);
-  $('#pracCard').innerHTML = `<div class="q">Which has more people?<small>Urban agglomeration population, 2025</small></div>
+  $('#pracCard').innerHTML = `<div class="q">Which has more people?<small>${esc(data.short || data.name)}</small></div>
     <div class="pair">${pair.map(c => `<button data-id="${c.id}"><b>${esc(c.name)}</b><small>${flag(c.iso2)} ${esc(c.country)}</small></button>`).join('')}</div>
     <div id="pRes"></div>`;
   $$('#pracCard .pair button').forEach(btn => btn.onclick = () => {
-    const chosen = byId.get(+btn.dataset.id), other = pair.find(c => c !== chosen);
+    const chosen = cityOf(btn.dataset.id), other = pair.find(c => c !== chosen);
     const ok = chosen.pop >= other.pop;
     S.bigger.n++; if (ok) S.bigger.ok++;
     session.n++; if (ok) session.ok++;
     // a wrong answer is a sign the smaller one's size isn't known yet
     if (!ok) { card(chosen.id).box = Math.min(card(chosen.id).box, 1); card(other.id).box = Math.min(card(other.id).box, 1); }
     $$('#pracCard .pair button').forEach(x => {
-      const c = byId.get(+x.dataset.id);
+      const c = cityOf(x.dataset.id);
       x.disabled = true;
       x.classList.add(c.pop >= (pair.find(y => y !== c).pop) ? 'right' : 'wrong');
       x.insertAdjacentHTML('beforeend', `<span class="pv">${fmtPop(c.pop)}</span><small>#${c.rank} in the world</small>`);
@@ -698,12 +728,12 @@ function renderAtlas(refit) {
   };
   list.sort(sorters[S.atlasSort]);
   $('#atlasCount').textContent = `${list.length} cities · ${fmtPop(list.reduce((a, c) => a + c.pop, 0))} people`;
-  const q = S.quiz['all' + (S.minPop < 1e6 ? '@800k' : '')]?.found || {};
+  const q = S.quiz[dbPrefix() + 'all' + (S.minPop < 1e6 ? '@800k' : '')]?.found || {};
   $('#atlasList').innerHTML = list.map(c => {
     const right = S.atlasSort === 'growth' && c.growth ? `×${c.growth.toFixed(2)}` : fmtPop(c.pop);
     return `<li data-id="${c.id}" class="${selected === c.id ? 'sel' : ''} ${q[c.id] ? 'found' : ''}"><span class="rk">${c.rank}</span><span class="nm">${esc(c.name)} <small>${flag(c.iso2)} ${esc(c.country)}</small></span><span class="pp">${right}</span></li>`;
   }).join('');
-  $$('#atlasList li').forEach(li => li.onclick = () => selectCity(byId.get(+li.dataset.id), true));
+  $$('#atlasList li').forEach(li => li.onclick = () => selectCity(cityOf(li.dataset.id), true));
   setCities(list.map(c => ({ c, st: selected === c.id ? 'sel' : 'atlas', label: S.atlasHideNames && selected !== c.id ? '' : c.name })));
   setOutlines(list.map(c => c.id));
   if (refit) {
@@ -717,19 +747,20 @@ function spark(c) {
   const x = y => pad + (W - 2 * pad) * (y - ys[0]) / (ys[ys.length - 1] - ys[0]);
   const yv = v => H - 14 - (H - 20) * v / max;
   const pts = ys.map((y, i) => `${x(y).toFixed(1)},${yv(vals[i]).toFixed(1)}`);
-  const iNow = ys.indexOf(2025);
+  const last = ys[ys.length - 1];
+  const iNow = Math.max(0, ys.indexOf(2025));
   const past = pts.slice(0, iNow + 1).join(' '), fut = pts.slice(iNow).join(' ');
-  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Population 1975 to 2050">
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Population ${ys[0]} to ${last}">
     <polygon class="ar" points="${x(ys[0])},${H - 14} ${pts.join(' ')} ${x(ys[ys.length - 1])},${H - 14}"/>
     <polyline class="ln" points="${past}"/><polyline class="ln proj" points="${fut}"/>
     <circle class="now" cx="${x(2025)}" cy="${yv(c.ts[2025])}" r="3.5"/>
     <text x="${pad}" y="${H - 2}">${ys[0]}: ${fmtPop(vals[0])}</text>
-    <text x="${x(2025)}" y="${H - 2}" text-anchor="middle">2025</text>
-    <text x="${W - pad}" y="${H - 2}" text-anchor="end">2050: ${fmtPop(vals[vals.length - 1])}</text></svg>`;
+    ${last - 2025 >= 20 ? `<text x="${x(2025)}" y="${H - 2}" text-anchor="middle">2025</text>` : ''}
+    <text x="${W - pad}" y="${H - 2}" text-anchor="end">${last}: ${fmtPop(vals[vals.length - 1])}</text></svg>`;
 }
 function selectCity(c, fly) {
   selected = c.id;
-  const k = S.cards[c.id];
+  const k = S.cards[ck(c.id)];
   const density = c.area ? Math.round(c.pop / c.area) : null;
   const other = c.aliases.filter(a => norm(a) !== norm(c.name) && a !== c.wup && a !== c.local).slice(0, 12);
   $('#detail').hidden = false;
@@ -737,16 +768,18 @@ function selectCity(c, fly) {
     <h2>${esc(c.name)}${c.cap ? '<span class="badge cap">capital</span>' : ''}${c.plaus === 'Low' ? '<span class="badge low" title="WUP 2025 plausibility rating">low plausibility</span>' : ''}${c.pop < 1e6 ? '<span class="badge">800k–1M</span>' : ''}</h2>
     <div class="sub">${c.local ? esc(c.local) + ' · ' : ''}${flag(c.iso2)} ${esc(c.country)} · ${esc(c.sub || c.cont)}</div>
     <div class="facts">
-      <div><b>${fmtPop(c.pop)}</b><small>people 2025</small></div>
+      <div><b>${fmtPop(c.pop)}</b><small>people ${esc(c.popyear || data.year || '')}</small></div>
       <div><b>#${c.rank}</b><small>world · #${c.crank} of ${c.cn} in country</small></div>
-      <div><b>${fmtInt(c.area)}</b><small>km² · ${density ? fmtInt(density) + '/km²' : ''}</small></div>
+      ${c.area ? `<div><b>${fmtInt(c.area)}</b><small>km² · ${density ? fmtInt(density) + '/km²' : ''}</small></div>`
+               : `<div><b class="def">${esc(c.concept || c.defn || '')}</b><small>${c.concept ? 'national definition' : 'counted area'}</small></div>`}
     </div>
-    ${spark(c)}
+    ${c.ts ? spark(c) : ''}
     ${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
-    ${c.wup !== c.name ? `<div class="small dim">WUP name: ${esc(c.wup)}</div>` : ''}
+    ${c.wup && c.wup !== c.name ? `<div class="small dim">Name in the UN list: ${esc(c.wup)}</div>` : ''}
+    ${c.popsrc ? `<div class="small dim">Figure: ${esc(c.popsrc)}${c.popyear ? ' (' + esc(c.popyear) + ')' : ''}</div>` : ''}
     ${c.contains.length ? `<div class="dh">Includes</div><div class="chips">${c.contains.slice(0, 18).map(p => `<span>${esc(p.n)} <small>${fmtPop(p.p)}</small></span>`).join('')}</div>` : ''}
     ${other.length ? `<div class="dh">Also accepted</div><div class="chips">${other.map(a => `<span>${esc(a)}</span>`).join('')}</div>` : ''}
-    <div class="small dim">${k ? `Practice: ${k.ok}× right, ${k.bad}× wrong` : 'Not practised yet'} · plausibility ${esc(c.plaus.toLowerCase())}${c.split ? ' · outline approximate' : ''}</div>`;
+    <div class="small dim">${k ? `Practice: ${k.ok}× right, ${k.bad}× wrong` : 'Not practised yet'}${c.plaus ? ' · plausibility ' + esc(c.plaus.toLowerCase()) : ''}${c.split ? ' · outline approximate' : ''}${c.wikidata ? ` · <a href="https://www.wikidata.org/wiki/${esc(c.wikidata)}" target="_blank" rel="noopener">Wikidata</a>` : ''}</div>`;
   $('#detail .close').onclick = () => { selected = null; $('#detail').hidden = true; popup?.remove(); renderAtlas(); };
   renderAtlas();
   if (fly) flyToCity(c, Math.max(map.getZoom(), 6.5));

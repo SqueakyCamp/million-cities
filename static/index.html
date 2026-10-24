@@ -46,12 +46,16 @@
 
   <aside class="panel" id="panel">
     <div class="grip" id="grip" aria-hidden="true"></div>
+    <div class="dbbar">
+      <label><span>Database</span><select id="dbSel"></select></label>
+      <label><span>Cities</span><select id="minPopSel" class="minpop"></select></label>
+      <div class="dbdesc" id="dbDesc"></div>
+    </div>
 
     <!-- ============ QUIZ ============ -->
     <section class="mode" id="mode-quiz">
       <div class="row scope-row">
         <select id="quizScope" class="scope" aria-label="Which cities"></select>
-        <select class="minpop" aria-label="City set"></select>
       </div>
       <div class="answer">
         <input id="answer" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Loading…" enterkeyhint="done" disabled>
@@ -84,7 +88,6 @@
     <section class="mode" id="mode-practice">
       <div class="row scope-row">
         <select id="pracScope" class="scope" aria-label="Which cities"></select>
-        <select class="minpop" aria-label="City set"></select>
       </div>
       <div class="seg wide" id="pracSeg">
         <button data-v="name">Name it</button><button data-v="find">Find it</button><button data-v="bigger">Bigger?</button>
@@ -104,7 +107,6 @@
       </div>
       <div class="row filters">
         <select id="atlasScope" class="scope" aria-label="Filter"></select>
-        <select class="minpop" aria-label="City set"></select>
         <select id="atlasSort" aria-label="Sort">
           <option value="pop">By population</option>
           <option value="name">A–Z</option>
@@ -123,10 +125,18 @@
 <dialog id="about">
   <form method="dialog"><button class="icon-btn close" aria-label="Close">×</button></form>
   <h2>About the data</h2>
-  <p><b>Cities and populations</b> come from the UN <a href="https://population.un.org/wup/" target="_blank" rel="noopener">World Urbanization Prospects 2025</a> (UN DESA, Population Division), mid-2025 estimates. Since this revision every country is measured the same way, with the <i>Degree of Urbanisation</i>: a city is a contiguous block of 1 km² grid cells with at least 1,500 inhabitants per km², and at least 50,000 people in total. This makes the numbers comparable worldwide. Municipal borders ("city proper") and statistical metro regions differ a lot from country to country, so neither is used.</p>
+  <p>"Which cities have over a million people?" depends on where a city ends. The <b>Database</b> menu switches between three answers:</p>
+  <ul>
+    <li><b>Agglomerations · UN 2025</b> (default): the same method everywhere, explained below.</li>
+    <li><b>National definitions · UN 2018</b>: the classic UN list from the <a href="https://population.un.org/wup/" target="_blank" rel="noopener">2018 revision</a>. Each country defines its cities itself, as city proper, urban agglomeration or metropolitan area (shown on each city's card). Figures are that revision's projection for 2025, and old names are shown with today's spelling.</li>
+    <li><b>City proper · Wikidata</b>: the population inside the official city limits, mostly from the latest census, as recorded in <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a> (CC0). Chinese prefecture-level cities count only their urban districts, not the rural counties. Metro areas, provinces and districts are filtered out. City limits differ hugely between countries (Chongqing 26M, Paris 2.1M), which is the classic problem with city-proper lists.</li>
+  </ul>
+  <p>Quiz and practice progress is kept separately for each database.</p>
+  <h3>UN 2025 agglomerations</h3>
+  <p>Cities and populations come from the UN <a href="https://population.un.org/wup/" target="_blank" rel="noopener">World Urbanization Prospects 2025</a> (UN DESA, Population Division), mid-2025 estimates. Since this revision every country is measured the same way, with the <i>Degree of Urbanisation</i>: a city is a contiguous block of 1 km² grid cells with at least 1,500 inhabitants per km², and at least 50,000 people in total. This makes the numbers comparable worldwide.</p>
   <p>Contiguous built-up areas are counted as one city (Tokyo includes Yokohama, Guangzhou includes Foshan and Dongguan). WUP 2025 still lists centres like <b>Shenzhen</b>, Zhongshan, Wuxi or The Hague as their own cities, even where the satellite-based GHSL database merges them into one big blob.</p>
   <p>A few names look unusual because WUP names agglomerations after a district or a neighbouring town (e.g. <i>Kasaï-Oriental</i> = Mbuji-Mayi, <i>Xiuying District</i> = Haikou). The map shows the familiar name and the quiz accepts both. Some fast-growing, very dense rural areas in India, Bangladesh and Nigeria (e.g. Hajipur, Kozhikode, Onitsha) count as cities under this method. WUP gives every estimate a plausibility rating, shown on each city's card.</p>
-  <p><b>Outlines</b> are the urban centres of the <a href="https://human-settlement.emergency.copernicus.eu/ghs_ucdb_2024.php" target="_blank" rel="noopener">GHSL Urban Centre Database R2024A</a> (European Commission, JRC). Where WUP splits one GHSL centre into several cities, the outline is divided between their centres, so it's only approximate. <b>Places inside</b> and alternative names (including German ones) come from <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a> (CC BY 4.0). Borders, rivers and lakes come from <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>. Terrain uses AWS Terrain Tiles (Mapzen); the physical and satellite maps are © Esri.</p>
+  <p><b>Outlines</b> (UN 2025 only) are the urban centres of the <a href="https://human-settlement.emergency.copernicus.eu/ghs_ucdb_2024.php" target="_blank" rel="noopener">GHSL Urban Centre Database R2024A</a> (European Commission, JRC). Where WUP splits one GHSL centre into several cities, the outline is divided between their centres, so it's only approximate. <b>Places inside</b> and alternative names (including German ones) come from <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a> (CC BY 4.0). Borders, rivers and lakes come from <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>. Terrain uses AWS Terrain Tiles (Mapzen); the physical and satellite maps are © Esri.</p>
   <p class="dim small">UN data © United Nations, CC BY 3.0 IGO. <span id="storageNote"></span></p>
 </dialog>
 

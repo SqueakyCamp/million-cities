@@ -122,3 +122,47 @@ EXTRA_ALIASES = {
     'Guatemala City': ['Guatemala', 'Guatemala-Stadt'], 'Panama City': ['Panama', 'Panama-Stadt'],
     'Kuala Lumpur': ['KL'], 'Ho Chi Minh City': ['Saigon'], 'Rio de Janeiro': ['Rio'],
 }
+
+# Fixes for the alternative databases: (db, name[, ISO2]) -> override.
+# skip=True removes an entry (e.g. a Wikidata item that is a region, not a city).
+ALT_OVERRIDES = {
+    ('wikidata', 'Dhaka'): dict(pop=10_278_882, popyear='2022', popsrc='census 2022, Dhaka North + South City Corporations',
+                                note='Wikidata lists 16.8M, which is the metropolitan figure; this is the two city corporations.'),
+    ('wikidata', 'Prayagraj'): dict(pop=1_112_544, popyear='2011', popsrc='census 2011 (municipal corporation)'),
+    ('wikidata', 'Hangzhou'): dict(keep=True),
+    ('wikidata', 'Madrid city'): dict(name='Madrid'),
+    ('wikidata', 'Aguascalientes City'): dict(name='Aguascalientes'),
+    ('wikidata', 'León de Los Aldama'): dict(name='León', aliases=['León de los Aldama']),
+    ('wikidata', 'Jerusalem'): dict(note='The status of Jerusalem is disputed; the figure is for the whole municipality.'),
+    ('wikidata', 'Masvingo'): dict(skip=True),        # province figure
+    ('wikidata', 'Garoua'): dict(skip=True),          # department figure
+    ('wikidata', 'Santo Domingo', 'CL'): dict(skip=True),  # small Chilean commune, wrong figure
+    # WUP 2018 uses some old names; show today's, keep the old one as an answer
+    **{('wup2018', old): dict(name=new) for old, new in [
+        ('Bombay', 'Mumbai'), ('Calcutta', 'Kolkata'), ('Madras', 'Chennai'), ('Bangalore', 'Bengaluru'), ('Poona', 'Pune'),
+        ('Calicut', 'Kozhikode'), ('Cochin', 'Kochi'), ('Benares', 'Varanasi'), ('Allahabad', 'Prayagraj'), ('Mysore', 'Mysuru'),
+        ('Kiev', 'Kyiv'), ('Chittagong', 'Chattogram'), ('Aurangabad', 'Chhatrapati Sambhajinagar'),
+        ('Bruxelles-Brussel', 'Brussels'), ('Ad-Dammam', 'Dammam')]},
+    ('wup2018', 'Tampa-St. Petersburg'): dict(name='Tampa – St. Petersburg', aliases=['Tampa', 'Tampa St. Petersburg'], drop=['St. Petersburg', 'Saint Petersburg']),
+    ('wup2018', 'Kitakyushu-Fukuoka M.M.A.'): dict(name='Kitakyushu – Fukuoka', aliases=['Fukuoka', 'Kitakyushu']),
+    ('wup2018', 'Shizuoka-Hamamatsu M.M.A.'): dict(name='Shizuoka – Hamamatsu', aliases=['Shizuoka', 'Hamamatsu']),
+    # Wikidata models these as metro areas, and that is also their usual "city" figure
+    ('wikidata', 'Lagos'): dict(keep=True, note='Wikidata has no separate city-proper figure for Lagos; this is Lagos as a whole.'),
+    ('wikidata', 'Melbourne'): dict(keep=True, note='Australian cities are usually counted as Greater Melbourne/Sydney etc.; the City of Melbourne itself is tiny.'),
+    # South African metropolitan municipalities are the cities
+    ('wikidata', 'eThekwini Metropolitan'): dict(name='Durban', aliases=['eThekwini']),
+    ('wikidata', 'City of Tshwane Metropolitan'): dict(name='Pretoria', aliases=['Tshwane'], note='City of Tshwane Metropolitan Municipality.'),
+    ('wikidata', 'City of Ekurhuleni Metropolitan'): dict(name='Ekurhuleni', aliases=['East Rand'], note='East Rand (Germiston, Benoni, Boksburg, …).'),
+    ('wikidata', 'Nelson Mandela Bay Metropolitan'): dict(name='Gqeberha', aliases=['Port Elizabeth', 'Nelson Mandela Bay'], note='Nelson Mandela Bay Metropolitan Municipality.'),
+    ('wikidata', 'Kharkiv City council'): dict(skip=True),
+    ('wikidata', 'Malang'): dict(pop=843_810, popyear='2020', popsrc='census 2020 (Kota Malang; Wikidata mixes in Malang Regency)'),
+    ('wikidata', 'Monterrey'): dict(pop=1_142_994, popyear='2020', popsrc='census 2020 (municipality; Wikidata lists the metro figure)'),
+    ('wikidata', 'Queretaro'): dict(name='Querétaro'),
+    # not cities, parts of other cities, or wrong figures
+    **{('wikidata', n): dict(skip=True) for n in [
+        'City of Johannesburg Metropolitan', 'Moro', 'Clyde', 'Dagbon', 'Coppice', 'Southern Kyoto Prefecture',
+        'Barrio Arroyo', 'Catemaco', 'Orangi', 'Gulshan Town', 'Kowloon', 'Bosaso', "Murang'a", 'Tanke', 'Banikoara',
+        'Humen Town', "Chang'an Town", 'Çankaya', 'Osmangazi', 'Yopougon', 'Abobo', 'Soweto', 'Palermo', 'Taoyuan County',
+        "Xiong'an New Area", 'München', 'Benito Juárez', 'Libertador', 'Municipio Iribarren', 'Stolichna', 'Kurdistan Region of Iraq',
+        'North East State of Somalia', 'Pudong', 'Heroica Puebla de Zaragoza', 'Chihuahua City', 'Binhai New Area', 'Panama City', 'Kumasi', 'Quảng Ninh', 'Danzhou', 'Ikeja']},
+}

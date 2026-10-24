@@ -11,42 +11,22 @@ Sources (see README.md):
 
 Output goes to static/data/.
 """
-import csv, gzip, json, math, pickle, re, sys, unicodedata
+import csv, gzip, json, math, pickle, re, sys
 from collections import defaultdict
 from pathlib import Path
 
-import openpyxl
 import shapely
 import shapely.ops
 from shapely import STRtree, Point, MultiPoint
 from shapely.geometry import mapping, shape
 
-ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / 'data' / 'raw'
-OUT = ROOT / 'static' / 'data'
-OUT.mkdir(parents=True, exist_ok=True)
-sys.path.insert(0, str(ROOT / 'tools'))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from common import (RAW, OUT, EXTENDED, norm, split_wup_name, load_locations, country_name, continent,  # noqa: E402
+                    geonames, gn_names, finish, write_db)
 from overrides import OVERRIDES, EXTRA_ALIASES, COUNTRY_OVERRIDES, ANSWER_UNION  # noqa: E402
 
-THRESHOLD = 1000  # thousands: the main list
-EXTENDED = 800  # optional extra set (800k–1M) the app can switch on
+EXT_K = EXTENDED / 1000  # WUP populations are in thousands
 YEARS = [1975, 1980, 1985, 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2025, 2030, 2035, 2040, 2045, 2050]
-
-
-def norm(s):
-    """Key used for matching typed answers: lowercase, no accents, letters/digits only."""
-    s = unicodedata.normalize('NFKD', s.lower())
-    s = ''.join(c for c in s if not unicodedata.combining(c))
-    s = s.replace('ß', 'ss').replace('ø', 'o').replace('đ', 'd').replace('ł', 'l').replace('ı', 'i').replace('æ', 'ae').replace('œ', 'oe')
-    s = re.sub(r'[^a-z0-9]+', '', s)
-    return s
-
-
-LATIN = re.compile(r"^[\sA-Za-zÀ-ɏḀ-ỿ'’‘ʻ`.\-()]+$")
-
-
-def is_latin(s):
-    return bool(LATIN.match(s))
 
 
 # ---------------------------------------------------------------- WUP
@@ -62,35 +42,7 @@ with gzip.open(RAW / 'cities.csv.gz', 'rt', encoding='utf-8-sig') as f:
 all2025 = {c: ys[2025] for c, ys in rows.items() if 2025 in ys}
 print(len(all2025), 'cities in 2025')
 
-wb = openpyxl.load_workbook(RAW / 'locations.xlsx', read_only=True)
-loc = {}
-hdr = None
-for r in wb['DB'].iter_rows(values_only=True):
-    if hdr is None:
-        hdr = r
-        continue
-    d = dict(zip(hdr, r))
-    loc[d['LocID']] = d
-
-countries = {}
-for line in open(RAW / 'countryInfo.txt', encoding='utf-8'):
-    if line.startswith('#'):
-        continue
-    f = line.rstrip('\n').split('\t')
-    countries[f[0]] = dict(name=f[4], langs=[l.split('-')[0] for l in f[15].split(',') if l])
-COUNTRY_NAME_FIX = {'TW': 'Taiwan', 'PS': 'Palestine', 'CD': 'DR Congo', 'CG': 'Congo', 'CI': "Côte d'Ivoire",
-                    'KR': 'South Korea', 'KP': 'North Korea', 'US': 'United States', 'GB': 'United Kingdom',
-                    'MO': 'Macao', 'HK': 'Hong Kong', 'TR': 'Türkiye', 'CZ': 'Czechia'}
-
-# continent = UN "major area" (GeoRegName), Americas split like WUP does
-def continent(d):
-    g = d.get('GeoRegName')
-    sub = d.get('SubRegName')
-    if g == 'Latin America and the Caribbean' or sub in ('South America', 'Central America', 'Caribbean'):
-        return 'Latin America'
-    if g == 'Northern America':
-        return 'Northern America'
-    return g
+loc, _ = load_locations()
 
 
 # ---------------------------------------------------------------- UCDB polygons
@@ -107,8 +59,8 @@ for code, r in all2025.items():
     uc_of[code] = i
     members[i].append(code)
 
-big = sorted([c for c, r in all2025.items() if float(r['Pop']) >= EXTENDED], key=lambda c: -float(all2025[c]['Pop']))
-print(len(big), 'cities >= 800k,', sum(float(all2025[c]['Pop']) >= THRESHOLD for c in big), '>= 1M')
+big = sorted([c for c, r in all2025.items() if float(r['Pop']) >= EXT_K], key=lambda c: -float(all2025[c]['Pop']))
+print(len(big), 'cities >= 800k,', sum(float(all2025[c]['Pop']) >= 1000 for c in big), '>= 1M')
 
 
 def local_xy(lat0):
@@ -179,35 +131,11 @@ def outline(code):
 
 # ---------------------------------------------------------------- GeoNames
 print('reading GeoNames …')
-gn = pickle.load(open(RAW / 'gn.pkl', 'rb'))
-gn_list = [g for g in gn.values() if g['fcode'] not in ('PPLX', 'PPLH', 'PPLQ', 'PPLW')]
-gn_tree = STRtree([Point(g['lon'], g['lat']) for g in gn_list])
-
-SKIP_LANG = {'link', 'iata', 'icao', 'faac', 'post', 'wkdt', 'abbr', 'unlc', 'fr_1793', 'tcid'}
-
-
-def gn_names(g, cc):
-    langs = {'en', 'de'} | set(countries.get(cc, {}).get('langs', []))
-    out = {g['name'], g['ascii']}
-    hist = set()
-    for lang, name, pref, short, coll, histo in g['alt']:
-        if lang in SKIP_LANG or lang not in langs or not is_latin(name) or len(norm(name)) < 3:
-            continue
-        (hist if (histo or coll) else out).add(name)
-    return out, hist - out
-
-
-def split_wup_name(raw):
-    """'Tōkyō (Tokyo)' -> ('Tokyo', 'Tōkyō'); 'A - B' -> ('A - B', None) etc."""
-    m = re.match(r'^(.*?)\s*\((.*)\)\s*$', raw)
-    if m:
-        return m.group(2).strip(), m.group(1).strip()
-    return raw.strip(), None
-
+gn, gn_list, gn_tree = geonames()
 
 cities = []
 features = []
-for rank, code in enumerate(big, 1):
+for code in big:
     r = all2025[code]
     ys = rows[code]
     iso2 = r['ISO2_Code']
@@ -288,10 +216,10 @@ for rank, code in enumerate(big, 1):
             break
 
     L = loc.get(int(r['LocID']), {})
-    cname = COUNTRY_NAME_FIX.get(cc) or countries.get(cc, {}).get('name') or r['Location']
+    cname = country_name(cc, r['Location'])
     ts = {y: round(float(ys[y]['Pop']) * 1000) for y in YEARS if y in ys}
     c = dict(
-        id=code, rank=rank, name=name, local=local if local and local != name else None,
+        id=code, name=name, local=local if local and local != name else None,
         wup=raw_name, country=cname, iso2=cc, cont=continent(L), sub=L.get('SubRegName'),
         lat=round(lat, 4), lon=round(lon, 4),
         pop=round(float(r['Pop']) * 1000), area=round(float(r['AREA_km2'])),
@@ -310,28 +238,7 @@ for rank, code in enumerate(big, 1):
     gj['coordinates'] = rnd(gj['coordinates'])
     features.append(dict(type='Feature', id=code, properties=dict(id=code), geometry=gj))
 
-# country ranks
-byc = defaultdict(list)
-for c in cities:
-    byc[c['iso2']].append(c)
-for lst in byc.values():
-    for i, c in enumerate(sorted(lst, key=lambda c: -c['pop']), 1):
-        c['crank'] = i
-        c['cn'] = len(lst)
-
-# answer index: normalized key -> list of ids.  Primary names win over aliases so that a
-# key that is one city's real name never also counts another city that merely lists it.
-primary = defaultdict(set)
-alias = defaultdict(set)
-for c in cities:
-    primary[norm(c['name'])].add(c['id'])
-    for a in c['aliases'] + c['historic']:
-        alias[norm(a)].add(c['id'])
-answers = {}
-for k in set(primary) | set(alias):
-    answers[k] = sorted(primary[k]) if k in primary else sorted(alias[k])
-for k in map(norm, ANSWER_UNION):
-    answers[k] = sorted(primary[k] | alias[k])
+answers = finish(cities, ANSWER_UNION)
 parts = defaultdict(set)
 for c in cities:
     for p in c['contains']:
@@ -344,18 +251,17 @@ for c in cities:
 near = {}
 for code, r in all2025.items():
     p = float(r['Pop'])
-    if 300 <= p < EXTENDED:
+    if 300 <= p < EXT_K:
         nm, lc = split_wup_name(r['City_Name'])
         for a in {nm, lc, r['City_Name']} - {None}:
             k = norm(a)
             if k and k not in answers and (k not in near or near[k][2] < p):
                 near[k] = [nm, r['ISO2_Code'], round(p * 1000)]
 
-json.dump(dict(source='UN DESA, World Urbanization Prospects 2025 (cities, Degree of Urbanisation); outlines: GHSL UCDB R2024A; names: GeoNames',
-               year=2025, threshold=THRESHOLD * 1000, extended=EXTENDED * 1000, cities=cities,
-               answers=answers, near=near, parts={k: sorted(v) for k, v in parts.items()}),
-          open(OUT / 'cities.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+write_db('wup2025', dict(
+    name='UN WUP 2025', short='Agglomerations (UN 2025)', year=2025, outlines=True,
+    desc='Cities measured the same way everywhere (Degree of Urbanisation): contiguous built-up areas with at least 1,500 people per km².',
+    source='UN DESA, World Urbanization Prospects 2025 (cities, Degree of Urbanisation); outlines: GHSL UCDB R2024A; names: GeoNames'),
+    cities, answers, near, {k: sorted(v) for k, v in parts.items()})
 json.dump(dict(type='FeatureCollection', features=features), open(OUT / 'outlines.geojson', 'w'), separators=(',', ':'))
-print('cities.json', (OUT / 'cities.json').stat().st_size // 1024, 'KB; outlines', (OUT / 'outlines.geojson').stat().st_size // 1024, 'KB')
-amb = {k: v for k, v in answers.items() if len(v) > 1}
-print('ambiguous answers:', {k: [next(c['name'] + '/' + c['iso2'] for c in cities if c['id'] == i) for i in v] for k, v in amb.items()})
+print('outlines', (OUT / 'outlines.geojson').stat().st_size // 1024, 'KB')
