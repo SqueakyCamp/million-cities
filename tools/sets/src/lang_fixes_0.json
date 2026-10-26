@@ -1,0 +1,276 @@
+{
+ "ar": {
+  "l1": 410,
+  "official": [
+   "EGY",
+   "SAU",
+   "ARE",
+   "QAT",
+   "BHR",
+   "KWT",
+   "OMN",
+   "YEM",
+   "IRQ",
+   "SYR",
+   "JOR",
+   "LBN",
+   "PSX",
+   "DZA",
+   "MAR",
+   "TUN",
+   "LBY",
+   "MRT",
+   "SDN",
+   "SOM",
+   "DJI",
+   "COM",
+   "SAH",
+   "TCD"
+  ],
+  "why": "L1 raised to infobox 410m (ours 270 is 34% below infobox, outside tolerance); added Chad (TCD), official Arabic co-official with French per constitution, matches '24 states' infobox count (ours only had 23)."
+ },
+ "aa": {
+  "unsure": "Wiktionary gives 'gadda ge' for thank-you vs ours 'Yakke'en'; no second source (no Wikivoyage) to confirm either, left unchanged."
+ },
+ "ff": {
+  "l1": 37,
+  "unsure": "hello 'Jam na?' vs Wiktionary 'mihofnima' for Fula - both plausible Pulaar-region greetings, no Wikivoyage line to confirm either way, left unchanged.",
+  "why": "L1 raised to infobox 36.85m->37 (ours 24 matches a stale 2007 Wikidata figure, infobox 2014-2021 data is more current and used as main reference)."
+ },
+ "ak": {
+  "phrases": {
+   "hello": {
+    "text": "Maakye",
+    "rom": "",
+    "say": "MAH-cheh"
+   }
+  },
+  "why": "'Akwaaba' means 'welcome' (said by a host to a guest), not a general-purpose hello; Wiktionary gives time-of-day greetings maakye/maaha/maadwo, used morning/afternoon/evening as the actual everyday greeting."
+ },
+ "kr": {
+  "l1": 11,
+  "total": 15,
+  "phrases": {
+   "thanks": {
+    "text": "Nyiro askǝrgǝna",
+    "rom": "",
+    "say": "NYEE-roh ahss-kuhr-GUH-nah"
+   }
+  },
+  "unsure": "'Yerima' for goodbye looks suspicious (it's a known Kanuri/Hausa title meaning 'crown prince'), but no Wikivoyage/Wiktionary goodbye line exists to confirm a replacement.",
+  "why": "ours (6/6) far below infobox 10.6m and Wikidata 15m; set L1 to infobox 2sf (11), total to Wikidata's broader figure (15); thanks replaced with Wikivoyage's phrasebook line which differs completely from ours."
+ },
+ "lg": {
+  "l1": 5.6,
+  "phrases": {
+   "hello": {
+    "text": "Oli otya",
+    "rom": "",
+    "say": "OH-lee OH-tyah"
+   }
+  },
+  "why": "ours L1=11 actually matches the infobox TOTAL (L1 5.6m + L2 5.4m ~ 11m); corrected L1 to infobox's 5.6m, kept total=11 (already right). 'Kodi' is not a greeting (it means something like 'is anyone there?/excuse me'); Wikivoyage's actual hello is 'Oli otya' (to one person)."
+ },
+ "st": {
+  "official": [
+   "ZAF",
+   "LSO",
+   "ZWE"
+  ],
+  "why": "Added Zimbabwe: both Wikidata and the infobox nation field list it as an official/national language alongside South Africa and Lesotho."
+ },
+ "ts": {
+  "official": [
+   "ZAF",
+   "ZWE"
+  ],
+  "phrases": {
+   "thanks": {
+    "text": "Inkomu",
+    "rom": "",
+    "say": "een-KOH-moo"
+   }
+  },
+  "why": "Added Zimbabwe (Shangani/Tsonga is one of Zimbabwe's 16 constitutionally recognized languages, confirmed by Wikidata+infobox). Thanks changed to Wikivoyage's phrasebook choice 'Inkomu' (ours 'Ndzi khense' is a more formal variant, Wikivoyage preferred for travellers)."
+ },
+ "umb": {
+  "official": [
+   "AGO"
+  ],
+  "unsure": "hello 'Kalunga' is suspicious - that word usually denotes a supreme deity/spirit in Umbundu-derived religions (Candomblé/Umbanda) rather than a greeting - but no Wiktionary/Wikivoyage data exists for Umbundu to confirm a replacement.",
+  "why": "Infobox nation field explicitly says Angola (national language status)."
+ },
+ "kri": {
+  "l1": 0.86,
+  "total": 7.8,
+  "official": [
+   "SLE"
+  ],
+  "phrases": {
+   "hello": {
+    "text": "Kushɛ",
+    "rom": "",
+    "say": "koo-SHEH"
+   },
+   "bye": {
+    "text": "A de go",
+    "rom": "",
+    "say": "ah day GOH"
+   }
+  },
+  "why": "ours l1=4m is ~5x the infobox (0.86m) and Wikidata (0.69m) figures; total raised to infobox total (L1 0.86m + L2 6.92m = 7.8m). Added Sierra Leone per Wikidata official_in. Hello diacritic corrected to match Wiktionary/Wikivoyage (Kushɛ). Goodbye 'A go so' replaced - both Wiktionary and Wikivoyage give 'a de go' for goodbye, a clear mismatch with ours."
+ },
+ "wuu": {
+  "phrases": {
+   "hello": {
+    "text": "侬好",
+    "rom": "Nóng hō",
+    "say": "nohng-HAW"
+   },
+   "thanks": {
+    "text": "謝謝",
+    "rom": "Zhia zhia",
+    "say": "JYAH-jyah"
+   }
+  },
+  "why": "Hello text '你好' is Mandarin, not Wu script - replaced with the Wu form '侬好' (儂好), matching Wiktionary/Wikivoyage. Thanks romanization 'Jiajia' did not match any source; Wikivoyage gives 'zhia6 zhia6' (Shanghai) for 謝謝, so rom/say updated to match."
+ },
+ "ja": {
+  "official": [
+   "JPN",
+   "PLW"
+  ],
+  "why": "Added Palau: Japanese has official status on Angaur Island/Angaur State per Wikidata and the infobox nation field; kept Japan since it's near-universally cited as Japan's (de facto) official/national language in general references."
+ },
+ "dz": {
+  "l1": 0.17,
+  "phrases": {
+   "thanks": {
+    "text": "བཀའ་དྲིན་ཆེ",
+    "rom": "Kadrinche",
+    "say": "kah-drin-CHAY"
+   }
+  },
+  "why": "ours l1=0.64m was actually the infobox's TOTAL figure (171,080 L1 / 640,000 total); L1 corrected to 0.17m, total (0.64) already right. Thanks script text was garbled; replaced with Wiktionary's བཀའ་དྲིན་ཆེ (rom/say already matched Wikivoyage's 'Kadrin chhe')."
+ },
+ "ps": {
+  "phrases": {
+   "thanks": {
+    "text": "مننه",
+    "rom": "Manana",
+    "say": "mah-nah-NAH"
+   },
+   "bye": {
+    "text": "پر مخه مو ښه",
+    "rom": "Pa makha mo kha",
+    "say": "peh MEH-khah moh khah"
+   }
+  },
+  "why": "Thanks script was missing a letter ('منه' -> 'مننه', matching Wiktionary's manana). Goodbye reworded to match Wikivoyage's actual phrasebook line 'په مخه مو ښه [pə məkha mo kha]' (ours had scrambled word order)."
+ },
+ "ku": {
+  "official": [
+   "IRQ",
+   "SYR"
+  ],
+  "phrases": {
+   "bye": {
+    "text": "بە خاترێ تۆ",
+    "rom": "Bi xatirê te",
+    "say": "bee khah-tee-REH teh"
+   }
+  },
+  "why": "Added Syria: infobox explicitly notes Kurdish is 'recognized as a national language' there. Goodbye script read like a Persian/Urdu 'khuda hafiz' borrowing that didn't match the rom/say fields at all; replaced with Kurdish script matching Wikivoyage's 'Bi xatirê te!' which the rom/say already reflected."
+ },
+ "hy": {
+  "l1": 5.3,
+  "why": "ours l1=4m is 24% below the only infobox figure (5.28m combined Western+Eastern Armenian, no L1/L2 split given); raised to match since it's the best available current reference and total (5.5) was already close to it."
+ },
+ "es": {
+  "official": [
+   "ESP",
+   "MEX",
+   "ARG",
+   "COL",
+   "PER",
+   "VEN",
+   "CHL",
+   "ECU",
+   "GTM",
+   "CUB",
+   "BOL",
+   "DOM",
+   "HND",
+   "PRY",
+   "NIC",
+   "SLV",
+   "CRI",
+   "PAN",
+   "URY",
+   "GNQ",
+   "SAH"
+  ],
+  "why": "Added Western Sahara (Sahrawi Arab Democratic Republic retains Spanish as an official language) - matches infobox's count of '21 countries, 1 territory, 1 partially recognized state' (ours only had 20 sovereign states)."
+ },
+ "ru": {
+  "official": [
+   "RUS",
+   "BLR",
+   "KAZ",
+   "KGZ",
+   "TJK"
+  ],
+  "why": "Added Tajikistan: both Wikidata and the infobox list it as an inter-ethnic language designated by the constitution, alongside the other co-official states."
+ },
+ "be": {
+  "l1": 5.1,
+  "why": "ours l1=3.3m is below every reference (lowest is Wikidata's 5.058m, infobox gives 5.094m); raised to infobox's 2sf value."
+ },
+ "sr": {
+  "official": [
+   "SRB",
+   "KOS"
+  ],
+  "why": "Removed Bosnia and Herzegovina: the infobox explicitly says Serbian is NOT official at the state level there, only within its sub-national entities (Federation of BiH / Republika Srpska) - regional-only per spec. Added Kosovo, where the infobox confirms Serbian is co-official nationally alongside Albanian. Montenegro not added: Serbian lost official status there in 2007 (now only a recognized minority 'language in official use')."
+ },
+ "sq": {
+  "official": [
+   "ALB",
+   "KOS",
+   "MKD",
+   "MNE"
+  ],
+  "why": "Added North Macedonia and Montenegro: both Wikidata and the infobox list Albanian as co-official there, alongside Albania and Kosovo."
+ },
+ "gd": {
+  "total": 0.07,
+  "phrases": {
+   "bye": {
+    "text": "Tioraidh",
+    "rom": "",
+    "say": "CHEE-ree"
+   }
+  },
+  "why": "ours total=0.087m exceeded the infobox's defined L1+L2 Scotland figure (69,701) by ~25%; set to that reference. Goodbye 'Mar sin leat' matches none of Wiktionary's three options or Wikivoyage's 'Tioraidh!' - replaced with Wikivoyage's phrasebook choice."
+ },
+ "ay": {
+  "official": [
+   "BOL"
+  ],
+  "why": "Removed Peru: the infobox's own footnote says Aymara is 'official only in Aymara-dominated areas' of Peru (a regional/local condition, not national-level per the spec's rule), unlike Bolivia where it is one of the 36 nationally official languages under the 2009 constitution."
+ },
+ "quc": {
+  "phrases": {
+   "thanks": {
+    "text": "Maltiox",
+    "rom": "",
+    "say": "mahl-TYOSH"
+   }
+  },
+  "why": "Spelling corrected from 'Maltyox' to 'Maltiox' to match Wiktionary."
+ },
+ "fj": {
+  "l1": 0.34,
+  "why": "ours l1=0.64m actually matches the infobox TOTAL (L1 339,210 + L2 320,000 ~ 0.66m); L1 corrected to the infobox L1 figure (0.34m), total (0.64) already close to the implied total and left unchanged."
+ }
+}

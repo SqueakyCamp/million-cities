@@ -1,2740 +1,2745 @@
 [
-  {
-    "id": "zh",
-    "name": "Mandarin",
-    "endonym": "普通话 (Pǔtōnghuà)",
-    "aliases": [
-      "Chinese",
-      "Standard Chinese",
-      "Putonghua",
-      "Guoyu",
-      "Mandarin Chinese"
-    ],
-    "family": "Sino-Tibetan",
-    "branch": "Sinitic",
-    "l1": 940,
-    "total": 1140,
-    "scripts": [
-      "Chinese characters"
-    ],
-    "official": [
-      "CHN",
-      "TWN",
-      "SGP"
-    ],
-    "core": [
-      "CHN",
-      "-CHN-1180",
-      "-CHN-1152",
-      "-CHN-1819",
-      "-CHN-1820",
-      "-CHN-1178",
-      "TWN"
-    ],
-    "also": [
-      "HKG",
-      "MAC"
-    ],
-    "wiki": "Mandarin Chinese",
-    "tts": "zh-CN",
-    "phrases": {
-      "hello": {
-        "text": "你好",
-        "rom": "Nǐ hǎo",
-        "say": "nee-HOW"
-      },
-      "thanks": {
-        "text": "谢谢",
-        "rom": "Xièxie",
-        "say": "shyeh-shyeh"
-      },
-      "bye": {
-        "text": "再见",
-        "rom": "Zàijiàn",
-        "say": "dzye-JYEN"
-      }
-    },
-    "facts": [
-      "Official language of China, Taiwan and one of Singapore's four official languages.",
-      "Based on the Beijing dialect; written with Chinese characters shared (with different styles) across varieties.",
-      "A tonal language: the same syllable means different things depending on pitch (four tones plus neutral).",
-      "Has more native speakers than any other language in the world."
-    ]
+ {
+  "id": "zh",
+  "name": "Mandarin",
+  "endonym": "普通话 (Pǔtōnghuà)",
+  "aliases": [
+   "Chinese",
+   "Standard Chinese",
+   "Putonghua",
+   "Guoyu",
+   "Mandarin Chinese"
+  ],
+  "family": "Sino-Tibetan",
+  "branch": "Sinitic",
+  "l1": 940,
+  "total": 1140,
+  "scripts": [
+   "Chinese characters"
+  ],
+  "official": [
+   "CHN",
+   "TWN",
+   "SGP",
+   "HKG",
+   "MAC"
+  ],
+  "core": [
+   "CHN",
+   "-CHN-1180",
+   "-CHN-1152",
+   "-CHN-1819",
+   "-CHN-1820",
+   "-CHN-1178",
+   "TWN"
+  ],
+  "also": [
+   "HKG",
+   "MAC"
+  ],
+  "wiki": "Mandarin Chinese",
+  "tts": "zh-CN",
+  "phrases": {
+   "hello": {
+    "text": "你好",
+    "rom": "Nǐ hǎo",
+    "say": "nee-HOW"
+   },
+   "thanks": {
+    "text": "谢谢",
+    "rom": "Xièxie",
+    "say": "shyeh-shyeh"
+   },
+   "bye": {
+    "text": "再见",
+    "rom": "Zàijiàn",
+    "say": "dzye-JYEN"
+   }
   },
-  {
-    "id": "yue",
-    "name": "Cantonese",
-    "endonym": "廣東話 (Gwóngdūng wá)",
-    "aliases": [
-      "Guangdonghua",
-      "Yue Chinese",
-      "Kantonesisch"
-    ],
-    "family": "Sino-Tibetan",
-    "branch": "Sinitic",
-    "l1": 85,
-    "total": 85,
-    "scripts": [
-      "Chinese characters"
-    ],
-    "official": [
-      "HKG",
-      "MAC"
-    ],
-    "core": [
-      "CHN-1180",
-      "HKG",
-      "MAC"
-    ],
-    "also": [
-      "CHN-1152"
-    ],
-    "wiki": "Cantonese",
-    "tts": "yue-HK",
-    "phrases": {
-      "hello": {
-        "text": "你好",
-        "rom": "Néih hóu",
-        "say": "nay-HOH"
-      },
-      "thanks": {
-        "text": "多謝",
-        "rom": "Dōjeh",
-        "say": "DOR-jeh"
-      },
-      "bye": {
-        "text": "再見",
-        "rom": "Joigin",
-        "say": "joy-GEEN"
-      }
-    },
-    "facts": [
-      "Spoken mainly in Guangdong, Hong Kong and Macau, and in many overseas Chinatowns.",
-      "Has six to nine tones, more than Mandarin, and keeps more sounds from Middle Chinese.",
-      "Written with traditional Chinese characters, plus extra characters for colloquial speech.",
-      "The main language of Cantopop and much of Hong Kong cinema."
-    ]
+  "facts": [
+   "Official language of China, Taiwan and one of Singapore's four official languages.",
+   "Based on the Beijing dialect; written with Chinese characters shared (with different styles) across varieties.",
+   "A tonal language: the same syllable means different things depending on pitch (four tones plus neutral).",
+   "Has more native speakers than any other language in the world."
+  ]
+ },
+ {
+  "id": "yue",
+  "name": "Cantonese",
+  "endonym": "廣東話 (Gwóngdūng wá)",
+  "aliases": [
+   "Guangdonghua",
+   "Yue Chinese",
+   "Kantonesisch"
+  ],
+  "family": "Sino-Tibetan",
+  "branch": "Sinitic",
+  "l1": 85,
+  "total": 85,
+  "scripts": [
+   "Chinese characters"
+  ],
+  "official": [
+   "HKG",
+   "MAC"
+  ],
+  "core": [
+   "CHN-1180",
+   "HKG",
+   "MAC"
+  ],
+  "also": [
+   "CHN-1152"
+  ],
+  "wiki": "Cantonese",
+  "tts": "yue-HK",
+  "phrases": {
+   "hello": {
+    "text": "你好",
+    "rom": "Néih hóu",
+    "say": "nay-HOH"
+   },
+   "thanks": {
+    "text": "多謝",
+    "rom": "Dōjeh",
+    "say": "DOR-jeh"
+   },
+   "bye": {
+    "text": "再見",
+    "rom": "Joigin",
+    "say": "joy-GEEN"
+   }
   },
-  {
-    "id": "wuu",
-    "name": "Wu (Shanghainese)",
-    "endonym": "吳語 (Wúyú)",
-    "aliases": [
-      "Wu Chinese",
-      "Shanghainese"
-    ],
-    "family": "Sino-Tibetan",
-    "branch": "Sinitic",
-    "l1": 81,
-    "total": 81,
-    "scripts": [
-      "Chinese characters"
-    ],
-    "official": [],
-    "core": [
-      "CHN-1819",
-      "CHN-1820"
-    ],
-    "also": [
-      "CHN-1818"
-    ],
-    "wiki": "Wu Chinese",
-    "tts": "zh-CN",
-    "phrases": {
-      "hello": {
-        "text": "你好",
-        "rom": "Nóng hō",
-        "say": "nohng-HAW"
-      },
-      "thanks": {
-        "text": "謝謝",
-        "rom": "Jiajia",
-        "say": "jya-jya"
-      },
-      "bye": {
-        "text": "再會",
-        "rom": "Zehwae",
-        "say": "zuh-WAY"
-      }
-    },
-    "facts": [
-      "Centred on Shanghai, Zhejiang and southern Jiangsu, in the lower Yangtze delta.",
-      "Shanghainese, its best-known form, is a prestige city dialect within Wu.",
-      "Keeps voiced consonants lost in Mandarin, giving it a softer sound.",
-      "Not mutually intelligible with Mandarin despite sharing written characters."
-    ]
+  "facts": [
+   "Spoken mainly in Guangdong, Hong Kong and Macau, and in many overseas Chinatowns.",
+   "Has six to nine tones, more than Mandarin, and keeps more sounds from Middle Chinese.",
+   "Written with traditional Chinese characters, plus extra characters for colloquial speech.",
+   "The main language of Cantopop and much of Hong Kong cinema."
+  ]
+ },
+ {
+  "id": "wuu",
+  "name": "Wu (Shanghainese)",
+  "endonym": "吳語 (Wúyú)",
+  "aliases": [
+   "Wu Chinese",
+   "Shanghainese"
+  ],
+  "family": "Sino-Tibetan",
+  "branch": "Sinitic",
+  "l1": 81,
+  "total": 81,
+  "scripts": [
+   "Chinese characters"
+  ],
+  "official": [],
+  "core": [
+   "CHN-1819",
+   "CHN-1820"
+  ],
+  "also": [
+   "CHN-1818"
+  ],
+  "wiki": "Wu Chinese",
+  "tts": "zh-CN",
+  "phrases": {
+   "hello": {
+    "text": "侬好",
+    "rom": "Nóng hō",
+    "say": "nohng-HAW"
+   },
+   "thanks": {
+    "text": "謝謝",
+    "rom": "Zhia zhia",
+    "say": "JYAH-jyah"
+   },
+   "bye": {
+    "text": "再會",
+    "rom": "Zehwae",
+    "say": "zuh-WAY"
+   }
   },
-  {
-    "id": "nan",
-    "name": "Min Nan (Hokkien)",
-    "endonym": "閩南語 (Bân-lâm-gú)",
-    "aliases": [
-      "Hokkien",
-      "Southern Min",
-      "Taiwanese",
-      "Amoy"
-    ],
-    "family": "Sino-Tibetan",
-    "branch": "Sinitic",
-    "l1": 30,
-    "total": 48,
-    "scripts": [
-      "Chinese characters",
-      "Latin"
-    ],
-    "official": [],
-    "core": [
-      "CHN-1178",
-      "TWN"
-    ],
-    "also": [
-      "CHN-1775"
-    ],
-    "wiki": "Southern Min",
-    "tts": "zh-TW",
-    "phrases": {
-      "hello": {
-        "text": "你好",
-        "rom": "Lí hó",
-        "say": "lee-HAW"
-      },
-      "thanks": {
-        "text": "多謝",
-        "rom": "To-siā",
-        "say": "toh-SYAH"
-      },
-      "bye": {
-        "text": "再見",
-        "rom": "Chài-kiàn",
-        "say": "tsye-KYEN"
-      }
-    },
-    "facts": [
-      "Spoken in Fujian province, across Taiwan (as Taiwanese Hokkien), and in Hainan dialects nearby.",
-      "Carried by emigrants to Southeast Asia, where it shaped Chinese communities in Malaysia, Singapore and the Philippines.",
-      "Also written with a Latin-based romanisation (Pe̍h-ōe-jī) alongside characters.",
-      "Preserves many Old Chinese pronunciations lost elsewhere."
-    ]
+  "facts": [
+   "Centred on Shanghai, Zhejiang and southern Jiangsu, in the lower Yangtze delta.",
+   "Shanghainese, its best-known form, is a prestige city dialect within Wu.",
+   "Keeps voiced consonants lost in Mandarin, giving it a softer sound.",
+   "Not mutually intelligible with Mandarin despite sharing written characters."
+  ]
+ },
+ {
+  "id": "nan",
+  "name": "Min Nan (Hokkien)",
+  "endonym": "閩南語 (Bân-lâm-gú)",
+  "aliases": [
+   "Hokkien",
+   "Southern Min",
+   "Taiwanese",
+   "Amoy"
+  ],
+  "family": "Sino-Tibetan",
+  "branch": "Sinitic",
+  "l1": 30,
+  "total": 48,
+  "scripts": [
+   "Chinese characters",
+   "Latin"
+  ],
+  "official": [],
+  "core": [
+   "CHN-1178",
+   "TWN"
+  ],
+  "also": [
+   "CHN-1775"
+  ],
+  "wiki": "Southern Min",
+  "tts": "zh-TW",
+  "phrases": {
+   "hello": {
+    "text": "你好",
+    "rom": "Lí hó",
+    "say": "lee-HAW"
+   },
+   "thanks": {
+    "text": "多謝",
+    "rom": "To-siā",
+    "say": "toh-SYAH"
+   },
+   "bye": {
+    "text": "再會",
+    "rom": "Chài-hoē",
+    "say": "tsai-HWEH"
+   }
   },
-  {
-    "id": "hak",
-    "name": "Hakka",
-    "endonym": "客家話 (Hak-kâ-fa)",
-    "aliases": [
-      "Hakka Chinese"
-    ],
-    "family": "Sino-Tibetan",
-    "branch": "Sinitic",
-    "l1": 25,
-    "total": 44,
-    "scripts": [
-      "Chinese characters"
-    ],
-    "official": [],
-    "core": [
-      "CHN-1817"
-    ],
-    "also": [
-      "CHN-1180",
-      "TWN",
-      "CHN-1152"
-    ],
-    "wiki": "Hakka Chinese",
-    "tts": "zh-CN",
-    "phrases": {
-      "hello": {
-        "text": "你好",
-        "rom": "Ngì hó",
-        "say": "ngee-HAW"
-      },
-      "thanks": {
-        "text": "多謝",
-        "rom": "Tô-chhia",
-        "say": "toh-CHYAH"
-      },
-      "bye": {
-        "text": "再見",
-        "rom": "Chai-kien",
-        "say": "tsye-KYEN"
-      }
-    },
-    "facts": [
-      "Named after the Hakka people, 'guest families' who migrated south within China over centuries.",
-      "Core areas are inland Jiangxi and Guangdong, with communities across Taiwan and overseas.",
-      "Not centred on one province the way other Chinese varieties are, reflecting a history of migration.",
-      "Closer in some features to older northern Chinese than to its Cantonese and Hokkien neighbours."
-    ]
+  "facts": [
+   "Spoken in Fujian province, across Taiwan (as Taiwanese Hokkien), and in Hainan dialects nearby.",
+   "Carried by emigrants to Southeast Asia, where it shaped Chinese communities in Malaysia, Singapore and the Philippines.",
+   "Also written with a Latin-based romanisation (Pe̍h-ōe-jī) alongside characters.",
+   "Preserves many Old Chinese pronunciations lost elsewhere."
+  ]
+ },
+ {
+  "id": "hak",
+  "name": "Hakka",
+  "endonym": "客家話 (Hak-kâ-fa)",
+  "aliases": [
+   "Hakka Chinese"
+  ],
+  "family": "Sino-Tibetan",
+  "branch": "Sinitic",
+  "l1": 25,
+  "total": 44,
+  "scripts": [
+   "Chinese characters"
+  ],
+  "official": [
+   "TWN"
+  ],
+  "core": [
+   "CHN-1817"
+  ],
+  "also": [
+   "CHN-1180",
+   "TWN",
+   "CHN-1152"
+  ],
+  "wiki": "Hakka Chinese",
+  "tts": "zh-CN",
+  "phrases": {
+   "hello": {
+    "text": "你好",
+    "rom": "Ngì hó",
+    "say": "ngee-HAW"
+   },
+   "thanks": {
+    "text": "多謝",
+    "rom": "Tô-chhia",
+    "say": "toh-CHYAH"
+   },
+   "bye": {
+    "text": "再見",
+    "rom": "Chai-kien",
+    "say": "tsye-KYEN"
+   }
   },
-  {
-    "id": "ja",
-    "name": "Japanese",
-    "endonym": "日本語 (Nihongo)",
-    "aliases": [
-      "Nihongo"
-    ],
-    "family": "Japonic",
-    "branch": "",
-    "l1": 123,
-    "total": 125,
-    "scripts": [
-      "Chinese characters",
-      "Hiragana",
-      "Katakana"
-    ],
-    "official": [
-      "JPN"
-    ],
-    "core": [
-      "JPN"
-    ],
-    "also": [],
-    "wiki": "Japanese language",
-    "tts": "ja-JP",
-    "phrases": {
-      "hello": {
-        "text": "こんにちは",
-        "rom": "Konnichiwa",
-        "say": "kohn-NEE-chee-wah"
-      },
-      "thanks": {
-        "text": "ありがとう",
-        "rom": "Arigatō",
-        "say": "ah-ree-GAH-toh"
-      },
-      "bye": {
-        "text": "さようなら",
-        "rom": "Sayōnara",
-        "say": "sah-yoh-NAH-rah"
-      }
-    },
-    "facts": [
-      "The national language of Japan, spoken almost nowhere else as a native language.",
-      "Written with a mix of Chinese-derived kanji and two native syllabaries, hiragana and katakana.",
-      "Has distinct levels of politeness and formality built into its grammar.",
-      "Its origins are debated; it is not clearly related to Chinese or Korean."
-    ]
+  "facts": [
+   "Named after the Hakka people, 'guest families' who migrated south within China over centuries.",
+   "Core areas are inland Jiangxi and Guangdong, with communities across Taiwan and overseas.",
+   "Not centred on one province the way other Chinese varieties are, reflecting a history of migration.",
+   "Closer in some features to older northern Chinese than to its Cantonese and Hokkien neighbours."
+  ]
+ },
+ {
+  "id": "ja",
+  "name": "Japanese",
+  "endonym": "日本語 (Nihongo)",
+  "aliases": [
+   "Nihongo"
+  ],
+  "family": "Japonic",
+  "branch": "",
+  "l1": 123,
+  "total": 125,
+  "scripts": [
+   "Chinese characters",
+   "Hiragana",
+   "Katakana"
+  ],
+  "official": [
+   "JPN",
+   "PLW"
+  ],
+  "core": [
+   "JPN"
+  ],
+  "also": [],
+  "wiki": "Japanese language",
+  "tts": "ja-JP",
+  "phrases": {
+   "hello": {
+    "text": "こんにちは",
+    "rom": "Konnichiwa",
+    "say": "kohn-NEE-chee-wah"
+   },
+   "thanks": {
+    "text": "ありがとう",
+    "rom": "Arigatō",
+    "say": "ah-ree-GAH-toh"
+   },
+   "bye": {
+    "text": "さようなら",
+    "rom": "Sayōnara",
+    "say": "sah-yoh-NAH-rah"
+   }
   },
-  {
-    "id": "ko",
-    "name": "Korean",
-    "endonym": "한국어 (Hangugeo)",
-    "aliases": [
-      "Hangugeo",
-      "Chosŏnmal"
-    ],
-    "family": "Koreanic",
-    "branch": "",
-    "l1": 82,
-    "total": 82,
-    "scripts": [
-      "Hangul"
-    ],
-    "official": [
-      "KOR",
-      "PRK"
-    ],
-    "core": [
-      "KOR",
-      "PRK"
-    ],
-    "also": [],
-    "wiki": "Korean language",
-    "tts": "ko-KR",
-    "phrases": {
-      "hello": {
-        "text": "안녕하세요",
-        "rom": "Annyeonghaseyo",
-        "say": "ahn-nyohng-hah-SEH-yoh"
-      },
-      "thanks": {
-        "text": "감사합니다",
-        "rom": "Gamsahamnida",
-        "say": "kahm-sah-HAHM-nee-dah"
-      },
-      "bye": {
-        "text": "안녕히 가세요",
-        "rom": "Annyeonghi gaseyo",
-        "say": "ahn-nyohng-hee KAH-seh-yoh"
-      }
-    },
-    "facts": [
-      "Spoken on the Korean peninsula, divided between North and South Korea.",
-      "Written with Hangul, a featural alphabet designed in the 15th century under King Sejong.",
-      "A language isolate by most classifications, with no firmly established relatives.",
-      "Uses an elaborate system of speech levels marking respect toward the listener."
-    ]
+  "facts": [
+   "The national language of Japan, spoken almost nowhere else as a native language.",
+   "Written with a mix of Chinese-derived kanji and two native syllabaries, hiragana and katakana.",
+   "Has distinct levels of politeness and formality built into its grammar.",
+   "Its origins are debated; it is not clearly related to Chinese or Korean."
+  ]
+ },
+ {
+  "id": "ko",
+  "name": "Korean",
+  "endonym": "한국어 (Hangugeo)",
+  "aliases": [
+   "Hangugeo",
+   "Chosŏnmal"
+  ],
+  "family": "Koreanic",
+  "branch": "",
+  "l1": 82,
+  "total": 82,
+  "scripts": [
+   "Hangul"
+  ],
+  "official": [
+   "KOR",
+   "PRK"
+  ],
+  "core": [
+   "KOR",
+   "PRK"
+  ],
+  "also": [],
+  "wiki": "Korean language",
+  "tts": "ko-KR",
+  "phrases": {
+   "hello": {
+    "text": "안녕하세요",
+    "rom": "Annyeonghaseyo",
+    "say": "ahn-nyohng-hah-SEH-yoh"
+   },
+   "thanks": {
+    "text": "감사합니다",
+    "rom": "Gamsahamnida",
+    "say": "kahm-sah-HAHM-nee-dah"
+   },
+   "bye": {
+    "text": "안녕히 가세요",
+    "rom": "Annyeonghi gaseyo",
+    "say": "ahn-nyohng-hee KAH-seh-yoh"
+   }
   },
-  {
-    "id": "vi",
-    "name": "Vietnamese",
-    "endonym": "Tiếng Việt",
-    "aliases": [
-      "Tieng Viet"
-    ],
-    "family": "Austroasiatic",
-    "branch": "Vietic",
-    "l1": 86,
-    "total": 86,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [
-      "VNM"
-    ],
-    "core": [
-      "VNM"
-    ],
-    "also": [],
-    "wiki": "Vietnamese language",
-    "tts": "vi-VN",
-    "phrases": {
-      "hello": {
-        "text": "Xin chào",
-        "rom": "",
-        "say": "sin chow"
-      },
-      "thanks": {
-        "text": "Cảm ơn",
-        "rom": "",
-        "say": "gahm un (falling tone)"
-      },
-      "bye": {
-        "text": "Tạm biệt",
-        "rom": "",
-        "say": "tahm byet"
-      }
-    },
-    "facts": [
-      "The national language of Vietnam, also spoken by large diaspora communities abroad.",
-      "A tonal language with six tones, written in a Latin alphabet with added diacritics (Quốc Ngữ).",
-      "Heavily influenced by Chinese vocabulary after a millennium of Chinese rule, despite being unrelated structurally.",
-      "Replaced Chinese characters and a Chinese-derived script (chữ Nôm) only in the 20th century."
-    ]
+  "facts": [
+   "Spoken on the Korean peninsula, divided between North and South Korea.",
+   "Written with Hangul, a featural alphabet designed in the 15th century under King Sejong.",
+   "A language isolate by most classifications, with no firmly established relatives.",
+   "Uses an elaborate system of speech levels marking respect toward the listener."
+  ]
+ },
+ {
+  "id": "vi",
+  "name": "Vietnamese",
+  "endonym": "Tiếng Việt",
+  "aliases": [
+   "Tieng Viet"
+  ],
+  "family": "Austroasiatic",
+  "branch": "Vietic",
+  "l1": 86,
+  "total": 86,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [
+   "VNM"
+  ],
+  "core": [
+   "VNM"
+  ],
+  "also": [],
+  "wiki": "Vietnamese language",
+  "tts": "vi-VN",
+  "phrases": {
+   "hello": {
+    "text": "Xin chào",
+    "rom": "",
+    "say": "sin chow"
+   },
+   "thanks": {
+    "text": "Cảm ơn",
+    "rom": "",
+    "say": "gahm un (falling tone)"
+   },
+   "bye": {
+    "text": "Tạm biệt",
+    "rom": "",
+    "say": "tahm byet"
+   }
   },
-  {
-    "id": "th",
-    "name": "Thai",
-    "endonym": "ภาษาไทย (Phasa Thai)",
-    "aliases": [
-      "Siamese"
-    ],
-    "family": "Kra-Dai",
-    "branch": "Tai",
-    "l1": 21,
-    "total": 61,
-    "scripts": [
-      "Thai"
-    ],
-    "official": [
-      "THA"
-    ],
-    "core": [
-      "THA"
-    ],
-    "also": [],
-    "wiki": "Thai language",
-    "tts": "th-TH",
-    "phrases": {
-      "hello": {
-        "text": "สวัสดี",
-        "rom": "Sawasdee",
-        "say": "sah-wah-DEE"
-      },
-      "thanks": {
-        "text": "ขอบคุณ",
-        "rom": "Khob khun",
-        "say": "kop-KOON"
-      },
-      "bye": {
-        "text": "ลาก่อน",
-        "rom": "La kon",
-        "say": "lah-GAWN"
-      }
-    },
-    "facts": [
-      "The national language of Thailand, written in its own script derived from Khmer and ultimately Indian scripts.",
-      "A tonal language with five tones that change a word's meaning.",
-      "Closely related to Lao, with speakers often able to understand each other.",
-      "Has distinct pronoun and vocabulary choices depending on the speaker's social status and gender."
-    ]
+  "facts": [
+   "The national language of Vietnam, also spoken by large diaspora communities abroad.",
+   "A tonal language with six tones, written in a Latin alphabet with added diacritics (Quốc Ngữ).",
+   "Heavily influenced by Chinese vocabulary after a millennium of Chinese rule, despite being unrelated structurally.",
+   "Replaced Chinese characters and a Chinese-derived script (chữ Nôm) only in the 20th century."
+  ]
+ },
+ {
+  "id": "th",
+  "name": "Thai",
+  "endonym": "ภาษาไทย (Phasa Thai)",
+  "aliases": [
+   "Siamese"
+  ],
+  "family": "Kra-Dai",
+  "branch": "Tai",
+  "l1": 21,
+  "total": 61,
+  "scripts": [
+   "Thai"
+  ],
+  "official": [
+   "THA"
+  ],
+  "core": [
+   "THA"
+  ],
+  "also": [],
+  "wiki": "Thai language",
+  "tts": "th-TH",
+  "phrases": {
+   "hello": {
+    "text": "สวัสดี",
+    "rom": "Sawasdee",
+    "say": "sah-wah-DEE"
+   },
+   "thanks": {
+    "text": "ขอบคุณ",
+    "rom": "Khob khun",
+    "say": "kop-KOON"
+   },
+   "bye": {
+    "text": "ลาก่อน",
+    "rom": "La kon",
+    "say": "lah-GAWN"
+   }
   },
-  {
-    "id": "lo",
-    "name": "Lao",
-    "endonym": "ພາສາລາວ (Phasa Lao)",
-    "aliases": [
-      "Laotian"
-    ],
-    "family": "Kra-Dai",
-    "branch": "Tai",
-    "l1": 30,
-    "total": 30,
-    "scripts": [
-      "Lao"
-    ],
-    "official": [
-      "LAO"
-    ],
-    "core": [
-      "LAO"
-    ],
-    "also": [],
-    "wiki": "Lao language",
-    "tts": "lo-LA",
-    "phrases": {
-      "hello": {
-        "text": "ສະບາຍດີ",
-        "rom": "Sabaidee",
-        "say": "sah-bye-DEE"
-      },
-      "thanks": {
-        "text": "ຂອບໃຈ",
-        "rom": "Khop chai",
-        "say": "kop-JIGH"
-      },
-      "bye": {
-        "text": "ລາກ່ອນ",
-        "rom": "La kon",
-        "say": "lah-GAWN"
-      }
-    },
-    "facts": [
-      "The national language of Laos, closely related to and largely mutually intelligible with Thai.",
-      "Written in the Lao script, a Brahmic script related to Thai's.",
-      "More native speakers of Lao-related Isan dialects live across the border in northeast Thailand than in Laos itself.",
-      "A tonal language, with the number of tones varying by dialect."
-    ]
+  "facts": [
+   "The national language of Thailand, written in its own script derived from Khmer and ultimately Indian scripts.",
+   "A tonal language with five tones that change a word's meaning.",
+   "Closely related to Lao, with speakers often able to understand each other.",
+   "Has distinct pronoun and vocabulary choices depending on the speaker's social status and gender."
+  ]
+ },
+ {
+  "id": "lo",
+  "name": "Lao",
+  "endonym": "ພາສາລາວ (Phasa Lao)",
+  "aliases": [
+   "Laotian"
+  ],
+  "family": "Kra-Dai",
+  "branch": "Tai",
+  "l1": 3.7,
+  "total": 4.5,
+  "scripts": [
+   "Lao"
+  ],
+  "official": [
+   "LAO"
+  ],
+  "core": [
+   "LAO"
+  ],
+  "also": [],
+  "wiki": "Lao language",
+  "tts": "lo-LA",
+  "phrases": {
+   "hello": {
+    "text": "ສະບາຍດີ",
+    "rom": "Sabaidee",
+    "say": "sah-bye-DEE"
+   },
+   "thanks": {
+    "text": "ຂອບໃຈ",
+    "rom": "Khop chai",
+    "say": "kop-JIGH"
+   },
+   "bye": {
+    "text": "ລາກ່ອນ",
+    "rom": "La kon",
+    "say": "lah-GAWN"
+   }
   },
-  {
-    "id": "km",
-    "name": "Khmer",
-    "endonym": "ភាសាខ្មែរ (Phiəsaa Khmae)",
-    "aliases": [
-      "Cambodian"
-    ],
-    "family": "Austroasiatic",
-    "branch": "Khmeric",
-    "l1": 17,
-    "total": 17,
-    "scripts": [
-      "Khmer"
-    ],
-    "official": [
-      "KHM"
-    ],
-    "core": [
-      "KHM"
-    ],
-    "also": [],
-    "wiki": "Khmer language",
-    "tts": "km-KH",
-    "phrases": {
-      "hello": {
-        "text": "សួស្តី",
-        "rom": "Suostei",
-        "say": "soo-uh-STAY"
-      },
-      "thanks": {
-        "text": "អរគុណ",
-        "rom": "Arkoun",
-        "say": "ar-KOON"
-      },
-      "bye": {
-        "text": "លាហើយ",
-        "rom": "Lea haey",
-        "say": "lee-ah-HAI"
-      }
-    },
-    "facts": [
-      "The national language of Cambodia, carved on the temples of Angkor over a thousand years ago.",
-      "Unlike most neighbouring languages, Khmer is not tonal.",
-      "Written in the Khmer script, the longest alphabet in the world with over 70 letters.",
-      "Has borrowed extensively from Sanskrit and Pali through Buddhist and Hindu influence."
-    ]
+  "facts": [
+   "The national language of Laos, closely related to and largely mutually intelligible with Thai.",
+   "Written in the Lao script, a Brahmic script related to Thai's.",
+   "More native speakers of Lao-related Isan dialects live across the border in northeast Thailand than in Laos itself.",
+   "A tonal language, with the number of tones varying by dialect."
+  ]
+ },
+ {
+  "id": "km",
+  "name": "Khmer",
+  "endonym": "ភាសាខ្មែរ (Phiəsaa Khmae)",
+  "aliases": [
+   "Cambodian"
+  ],
+  "family": "Austroasiatic",
+  "branch": "Khmeric",
+  "l1": 17,
+  "total": 17,
+  "scripts": [
+   "Khmer"
+  ],
+  "official": [
+   "KHM"
+  ],
+  "core": [
+   "KHM"
+  ],
+  "also": [],
+  "wiki": "Khmer language",
+  "tts": "km-KH",
+  "phrases": {
+   "hello": {
+    "text": "សួស្តី",
+    "rom": "Suostei",
+    "say": "soo-uh-STAY"
+   },
+   "thanks": {
+    "text": "អរគុណ",
+    "rom": "Arkoun",
+    "say": "ar-KOON"
+   },
+   "bye": {
+    "text": "លាហើយ",
+    "rom": "Lea haey",
+    "say": "lee-ah-HAI"
+   }
   },
-  {
-    "id": "my",
-    "name": "Burmese",
-    "endonym": "မြန်မာဘာသာ (Myanma bhasa)",
-    "aliases": [
-      "Myanmar language"
-    ],
-    "family": "Sino-Tibetan",
-    "branch": "Burmish",
-    "l1": 33,
-    "total": 43,
-    "scripts": [
-      "Burmese"
-    ],
-    "official": [
-      "MMR"
-    ],
-    "core": [
-      "MMR"
-    ],
-    "also": [],
-    "wiki": "Burmese language",
-    "tts": "my-MM",
-    "phrases": {
-      "hello": {
-        "text": "မင်္ဂလာပါ",
-        "rom": "Mingalaba",
-        "say": "ming-gah-LAH-bah"
-      },
-      "thanks": {
-        "text": "ကျေးဇူးတင်ပါတယ်",
-        "rom": "Kyay zu tin ba de",
-        "say": "chay-zoo tin BAH-day"
-      },
-      "bye": {
-        "text": "သွားတော့မယ်",
-        "rom": "Thwa tawmai",
-        "say": "twah-DAW-may"
-      }
-    },
-    "facts": [
-      "The official language of Myanmar, spoken by the Bamar majority and used as a lingua franca by other groups.",
-      "A tonal language written in a rounded script shared with Mon and Shan.",
-      "Related to Tibetan, far up the Sino-Tibetan family tree, though the two look nothing alike today.",
-      "Shan, Kachin, Karen and other minority languages remain widely spoken in Myanmar's border states."
-    ]
+  "facts": [
+   "The national language of Cambodia, carved on the temples of Angkor over a thousand years ago.",
+   "Unlike most neighbouring languages, Khmer is not tonal.",
+   "Written in the Khmer script, the longest alphabet in the world with over 70 letters.",
+   "Has borrowed extensively from Sanskrit and Pali through Buddhist and Hindu influence."
+  ]
+ },
+ {
+  "id": "my",
+  "name": "Burmese",
+  "endonym": "မြန်မာဘာသာ (Myanma bhasa)",
+  "aliases": [
+   "Myanmar language"
+  ],
+  "family": "Sino-Tibetan",
+  "branch": "Burmish",
+  "l1": 33,
+  "total": 43,
+  "scripts": [
+   "Burmese"
+  ],
+  "official": [
+   "MMR"
+  ],
+  "core": [
+   "MMR"
+  ],
+  "also": [],
+  "wiki": "Burmese language",
+  "tts": "my-MM",
+  "phrases": {
+   "hello": {
+    "text": "မင်္ဂလာပါ",
+    "rom": "Mingalaba",
+    "say": "ming-gah-LAH-bah"
+   },
+   "thanks": {
+    "text": "ကျေးဇူးတင်ပါတယ်",
+    "rom": "Kyay zu tin ba de",
+    "say": "chay-zoo tin BAH-day"
+   },
+   "bye": {
+    "text": "သွားတော့မယ်",
+    "rom": "Thwa tawmai",
+    "say": "twah-DAW-may"
+   }
   },
-  {
-    "id": "ms",
-    "name": "Malay",
-    "endonym": "Bahasa Melayu",
-    "aliases": [
-      "Bahasa Melayu"
-    ],
-    "family": "Austronesian",
-    "branch": "Malayo-Polynesian",
-    "l1": 20,
-    "total": 80,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [
-      "MYS",
-      "BRN",
-      "SGP"
-    ],
-    "core": [
-      "MYS",
-      "BRN"
-    ],
-    "also": [
-      "SGP",
-      "IDN-1796"
-    ],
-    "wiki": "Malay language",
-    "tts": "ms-MY",
-    "phrases": {
-      "hello": {
-        "text": "Halo",
-        "rom": "",
-        "say": "HAH-loh"
-      },
-      "thanks": {
-        "text": "Terima kasih",
-        "rom": "",
-        "say": "teh-REE-mah KAH-see"
-      },
-      "bye": {
-        "text": "Selamat tinggal",
-        "rom": "",
-        "say": "seh-LAH-mat TING-gal"
-      }
-    },
-    "facts": [
-      "Official language of Malaysia and Brunei, and one of Singapore's four official languages.",
-      "Standard Indonesian is its own standardised form of the same Malay language family.",
-      "Was long the trade lingua franca of maritime Southeast Asia, written historically in Jawi (Arabic-based) script.",
-      "Shares most grammar and core vocabulary with Indonesian, though vocabulary and spelling diverge in places."
-    ]
+  "facts": [
+   "The official language of Myanmar, spoken by the Bamar majority and used as a lingua franca by other groups.",
+   "A tonal language written in a rounded script shared with Mon and Shan.",
+   "Related to Tibetan, far up the Sino-Tibetan family tree, though the two look nothing alike today.",
+   "Shan, Kachin, Karen and other minority languages remain widely spoken in Myanmar's border states."
+  ]
+ },
+ {
+  "id": "ms",
+  "name": "Malay",
+  "endonym": "Bahasa Melayu",
+  "aliases": [
+   "Bahasa Melayu"
+  ],
+  "family": "Austronesian",
+  "branch": "Malayo-Polynesian",
+  "l1": 20,
+  "total": 80,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [
+   "MYS",
+   "BRN",
+   "SGP"
+  ],
+  "core": [
+   "MYS",
+   "BRN"
+  ],
+  "also": [
+   "SGP",
+   "IDN-1796"
+  ],
+  "wiki": "Malay language",
+  "tts": "ms-MY",
+  "phrases": {
+   "hello": {
+    "text": "Halo",
+    "rom": "",
+    "say": "HAH-loh"
+   },
+   "thanks": {
+    "text": "Terima kasih",
+    "rom": "",
+    "say": "teh-REE-mah KAH-see"
+   },
+   "bye": {
+    "text": "Selamat tinggal",
+    "rom": "",
+    "say": "seh-LAH-mat TING-gal"
+   }
   },
-  {
-    "id": "id",
-    "name": "Indonesian",
-    "endonym": "Bahasa Indonesia",
-    "aliases": [
-      "Bahasa Indonesia"
-    ],
-    "family": "Austronesian",
-    "branch": "Malayo-Polynesian",
-    "l1": 45,
-    "total": 199,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [
-      "IDN"
-    ],
-    "core": [
-      "IDN"
-    ],
-    "also": [
-      "TLS"
-    ],
-    "wiki": "Indonesian language",
-    "tts": "id-ID",
-    "phrases": {
-      "hello": {
-        "text": "Halo",
-        "rom": "",
-        "say": "HAH-loh"
-      },
-      "thanks": {
-        "text": "Terima kasih",
-        "rom": "",
-        "say": "teh-REE-mah KAH-see"
-      },
-      "bye": {
-        "text": "Selamat tinggal",
-        "rom": "",
-        "say": "seh-LAH-mat TING-gal"
-      }
-    },
-    "facts": [
-      "The national language of Indonesia, a standardised form of Malay adopted at independence.",
-      "Serves as a unifying lingua franca across an archipelago with over 700 local languages.",
-      "Written in the Latin alphabet with straightforward, mostly phonetic spelling.",
-      "Most Indonesians grow up speaking a regional language at home and learn Indonesian at school."
-    ]
+  "facts": [
+   "Official language of Malaysia and Brunei, and one of Singapore's four official languages.",
+   "Standard Indonesian is its own standardised form of the same Malay language family.",
+   "Was long the trade lingua franca of maritime Southeast Asia, written historically in Jawi (Arabic-based) script.",
+   "Shares most grammar and core vocabulary with Indonesian, though vocabulary and spelling diverge in places."
+  ]
+ },
+ {
+  "id": "id",
+  "name": "Indonesian",
+  "endonym": "Bahasa Indonesia",
+  "aliases": [
+   "Bahasa Indonesia"
+  ],
+  "family": "Austronesian",
+  "branch": "Malayo-Polynesian",
+  "l1": 45,
+  "total": 199,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [
+   "IDN"
+  ],
+  "core": [
+   "IDN"
+  ],
+  "also": [
+   "TLS"
+  ],
+  "wiki": "Indonesian language",
+  "tts": "id-ID",
+  "phrases": {
+   "hello": {
+    "text": "Halo",
+    "rom": "",
+    "say": "HAH-loh"
+   },
+   "thanks": {
+    "text": "Terima kasih",
+    "rom": "",
+    "say": "teh-REE-mah KAH-see"
+   },
+   "bye": {
+    "text": "Selamat tinggal",
+    "rom": "",
+    "say": "seh-LAH-mat TING-gal"
+   }
   },
-  {
-    "id": "jv",
-    "name": "Javanese",
-    "endonym": "Basa Jawa",
-    "aliases": [
-      "Basa Jawa"
-    ],
-    "family": "Austronesian",
-    "branch": "Malayo-Polynesian",
-    "l1": 68,
-    "total": 68,
-    "scripts": [
-      "Latin",
-      "Javanese"
-    ],
-    "official": [],
-    "core": [
-      "IDN-1224",
-      "IDN-1233",
-      "IDN-540"
-    ],
-    "also": [
-      "IDN-1223"
-    ],
-    "wiki": "Javanese language",
-    "tts": "jv-ID",
-    "phrases": {
-      "hello": {
-        "text": "Halo",
-        "rom": "",
-        "say": "HAH-loh"
-      },
-      "thanks": {
-        "text": "Matur nuwun",
-        "rom": "",
-        "say": "MAH-toor NOO-woon"
-      },
-      "bye": {
-        "text": "Pamit",
-        "rom": "",
-        "say": "PAH-mit"
-      }
-    },
-    "facts": [
-      "Spoken across central and eastern Java, home to more native speakers than any other language without national official status.",
-      "Has an elaborate system of speech levels used depending on the listener's age and status.",
-      "Traditionally written in its own Javanese script, though Latin script dominates today.",
-      "Not the national language of Indonesia, which is a standardised Malay instead."
-    ]
+  "facts": [
+   "The national language of Indonesia, a standardised form of Malay adopted at independence.",
+   "Serves as a unifying lingua franca across an archipelago with over 700 local languages.",
+   "Written in the Latin alphabet with straightforward, mostly phonetic spelling.",
+   "Most Indonesians grow up speaking a regional language at home and learn Indonesian at school."
+  ]
+ },
+ {
+  "id": "jv",
+  "name": "Javanese",
+  "endonym": "Basa Jawa",
+  "aliases": [
+   "Basa Jawa"
+  ],
+  "family": "Austronesian",
+  "branch": "Malayo-Polynesian",
+  "l1": 68,
+  "total": 68,
+  "scripts": [
+   "Latin",
+   "Javanese"
+  ],
+  "official": [],
+  "core": [
+   "IDN-1224",
+   "IDN-1233",
+   "IDN-540"
+  ],
+  "also": [
+   "IDN-1223"
+  ],
+  "wiki": "Javanese language",
+  "tts": "jv-ID",
+  "phrases": {
+   "hello": {
+    "text": "Halo",
+    "rom": "",
+    "say": "HAH-loh"
+   },
+   "thanks": {
+    "text": "Matur nuwun",
+    "rom": "",
+    "say": "MAH-toor NOO-woon"
+   },
+   "bye": {
+    "text": "Pamit",
+    "rom": "",
+    "say": "PAH-mit"
+   }
   },
-  {
-    "id": "su",
-    "name": "Sundanese",
-    "endonym": "Basa Sunda",
-    "aliases": [
-      "Basa Sunda"
-    ],
-    "family": "Austronesian",
-    "branch": "Malayo-Polynesian",
-    "l1": 32,
-    "total": 32,
-    "scripts": [
-      "Latin",
-      "Sundanese"
-    ],
-    "official": [],
-    "core": [
-      "IDN-1223",
-      "IDN-1226"
-    ],
-    "also": [],
-    "wiki": "Sundanese language",
-    "tts": "su-ID",
-    "phrases": {
-      "hello": {
-        "text": "Halo",
-        "rom": "",
-        "say": "HAH-loh"
-      },
-      "thanks": {
-        "text": "Hatur nuhun",
-        "rom": "",
-        "say": "HAH-toor NOO-hoon"
-      },
-      "bye": {
-        "text": "Mangga",
-        "rom": "",
-        "say": "MAHNG-gah"
-      }
-    },
-    "facts": [
-      "Spoken in West Java and Banten, in the highlands around Bandung.",
-      "The second most-spoken home language of Indonesia after Javanese.",
-      "Once written in its own Sundanese script, now mostly in Latin letters.",
-      "Distinct from Javanese despite being a close geographic and linguistic neighbour."
-    ]
+  "facts": [
+   "Spoken across central and eastern Java, home to more native speakers than any other language without national official status.",
+   "Has an elaborate system of speech levels used depending on the listener's age and status.",
+   "Traditionally written in its own Javanese script, though Latin script dominates today.",
+   "Not the national language of Indonesia, which is a standardised Malay instead."
+  ]
+ },
+ {
+  "id": "su",
+  "name": "Sundanese",
+  "endonym": "Basa Sunda",
+  "aliases": [
+   "Basa Sunda"
+  ],
+  "family": "Austronesian",
+  "branch": "Malayo-Polynesian",
+  "l1": 32,
+  "total": 32,
+  "scripts": [
+   "Latin",
+   "Sundanese"
+  ],
+  "official": [],
+  "core": [
+   "IDN-1223",
+   "IDN-1226"
+  ],
+  "also": [],
+  "wiki": "Sundanese language",
+  "tts": "su-ID",
+  "phrases": {
+   "hello": {
+    "text": "Sampurasun",
+    "rom": "",
+    "say": "sahm-poo-RAH-soon"
+   },
+   "thanks": {
+    "text": "Hatur nuhun",
+    "rom": "",
+    "say": "HAH-toor NOO-hoon"
+   },
+   "bye": {
+    "text": "Mangga",
+    "rom": "",
+    "say": "MAHNG-gah"
+   }
   },
-  {
-    "id": "tl",
-    "name": "Tagalog (Filipino)",
-    "endonym": "Tagalog",
-    "aliases": [
-      "Filipino",
-      "Pilipino"
-    ],
-    "family": "Austronesian",
-    "branch": "Malayo-Polynesian",
-    "l1": 28,
-    "total": 82,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [
-      "PHL"
-    ],
-    "core": [
-      "PHL-5543",
-      "PHL-2565",
-      "PHL-2567",
-      "PHL-2563",
-      "PHL-2566",
-      "PHL-2564",
-      "PHL-2572",
-      "PHL-2557",
-      "PHL-2555",
-      "PHL-2549",
-      "PHL-2569",
-      "PHL-2570",
-      "PHL-2571",
-      "PHL-2535"
-    ],
-    "also": [],
-    "wiki": "Tagalog language",
-    "tts": "fil-PH",
-    "phrases": {
-      "hello": {
-        "text": "Kumusta",
-        "rom": "",
-        "say": "koo-moos-TAH"
-      },
-      "thanks": {
-        "text": "Salamat",
-        "rom": "",
-        "say": "sah-LAH-mat"
-      },
-      "bye": {
-        "text": "Paalam",
-        "rom": "",
-        "say": "pah-AH-lam"
-      }
-    },
-    "facts": [
-      "Spoken natively in Manila and the surrounding provinces of southern and central Luzon.",
-      "Standardised as Filipino, the national language of the Philippines, and taught nationwide.",
-      "Absorbed heavy Spanish and, more recently, English vocabulary.",
-      "The Philippines has over 180 languages; Tagalog speakers are a large plurality, not a majority."
-    ]
+  "facts": [
+   "Spoken in West Java and Banten, in the highlands around Bandung.",
+   "The second most-spoken home language of Indonesia after Javanese.",
+   "Once written in its own Sundanese script, now mostly in Latin letters.",
+   "Distinct from Javanese despite being a close geographic and linguistic neighbour."
+  ]
+ },
+ {
+  "id": "tl",
+  "name": "Tagalog (Filipino)",
+  "endonym": "Tagalog",
+  "aliases": [
+   "Filipino",
+   "Pilipino"
+  ],
+  "family": "Austronesian",
+  "branch": "Malayo-Polynesian",
+  "l1": 28,
+  "total": 82,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [
+   "PHL"
+  ],
+  "core": [
+   "PHL-5543",
+   "PHL-2565",
+   "PHL-2567",
+   "PHL-2563",
+   "PHL-2566",
+   "PHL-2564",
+   "PHL-2572",
+   "PHL-2557",
+   "PHL-2555",
+   "PHL-2549",
+   "PHL-2569",
+   "PHL-2570",
+   "PHL-2571",
+   "PHL-2535"
+  ],
+  "also": [],
+  "wiki": "Tagalog language",
+  "tts": "fil-PH",
+  "phrases": {
+   "hello": {
+    "text": "Kumusta",
+    "rom": "",
+    "say": "koo-moos-TAH"
+   },
+   "thanks": {
+    "text": "Salamat",
+    "rom": "",
+    "say": "sah-LAH-mat"
+   },
+   "bye": {
+    "text": "Paalam",
+    "rom": "",
+    "say": "pah-AH-lam"
+   }
   },
-  {
-    "id": "ceb",
-    "name": "Cebuano",
-    "endonym": "Sinugboanong Binisaya",
-    "aliases": [
-      "Visayan",
-      "Bisaya",
-      "Binisaya"
-    ],
-    "family": "Austronesian",
-    "branch": "Malayo-Polynesian",
-    "l1": 20,
-    "total": 20,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [],
-    "core": [
-      "PHL-2514",
-      "PHL-2513",
-      "PHL-2516",
-      "PHL-2517",
-      "PHL-2583",
-      "PHL-2585",
-      "PHL-2581",
-      "PHL-2523",
-      "PHL-2595",
-      "PHL-2589",
-      "PHL-2591",
-      "PHL-2596",
-      "PHL-2597",
-      "PHL-2587",
-      "PHL-2588",
-      "PHL-2593",
-      "PHL-2594",
-      "PHL-2599",
-      "PHL-2598",
-      "PHL-2520",
-      "PHL-2522",
-      "PHL-2521",
-      "PHL-2592"
-    ],
-    "also": [],
-    "wiki": "Cebuano language",
-    "tts": "ceb-PH",
-    "phrases": {
-      "hello": {
-        "text": "Kumusta",
-        "rom": "",
-        "say": "koo-moos-TAH"
-      },
-      "thanks": {
-        "text": "Salamat",
-        "rom": "",
-        "say": "sah-LAH-mat"
-      },
-      "bye": {
-        "text": "Babay",
-        "rom": "",
-        "say": "bah-BYE"
-      }
-    },
-    "facts": [
-      "Spoken across Cebu, Bohol, Negros Oriental, Leyte and much of northern and eastern Mindanao.",
-      "By some counts has more native speakers than Tagalog, though it has no official national status.",
-      "Also called Bisaya or Binisaya by its own speakers, one of several Visayan languages.",
-      "Closely related to, but distinct from, Hiligaynon and Waray, spoken in nearby islands."
-    ]
+  "facts": [
+   "Spoken natively in Manila and the surrounding provinces of southern and central Luzon.",
+   "Standardised as Filipino, the national language of the Philippines, and taught nationwide.",
+   "Absorbed heavy Spanish and, more recently, English vocabulary.",
+   "The Philippines has over 180 languages; Tagalog speakers are a large plurality, not a majority."
+  ]
+ },
+ {
+  "id": "ceb",
+  "name": "Cebuano",
+  "endonym": "Sinugboanong Binisaya",
+  "aliases": [
+   "Visayan",
+   "Bisaya",
+   "Binisaya"
+  ],
+  "family": "Austronesian",
+  "branch": "Malayo-Polynesian",
+  "l1": 20,
+  "total": 20,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [],
+  "core": [
+   "PHL-2514",
+   "PHL-2513",
+   "PHL-2516",
+   "PHL-2517",
+   "PHL-2583",
+   "PHL-2585",
+   "PHL-2581",
+   "PHL-2523",
+   "PHL-2595",
+   "PHL-2589",
+   "PHL-2591",
+   "PHL-2596",
+   "PHL-2597",
+   "PHL-2587",
+   "PHL-2588",
+   "PHL-2593",
+   "PHL-2594",
+   "PHL-2599",
+   "PHL-2598",
+   "PHL-2520",
+   "PHL-2522",
+   "PHL-2521",
+   "PHL-2592"
+  ],
+  "also": [],
+  "wiki": "Cebuano language",
+  "tts": "ceb-PH",
+  "phrases": {
+   "hello": {
+    "text": "Kumusta",
+    "rom": "",
+    "say": "koo-moos-TAH"
+   },
+   "thanks": {
+    "text": "Salamat",
+    "rom": "",
+    "say": "sah-LAH-mat"
+   },
+   "bye": {
+    "text": "Babay",
+    "rom": "",
+    "say": "bah-BYE"
+   }
   },
-  {
-    "id": "hi",
-    "name": "Hindi",
-    "endonym": "हिन्दी (Hindī)",
-    "aliases": [
-      "Hindustani"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 345,
-    "total": 610,
-    "scripts": [
-      "Devanagari"
-    ],
-    "official": [
-      "IND"
-    ],
-    "core": [
-      "IND-3253",
-      "IND-3254",
-      "IND-3261",
-      "IND-3260",
-      "IND-3250",
-      "IND-2430",
-      "IND-2428",
-      "IND-2429",
-      "IND-2427"
-    ],
-    "also": [
-      "IND-3258",
-      "IND-3256",
-      "FJI"
-    ],
-    "wiki": "Hindi",
-    "tts": "hi-IN",
-    "phrases": {
-      "hello": {
-        "text": "नमस्ते",
-        "rom": "Namaste",
-        "say": "nuh-muh-STAY"
-      },
-      "thanks": {
-        "text": "धन्यवाद",
-        "rom": "Dhanyavad",
-        "say": "dhun-yuh-VAHD"
-      },
-      "bye": {
-        "text": "अलविदा",
-        "rom": "Alvida",
-        "say": "ahl-vee-DAH"
-      }
-    },
-    "facts": [
-      "One of India's two national-level official languages, alongside English.",
-      "Centred on the 'Hindi belt' of north India: Uttar Pradesh, Madhya Pradesh, Rajasthan and neighbours.",
-      "Written in Devanagari, shared with Sanskrit and Marathi.",
-      "Shares a largely common spoken grammar with Urdu, though the two use different scripts and formal vocabulary."
-    ]
+  "facts": [
+   "Spoken across Cebu, Bohol, Negros Oriental, Leyte and much of northern and eastern Mindanao.",
+   "By some counts has more native speakers than Tagalog, though it has no official national status.",
+   "Also called Bisaya or Binisaya by its own speakers, one of several Visayan languages.",
+   "Closely related to, but distinct from, Hiligaynon and Waray, spoken in nearby islands."
+  ]
+ },
+ {
+  "id": "hi",
+  "name": "Hindi",
+  "endonym": "हिन्दी (Hindī)",
+  "aliases": [
+   "Hindustani"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 345,
+  "total": 610,
+  "scripts": [
+   "Devanagari"
+  ],
+  "official": [
+   "IND"
+  ],
+  "core": [
+   "IND-3253",
+   "IND-3254",
+   "IND-3261",
+   "IND-3260",
+   "IND-3250",
+   "IND-2430",
+   "IND-2428",
+   "IND-2429",
+   "IND-2427"
+  ],
+  "also": [
+   "IND-3258",
+   "IND-3256",
+   "FJI"
+  ],
+  "wiki": "Hindi",
+  "tts": "hi-IN",
+  "phrases": {
+   "hello": {
+    "text": "नमस्ते",
+    "rom": "Namaste",
+    "say": "nuh-muh-STAY"
+   },
+   "thanks": {
+    "text": "धन्यवाद",
+    "rom": "Dhanyavad",
+    "say": "dhun-yuh-VAHD"
+   },
+   "bye": {
+    "text": "अलविदा",
+    "rom": "Alvida",
+    "say": "ahl-vee-DAH"
+   }
   },
-  {
-    "id": "ur",
-    "name": "Urdu",
-    "endonym": "اردو (Urdū)",
-    "aliases": [
-      "Hindustani"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 70,
-    "total": 230,
-    "scripts": [
-      "Arabic"
-    ],
-    "official": [
-      "PAK"
-    ],
-    "core": [],
-    "also": [
-      "PAK",
-      "IND-2431",
-      "IND-2428",
-      "IND-3253",
-      "IND-3258",
-      "IND-20011"
-    ],
-    "wiki": "Urdu",
-    "tts": "ur-PK",
-    "phrases": {
-      "hello": {
-        "text": "السلام علیکم",
-        "rom": "Assalamu alaikum",
-        "say": "ah-sah-LAH-moo ah-LAY-koom"
-      },
-      "thanks": {
-        "text": "شکریہ",
-        "rom": "Shukriya",
-        "say": "shook-REE-yah"
-      },
-      "bye": {
-        "text": "خدا حافظ",
-        "rom": "Khuda hafiz",
-        "say": "koo-DAH HAH-fiz"
-      }
-    },
-    "facts": [
-      "The national language of Pakistan, though most Pakistanis speak Punjabi, Pashto, Sindhi or another language at home.",
-      "Written in a Perso-Arabic script, unlike its close relative Hindi which uses Devanagari.",
-      "Spoken daily in the home by a sizeable minority, especially in Pakistani cities like Karachi, and parts of north India.",
-      "Grammatically very close to Hindi; the two are often considered one spoken language with two literary traditions."
-    ]
+  "facts": [
+   "One of India's two national-level official languages, alongside English.",
+   "Centred on the 'Hindi belt' of north India: Uttar Pradesh, Madhya Pradesh, Rajasthan and neighbours.",
+   "Written in Devanagari, shared with Sanskrit and Marathi.",
+   "Shares a largely common spoken grammar with Urdu, though the two use different scripts and formal vocabulary."
+  ]
+ },
+ {
+  "id": "ur",
+  "name": "Urdu",
+  "endonym": "اردو (Urdū)",
+  "aliases": [
+   "Hindustani"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 70,
+  "total": 230,
+  "scripts": [
+   "Arabic"
+  ],
+  "official": [
+   "PAK"
+  ],
+  "core": [],
+  "also": [
+   "PAK",
+   "IND-2431",
+   "IND-2428",
+   "IND-3253",
+   "IND-3258",
+   "IND-20011"
+  ],
+  "wiki": "Urdu",
+  "tts": "ur-PK",
+  "phrases": {
+   "hello": {
+    "text": "السلام علیکم",
+    "rom": "Assalamu alaikum",
+    "say": "ah-sah-LAH-moo ah-LAY-koom"
+   },
+   "thanks": {
+    "text": "شکریہ",
+    "rom": "Shukriya",
+    "say": "shook-REE-yah"
+   },
+   "bye": {
+    "text": "خدا حافظ",
+    "rom": "Khuda hafiz",
+    "say": "koo-DAH HAH-fiz"
+   }
   },
-  {
-    "id": "bn",
-    "name": "Bengali",
-    "endonym": "বাংলা (Bangla)",
-    "aliases": [
-      "Bangla"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 234,
-    "total": 273,
-    "scripts": [
-      "Bengali"
-    ],
-    "official": [
-      "BGD"
-    ],
-    "core": [
-      "BGD",
-      "IND-3257",
-      "IND-2474"
-    ],
-    "also": [
-      "IND-3301"
-    ],
-    "wiki": "Bengali language",
-    "tts": "bn-BD",
-    "phrases": {
-      "hello": {
-        "text": "নমস্কার",
-        "rom": "Nomoshkar",
-        "say": "noh-mosh-KAHR"
-      },
-      "thanks": {
-        "text": "ধন্যবাদ",
-        "rom": "Dhonnobad",
-        "say": "dhon-noh-BAHD"
-      },
-      "bye": {
-        "text": "বিদায়",
-        "rom": "Bidae",
-        "say": "bee-DAH-eye"
-      }
-    },
-    "facts": [
-      "The national language of Bangladesh and official language of the Indian state of West Bengal.",
-      "One of the most-spoken languages in the world, with speakers concentrated in the Bengal delta.",
-      "Its own 1952 language movement in East Pakistan helped lead to the creation of Bangladesh.",
-      "Uses the Bengali script, also used to write Assamese."
-    ]
+  "facts": [
+   "The national language of Pakistan, though most Pakistanis speak Punjabi, Pashto, Sindhi or another language at home.",
+   "Written in a Perso-Arabic script, unlike its close relative Hindi which uses Devanagari.",
+   "Spoken daily in the home by a sizeable minority, especially in Pakistani cities like Karachi, and parts of north India.",
+   "Grammatically very close to Hindi; the two are often considered one spoken language with two literary traditions."
+  ]
+ },
+ {
+  "id": "bn",
+  "name": "Bengali",
+  "endonym": "বাংলা (Bangla)",
+  "aliases": [
+   "Bangla"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 234,
+  "total": 273,
+  "scripts": [
+   "Bengali"
+  ],
+  "official": [
+   "BGD"
+  ],
+  "core": [
+   "BGD",
+   "IND-3257",
+   "IND-2474"
+  ],
+  "also": [
+   "IND-3301"
+  ],
+  "wiki": "Bengali language",
+  "tts": "bn-BD",
+  "phrases": {
+   "hello": {
+    "text": "নমস্কার",
+    "rom": "Nomoshkar",
+    "say": "noh-mosh-KAHR"
+   },
+   "thanks": {
+    "text": "ধন্যবাদ",
+    "rom": "Dhonnobad",
+    "say": "dhon-noh-BAHD"
+   },
+   "bye": {
+    "text": "বিদায়",
+    "rom": "Bidae",
+    "say": "bee-DAH-eye"
+   }
   },
-  {
-    "id": "pa",
-    "name": "Punjabi",
-    "endonym": "ਪੰਜਾਬੀ / پنجابی (Panjabi)",
-    "aliases": [
-      "Panjabi"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 125,
-    "total": 125,
-    "scripts": [
-      "Gurmukhi",
-      "Arabic"
-    ],
-    "official": [
-      "IND"
-    ],
-    "core": [
-      "IND-3249",
-      "PAK-1113"
-    ],
-    "also": [
-      "IND-2427"
-    ],
-    "wiki": "Punjabi language",
-    "tts": "pa-IN",
-    "phrases": {
-      "hello": {
-        "text": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
-        "rom": "Sat sri akal",
-        "say": "sut-SREE ah-KAHL"
-      },
-      "thanks": {
-        "text": "ਧੰਨਵਾਦ",
-        "rom": "Dhannavad",
-        "say": "dhun-nuh-VAHD"
-      },
-      "bye": {
-        "text": "ਫਿਰ ਮਿਲਾਂਗੇ",
-        "rom": "Phir milange",
-        "say": "feer mee-LAHN-geh"
-      }
-    },
-    "facts": [
-      "Split by the 1947 partition of Punjab between India and Pakistan.",
-      "In India it is written in the Gurmukhi script, associated with Sikhism; in Pakistan, in a Perso-Arabic script, Shahmukhi.",
-      "Has more native speakers in Pakistan than in India, though it holds no national official status there.",
-      "A tonal language, unusual among Indo-Aryan languages."
-    ]
+  "facts": [
+   "The national language of Bangladesh and official language of the Indian state of West Bengal.",
+   "One of the most-spoken languages in the world, with speakers concentrated in the Bengal delta.",
+   "Its own 1952 language movement in East Pakistan helped lead to the creation of Bangladesh.",
+   "Uses the Bengali script, also used to write Assamese."
+  ]
+ },
+ {
+  "id": "pa",
+  "name": "Punjabi",
+  "endonym": "ਪੰਜਾਬੀ / پنجابی (Panjabi)",
+  "aliases": [
+   "Panjabi"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 125,
+  "total": 125,
+  "scripts": [
+   "Gurmukhi",
+   "Arabic"
+  ],
+  "official": [],
+  "core": [
+   "IND-3249",
+   "PAK-1113"
+  ],
+  "also": [
+   "IND-2427"
+  ],
+  "wiki": "Punjabi language",
+  "tts": "pa-IN",
+  "phrases": {
+   "hello": {
+    "text": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+    "rom": "Sat sri akal",
+    "say": "sut-SREE ah-KAHL"
+   },
+   "thanks": {
+    "text": "ਧੰਨਵਾਦ",
+    "rom": "Dhannavad",
+    "say": "dhun-nuh-VAHD"
+   },
+   "bye": {
+    "text": "ਫਿਰ ਮਿਲਾਂਗੇ",
+    "rom": "Phir milange",
+    "say": "feer mee-LAHN-geh"
+   }
   },
-  {
-    "id": "mr",
-    "name": "Marathi",
-    "endonym": "मराठी (Marathi)",
-    "aliases": [],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 83,
-    "total": 99,
-    "scripts": [
-      "Devanagari"
-    ],
-    "official": [],
-    "core": [
-      "IND-2447"
-    ],
-    "also": [
-      "IND-3265"
-    ],
-    "wiki": "Marathi language",
-    "tts": "mr-IN",
-    "phrases": {
-      "hello": {
-        "text": "नमस्कार",
-        "rom": "Namaskar",
-        "say": "nuh-mus-KAHR"
-      },
-      "thanks": {
-        "text": "धन्यवाद",
-        "rom": "Dhanyavad",
-        "say": "dhun-yuh-VAHD"
-      },
-      "bye": {
-        "text": "निरोप",
-        "rom": "Nirop",
-        "say": "nee-ROHP"
-      }
-    },
-    "facts": [
-      "Official language of Maharashtra state, home to Mumbai.",
-      "One of the oldest Indo-Aryan literary languages, with records going back over a thousand years.",
-      "Written in Devanagari, the same script used for Hindi and Sanskrit.",
-      "Has a rich tradition of saint-poetry and, more recently, Marathi cinema and theatre."
-    ]
+  "facts": [
+   "Split by the 1947 partition of Punjab between India and Pakistan.",
+   "In India it is written in the Gurmukhi script, associated with Sikhism; in Pakistan, in a Perso-Arabic script, Shahmukhi.",
+   "Has more native speakers in Pakistan than in India, though it holds no national official status there.",
+   "A tonal language, unusual among Indo-Aryan languages."
+  ]
+ },
+ {
+  "id": "mr",
+  "name": "Marathi",
+  "endonym": "मराठी (Marathi)",
+  "aliases": [],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 83,
+  "total": 99,
+  "scripts": [
+   "Devanagari"
+  ],
+  "official": [],
+  "core": [
+   "IND-2447"
+  ],
+  "also": [
+   "IND-3265"
+  ],
+  "wiki": "Marathi language",
+  "tts": "mr-IN",
+  "phrases": {
+   "hello": {
+    "text": "नमस्कार",
+    "rom": "Namaskar",
+    "say": "nuh-mus-KAHR"
+   },
+   "thanks": {
+    "text": "धन्यवाद",
+    "rom": "Dhanyavad",
+    "say": "dhun-yuh-VAHD"
+   },
+   "bye": {
+    "text": "निरोप",
+    "rom": "Nirop",
+    "say": "nee-ROHP"
+   }
   },
-  {
-    "id": "gu",
-    "name": "Gujarati",
-    "endonym": "ગુજરાતી (Gujarati)",
-    "aliases": [],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 57,
-    "total": 57,
-    "scripts": [
-      "Gujarati"
-    ],
-    "official": [],
-    "core": [
-      "IND-3264"
-    ],
-    "also": [
-      "IND-2445"
-    ],
-    "wiki": "Gujarati language",
-    "tts": "gu-IN",
-    "phrases": {
-      "hello": {
-        "text": "નમસ્તે",
-        "rom": "Namaste",
-        "say": "nuh-muh-STAY"
-      },
-      "thanks": {
-        "text": "આભાર",
-        "rom": "Abhar",
-        "say": "ah-BHAR"
-      },
-      "bye": {
-        "text": "આવજો",
-        "rom": "Aavjo",
-        "say": "AHV-joh"
-      }
-    },
-    "facts": [
-      "Official language of Gujarat state in western India; Mahatma Gandhi's native language.",
-      "Its script dropped the horizontal headline found in Devanagari.",
-      "Carried worldwide by a large Gujarati trading and emigrant diaspora, especially in East Africa and the UK.",
-      "Closely related to Hindi and Rajasthani, within the Indo-Aryan family."
-    ]
+  "facts": [
+   "Official language of Maharashtra state, home to Mumbai.",
+   "One of the oldest Indo-Aryan literary languages, with records going back over a thousand years.",
+   "Written in Devanagari, the same script used for Hindi and Sanskrit.",
+   "Has a rich tradition of saint-poetry and, more recently, Marathi cinema and theatre."
+  ]
+ },
+ {
+  "id": "gu",
+  "name": "Gujarati",
+  "endonym": "ગુજરાતી (Gujarati)",
+  "aliases": [],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 57,
+  "total": 57,
+  "scripts": [
+   "Gujarati"
+  ],
+  "official": [],
+  "core": [
+   "IND-3264"
+  ],
+  "also": [
+   "IND-2445"
+  ],
+  "wiki": "Gujarati language",
+  "tts": "gu-IN",
+  "phrases": {
+   "hello": {
+    "text": "નમસ્તે",
+    "rom": "Namaste",
+    "say": "nuh-muh-STAY"
+   },
+   "thanks": {
+    "text": "આભાર",
+    "rom": "Abhar",
+    "say": "ah-BHAR"
+   },
+   "bye": {
+    "text": "આવજો",
+    "rom": "Aavjo",
+    "say": "AHV-joh"
+   }
   },
-  {
-    "id": "kn",
-    "name": "Kannada",
-    "endonym": "ಕನ್ನಡ (Kannada)",
-    "aliases": [],
-    "family": "Dravidian",
-    "branch": "South Dravidian",
-    "l1": 44,
-    "total": 57,
-    "scripts": [
-      "Kannada"
-    ],
-    "official": [],
-    "core": [
-      "IND-2446"
-    ],
-    "also": [],
-    "wiki": "Kannada",
-    "tts": "kn-IN",
-    "phrases": {
-      "hello": {
-        "text": "ನಮಸ್ಕಾರ",
-        "rom": "Namaskara",
-        "say": "nuh-mus-KAH-rah"
-      },
-      "thanks": {
-        "text": "ಧನ್ಯವಾದ",
-        "rom": "Dhanyavada",
-        "say": "dhun-yuh-VAH-dah"
-      },
-      "bye": {
-        "text": "ಹೋಗಿ ಬರುತ್ತೇನೆ",
-        "rom": "Hogi baruttene",
-        "say": "hoh-gee buh-root-TAY-neh"
-      }
-    },
-    "facts": [
-      "Official language of Karnataka state, home to Bangalore.",
-      "A Dravidian language, unrelated to the Indo-Aryan languages of north India.",
-      "Has one of the oldest continuous literary traditions among Dravidian languages, dating back over 1,500 years.",
-      "Written in its own rounded script, related to Telugu's."
-    ]
+  "facts": [
+   "Official language of Gujarat state in western India; Mahatma Gandhi's native language.",
+   "Its script dropped the horizontal headline found in Devanagari.",
+   "Carried worldwide by a large Gujarati trading and emigrant diaspora, especially in East Africa and the UK.",
+   "Closely related to Hindi and Rajasthani, within the Indo-Aryan family."
+  ]
+ },
+ {
+  "id": "kn",
+  "name": "Kannada",
+  "endonym": "ಕನ್ನಡ (Kannada)",
+  "aliases": [],
+  "family": "Dravidian",
+  "branch": "South Dravidian",
+  "l1": 44,
+  "total": 57,
+  "scripts": [
+   "Kannada"
+  ],
+  "official": [],
+  "core": [
+   "IND-2446"
+  ],
+  "also": [],
+  "wiki": "Kannada",
+  "tts": "kn-IN",
+  "phrases": {
+   "hello": {
+    "text": "ನಮಸ್ಕಾರ",
+    "rom": "Namaskara",
+    "say": "nuh-mus-KAH-rah"
+   },
+   "thanks": {
+    "text": "ಧನ್ಯವಾದ",
+    "rom": "Dhanyavada",
+    "say": "dhun-yuh-VAH-dah"
+   },
+   "bye": {
+    "text": "ಹೋಗಿ ಬರುತ್ತೇನೆ",
+    "rom": "Hogi baruttene",
+    "say": "hoh-gee buh-root-TAY-neh"
+   }
   },
-  {
-    "id": "ml",
-    "name": "Malayalam",
-    "endonym": "മലയാളം (Malayalam)",
-    "aliases": [],
-    "family": "Dravidian",
-    "branch": "South Dravidian",
-    "l1": 35,
-    "total": 38,
-    "scripts": [
-      "Malayalam"
-    ],
-    "official": [],
-    "core": [
-      "IND-2442",
-      "IND-2443"
-    ],
-    "also": [],
-    "wiki": "Malayalam",
-    "tts": "ml-IN",
-    "phrases": {
-      "hello": {
-        "text": "നമസ്കാരം",
-        "rom": "Namaskaram",
-        "say": "nuh-mus-KAH-rum"
-      },
-      "thanks": {
-        "text": "നന്ദി",
-        "rom": "Nandi",
-        "say": "NUN-dee"
-      },
-      "bye": {
-        "text": "വീണ്ടും കാണാം",
-        "rom": "Veendum kanam",
-        "say": "veen-dum KAH-nahm"
-      }
-    },
-    "facts": [
-      "Official language of Kerala state in southwestern India.",
-      "Split off from Tamil roughly a thousand years ago and developed its own script.",
-      "Its script contains among the largest number of letters of any Indian script.",
-      "Kerala has one of India's largest diaspora communities in the Gulf states, carrying Malayalam abroad."
-    ]
+  "facts": [
+   "Official language of Karnataka state, home to Bangalore.",
+   "A Dravidian language, unrelated to the Indo-Aryan languages of north India.",
+   "Has one of the oldest continuous literary traditions among Dravidian languages, dating back over 1,500 years.",
+   "Written in its own rounded script, related to Telugu's."
+  ]
+ },
+ {
+  "id": "ml",
+  "name": "Malayalam",
+  "endonym": "മലയാളം (Malayalam)",
+  "aliases": [],
+  "family": "Dravidian",
+  "branch": "South Dravidian",
+  "l1": 35,
+  "total": 38,
+  "scripts": [
+   "Malayalam"
+  ],
+  "official": [],
+  "core": [
+   "IND-2442",
+   "IND-2443"
+  ],
+  "also": [],
+  "wiki": "Malayalam",
+  "tts": "ml-IN",
+  "phrases": {
+   "hello": {
+    "text": "നമസ്കാരം",
+    "rom": "Namaskaram",
+    "say": "nuh-mus-KAH-rum"
+   },
+   "thanks": {
+    "text": "നന്ദി",
+    "rom": "Nandi",
+    "say": "NUN-dee"
+   },
+   "bye": {
+    "text": "വീണ്ടും കാണാം",
+    "rom": "Veendum kanam",
+    "say": "veen-dum KAH-nahm"
+   }
   },
-  {
-    "id": "te",
-    "name": "Telugu",
-    "endonym": "తెలుగు (Telugu)",
-    "aliases": [],
-    "family": "Dravidian",
-    "branch": "South-Central Dravidian",
-    "l1": 83,
-    "total": 96,
-    "scripts": [
-      "Telugu"
-    ],
-    "official": [],
-    "core": [
-      "IND-2441",
-      "IND-20011"
-    ],
-    "also": [],
-    "wiki": "Telugu language",
-    "tts": "te-IN",
-    "phrases": {
-      "hello": {
-        "text": "నమస్కారం",
-        "rom": "Namaskaram",
-        "say": "nuh-mus-KAH-rum"
-      },
-      "thanks": {
-        "text": "ధన్యవాదాలు",
-        "rom": "Dhanyavadalu",
-        "say": "dhun-yuh-vah-DAH-loo"
-      },
-      "bye": {
-        "text": "వీడ్కోలు",
-        "rom": "Veedkolu",
-        "say": "veed-KOH-loo"
-      }
-    },
-    "facts": [
-      "Official language of Andhra Pradesh and Telangana, spoken around Hyderabad.",
-      "Has the most native speakers of any Dravidian language.",
-      "Nicknamed the 'Italian of the East' by colonial-era observers for its vowel-rich, melodic sound.",
-      "Written in its own rounded Telugu script, closely related to Kannada's."
-    ]
+  "facts": [
+   "Official language of Kerala state in southwestern India.",
+   "Split off from Tamil roughly a thousand years ago and developed its own script.",
+   "Its script contains among the largest number of letters of any Indian script.",
+   "Kerala has one of India's largest diaspora communities in the Gulf states, carrying Malayalam abroad."
+  ]
+ },
+ {
+  "id": "te",
+  "name": "Telugu",
+  "endonym": "తెలుగు (Telugu)",
+  "aliases": [],
+  "family": "Dravidian",
+  "branch": "South-Central Dravidian",
+  "l1": 83,
+  "total": 96,
+  "scripts": [
+   "Telugu"
+  ],
+  "official": [],
+  "core": [
+   "IND-2441",
+   "IND-20011"
+  ],
+  "also": [],
+  "wiki": "Telugu language",
+  "tts": "te-IN",
+  "phrases": {
+   "hello": {
+    "text": "నమస్కారం",
+    "rom": "Namaskaram",
+    "say": "nuh-mus-KAH-rum"
+   },
+   "thanks": {
+    "text": "ధన్యవాదాలు",
+    "rom": "Dhanyavadalu",
+    "say": "dhun-yuh-vah-DAH-loo"
+   },
+   "bye": {
+    "text": "వీడ్కోలు",
+    "rom": "Veedkolu",
+    "say": "veed-KOH-loo"
+   }
   },
-  {
-    "id": "ta",
-    "name": "Tamil",
-    "endonym": "தமிழ் (Tamiḻ)",
-    "aliases": [],
-    "family": "Dravidian",
-    "branch": "South Dravidian",
-    "l1": 78,
-    "total": 86,
-    "scripts": [
-      "Tamil"
-    ],
-    "official": [
-      "LKA",
-      "SGP"
-    ],
-    "core": [
-      "IND-3263",
-      "LKA-2459",
-      "LKA-2460",
-      "LKA-2458",
-      "LKA-2456",
-      "LKA-2457",
-      "LKA-2454",
-      "LKA-2452"
-    ],
-    "also": [
-      "IND-3262",
-      "SGP"
-    ],
-    "wiki": "Tamil language",
-    "tts": "ta-IN",
-    "phrases": {
-      "hello": {
-        "text": "வணக்கம்",
-        "rom": "Vanakkam",
-        "say": "vuh-NUK-kum"
-      },
-      "thanks": {
-        "text": "நன்றி",
-        "rom": "Nandri",
-        "say": "NUN-dree"
-      },
-      "bye": {
-        "text": "போய் வருகிறேன்",
-        "rom": "Poi varugiren",
-        "say": "poy vuh-roo-GEE-ren"
-      }
-    },
-    "facts": [
-      "Official language of Tamil Nadu state in India and of Sri Lanka and Singapore.",
-      "One of the longest continuously used languages in the world, with literature going back over two thousand years.",
-      "Written in its own looping Tamil script.",
-      "Resisted Sanskrit influence more than most other Indian languages, keeping a largely native vocabulary."
-    ]
+  "facts": [
+   "Official language of Andhra Pradesh and Telangana, spoken around Hyderabad.",
+   "Has the most native speakers of any Dravidian language.",
+   "Nicknamed the 'Italian of the East' by colonial-era observers for its vowel-rich, melodic sound.",
+   "Written in its own rounded Telugu script, closely related to Kannada's."
+  ]
+ },
+ {
+  "id": "ta",
+  "name": "Tamil",
+  "endonym": "தமிழ் (Tamiḻ)",
+  "aliases": [],
+  "family": "Dravidian",
+  "branch": "South Dravidian",
+  "l1": 78,
+  "total": 86,
+  "scripts": [
+   "Tamil"
+  ],
+  "official": [
+   "LKA",
+   "SGP"
+  ],
+  "core": [
+   "IND-3263",
+   "LKA-2459",
+   "LKA-2460",
+   "LKA-2458",
+   "LKA-2456",
+   "LKA-2457",
+   "LKA-2454",
+   "LKA-2452"
+  ],
+  "also": [
+   "IND-3262",
+   "SGP"
+  ],
+  "wiki": "Tamil language",
+  "tts": "ta-IN",
+  "phrases": {
+   "hello": {
+    "text": "வணக்கம்",
+    "rom": "Vanakkam",
+    "say": "vuh-NUK-kum"
+   },
+   "thanks": {
+    "text": "நன்றி",
+    "rom": "Nandri",
+    "say": "NUN-dree"
+   },
+   "bye": {
+    "text": "போய் வருகிறேன்",
+    "rom": "Poi varugiren",
+    "say": "poy vuh-roo-GEE-ren"
+   }
   },
-  {
-    "id": "or",
-    "name": "Odia",
-    "endonym": "ଓଡ଼ିଆ (Odia)",
-    "aliases": [
-      "Oriya"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 38,
-    "total": 38,
-    "scripts": [
-      "Odia"
-    ],
-    "official": [],
-    "core": [
-      "IND-2444"
-    ],
-    "also": [],
-    "wiki": "Odia language",
-    "tts": "or-IN",
-    "phrases": {
-      "hello": {
-        "text": "ନମସ୍କାର",
-        "rom": "Namaskara",
-        "say": "nuh-mus-KAH-rah"
-      },
-      "thanks": {
-        "text": "ଧନ୍ୟବାଦ",
-        "rom": "Dhanyabad",
-        "say": "dhun-yuh-BAHD"
-      },
-      "bye": {
-        "text": "ବିଦାୟ",
-        "rom": "Bidaya",
-        "say": "bee-DAH-yuh"
-      }
-    },
-    "facts": [
-      "Official language of Odisha state on India's east coast.",
-      "Written in its own rounded script, shaped historically by writing on palm leaves.",
-      "One of India's languages recognised as 'classical' for the age of its literature.",
-      "Closely related to Bengali and Assamese, its eastern Indo-Aryan neighbours."
-    ]
+  "facts": [
+   "Official language of Tamil Nadu state in India and of Sri Lanka and Singapore.",
+   "One of the longest continuously used languages in the world, with literature going back over two thousand years.",
+   "Written in its own looping Tamil script.",
+   "Resisted Sanskrit influence more than most other Indian languages, keeping a largely native vocabulary."
+  ]
+ },
+ {
+  "id": "or",
+  "name": "Odia",
+  "endonym": "ଓଡ଼ିଆ (Odia)",
+  "aliases": [
+   "Oriya"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 38,
+  "total": 38,
+  "scripts": [
+   "Odia"
+  ],
+  "official": [],
+  "core": [
+   "IND-2444"
+  ],
+  "also": [],
+  "wiki": "Odia language",
+  "tts": "or-IN",
+  "phrases": {
+   "hello": {
+    "text": "ନମସ୍କାର",
+    "rom": "Namaskara",
+    "say": "nuh-mus-KAH-rah"
+   },
+   "thanks": {
+    "text": "ଧନ୍ୟବାଦ",
+    "rom": "Dhanyabad",
+    "say": "dhun-yuh-BAHD"
+   },
+   "bye": {
+    "text": "ବିଦାୟ",
+    "rom": "Bidaya",
+    "say": "bee-DAH-yuh"
+   }
   },
-  {
-    "id": "as",
-    "name": "Assamese",
-    "endonym": "অসমীয়া (Oxomiya)",
-    "aliases": [
-      "Oxomiya"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 15,
-    "total": 23,
-    "scripts": [
-      "Bengali"
-    ],
-    "official": [],
-    "core": [
-      "IND-2477"
-    ],
-    "also": [],
-    "wiki": "Assamese language",
-    "tts": "as-IN",
-    "phrases": {
-      "hello": {
-        "text": "নমস্কাৰ",
-        "rom": "Nomoskar",
-        "say": "noh-mohs-KAHR"
-      },
-      "thanks": {
-        "text": "ধন্যবাদ",
-        "rom": "Dhonyobad",
-        "say": "dhon-yoh-BAHD"
-      },
-      "bye": {
-        "text": "আকৌ পাম",
-        "rom": "Akou pam",
-        "say": "ah-koh PAHM"
-      }
-    },
-    "facts": [
-      "Official language of Assam state in India's northeast.",
-      "The easternmost of the Indo-Aryan languages, bordering Tibeto-Burman and Tai languages.",
-      "Shares its script, with minor letter differences, with Bengali.",
-      "Has its own distinct sound, including a voiceless velar fricative absent from most Indian languages."
-    ]
+  "facts": [
+   "Official language of Odisha state on India's east coast.",
+   "Written in its own rounded script, shaped historically by writing on palm leaves.",
+   "One of India's languages recognised as 'classical' for the age of its literature.",
+   "Closely related to Bengali and Assamese, its eastern Indo-Aryan neighbours."
+  ]
+ },
+ {
+  "id": "as",
+  "name": "Assamese",
+  "endonym": "অসমীয়া (Oxomiya)",
+  "aliases": [
+   "Oxomiya"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 15,
+  "total": 23,
+  "scripts": [
+   "Bengali"
+  ],
+  "official": [],
+  "core": [
+   "IND-2477"
+  ],
+  "also": [],
+  "wiki": "Assamese language",
+  "tts": "as-IN",
+  "phrases": {
+   "hello": {
+    "text": "নমস্কাৰ",
+    "rom": "Nomoskar",
+    "say": "noh-mohs-KAHR"
+   },
+   "thanks": {
+    "text": "ধন্যবাদ",
+    "rom": "Dhonyobad",
+    "say": "dhon-yoh-BAHD"
+   },
+   "bye": {
+    "text": "আকৌ পাম",
+    "rom": "Akou pam",
+    "say": "ah-koh PAHM"
+   }
   },
-  {
-    "id": "mai",
-    "name": "Maithili",
-    "endonym": "मैथिली (Maithili)",
-    "aliases": [],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 34,
-    "total": 34,
-    "scripts": [
-      "Devanagari"
-    ],
-    "official": [],
-    "core": [
-      "IND-3258"
-    ],
-    "also": [
-      "NPL-1131"
-    ],
-    "wiki": "Maithili language",
-    "tts": "hi-IN",
-    "phrases": {
-      "hello": {
-        "text": "नमस्कार",
-        "rom": "Namaskar",
-        "say": "nuh-mus-KAHR"
-      },
-      "thanks": {
-        "text": "धन्यवाद",
-        "rom": "Dhanyabad",
-        "say": "dhun-yuh-BAHD"
-      },
-      "bye": {
-        "text": "फिनु भेटब",
-        "rom": "Phinu bhetab",
-        "say": "fee-noo bheh-TUB"
-      }
-    },
-    "facts": [
-      "Spoken in the Mithila region of northern Bihar, India, and the adjoining Madhesh plains of Nepal.",
-      "Recognised as one of Nepal's official provincial languages and listed among India's scheduled languages.",
-      "Long counted by India's census as a dialect of Hindi before gaining separate recognition in 2003.",
-      "Has its own classical literary tradition, including the poetry of Vidyapati."
-    ]
+  "facts": [
+   "Official language of Assam state in India's northeast.",
+   "The easternmost of the Indo-Aryan languages, bordering Tibeto-Burman and Tai languages.",
+   "Shares its script, with minor letter differences, with Bengali.",
+   "Has its own distinct sound, including a voiceless velar fricative absent from most Indian languages."
+  ]
+ },
+ {
+  "id": "mai",
+  "name": "Maithili",
+  "endonym": "मैथिली (Maithili)",
+  "aliases": [],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 34,
+  "total": 34,
+  "scripts": [
+   "Devanagari"
+  ],
+  "official": [],
+  "core": [
+   "IND-3258"
+  ],
+  "also": [
+   "NPL-1131"
+  ],
+  "wiki": "Maithili language",
+  "tts": "hi-IN",
+  "phrases": {
+   "hello": {
+    "text": "नमस्कार",
+    "rom": "Namaskar",
+    "say": "nuh-mus-KAHR"
+   },
+   "thanks": {
+    "text": "धन्यवाद",
+    "rom": "Dhanyabad",
+    "say": "dhun-yuh-BAHD"
+   },
+   "bye": {
+    "text": "फिनु भेटब",
+    "rom": "Phinu bhetab",
+    "say": "fee-noo bheh-TUB"
+   }
   },
-  {
-    "id": "bho",
-    "name": "Bhojpuri",
-    "endonym": "भोजपुरी (Bhojpuri)",
-    "aliases": [],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 52,
-    "total": 52,
-    "scripts": [
-      "Devanagari"
-    ],
-    "official": [],
-    "core": [
-      "IND-3253"
-    ],
-    "also": [
-      "IND-3258"
-    ],
-    "wiki": "Bhojpuri language",
-    "tts": "hi-IN",
-    "phrases": {
-      "hello": {
-        "text": "नमस्कार",
-        "rom": "Namaskar",
-        "say": "nuh-mus-KAHR"
-      },
-      "thanks": {
-        "text": "धन्यवाद",
-        "rom": "Dhanyabad",
-        "say": "dhun-yuh-BAHD"
-      },
-      "bye": {
-        "text": "फिर मिलब",
-        "rom": "Phir milab",
-        "say": "feer mee-LUB"
-      }
-    },
-    "facts": [
-      "Spoken across western Bihar and eastern Uttar Pradesh, often grouped with Hindi in censuses.",
-      "Carried by 19th-century indentured labourers to Mauritius, Fiji, Trinidad, Guyana and Suriname, where it is still spoken.",
-      "Famous for its own film industry, 'Bhojpuri cinema', based in Patna and Mumbai.",
-      "Closely related to, but distinct from, neighbouring Maithili and Awadhi."
-    ]
+  "facts": [
+   "Spoken in the Mithila region of northern Bihar, India, and the adjoining Madhesh plains of Nepal.",
+   "Recognised as one of Nepal's official provincial languages and listed among India's scheduled languages.",
+   "Long counted by India's census as a dialect of Hindi before gaining separate recognition in 2003.",
+   "Has its own classical literary tradition, including the poetry of Vidyapati."
+  ]
+ },
+ {
+  "id": "bho",
+  "name": "Bhojpuri",
+  "endonym": "भोजपुरी (Bhojpuri)",
+  "aliases": [],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 52,
+  "total": 52,
+  "scripts": [
+   "Devanagari"
+  ],
+  "official": [],
+  "core": [
+   "IND-3253"
+  ],
+  "also": [
+   "IND-3258"
+  ],
+  "wiki": "Bhojpuri language",
+  "tts": "hi-IN",
+  "phrases": {
+   "hello": {
+    "text": "प्रणाम",
+    "rom": "Pranam",
+    "say": "pruh-NAHM"
+   },
+   "thanks": {
+    "text": "धन्यवाद",
+    "rom": "Dhanyabad",
+    "say": "dhun-yuh-BAHD"
+   },
+   "bye": {
+    "text": "फिर मिलब",
+    "rom": "Phir milab",
+    "say": "feer mee-LUB"
+   }
   },
-  {
-    "id": "ne",
-    "name": "Nepali",
-    "endonym": "नेपाली (Nepali)",
-    "aliases": [
-      "Gorkhali"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 17,
-    "total": 32,
-    "scripts": [
-      "Devanagari"
-    ],
-    "official": [
-      "NPL"
-    ],
-    "core": [
-      "NPL"
-    ],
-    "also": [
-      "IND-3259"
-    ],
-    "wiki": "Nepali language",
-    "tts": "ne-NP",
-    "phrases": {
-      "hello": {
-        "text": "नमस्ते",
-        "rom": "Namaste",
-        "say": "nuh-muh-STAY"
-      },
-      "thanks": {
-        "text": "धन्यवाद",
-        "rom": "Dhanyabad",
-        "say": "dhun-yuh-BAHD"
-      },
-      "bye": {
-        "text": "फेरि भेटौंला",
-        "rom": "Pheri bhetaula",
-        "say": "feh-ree bheh-TOW-lah"
-      }
-    },
-    "facts": [
-      "The official and most widely used language of Nepal, home to over 120 languages.",
-      "Also an official state language in the Indian state of Sikkim and widely spoken in Darjeeling.",
-      "Written in Devanagari, like Hindi and Sanskrit.",
-      "Spread historically with the Gorkha kingdom's expansion across the Himalayas."
-    ]
+  "facts": [
+   "Spoken across western Bihar and eastern Uttar Pradesh, often grouped with Hindi in censuses.",
+   "Carried by 19th-century indentured labourers to Mauritius, Fiji, Trinidad, Guyana and Suriname, where it is still spoken.",
+   "Famous for its own film industry, 'Bhojpuri cinema', based in Patna and Mumbai.",
+   "Closely related to, but distinct from, neighbouring Maithili and Awadhi."
+  ]
+ },
+ {
+  "id": "ne",
+  "name": "Nepali",
+  "endonym": "नेपाली (Nepali)",
+  "aliases": [
+   "Gorkhali"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 17,
+  "total": 32,
+  "scripts": [
+   "Devanagari"
+  ],
+  "official": [
+   "NPL"
+  ],
+  "core": [
+   "NPL"
+  ],
+  "also": [
+   "IND-3259"
+  ],
+  "wiki": "Nepali language",
+  "tts": "ne-NP",
+  "phrases": {
+   "hello": {
+    "text": "नमस्ते",
+    "rom": "Namaste",
+    "say": "nuh-muh-STAY"
+   },
+   "thanks": {
+    "text": "धन्यवाद",
+    "rom": "Dhanyabad",
+    "say": "dhun-yuh-BAHD"
+   },
+   "bye": {
+    "text": "फेरि भेटौंला",
+    "rom": "Pheri bhetaula",
+    "say": "feh-ree bheh-TOW-lah"
+   }
   },
-  {
-    "id": "si",
-    "name": "Sinhala",
-    "endonym": "සිංහල (Sinhala)",
-    "aliases": [
-      "Sinhalese"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 16,
-    "total": 18,
-    "scripts": [
-      "Sinhala"
-    ],
-    "official": [
-      "LKA"
-    ],
-    "core": [
-      "LKA",
-      "-LKA-2459",
-      "-LKA-2460",
-      "-LKA-2458",
-      "-LKA-2456",
-      "-LKA-2457",
-      "-LKA-2454",
-      "-LKA-2452"
-    ],
-    "also": [],
-    "wiki": "Sinhalese language",
-    "tts": "si-LK",
-    "phrases": {
-      "hello": {
-        "text": "ආයුබෝවන්",
-        "rom": "Ayubowan",
-        "say": "ah-yoo-BOH-wan"
-      },
-      "thanks": {
-        "text": "ස්තුතියි",
-        "rom": "Istutiyi",
-        "say": "stoo-TEE-yee"
-      },
-      "bye": {
-        "text": "ගිහින් එන්නම්",
-        "rom": "Gihin ennam",
-        "say": "gee-hin EN-num"
-      }
-    },
-    "facts": [
-      "The majority language of Sri Lanka, spoken mostly outside the Tamil-majority north and east.",
-      "An Indo-Aryan language isolated far south among Dravidian neighbours, reaching the island around the 5th century BCE.",
-      "Written in its own rounded Sinhala script, related to other Brahmic scripts.",
-      "Co-official with Tamil at the national level since Sri Lanka's constitution recognised both."
-    ]
+  "facts": [
+   "The official and most widely used language of Nepal, home to over 120 languages.",
+   "Also an official state language in the Indian state of Sikkim and widely spoken in Darjeeling.",
+   "Written in Devanagari, like Hindi and Sanskrit.",
+   "Spread historically with the Gorkha kingdom's expansion across the Himalayas."
+  ]
+ },
+ {
+  "id": "si",
+  "name": "Sinhala",
+  "endonym": "සිංහල (Sinhala)",
+  "aliases": [
+   "Sinhalese"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 16,
+  "total": 18,
+  "scripts": [
+   "Sinhala"
+  ],
+  "official": [
+   "LKA"
+  ],
+  "core": [
+   "LKA",
+   "-LKA-2459",
+   "-LKA-2460",
+   "-LKA-2458",
+   "-LKA-2456",
+   "-LKA-2457",
+   "-LKA-2454",
+   "-LKA-2452"
+  ],
+  "also": [],
+  "wiki": "Sinhalese language",
+  "tts": "si-LK",
+  "phrases": {
+   "hello": {
+    "text": "ආයුබෝවන්",
+    "rom": "Ayubowan",
+    "say": "ah-yoo-BOH-wan"
+   },
+   "thanks": {
+    "text": "ස්තුතියි",
+    "rom": "Istutiyi",
+    "say": "stoo-TEE-yee"
+   },
+   "bye": {
+    "text": "ගිහින් එන්නම්",
+    "rom": "Gihin ennam",
+    "say": "gee-hin EN-num"
+   }
   },
-  {
-    "id": "dv",
-    "name": "Dhivehi",
-    "endonym": "ދިވެހި (Dhivehi)",
-    "aliases": [
-      "Maldivian"
-    ],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 0.35,
-    "total": 0.35,
-    "scripts": [
-      "Thaana"
-    ],
-    "official": [
-      "MDV"
-    ],
-    "core": [
-      "MDV"
-    ],
-    "also": [],
-    "wiki": "Maldivian language",
-    "tts": "dv-MV",
-    "phrases": {
-      "hello": {
-        "text": "ކިހިނެއްތަ",
-        "rom": "Kihineytha",
-        "say": "kee-hee-NAY-tah"
-      },
-      "thanks": {
-        "text": "ޝުކުރިއްޔާ",
-        "rom": "Shukuriyya",
-        "say": "shoo-koo-REE-yah"
-      },
-      "bye": {
-        "text": "ދަނީ",
-        "rom": "Dhanee",
-        "say": "dah-NEE"
-      }
-    },
-    "facts": [
-      "The national language of the Maldives, the only Indo-Aryan language spoken entirely south of India.",
-      "Written right-to-left in Thaana, a unique script developed in the 16th-18th centuries.",
-      "Closely related to Sinhala of Sri Lanka, its nearest linguistic relative.",
-      "Has absorbed Arabic vocabulary through centuries of Islamic influence."
-    ]
+  "facts": [
+   "The majority language of Sri Lanka, spoken mostly outside the Tamil-majority north and east.",
+   "An Indo-Aryan language isolated far south among Dravidian neighbours, reaching the island around the 5th century BCE.",
+   "Written in its own rounded Sinhala script, related to other Brahmic scripts.",
+   "Co-official with Tamil at the national level since Sri Lanka's constitution recognised both."
+  ]
+ },
+ {
+  "id": "dv",
+  "name": "Dhivehi",
+  "endonym": "ދިވެހި (Dhivehi)",
+  "aliases": [
+   "Maldivian"
+  ],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 0.35,
+  "total": 0.35,
+  "scripts": [
+   "Thaana"
+  ],
+  "official": [
+   "MDV"
+  ],
+  "core": [
+   "MDV"
+  ],
+  "also": [],
+  "wiki": "Maldivian language",
+  "tts": "dv-MV",
+  "phrases": {
+   "hello": {
+    "text": "މަރުޙަބާ",
+    "rom": "Maruhabaa",
+    "say": "mah-roo-hah-BAH"
+   },
+   "thanks": {
+    "text": "ޝުކުރިއްޔާ",
+    "rom": "Shukuriyya",
+    "say": "shoo-koo-REE-yah"
+   },
+   "bye": {
+    "text": "ދަނީ",
+    "rom": "Dhanee",
+    "say": "dah-NEE"
+   }
   },
-  {
-    "id": "dz",
-    "name": "Dzongkha",
-    "endonym": "རྫོང་ཁ (Dzongkha)",
-    "aliases": [
-      "Bhutanese"
-    ],
-    "family": "Sino-Tibetan",
-    "branch": "Tibetic",
-    "l1": 0.64,
-    "total": 0.64,
-    "scripts": [
-      "Tibetan"
-    ],
-    "official": [
-      "BTN"
-    ],
-    "core": [
-      "BTN"
-    ],
-    "also": [],
-    "wiki": "Dzongkha",
-    "tts": "dz-BT",
-    "phrases": {
-      "hello": {
-        "text": "ཀུཛུ་ཟང་པོ",
-        "rom": "Kuzuzangpo",
-        "say": "koo-zoo-ZANG-poh"
-      },
-      "thanks": {
-        "text": "ཐུཌྲི་ཆེ",
-        "rom": "Kadrinche",
-        "say": "kah-drin-CHAY"
-      },
-      "bye": {
-        "text": "ལོག་འོང་",
-        "rom": "Log-ong",
-        "say": "lohk-OHNG"
-      }
-    },
-    "facts": [
-      "The national language of Bhutan, named after the dzong fortress-monasteries where officials once governed.",
-      "Written in the Tibetan script, shared with Tibetan itself.",
-      "A Tibetic language, related to Tibetan but not mutually intelligible with it.",
-      "Only became Bhutan's standardised national language in the 1970s, alongside many other local languages."
-    ]
+  "facts": [
+   "The national language of the Maldives, the only Indo-Aryan language spoken entirely south of India.",
+   "Written right-to-left in Thaana, a unique script developed in the 16th-18th centuries.",
+   "Closely related to Sinhala of Sri Lanka, its nearest linguistic relative.",
+   "Has absorbed Arabic vocabulary through centuries of Islamic influence."
+  ]
+ },
+ {
+  "id": "dz",
+  "name": "Dzongkha",
+  "endonym": "རྫོང་ཁ (Dzongkha)",
+  "aliases": [
+   "Bhutanese"
+  ],
+  "family": "Sino-Tibetan",
+  "branch": "Tibetic",
+  "l1": 0.17,
+  "total": 0.64,
+  "scripts": [
+   "Tibetan"
+  ],
+  "official": [
+   "BTN"
+  ],
+  "core": [
+   "BTN"
+  ],
+  "also": [],
+  "wiki": "Dzongkha",
+  "tts": "dz-BT",
+  "phrases": {
+   "hello": {
+    "text": "ཀུཛུ་ཟང་པོ",
+    "rom": "Kuzuzangpo",
+    "say": "koo-zoo-ZANG-poh"
+   },
+   "thanks": {
+    "text": "བཀའ་དྲིན་ཆེ",
+    "rom": "Kadrinche",
+    "say": "kah-drin-CHAY"
+   },
+   "bye": {
+    "text": "ལོག་འོང་",
+    "rom": "Log-ong",
+    "say": "lohk-OHNG"
+   }
   },
-  {
-    "id": "sd",
-    "name": "Sindhi",
-    "endonym": "سنڌي (Sindhi)",
-    "aliases": [],
-    "family": "Indo-European",
-    "branch": "Indo-Aryan",
-    "l1": 33,
-    "total": 33,
-    "scripts": [
-      "Arabic",
-      "Devanagari"
-    ],
-    "official": [],
-    "core": [
-      "PAK-1114"
-    ],
-    "also": [
-      "IND-3264"
-    ],
-    "wiki": "Sindhi language",
-    "tts": "sd-PK",
-    "phrases": {
-      "hello": {
-        "text": "السلام عليڪم",
-        "rom": "Assalamu alaikum",
-        "say": "ah-sah-LAH-moo ah-LAY-koom"
-      },
-      "thanks": {
-        "text": "مهرباني",
-        "rom": "Mehrbani",
-        "say": "meh-ur-BAH-nee"
-      },
-      "bye": {
-        "text": "خدا حافظ",
-        "rom": "Khuda hafiz",
-        "say": "koo-DAH HAH-fiz"
-      }
-    },
-    "facts": [
-      "Spoken mainly in Sindh province, Pakistan, home to the ancient Indus Valley Civilisation.",
-      "Written in a Perso-Arabic script in Pakistan, and in Devanagari by Sindhi Hindus in India.",
-      "An official provincial language of Sindh, though not a national-level official language of Pakistan.",
-      "Has one of the largest consonant inventories of any Indo-Aryan language, including implosive sounds."
-    ]
+  "facts": [
+   "The national language of Bhutan, named after the dzong fortress-monasteries where officials once governed.",
+   "Written in the Tibetan script, shared with Tibetan itself.",
+   "A Tibetic language, related to Tibetan but not mutually intelligible with it.",
+   "Only became Bhutan's standardised national language in the 1970s, alongside many other local languages."
+  ]
+ },
+ {
+  "id": "sd",
+  "name": "Sindhi",
+  "endonym": "سنڌي (Sindhi)",
+  "aliases": [],
+  "family": "Indo-European",
+  "branch": "Indo-Aryan",
+  "l1": 33,
+  "total": 33,
+  "scripts": [
+   "Arabic",
+   "Devanagari"
+  ],
+  "official": [],
+  "core": [
+   "PAK-1114"
+  ],
+  "also": [
+   "IND-3264"
+  ],
+  "wiki": "Sindhi language",
+  "tts": "sd-PK",
+  "phrases": {
+   "hello": {
+    "text": "السلام عليڪم",
+    "rom": "Assalamu alaikum",
+    "say": "ah-sah-LAH-moo ah-LAY-koom"
+   },
+   "thanks": {
+    "text": "مهرباني",
+    "rom": "Mehrbani",
+    "say": "meh-ur-BAH-nee"
+   },
+   "bye": {
+    "text": "خدا حافظ",
+    "rom": "Khuda hafiz",
+    "say": "koo-DAH HAH-fiz"
+   }
   },
-  {
-    "id": "bal",
-    "name": "Balochi",
-    "endonym": "بلوچی (Balochi)",
-    "aliases": [
-      "Baluchi"
-    ],
-    "family": "Indo-European",
-    "branch": "Iranian",
-    "l1": 8.5,
-    "total": 8.5,
-    "scripts": [
-      "Arabic"
-    ],
-    "official": [],
-    "core": [
-      "PAK-1108",
-      "IRN-3247"
-    ],
-    "also": [
-      "AFG-1751",
-      "AFG-1750"
-    ],
-    "wiki": "Balochi language",
-    "tts": "bal-PK",
-    "phrases": {
-      "hello": {
-        "text": "سلام",
-        "rom": "Salaam",
-        "say": "sah-LAHM"
-      },
-      "thanks": {
-        "text": "منّت وار",
-        "rom": "Mannatwar",
-        "say": "mun-nut-WAHR"
-      },
-      "bye": {
-        "text": "خدا حافظ",
-        "rom": "Khuda hafiz",
-        "say": "koo-DAH HAH-fiz"
-      }
-    },
-    "facts": [
-      "Spoken across Balochistan, split between Pakistan, Iran and a corner of Afghanistan.",
-      "A Northwestern Iranian language, related to Kurdish and Persian but not mutually intelligible with either.",
-      "Has no national official status in any of the three countries where it is spoken.",
-      "Traditionally has a strong oral epic and ballad tradition among Baloch tribes."
-    ]
+  "facts": [
+   "Spoken mainly in Sindh province, Pakistan, home to the ancient Indus Valley Civilisation.",
+   "Written in a Perso-Arabic script in Pakistan, and in Devanagari by Sindhi Hindus in India.",
+   "An official provincial language of Sindh, though not a national-level official language of Pakistan.",
+   "Has one of the largest consonant inventories of any Indo-Aryan language, including implosive sounds."
+  ]
+ },
+ {
+  "id": "bal",
+  "name": "Balochi",
+  "endonym": "بلوچی (Balochi)",
+  "aliases": [
+   "Baluchi"
+  ],
+  "family": "Indo-European",
+  "branch": "Iranian",
+  "l1": 8.5,
+  "total": 8.5,
+  "scripts": [
+   "Arabic"
+  ],
+  "official": [],
+  "core": [
+   "PAK-1108",
+   "IRN-3247"
+  ],
+  "also": [
+   "AFG-1751",
+   "AFG-1750"
+  ],
+  "wiki": "Balochi language",
+  "tts": "bal-PK",
+  "phrases": {
+   "hello": {
+    "text": "سلام",
+    "rom": "Salaam",
+    "say": "sah-LAHM"
+   },
+   "thanks": {
+    "text": "منّت وار",
+    "rom": "Mannatwar",
+    "say": "mun-nut-WAHR"
+   },
+   "bye": {
+    "text": "خدا حافظ",
+    "rom": "Khuda hafiz",
+    "say": "koo-DAH HAH-fiz"
+   }
   },
-  {
-    "id": "ps",
-    "name": "Pashto",
-    "endonym": "پښتو (Pashto)",
-    "aliases": [
-      "Pushto",
-      "Afghan"
-    ],
-    "family": "Indo-European",
-    "branch": "Iranian",
-    "l1": 40,
-    "total": 50,
-    "scripts": [
-      "Arabic"
-    ],
-    "official": [
-      "AFG"
-    ],
-    "core": [
-      "AFG-1754",
-      "AFG-1750",
-      "AFG-1764",
-      "AFG-1758",
-      "AFG-1759",
-      "AFG-3413",
-      "AFG-1757",
-      "AFG-1755",
-      "AFG-1752",
-      "AFG-1762",
-      "AFG-1761",
-      "AFG-1770",
-      "AFG-1771",
-      "PAK-1123",
-      "PAK-1112"
-    ],
-    "also": [
-      "AFG-1767",
-      "PAK-1108"
-    ],
-    "wiki": "Pashto",
-    "tts": "ps-AF",
-    "phrases": {
-      "hello": {
-        "text": "سلام",
-        "rom": "Salaam",
-        "say": "sah-LAHM"
-      },
-      "thanks": {
-        "text": "منه",
-        "rom": "Manana",
-        "say": "mah-nah-NAH"
-      },
-      "bye": {
-        "text": "ښه مخه",
-        "rom": "Pa makha de kha",
-        "say": "pah MAH-kha deh kha"
-      }
-    },
-    "facts": [
-      "Co-official language of Afghanistan alongside Dari, dominant in the south and east.",
-      "Also widely spoken across the border in Pakistan's Khyber Pakhtunkhwa and former tribal areas.",
-      "The traditional language of the Pashtun people and of Pashtunwali tribal custom.",
-      "Written in a Perso-Arabic script with extra letters for sounds not found in Persian."
-    ]
+  "facts": [
+   "Spoken across Balochistan, split between Pakistan, Iran and a corner of Afghanistan.",
+   "A Northwestern Iranian language, related to Kurdish and Persian but not mutually intelligible with either.",
+   "Has no national official status in any of the three countries where it is spoken.",
+   "Traditionally has a strong oral epic and ballad tradition among Baloch tribes."
+  ]
+ },
+ {
+  "id": "ps",
+  "name": "Pashto",
+  "endonym": "پښتو (Pashto)",
+  "aliases": [
+   "Pushto",
+   "Afghan"
+  ],
+  "family": "Indo-European",
+  "branch": "Iranian",
+  "l1": 40,
+  "total": 50,
+  "scripts": [
+   "Arabic"
+  ],
+  "official": [
+   "AFG"
+  ],
+  "core": [
+   "AFG-1754",
+   "AFG-1750",
+   "AFG-1764",
+   "AFG-1758",
+   "AFG-1759",
+   "AFG-3413",
+   "AFG-1757",
+   "AFG-1755",
+   "AFG-1752",
+   "AFG-1762",
+   "AFG-1761",
+   "AFG-1770",
+   "AFG-1771",
+   "PAK-1123",
+   "PAK-1112"
+  ],
+  "also": [
+   "AFG-1767",
+   "PAK-1108"
+  ],
+  "wiki": "Pashto",
+  "tts": "ps-AF",
+  "phrases": {
+   "hello": {
+    "text": "سلام",
+    "rom": "Salaam",
+    "say": "sah-LAHM"
+   },
+   "thanks": {
+    "text": "مننه",
+    "rom": "Manana",
+    "say": "mah-nah-NAH"
+   },
+   "bye": {
+    "text": "پر مخه مو ښه",
+    "rom": "Pa makha mo kha",
+    "say": "peh MEH-khah moh khah"
+   }
   },
-  {
-    "id": "fa",
-    "name": "Persian",
-    "endonym": "فارسی (Farsi)",
-    "aliases": [
-      "Farsi",
-      "Dari"
-    ],
-    "family": "Indo-European",
-    "branch": "Iranian",
-    "l1": 70,
-    "total": 130,
-    "scripts": [
-      "Arabic"
-    ],
-    "official": [
-      "IRN",
-      "AFG",
-      "TJK"
-    ],
-    "core": [
-      "IRN",
-      "-IRN-3238",
-      "-IRN-3237",
-      "-IRN-3230",
-      "-IRN-3241",
-      "-IRN-3247",
-      "-IRN-3239",
-      "-IRN-3221",
-      "AFG-1742",
-      "AFG-1767",
-      "AFG-1744",
-      "AFG-1760",
-      "AFG-1743",
-      "AFG-1747",
-      "AFG-1749",
-      "AFG-1768",
-      "AFG-1769"
-    ],
-    "also": [],
-    "wiki": "Persian language",
-    "tts": "fa-IR",
-    "phrases": {
-      "hello": {
-        "text": "سلام",
-        "rom": "Salaam",
-        "say": "sah-LAHM"
-      },
-      "thanks": {
-        "text": "متشکرم",
-        "rom": "Motashakkeram",
-        "say": "moh-tah-shah-KEH-rum"
-      },
-      "bye": {
-        "text": "خداحافظ",
-        "rom": "Khoda hafez",
-        "say": "koh-DAH HAH-fez"
-      }
-    },
-    "facts": [
-      "Official language of Iran (as Farsi), Afghanistan (as Dari) and Tajikistan (as Tajik, in Cyrillic).",
-      "A classical language of poetry, home to Rumi, Hafez and Omar Khayyam.",
-      "Written in a Perso-Arabic script in Iran and Afghanistan, but in Cyrillic in Tajikistan.",
-      "Served for centuries as the literary and administrative language across much of Central and South Asia."
-    ]
+  "facts": [
+   "Co-official language of Afghanistan alongside Dari, dominant in the south and east.",
+   "Also widely spoken across the border in Pakistan's Khyber Pakhtunkhwa and former tribal areas.",
+   "The traditional language of the Pashtun people and of Pashtunwali tribal custom.",
+   "Written in a Perso-Arabic script with extra letters for sounds not found in Persian."
+  ]
+ },
+ {
+  "id": "fa",
+  "name": "Persian",
+  "endonym": "فارسی (Farsi)",
+  "aliases": [
+   "Farsi",
+   "Dari"
+  ],
+  "family": "Indo-European",
+  "branch": "Iranian",
+  "l1": 91,
+  "total": 130,
+  "scripts": [
+   "Arabic"
+  ],
+  "official": [
+   "IRN",
+   "AFG",
+   "TJK"
+  ],
+  "core": [
+   "IRN",
+   "-IRN-3238",
+   "-IRN-3237",
+   "-IRN-3230",
+   "-IRN-3241",
+   "-IRN-3247",
+   "-IRN-3239",
+   "-IRN-3221",
+   "AFG-1742",
+   "AFG-1767",
+   "AFG-1744",
+   "AFG-1760",
+   "AFG-1743",
+   "AFG-1747",
+   "AFG-1749",
+   "AFG-1768",
+   "AFG-1769"
+  ],
+  "also": [],
+  "wiki": "Persian language",
+  "tts": "fa-IR",
+  "phrases": {
+   "hello": {
+    "text": "سلام",
+    "rom": "Salaam",
+    "say": "sah-LAHM"
+   },
+   "thanks": {
+    "text": "متشکرم",
+    "rom": "Motashakkeram",
+    "say": "moh-tah-shah-KEH-rum"
+   },
+   "bye": {
+    "text": "خداحافظ",
+    "rom": "Khoda hafez",
+    "say": "koh-DAH HAH-fez"
+   }
   },
-  {
-    "id": "tg",
-    "name": "Tajik",
-    "endonym": "тоҷикӣ (Tojikī)",
-    "aliases": [],
-    "family": "Indo-European",
-    "branch": "Iranian",
-    "l1": 8.8,
-    "total": 8.8,
-    "scripts": [
-      "Cyrillic"
-    ],
-    "official": [
-      "TJK"
-    ],
-    "core": [
-      "TJK"
-    ],
-    "also": [
-      "AFG-1760",
-      "AFG-1765"
-    ],
-    "wiki": "Tajik language",
-    "tts": "tg-TJ",
-    "phrases": {
-      "hello": {
-        "text": "Салом",
-        "rom": "Salom",
-        "say": "sah-LOHM"
-      },
-      "thanks": {
-        "text": "Ташаккур",
-        "rom": "Tashakkur",
-        "say": "tah-shahk-KOOR"
-      },
-      "bye": {
-        "text": "Хайр",
-        "rom": "Khair",
-        "say": "khyre"
-      }
-    },
-    "facts": [
-      "The national language of Tajikistan, a form of Persian written in the Cyrillic alphabet.",
-      "Mutually intelligible with Dari and Farsi despite the different scripts, a legacy of Soviet-era script reform.",
-      "Also spoken by a Tajik minority in northern Afghanistan.",
-      "Retains some older Persian vocabulary that has shifted meaning in modern Iranian Farsi."
-    ]
+  "facts": [
+   "Official language of Iran (as Farsi), Afghanistan (as Dari) and Tajikistan (as Tajik, in Cyrillic).",
+   "A classical language of poetry, home to Rumi, Hafez and Omar Khayyam.",
+   "Written in a Perso-Arabic script in Iran and Afghanistan, but in Cyrillic in Tajikistan.",
+   "Served for centuries as the literary and administrative language across much of Central and South Asia."
+  ]
+ },
+ {
+  "id": "tg",
+  "name": "Tajik",
+  "endonym": "тоҷикӣ (Tojikī)",
+  "aliases": [],
+  "family": "Indo-European",
+  "branch": "Iranian",
+  "l1": 8.8,
+  "total": 8.8,
+  "scripts": [
+   "Cyrillic"
+  ],
+  "official": [
+   "TJK"
+  ],
+  "core": [
+   "TJK"
+  ],
+  "also": [
+   "AFG-1760",
+   "AFG-1765"
+  ],
+  "wiki": "Tajik language",
+  "tts": "tg-TJ",
+  "phrases": {
+   "hello": {
+    "text": "Салом",
+    "rom": "Salom",
+    "say": "sah-LOHM"
+   },
+   "thanks": {
+    "text": "Ташаккур",
+    "rom": "Tashakkur",
+    "say": "tah-shahk-KOOR"
+   },
+   "bye": {
+    "text": "Хайр",
+    "rom": "Khair",
+    "say": "khyre"
+   }
   },
-  {
-    "id": "ku",
-    "name": "Kurdish",
-    "endonym": "کوردی (Kurdî)",
-    "aliases": [
-      "Kurdi"
-    ],
-    "family": "Indo-European",
-    "branch": "Iranian",
-    "l1": 30,
-    "total": 30,
-    "scripts": [
-      "Arabic",
-      "Latin"
-    ],
-    "official": [
-      "IRQ"
-    ],
-    "core": [
-      "IRQ-3046",
-      "IRQ-3050",
-      "IRQ-3242",
-      "TUR-2309",
-      "TUR-3041",
-      "TUR-3044",
-      "TUR-3047",
-      "TUR-3048",
-      "TUR-2311",
-      "TUR-3043",
-      "TUR-2310",
-      "TUR-2307",
-      "TUR-2308",
-      "IRN-3241",
-      "IRN-3239"
-    ],
-    "also": [
-      "IRQ-3049",
-      "IRN-3221",
-      "SYR"
-    ],
-    "wiki": "Kurdish languages",
-    "tts": "ku-TR",
-    "phrases": {
-      "hello": {
-        "text": "سلاو",
-        "rom": "Silav",
-        "say": "see-LAHV"
-      },
-      "thanks": {
-        "text": "سوپاس",
-        "rom": "Spas",
-        "say": "spahs"
-      },
-      "bye": {
-        "text": "خواحافیز",
-        "rom": "Xatire te",
-        "say": "khah-tee-reh TAY"
-      }
-    },
-    "facts": [
-      "Spoken across a region straddling Turkey, Iraq, Iran and Syria known as Kurdistan.",
-      "Co-official, alongside Arabic, at the national level in Iraq, and official within the Kurdistan Region.",
-      "Written in a Latin-based alphabet in Turkey and Syria, and an Arabic-based one in Iraq and Iran.",
-      "Not a single uniform language but a group of related varieties, chiefly Kurmanji and Sorani."
-    ]
+  "facts": [
+   "The national language of Tajikistan, a form of Persian written in the Cyrillic alphabet.",
+   "Mutually intelligible with Dari and Farsi despite the different scripts, a legacy of Soviet-era script reform.",
+   "Also spoken by a Tajik minority in northern Afghanistan.",
+   "Retains some older Persian vocabulary that has shifted meaning in modern Iranian Farsi."
+  ]
+ },
+ {
+  "id": "ku",
+  "name": "Kurdish",
+  "endonym": "کوردی (Kurdî)",
+  "aliases": [
+   "Kurdi"
+  ],
+  "family": "Indo-European",
+  "branch": "Iranian",
+  "l1": 30,
+  "total": 30,
+  "scripts": [
+   "Arabic",
+   "Latin"
+  ],
+  "official": [
+   "IRQ",
+   "SYR"
+  ],
+  "core": [
+   "IRQ-3046",
+   "IRQ-3050",
+   "IRQ-3242",
+   "TUR-2309",
+   "TUR-3041",
+   "TUR-3044",
+   "TUR-3047",
+   "TUR-3048",
+   "TUR-2311",
+   "TUR-3043",
+   "TUR-2310",
+   "TUR-2307",
+   "TUR-2308",
+   "IRN-3241",
+   "IRN-3239"
+  ],
+  "also": [
+   "IRQ-3049",
+   "IRN-3221",
+   "SYR"
+  ],
+  "wiki": "Kurdish languages",
+  "tts": "ku-TR",
+  "phrases": {
+   "hello": {
+    "text": "سلاو",
+    "rom": "Silav",
+    "say": "see-LAHV"
+   },
+   "thanks": {
+    "text": "سوپاس",
+    "rom": "Spas",
+    "say": "spahs"
+   },
+   "bye": {
+    "text": "بە خاترێ تۆ",
+    "rom": "Bi xatirê te",
+    "say": "bee khah-tee-REH teh"
+   }
   },
-  {
-    "id": "tr",
-    "name": "Turkish",
-    "endonym": "Türkçe",
-    "aliases": [],
-    "family": "Turkic",
-    "branch": "Oghuz",
-    "l1": 80,
-    "total": 90,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [
-      "TUR",
-      "CYP"
-    ],
-    "core": [
-      "TUR"
-    ],
-    "also": [],
-    "wiki": "Turkish language",
-    "tts": "tr-TR",
-    "phrases": {
-      "hello": {
-        "text": "Merhaba",
-        "rom": "",
-        "say": "mehr-hah-BAH"
-      },
-      "thanks": {
-        "text": "Teşekkürler",
-        "rom": "",
-        "say": "teh-shek-kewr-LEHR"
-      },
-      "bye": {
-        "text": "Hoşça kal",
-        "rom": "",
-        "say": "hosh-chah KAHL"
-      }
-    },
-    "facts": [
-      "The national language of Turkey and one of the official languages of Cyprus.",
-      "Switched from a Perso-Arabic script to the Latin alphabet in a 1928 reform under Atatürk.",
-      "An agglutinative language, building long words by stacking suffixes onto a root.",
-      "Part of the Turkic family, related to Azerbaijani, Uzbek and other Central Asian languages."
-    ]
+  "facts": [
+   "Spoken across a region straddling Turkey, Iraq, Iran and Syria known as Kurdistan.",
+   "Co-official, alongside Arabic, at the national level in Iraq, and official within the Kurdistan Region.",
+   "Written in a Latin-based alphabet in Turkey and Syria, and an Arabic-based one in Iraq and Iran.",
+   "Not a single uniform language but a group of related varieties, chiefly Kurmanji and Sorani."
+  ]
+ },
+ {
+  "id": "tr",
+  "name": "Turkish",
+  "endonym": "Türkçe",
+  "aliases": [],
+  "family": "Turkic",
+  "branch": "Oghuz",
+  "l1": 80,
+  "total": 90,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [
+   "TUR",
+   "CYP",
+   "CYN"
+  ],
+  "core": [
+   "TUR"
+  ],
+  "also": [],
+  "wiki": "Turkish language",
+  "tts": "tr-TR",
+  "phrases": {
+   "hello": {
+    "text": "Merhaba",
+    "rom": "",
+    "say": "mehr-hah-BAH"
+   },
+   "thanks": {
+    "text": "Teşekkürler",
+    "rom": "",
+    "say": "teh-shek-kewr-LEHR"
+   },
+   "bye": {
+    "text": "Hoşça kal",
+    "rom": "",
+    "say": "hosh-chah KAHL"
+   }
   },
-  {
-    "id": "az",
-    "name": "Azerbaijani",
-    "endonym": "Azərbaycan dili",
-    "aliases": [
-      "Azeri"
-    ],
-    "family": "Turkic",
-    "branch": "Oghuz",
-    "l1": 24,
-    "total": 24,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [
-      "AZE"
-    ],
-    "core": [
-      "AZE",
-      "IRN-3238",
-      "IRN-3237",
-      "IRN-3230"
-    ],
-    "also": [],
-    "wiki": "Azerbaijani language",
-    "tts": "az-AZ",
-    "phrases": {
-      "hello": {
-        "text": "Salam",
-        "rom": "",
-        "say": "sah-LAHM"
-      },
-      "thanks": {
-        "text": "Sağ olun",
-        "rom": "",
-        "say": "sah oh-LOON"
-      },
-      "bye": {
-        "text": "Sağ olun",
-        "rom": "",
-        "say": "sah oh-LOON"
-      }
-    },
-    "facts": [
-      "The national language of Azerbaijan, written in the Latin alphabet since the 1990s.",
-      "More native speakers live in Iran's Azerbaijan provinces than in Azerbaijan itself.",
-      "Closely related to Turkish, with a good degree of mutual intelligibility.",
-      "Was written in Cyrillic during the Soviet period, before switching to Latin script."
-    ]
+  "facts": [
+   "The national language of Turkey and one of the official languages of Cyprus.",
+   "Switched from a Perso-Arabic script to the Latin alphabet in a 1928 reform under Atatürk.",
+   "An agglutinative language, building long words by stacking suffixes onto a root.",
+   "Part of the Turkic family, related to Azerbaijani, Uzbek and other Central Asian languages."
+  ]
+ },
+ {
+  "id": "az",
+  "name": "Azerbaijani",
+  "endonym": "Azərbaycan dili",
+  "aliases": [
+   "Azeri"
+  ],
+  "family": "Turkic",
+  "branch": "Oghuz",
+  "l1": 24,
+  "total": 24,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [
+   "AZE"
+  ],
+  "core": [
+   "AZE",
+   "IRN-3238",
+   "IRN-3237",
+   "IRN-3230"
+  ],
+  "also": [],
+  "wiki": "Azerbaijani language",
+  "tts": "az-AZ",
+  "phrases": {
+   "hello": {
+    "text": "Salam",
+    "rom": "",
+    "say": "sah-LAHM"
+   },
+   "thanks": {
+    "text": "Sağ olun",
+    "rom": "",
+    "say": "sah oh-LOON"
+   },
+   "bye": {
+    "text": "Sağ olun",
+    "rom": "",
+    "say": "sah oh-LOON"
+   }
   },
-  {
-    "id": "uz",
-    "name": "Uzbek",
-    "endonym": "O'zbek tili",
-    "aliases": [],
-    "family": "Turkic",
-    "branch": "Karluk",
-    "l1": 35,
-    "total": 35,
-    "scripts": [
-      "Latin",
-      "Cyrillic"
-    ],
-    "official": [
-      "UZB"
-    ],
-    "core": [
-      "UZB"
-    ],
-    "also": [
-      "AFG-1745"
-    ],
-    "wiki": "Uzbek language",
-    "tts": "uz-UZ",
-    "phrases": {
-      "hello": {
-        "text": "Salom",
-        "rom": "",
-        "say": "sah-LOHM"
-      },
-      "thanks": {
-        "text": "Rahmat",
-        "rom": "",
-        "say": "rahk-MAHT"
-      },
-      "bye": {
-        "text": "Xayr",
-        "rom": "",
-        "say": "khire"
-      }
-    },
-    "facts": [
-      "The national language of Uzbekistan, the most populous country in Central Asia.",
-      "Officially switching from Cyrillic to a Latin alphabet, a transition still in progress.",
-      "Has a significant Uzbek-speaking minority in northern Afghanistan.",
-      "A Turkic language with heavy historical borrowing from Persian, reflecting Silk Road contact."
-    ]
+  "facts": [
+   "The national language of Azerbaijan, written in the Latin alphabet since the 1990s.",
+   "More native speakers live in Iran's Azerbaijan provinces than in Azerbaijan itself.",
+   "Closely related to Turkish, with a good degree of mutual intelligibility.",
+   "Was written in Cyrillic during the Soviet period, before switching to Latin script."
+  ]
+ },
+ {
+  "id": "uz",
+  "name": "Uzbek",
+  "endonym": "O'zbek tili",
+  "aliases": [],
+  "family": "Turkic",
+  "branch": "Karluk",
+  "l1": 35,
+  "total": 35,
+  "scripts": [
+   "Latin",
+   "Cyrillic"
+  ],
+  "official": [
+   "UZB"
+  ],
+  "core": [
+   "UZB"
+  ],
+  "also": [
+   "AFG-1745"
+  ],
+  "wiki": "Uzbek language",
+  "tts": "uz-UZ",
+  "phrases": {
+   "hello": {
+    "text": "Salom",
+    "rom": "",
+    "say": "sah-LOHM"
+   },
+   "thanks": {
+    "text": "Rahmat",
+    "rom": "",
+    "say": "rahk-MAHT"
+   },
+   "bye": {
+    "text": "Xayr",
+    "rom": "",
+    "say": "khire"
+   }
   },
-  {
-    "id": "kk",
-    "name": "Kazakh",
-    "endonym": "Қазақ тілі (Qazaq tili)",
-    "aliases": [],
-    "family": "Turkic",
-    "branch": "Kipchak",
-    "l1": 15,
-    "total": 18,
-    "scripts": [
-      "Cyrillic"
-    ],
-    "official": [
-      "KAZ"
-    ],
-    "core": [
-      "KAZ"
-    ],
-    "also": [],
-    "wiki": "Kazakh language",
-    "tts": "kk-KZ",
-    "phrases": {
-      "hello": {
-        "text": "Сәлем",
-        "rom": "Salem",
-        "say": "sah-LEM"
-      },
-      "thanks": {
-        "text": "Рахмет",
-        "rom": "Rakhmet",
-        "say": "rahk-MET"
-      },
-      "bye": {
-        "text": "Сау болыңыз",
-        "rom": "Sau bolynyz",
-        "say": "sow boh-leh-NEEZ"
-      }
-    },
-    "facts": [
-      "The national language of Kazakhstan, the largest country in Central Asia by area.",
-      "Still mainly written in Cyrillic, with a long-planned transition to Latin script underway.",
-      "A Kipchak Turkic language, closely related to Kyrgyz.",
-      "Historically tied to nomadic herding culture on the Central Asian steppe."
-    ]
+  "facts": [
+   "The national language of Uzbekistan, the most populous country in Central Asia.",
+   "Officially switching from Cyrillic to a Latin alphabet, a transition still in progress.",
+   "Has a significant Uzbek-speaking minority in northern Afghanistan.",
+   "A Turkic language with heavy historical borrowing from Persian, reflecting Silk Road contact."
+  ]
+ },
+ {
+  "id": "kk",
+  "name": "Kazakh",
+  "endonym": "Қазақ тілі (Qazaq tili)",
+  "aliases": [],
+  "family": "Turkic",
+  "branch": "Kipchak",
+  "l1": 15,
+  "total": 18,
+  "scripts": [
+   "Cyrillic"
+  ],
+  "official": [
+   "KAZ"
+  ],
+  "core": [
+   "KAZ"
+  ],
+  "also": [],
+  "wiki": "Kazakh language",
+  "tts": "kk-KZ",
+  "phrases": {
+   "hello": {
+    "text": "Сәлем",
+    "rom": "Salem",
+    "say": "sah-LEM"
+   },
+   "thanks": {
+    "text": "Рахмет",
+    "rom": "Rakhmet",
+    "say": "rahk-MET"
+   },
+   "bye": {
+    "text": "Сау болыңыз",
+    "rom": "Sau bolynyz",
+    "say": "sow boh-leh-NEEZ"
+   }
   },
-  {
-    "id": "ky",
-    "name": "Kyrgyz",
-    "endonym": "Кыргызча (Kyrgyzcha)",
-    "aliases": [],
-    "family": "Turkic",
-    "branch": "Kipchak",
-    "l1": 4.5,
-    "total": 4.5,
-    "scripts": [
-      "Cyrillic"
-    ],
-    "official": [
-      "KGZ"
-    ],
-    "core": [
-      "KGZ"
-    ],
-    "also": [],
-    "wiki": "Kyrgyz language",
-    "tts": "ky-KG",
-    "phrases": {
-      "hello": {
-        "text": "Салам",
-        "rom": "Salam",
-        "say": "sah-LAHM"
-      },
-      "thanks": {
-        "text": "Рахмат",
-        "rom": "Rakhmat",
-        "say": "rahk-MAHT"
-      },
-      "bye": {
-        "text": "Саламатта болуңуз",
-        "rom": "Salamatta boluŋuz",
-        "say": "sah-lah-MAHT-tah boh-loo-NOOZ"
-      }
-    },
-    "facts": [
-      "The national language of Kyrgyzstan, a mountainous Central Asian country.",
-      "Written in the Cyrillic alphabet, introduced during the Soviet period.",
-      "Closely related to Kazakh, with speakers often able to understand each other.",
-      "Home to the Manas, one of the world's longest epic poems, traditionally recited from memory."
-    ]
+  "facts": [
+   "The national language of Kazakhstan, the largest country in Central Asia by area.",
+   "Still mainly written in Cyrillic, with a long-planned transition to Latin script underway.",
+   "A Kipchak Turkic language, closely related to Kyrgyz.",
+   "Historically tied to nomadic herding culture on the Central Asian steppe."
+  ]
+ },
+ {
+  "id": "ky",
+  "name": "Kyrgyz",
+  "endonym": "Кыргызча (Kyrgyzcha)",
+  "aliases": [],
+  "family": "Turkic",
+  "branch": "Kipchak",
+  "l1": 4.5,
+  "total": 4.5,
+  "scripts": [
+   "Cyrillic"
+  ],
+  "official": [
+   "KGZ"
+  ],
+  "core": [
+   "KGZ"
+  ],
+  "also": [],
+  "wiki": "Kyrgyz language",
+  "tts": "ky-KG",
+  "phrases": {
+   "hello": {
+    "text": "Салам",
+    "rom": "Salam",
+    "say": "sah-LAHM"
+   },
+   "thanks": {
+    "text": "Рахмат",
+    "rom": "Rakhmat",
+    "say": "rahk-MAHT"
+   },
+   "bye": {
+    "text": "Кош болуңуз",
+    "rom": "Kosh bolunguz",
+    "say": "kohsh boh-loo-NOOZ"
+   }
   },
-  {
-    "id": "tk",
-    "name": "Turkmen",
-    "endonym": "Türkmençe",
-    "aliases": [],
-    "family": "Turkic",
-    "branch": "Oghuz",
-    "l1": 7,
-    "total": 7,
-    "scripts": [
-      "Latin"
-    ],
-    "official": [
-      "TKM"
-    ],
-    "core": [
-      "TKM"
-    ],
-    "also": [
-      "AFG-1746"
-    ],
-    "wiki": "Turkmen language",
-    "tts": "tk-TM",
-    "phrases": {
-      "hello": {
-        "text": "Salam",
-        "rom": "",
-        "say": "sah-LAHM"
-      },
-      "thanks": {
-        "text": "Sağ boluň",
-        "rom": "",
-        "say": "sah boh-LOON"
-      },
-      "bye": {
-        "text": "Hoş gal",
-        "rom": "",
-        "say": "hosh GAHL"
-      }
-    },
-    "facts": [
-      "The national language of Turkmenistan, one of the most sparsely populated countries in Central Asia.",
-      "An Oghuz Turkic language, closely related to Turkish and Azerbaijani.",
-      "Switched from Cyrillic to a Latin-based alphabet after independence in 1991.",
-      "Also spoken by a Turkmen minority in northern Afghanistan and northeastern Iran."
-    ]
+  "facts": [
+   "The national language of Kyrgyzstan, a mountainous Central Asian country.",
+   "Written in the Cyrillic alphabet, introduced during the Soviet period.",
+   "Closely related to Kazakh, with speakers often able to understand each other.",
+   "Home to the Manas, one of the world's longest epic poems, traditionally recited from memory."
+  ]
+ },
+ {
+  "id": "tk",
+  "name": "Turkmen",
+  "endonym": "Türkmençe",
+  "aliases": [],
+  "family": "Turkic",
+  "branch": "Oghuz",
+  "l1": 7,
+  "total": 7,
+  "scripts": [
+   "Latin"
+  ],
+  "official": [
+   "TKM"
+  ],
+  "core": [
+   "TKM"
+  ],
+  "also": [
+   "AFG-1746"
+  ],
+  "wiki": "Turkmen language",
+  "tts": "tk-TM",
+  "phrases": {
+   "hello": {
+    "text": "Salam",
+    "rom": "",
+    "say": "sah-LAHM"
+   },
+   "thanks": {
+    "text": "Sağ boluň",
+    "rom": "",
+    "say": "sah boh-LOON"
+   },
+   "bye": {
+    "text": "Hoş gal",
+    "rom": "",
+    "say": "hosh GAHL"
+   }
   },
-  {
-    "id": "ug",
-    "name": "Uyghur",
-    "endonym": "ئۇيغۇرچە (Uyghurche)",
-    "aliases": [
-      "Uighur"
-    ],
-    "family": "Turkic",
-    "branch": "Karluk",
-    "l1": 11,
-    "total": 11,
-    "scripts": [
-      "Arabic"
-    ],
-    "official": [],
-    "core": [
-      "CHN-1756"
-    ],
-    "also": [],
-    "wiki": "Uyghur language",
-    "tts": "ug-CN",
-    "phrases": {
-      "hello": {
-        "text": "ياخشىمۇسىز",
-        "rom": "Yakhshimusiz",
-        "say": "yahk-shee-moo-SEEZ"
-      },
-      "thanks": {
-        "text": "رەخمەت",
-        "rom": "Rakhmat",
-        "say": "rahk-MAHT"
-      },
-      "bye": {
-        "text": "خوش",
-        "rom": "Khosh",
-        "say": "khosh"
-      }
-    },
-    "facts": [
-      "Spoken by the Uyghur people, concentrated in the Xinjiang region of northwest China.",
-      "A Turkic language, unrelated to Mandarin Chinese, written in a modified Perso-Arabic script.",
-      "Not an official language of China at the national level, though it has regional use in Xinjiang.",
-      "Historically a language of the Silk Road oases of the Tarim Basin."
-    ]
+  "facts": [
+   "The national language of Turkmenistan, one of the most sparsely populated countries in Central Asia.",
+   "An Oghuz Turkic language, closely related to Turkish and Azerbaijani.",
+   "Switched from Cyrillic to a Latin-based alphabet after independence in 1991.",
+   "Also spoken by a Turkmen minority in northern Afghanistan and northeastern Iran."
+  ]
+ },
+ {
+  "id": "ug",
+  "name": "Uyghur",
+  "endonym": "ئۇيغۇرچە (Uyghurche)",
+  "aliases": [
+   "Uighur"
+  ],
+  "family": "Turkic",
+  "branch": "Karluk",
+  "l1": 11,
+  "total": 11,
+  "scripts": [
+   "Arabic"
+  ],
+  "official": [],
+  "core": [
+   "CHN-1756"
+  ],
+  "also": [],
+  "wiki": "Uyghur language",
+  "tts": "ug-CN",
+  "phrases": {
+   "hello": {
+    "text": "ياخشىمۇسىز",
+    "rom": "Yakhshimusiz",
+    "say": "yahk-shee-moo-SEEZ"
+   },
+   "thanks": {
+    "text": "رەھمەت",
+    "rom": "Rehmet",
+    "say": "reh-MET"
+   },
+   "bye": {
+    "text": "خوش",
+    "rom": "Khosh",
+    "say": "khosh"
+   }
   },
-  {
-    "id": "tt",
-    "name": "Tatar",
-    "endonym": "Татар тиле (Tatar tele)",
-    "aliases": [],
-    "family": "Turkic",
-    "branch": "Kipchak",
-    "l1": 4.3,
-    "total": 5.2,
-    "scripts": [
-      "Cyrillic"
-    ],
-    "official": [],
-    "core": [
-      "RUS-2394"
-    ],
-    "also": [
-      "RUS-2378"
-    ],
-    "wiki": "Tatar language",
-    "tts": "tt-RU",
-    "phrases": {
-      "hello": {
-        "text": "Сәлам",
-        "rom": "Salam",
-        "say": "sah-LAHM"
-      },
-      "thanks": {
-        "text": "Рәхмәт",
-        "rom": "Rakhmat",
-        "say": "rahk-MAHT"
-      },
-      "bye": {
-        "text": "Сау бул",
-        "rom": "Sau bul",
-        "say": "sow bool"
-      }
-    },
-    "facts": [
-      "The largest Turkic language of Russia, centred on Tatarstan on the Volga River.",
-      "Co-official with Russian within the Republic of Tatarstan, though not at the national level.",
-      "Written in Cyrillic since the Soviet period, after earlier use of Arabic and briefly Latin script.",
-      "Also widely spoken by Bashkirs and others in neighbouring Bashkortostan."
-    ]
+  "facts": [
+   "Spoken by the Uyghur people, concentrated in the Xinjiang region of northwest China.",
+   "A Turkic language, unrelated to Mandarin Chinese, written in a modified Perso-Arabic script.",
+   "Not an official language of China at the national level, though it has regional use in Xinjiang.",
+   "Historically a language of the Silk Road oases of the Tarim Basin."
+  ]
+ },
+ {
+  "id": "tt",
+  "name": "Tatar",
+  "endonym": "Татар тиле (Tatar tele)",
+  "aliases": [],
+  "family": "Turkic",
+  "branch": "Kipchak",
+  "l1": 4.3,
+  "total": 5.2,
+  "scripts": [
+   "Cyrillic"
+  ],
+  "official": [],
+  "core": [
+   "RUS-2394"
+  ],
+  "also": [
+   "RUS-2378"
+  ],
+  "wiki": "Tatar language",
+  "tts": "tt-RU",
+  "phrases": {
+   "hello": {
+    "text": "Сәлам",
+    "rom": "Salam",
+    "say": "sah-LAHM"
+   },
+   "thanks": {
+    "text": "Рәхмәт",
+    "rom": "Rakhmat",
+    "say": "rahk-MAHT"
+   },
+   "bye": {
+    "text": "Сау бул",
+    "rom": "Sau bul",
+    "say": "sow bool"
+   }
   },
-  {
-    "id": "mn",
-    "name": "Mongolian",
-    "endonym": "Монгол хэл (Mongol khel)",
-    "aliases": [],
-    "family": "Mongolic",
-    "branch": "",
-    "l1": 5.7,
-    "total": 5.7,
-    "scripts": [
-      "Cyrillic",
-      "Mongolian"
-    ],
-    "official": [
-      "MNG"
-    ],
-    "core": [
-      "MNG"
-    ],
-    "also": [
-      "CHN-1838"
-    ],
-    "wiki": "Mongolian language",
-    "tts": "mn-MN",
-    "phrases": {
-      "hello": {
-        "text": "Сайн байна уу",
-        "rom": "Sain baina uu",
-        "say": "sine BUY-nah oo"
-      },
-      "thanks": {
-        "text": "Баярлалаа",
-        "rom": "Bayarlalaa",
-        "say": "by-ar-lah-LAH"
-      },
-      "bye": {
-        "text": "Баяртай",
-        "rom": "Bayartai",
-        "say": "by-ar-TIE"
-      }
-    },
-    "facts": [
-      "The national language of Mongolia, written there in the Cyrillic alphabet.",
-      "Also spoken in China's Inner Mongolia, where the traditional vertical Mongolian script is still used.",
-      "A Mongolic language, a small family distinct from the neighbouring Turkic and Sino-Tibetan languages.",
-      "Historically the language of the Mongol Empire under Genghis Khan."
-    ]
+  "facts": [
+   "The largest Turkic language of Russia, centred on Tatarstan on the Volga River.",
+   "Co-official with Russian within the Republic of Tatarstan, though not at the national level.",
+   "Written in Cyrillic since the Soviet period, after earlier use of Arabic and briefly Latin script.",
+   "Also widely spoken by Bashkirs and others in neighbouring Bashkortostan."
+  ]
+ },
+ {
+  "id": "mn",
+  "name": "Mongolian",
+  "endonym": "Монгол хэл (Mongol khel)",
+  "aliases": [],
+  "family": "Mongolic",
+  "branch": "",
+  "l1": 5.7,
+  "total": 5.7,
+  "scripts": [
+   "Cyrillic",
+   "Mongolian"
+  ],
+  "official": [
+   "MNG"
+  ],
+  "core": [
+   "MNG"
+  ],
+  "also": [
+   "CHN-1838"
+  ],
+  "wiki": "Mongolian language",
+  "tts": "mn-MN",
+  "phrases": {
+   "hello": {
+    "text": "Сайн байна уу",
+    "rom": "Sain baina uu",
+    "say": "sine BUY-nah oo"
+   },
+   "thanks": {
+    "text": "Баярлалаа",
+    "rom": "Bayarlalaa",
+    "say": "by-ar-lah-LAH"
+   },
+   "bye": {
+    "text": "Баяртай",
+    "rom": "Bayartai",
+    "say": "by-ar-TIE"
+   }
   },
-  {
-    "id": "bo",
-    "name": "Tibetan",
-    "endonym": "བོད་སྐད (Bodskad)",
-    "aliases": [],
-    "family": "Sino-Tibetan",
-    "branch": "Tibetic",
-    "l1": 6,
-    "total": 6,
-    "scripts": [
-      "Tibetan"
-    ],
-    "official": [],
-    "core": [
-      "CHN-1662"
-    ],
-    "also": [
-      "CHN-1151",
-      "CHN-1809"
-    ],
-    "wiki": "Standard Tibetan",
-    "tts": "bo-CN",
-    "phrases": {
-      "hello": {
-        "text": "བཀྲ་ཤིས་བདེ་ལེགས",
-        "rom": "Tashi delek",
-        "say": "tah-shee deh-LEK"
-      },
-      "thanks": {
-        "text": "ཐུགས་རྗེ་ཆེ",
-        "rom": "Thuk je che",
-        "say": "took-jeh CHEH"
-      },
-      "bye": {
-        "text": "ཕྱིས་འཇལ",
-        "rom": "Chi jal",
-        "say": "chee-JAHL"
-      }
-    },
-    "facts": [
-      "Spoken across the Tibetan Plateau, chiefly in China's Xizang (Tibet) Autonomous Region.",
-      "Written in the Tibetan script, adapted from an Indian Brahmic script in the 7th century.",
-      "Tonal in some dialects, including Standard Tibetan (Lhasa dialect), unlike most other Tibetic varieties.",
-      "The liturgical language of Tibetan Buddhism, used well beyond the Tibetan Plateau itself."
-    ]
+  "facts": [
+   "The national language of Mongolia, written there in the Cyrillic alphabet.",
+   "Also spoken in China's Inner Mongolia, where the traditional vertical Mongolian script is still used.",
+   "A Mongolic language, a small family distinct from the neighbouring Turkic and Sino-Tibetan languages.",
+   "Historically the language of the Mongol Empire under Genghis Khan."
+  ]
+ },
+ {
+  "id": "bo",
+  "name": "Tibetan",
+  "endonym": "བོད་སྐད (Bodskad)",
+  "aliases": [],
+  "family": "Sino-Tibetan",
+  "branch": "Tibetic",
+  "l1": 6,
+  "total": 6,
+  "scripts": [
+   "Tibetan"
+  ],
+  "official": [],
+  "core": [
+   "CHN-1662"
+  ],
+  "also": [
+   "CHN-1151",
+   "CHN-1809"
+  ],
+  "wiki": "Standard Tibetan",
+  "tts": "bo-CN",
+  "phrases": {
+   "hello": {
+    "text": "བཀྲ་ཤིས་བདེ་ལེགས",
+    "rom": "Tashi delek",
+    "say": "tah-shee deh-LEK"
+   },
+   "thanks": {
+    "text": "ཐུགས་རྗེ་ཆེ",
+    "rom": "Thuk je che",
+    "say": "took-jeh CHEH"
+   },
+   "bye": {
+    "text": "ག་ལེ་ཕེབས།",
+    "rom": "ga le phe",
+    "say": "kah-lay PAY (to someone leaving; ga le zhu to someone staying)"
+   }
   },
-  {
-    "id": "ka",
-    "name": "Georgian",
-    "endonym": "ქართული (Kartuli)",
-    "aliases": [],
-    "family": "Kartvelian",
-    "branch": "",
-    "l1": 3.9,
-    "total": 3.9,
-    "scripts": [
-      "Georgian"
-    ],
-    "official": [
-      "GEO"
-    ],
-    "core": [
-      "GEO"
-    ],
-    "also": [],
-    "wiki": "Georgian language",
-    "tts": "ka-GE",
-    "phrases": {
-      "hello": {
-        "text": "გამარჯობა",
-        "rom": "Gamarjoba",
-        "say": "gah-mar-JOH-bah"
-      },
-      "thanks": {
-        "text": "მადლობა",
-        "rom": "Madloba",
-        "say": "mahd-LOH-bah"
-      },
-      "bye": {
-        "text": "ნახვამდის",
-        "rom": "Nakhvamdis",
-        "say": "nahk-VAHM-dees"
-      }
-    },
-    "facts": [
-      "The national language of Georgia, in the South Caucasus.",
-      "Written in its own unique Georgian script, with no close relatives outside the Kartvelian family.",
-      "Not related to Indo-European, Turkic or Semitic languages despite its location at their crossroads.",
-      "Has a famously complex verb system with many prefixes and suffixes marking person and case."
-    ]
+  "facts": [
+   "Spoken across the Tibetan Plateau, chiefly in China's Xizang (Tibet) Autonomous Region.",
+   "Written in the Tibetan script, adapted from an Indian Brahmic script in the 7th century.",
+   "Tonal in some dialects, including Standard Tibetan (Lhasa dialect), unlike most other Tibetic varieties.",
+   "The liturgical language of Tibetan Buddhism, used well beyond the Tibetan Plateau itself."
+  ]
+ },
+ {
+  "id": "ka",
+  "name": "Georgian",
+  "endonym": "ქართული (Kartuli)",
+  "aliases": [],
+  "family": "Kartvelian",
+  "branch": "",
+  "l1": 3.9,
+  "total": 3.9,
+  "scripts": [
+   "Georgian"
+  ],
+  "official": [
+   "GEO"
+  ],
+  "core": [
+   "GEO"
+  ],
+  "also": [],
+  "wiki": "Georgian language",
+  "tts": "ka-GE",
+  "phrases": {
+   "hello": {
+    "text": "გამარჯობა",
+    "rom": "Gamarjoba",
+    "say": "gah-mar-JOH-bah"
+   },
+   "thanks": {
+    "text": "მადლობა",
+    "rom": "Madloba",
+    "say": "mahd-LOH-bah"
+   },
+   "bye": {
+    "text": "ნახვამდის",
+    "rom": "Nakhvamdis",
+    "say": "nahk-VAHM-dees"
+   }
   },
-  {
-    "id": "hy",
-    "name": "Armenian",
-    "endonym": "Հայերեն (Hayeren)",
-    "aliases": [],
-    "family": "Indo-European",
-    "branch": "Armenian",
-    "l1": 4,
-    "total": 5.5,
-    "scripts": [
-      "Armenian"
-    ],
-    "official": [
-      "ARM"
-    ],
-    "core": [
-      "ARM"
-    ],
-    "also": [],
-    "wiki": "Armenian language",
-    "tts": "hy-AM",
-    "phrases": {
-      "hello": {
-        "text": "Բարեւ",
-        "rom": "Barev",
-        "say": "bah-REV"
-      },
-      "thanks": {
-        "text": "Շնորհակալություն",
-        "rom": "Shnorhakalutyun",
-        "say": "shnor-hah-kah-loo-TYOON"
-      },
-      "bye": {
-        "text": "Ցտեսություն",
-        "rom": "Tstesutyun",
-        "say": "tses-TOO-tyoon"
-      }
-    },
-    "facts": [
-      "The national language of Armenia, forming its own branch of the Indo-European family.",
-      "Written in a unique 36-letter alphabet created around 405 CE by Mesrop Mashtots.",
-      "Split historically into Eastern Armenian (spoken in Armenia) and Western Armenian (spoken by the diaspora).",
-      "Armenia was among the first states to adopt Christianity, shaping centuries of Armenian literature."
-    ]
+  "facts": [
+   "The national language of Georgia, in the South Caucasus.",
+   "Written in its own unique Georgian script, with no close relatives outside the Kartvelian family.",
+   "Not related to Indo-European, Turkic or Semitic languages despite its location at their crossroads.",
+   "Has a famously complex verb system with many prefixes and suffixes marking person and case."
+  ]
+ },
+ {
+  "id": "hy",
+  "name": "Armenian",
+  "endonym": "Հայերեն (Hayeren)",
+  "aliases": [],
+  "family": "Indo-European",
+  "branch": "Armenian",
+  "l1": 5.3,
+  "total": 5.5,
+  "scripts": [
+   "Armenian"
+  ],
+  "official": [
+   "ARM"
+  ],
+  "core": [
+   "ARM"
+  ],
+  "also": [],
+  "wiki": "Armenian language",
+  "tts": "hy-AM",
+  "phrases": {
+   "hello": {
+    "text": "Բարեւ",
+    "rom": "Barev",
+    "say": "bah-REV"
+   },
+   "thanks": {
+    "text": "Շնորհակալություն",
+    "rom": "Shnorhakalutyun",
+    "say": "shnor-hah-kah-loo-TYOON"
+   },
+   "bye": {
+    "text": "Ցտեսություն",
+    "rom": "Tstesutyun",
+    "say": "tses-TOO-tyoon"
+   }
   },
-  {
-    "id": "he",
-    "name": "Hebrew",
-    "endonym": "עברית (Ivrit)",
-    "aliases": [
-      "Ivrit"
-    ],
-    "family": "Afroasiatic",
-    "branch": "Semitic",
-    "l1": 9,
-    "total": 9,
-    "scripts": [
-      "Hebrew"
-    ],
-    "official": [
-      "ISR"
-    ],
-    "core": [
-      "ISR"
-    ],
-    "also": [],
-    "wiki": "Hebrew language",
-    "tts": "he-IL",
-    "phrases": {
-      "hello": {
-        "text": "שלום",
-        "rom": "Shalom",
-        "say": "shah-LOHM"
-      },
-      "thanks": {
-        "text": "תודה",
-        "rom": "Toda",
-        "say": "toh-DAH"
-      },
-      "bye": {
-        "text": "להתראות",
-        "rom": "Lehitra'ot",
-        "say": "leh-heet-rah-OHT"
-      }
-    },
-    "facts": [
-      "The official language of Israel, written right-to-left in the Hebrew alphabet.",
-      "Revived as an everyday spoken language in the late 19th and 20th centuries after surviving mainly as a liturgical language.",
-      "A Semitic language, related to Arabic and Aramaic.",
-      "Also the language of the Hebrew Bible (Tanakh), composed over roughly a thousand years."
-    ]
-  }
+  "facts": [
+   "The national language of Armenia, forming its own branch of the Indo-European family.",
+   "Written in a unique 36-letter alphabet created around 405 CE by Mesrop Mashtots.",
+   "Split historically into Eastern Armenian (spoken in Armenia) and Western Armenian (spoken by the diaspora).",
+   "Armenia was among the first states to adopt Christianity, shaping centuries of Armenian literature."
+  ]
+ },
+ {
+  "id": "he",
+  "name": "Hebrew",
+  "endonym": "עברית (Ivrit)",
+  "aliases": [
+   "Ivrit"
+  ],
+  "family": "Afroasiatic",
+  "branch": "Semitic",
+  "l1": 9,
+  "total": 9,
+  "scripts": [
+   "Hebrew"
+  ],
+  "official": [
+   "ISR"
+  ],
+  "core": [
+   "ISR"
+  ],
+  "also": [],
+  "wiki": "Hebrew language",
+  "tts": "he-IL",
+  "phrases": {
+   "hello": {
+    "text": "שלום",
+    "rom": "Shalom",
+    "say": "shah-LOHM"
+   },
+   "thanks": {
+    "text": "תודה",
+    "rom": "Toda",
+    "say": "toh-DAH"
+   },
+   "bye": {
+    "text": "להתראות",
+    "rom": "Lehitra'ot",
+    "say": "leh-heet-rah-OHT"
+   }
+  },
+  "facts": [
+   "The official language of Israel, written right-to-left in the Hebrew alphabet.",
+   "Revived as an everyday spoken language in the late 19th and 20th centuries after surviving mainly as a liturgical language.",
+   "A Semitic language, related to Arabic and Aramaic.",
+   "Also the language of the Hebrew Bible (Tanakh), composed over roughly a thousand years."
+  ]
+ }
 ]

@@ -20,6 +20,8 @@ Quiz sets data (`tools/sets/`, run from that folder; `tools/sets/prepare_raw.sh`
   segments into rivers), Wikidata (sitelinks = how well known, length/area/elevation), cached in data/raw/sets/.
   `build_physical.py` selects by sitelinks per type (MIN_SL), applies `src/phys_overrides.json` (drop/cat/name/wiki/alias, add
   point features by wiki title), computes continents/countries/measures, writes data/raw/sets/phys_factsrc.json (intros).
+- Language data was checked 2026-10-26 against Wikidata, Wikipedia infoboxes, Wikivoyage phrasebooks and Wiktionary
+  (`verify_languages.py` collects the references, reviewers wrote `src/lang_fixes_*.json`, `apply_lang_fixes.py` applied them).
 - `build_languages.py`: `src/languages_*.json` (spec in `src/LANG_SPEC.md`: areas as NE admin-0 ADM0_A3 / admin-1 adm1_code
   lists, speakers, phrases, facts; compiled with Claude) dissolved into core/also areas.
 - `build_austria.py`: Statistik Austria population 1 Jan (Vienna's districts summed into Wien), Gemeinde polygons (WFS),

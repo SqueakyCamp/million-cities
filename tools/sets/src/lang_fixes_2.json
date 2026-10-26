@@ -1,0 +1,226 @@
+{
+  "sw": {
+    "l1": 5.3,
+    "why": "Infobox gives L1 5.265M vs L2 92.4M; ours (20) far above infobox L1, total (100) already close to infobox L1+L2 (~98) so kept"
+  },
+  "ig": {
+    "official": [
+      "NGA"
+    ],
+    "phrases": {
+      "thanks": {
+        "text": "Daalụ",
+        "rom": "",
+        "say": "DAH-loo"
+      }
+    },
+    "why": "Infobox nation field marks Igbo as having national-language status in Nigeria (NGA), ours had empty official list; thanks text fixed to include underdot diacritic per Wiktionary 'daalụ'"
+  },
+  "bm": {
+    "l1": 4.2,
+    "total": 14,
+    "why": "Infobox L1 4.19M/L2 10.0M (total ~14.2M); ours l1=14 and total=18 were both far above infobox"
+  },
+  "mos": {
+    "total": 12,
+    "official": [
+      "BFA"
+    ],
+    "why": "Infobox speakers ~11.9M vs ours total 9 (>20% off); Wikidata official_in and infobox nation both list Burkina Faso, ours official list was empty"
+  },
+  "rn": {
+    "phrases": {
+      "hello": {
+        "text": "Muraho",
+        "rom": "",
+        "say": "moo-RAH-hoh"
+      }
+    },
+    "why": "Wikivoyage's neutral Kirundi greeting is 'Muraho'; 'Amahoro' (peace) is the Kinyarwanda (Rwanda) greeting, likely mixed up with the sister language"
+  },
+  "nso": {
+    "l1": 3.2,
+    "why": "Infobox L1 is 3.23M (2022 census) vs ours 4.7, >20% off; total (13) kept, close to infobox L1+L2 (~12.3)"
+  },
+  "sg": {
+    "l1": 0.62,
+    "why": "Both Wikidata (0.599M, 2017) and infobox (sag: 617,000) put L1 at ~0.6M, far below ours (1); total (5) kept, close to Wikidata L1+L2 (~5.2)"
+  },
+  "hak": {
+    "official": [
+      "TWN"
+    ],
+    "unsure": "Speaker counts conflict: Wikidata gives L1=48.2M (2019, preferred rank) while the Wikipedia infobox gives a single total-like figure of ~43.9M (2023) with no L1/L2 split. Kept l1=25/total=44 since total matches the infobox closely, but the Wikidata L1 figure exceeding our total is unresolved.",
+    "why": "Infobox nation field states Hakka is a national language in Taiwan (statutory status), ours had empty official list"
+  },
+  "bho": {
+    "official": [
+      "FJI"
+    ],
+    "phrases": {
+      "hello": {
+        "text": "प्रणाम",
+        "rom": "Pranam",
+        "say": "pruh-NAHM"
+      }
+    },
+    "why": "Infobox nation field lists Fiji ('as Fiji Hindi'), and the official-by-label file confirms Fiji Hindi is official in Fiji; ours had empty official list. Hello fixed to Wiktionary's bho-specific entry 'प्रणाम' (pranam) since 'नमस्कार' wasn't attested for this language code"
+  },
+  "dv": {
+    "phrases": {
+      "hello": {
+        "text": "މަރުޙަބާ",
+        "rom": "Maruhabaa",
+        "say": "mah-roo-hah-BAH"
+      }
+    },
+    "why": "Ours 'Kihineytha' means 'how are you', not hello; Wikivoyage/Wiktionary give assalaamu alaikum (formal) or maruhabaa (informal, also means welcome) for hello - used the informal form"
+  },
+  "bal": {
+    "unsure": "Wikivoyage lists a native-sounding goodbye romanization 'Wassh ent' (no script given) distinct from ours 'Khuda hafiz' (a Persian/Urdu loan phrase common across the region); could not confirm the native Balochi script for 'Wassh ent' or confirm 'Khuda hafiz' is actually wrong, so left unchanged."
+  },
+  "ky": {
+    "phrases": {
+      "bye": {
+        "text": "Кош болуңуз",
+        "rom": "Kosh bolunguz",
+        "say": "kohsh boh-loo-NOOZ"
+      }
+    },
+    "why": "Ours 'Salamatta boluŋuz' doesn't match any attested Kyrgyz farewell; Wiktionary gives 'кош бол' (kosh bol) as goodbye, formalized here with the -uŋuz honorific matching ours' register"
+  },
+  "en": {
+    "official": [
+      "AIA",
+      "ASM",
+      "ATC",
+      "ATG",
+      "AUS",
+      "BDI",
+      "BHS",
+      "BLZ",
+      "BMU",
+      "BRB",
+      "BWA",
+      "CAN",
+      "CMR",
+      "COK",
+      "CSI",
+      "CUW",
+      "CYM",
+      "DMA",
+      "ERI",
+      "FJI",
+      "FSM",
+      "GBR",
+      "GGY",
+      "GHA",
+      "GMB",
+      "GRD",
+      "GUM",
+      "GUY",
+      "HKG",
+      "HMD",
+      "IMN",
+      "IND",
+      "IOT",
+      "IRL",
+      "JAM",
+      "JEY",
+      "KEN",
+      "KIR",
+      "KNA",
+      "LBR",
+      "LCA",
+      "LSO",
+      "MHL",
+      "MLT",
+      "MNP",
+      "MSR",
+      "MUS",
+      "MWI",
+      "NAM",
+      "NFK",
+      "NGA",
+      "NIU",
+      "NRU",
+      "NZL",
+      "PAK",
+      "PCN",
+      "PHL",
+      "PLW",
+      "PNG",
+      "PRI",
+      "RWA",
+      "SDN",
+      "SDS",
+      "SGP",
+      "SGS",
+      "SHN",
+      "SLB",
+      "SLE",
+      "SOL",
+      "SWZ",
+      "SXM",
+      "SYC",
+      "TCA",
+      "TON",
+      "TTO",
+      "TUV",
+      "TZA",
+      "UGA",
+      "UMI",
+      "USA",
+      "VCT",
+      "VGB",
+      "VIR",
+      "VUT",
+      "WSM",
+      "ZAF",
+      "ZMB",
+      "ZWE"
+    ],
+    "why": "Expanded from 34 to 88 ADM0 codes using Wikidata official_in (sovereign states + inhabited dependent territories where English is official or official is a Natural Earth admin-0 entity in our countries list); excluded Netherlands (likely a Caribbean Netherlands tagging artifact, Dutch is official in mainland NL) and Spratly Islands (disputed, uninhabited)."
+  },
+  "bs": {
+    "official": [
+      "BIH",
+      "MNE"
+    ],
+    "why": "Infobox explicitly marks Montenegro '(co-official)' at the national level (also confirmed by Wikidata official_in); ours was missing Montenegro."
+  },
+  "se": {
+    "official": [
+      "NOR"
+    ],
+    "why": "Infobox nation field lists Norway (unqualified) vs Finland listed under 'minority' with explicit regional-only caveat (Sami homeland municipalities); Norway's Sami Act grants Northern Sami national official status. Ours official list was empty."
+  },
+  "gn": {
+    "official": [
+      "PRY",
+      "BOL"
+    ],
+    "why": "Infobox nation field and Wikidata official_in both list Bolivia alongside Paraguay (unqualified, national level); ours was missing Bolivia."
+  },
+  "yua": {
+    "official": [
+      "MEX"
+    ],
+    "phrases": {
+      "bye": {
+        "text": "Tuláak' k'iin",
+        "rom": "",
+        "say": "too-LAHK keen"
+      }
+    },
+    "why": "Wikidata official_in and infobox nation both list Mexico (indigenous languages have national-language status under Mexico's linguistic rights law), ours was empty. Bye phrase replaced with Wikivoyage's attested farewell; ours 'Jach ma'alob k'iin' ('very good day') wasn't found in either reference."
+  },
+  "pap": {
+    "official": [
+      "ABW",
+      "CUW",
+      "NLD"
+    ],
+    "why": "Infobox nation field also lists Bonaire (a special municipality of the Netherlands, no separate ADM0 code), where Papiamento has official/recognized status; Wikidata official_in also lists Netherlands. Ours was missing this."
+  }
+}

@@ -1,0 +1,121 @@
+{
+ "tig": {
+  "l1": 1.0,
+  "total": 1.0,
+  "why": "Infobox gives ~1.0M (Ethnologue 2022-2024); ours (1.3) was too high, no L1/L2 split available so total matches l1."
+ },
+ "ln": {
+  "official": ["COD", "COG"],
+  "why": "Infobox nation field lists Lingala as national language in both DR Congo and Republic of the Congo; ours was missing Republic of the Congo."
+ },
+ "xh": {
+  "official": ["ZAF", "ZWE"],
+  "why": "Wikidata official_in and infobox both list Zimbabwe (one of its 16 official languages) in addition to South Africa."
+ },
+ "wo": {
+  "l1": 8.2,
+  "total": 18,
+  "official": ["SEN"],
+  "why": "Infobox (2022-2023) gives L1 8.2M / total 18M, notably higher than ours; infobox nation field also gives Wolof national-language status in Senegal."
+ },
+ "ee": {
+  "l1": 5.0,
+  "total": 5.0,
+  "why": "Infobox gives ~5.0M (2013-2019), well below ours (7); no L1/L2 split so l1=total."
+ },
+ "tn": {
+  "official": ["BWA", "ZAF", "ZWE"],
+  "why": "Wikidata official_in and infobox nation field both add Zimbabwe (Setswana is one of Zimbabwe's 16 official languages)."
+ },
+ "ss": {
+  "total": 4.7,
+  "why": "Infobox gives L1 2.3M + L2 2.4M (2013) = ~4.7M total, well above ours (3.0); l1 (2.5) stayed within tolerance."
+ },
+ "ny": {
+  "official": ["MWI", "ZWE"],
+  "why": "Wikidata official_in lists Malawi and Zimbabwe (Chewa is one of Zimbabwe's 16 official languages), not Zambia (which only has regional/lingua-franca status, not national official)."
+ },
+ "zh": {
+  "official": ["CHN", "TWN", "SGP", "HKG", "MAC"],
+  "why": "official_by_label for the Standard Chinese / Standard Taiwanese Mandarin variants adds Hong Kong and Macao alongside China, Taiwan, Singapore."
+ },
+ "nan": {
+  "phrases": {
+   "bye": {"text": "再會", "rom": "Chài-hoē", "say": "tsai-HWEH"}
+  },
+  "why": "Wiktionary gives 再會 (chài-hoē) as the native Hokkien goodbye; ours mixed the Mandarin character/reading 再見 (kiàn) which isn't a real Hokkien pronunciation."
+ },
+ "lo": {
+  "l1": 3.7,
+  "total": 4.5,
+  "why": "Infobox gives L1 3.7M + L2 0.8M = ~4.5M (2015), vs ours 30/30 which was off by 6-7x -- likely conflated with Isan/Lao speakers in Thailand."
+ },
+ "su": {
+  "phrases": {
+   "hello": {"text": "Sampurasun", "rom": "", "say": "sahm-poo-RAH-soon"}
+  },
+  "why": "Wikivoyage lists Sampurasun as the standard greeting and Halo only as the informal variant; ours had the informal form as primary."
+ },
+ "ms": {
+  "unsure": "Ours (l1 20 / total 80) is far below the infobox/Wikidata figures (L1 ~90M, L2 ~180M), but those appear to be macrolanguage-wide figures that fold in Indonesian speakers; ours seems to deliberately scope Malay to Malaysia/Brunei/Singapore. Left unchanged, flagging for human review."
+ },
+ "pa": {
+  "official": [],
+  "why": "wikidata_official_in is empty and infobox nation field only lists India + its states/regional additional status; like Tamil/Kannada/Maithili, Punjabi is a scheduled/regional language in India, not official at the national level (Pakistan only gives it provincial status)."
+ },
+ "fa": {
+  "l1": 91,
+  "why": "Infobox combined Farsi+Dari+Tajik L1 figure is ~91M (our total of 130 already matched the infobox's combined total of ~127M well, but l1=70 was >20% below the infobox L1)."
+ },
+ "tr": {
+  "official": ["TUR", "CYP", "CYN"],
+  "why": "Wikidata official_in and infobox nation field both add Northern Cyprus alongside Turkey and Cyprus."
+ },
+ "ug": {
+  "phrases": {
+   "thanks": {"text": "رەھمەت", "rom": "Rehmet", "say": "reh-MET"}
+  },
+  "why": "Wiktionary and Wikivoyage both spell thanks with ھ (rehmet); ours used خ (rakhmat), a misspelling/confusion with the Kazakh/Uzbek form."
+ },
+ "bo": {
+  "unsure": "Bye phrase (ཕྱིས་འཇལ / Chi jal) doesn't match either Wiktionary (ག་ལེ་ཕེབས/ག་ལེ་ཞུགས) or Wikivoyage (kha lay shug/pheb); couldn't confidently verify the correct Tibetan script for a replacement, flagging for human review."
+ },
+ "pt": {
+  "official": ["PRT", "BRA", "AGO", "MOZ", "GNB", "CPV", "STP", "TLS", "GNQ", "MAC"],
+  "why": "Wikidata official_in and infobox both add Equatorial Guinea and Macao alongside the 8 countries ours already had."
+ },
+ "hr": {
+  "official": ["HRV", "MNE"],
+  "why": "Infobox's own footnote says Bosnia and Herzegovina has no state-level official language (Croatian is only official in its sub-national entities, which doesn't count); Wikidata official_in and infobox both add Montenegro (co-official nationally) instead."
+ },
+ "lt": {
+  "total": 4.0,
+  "why": "Wikidata and infobox both agree on 4.0M total speakers (vs ours 3); l1 (2.8) stayed within tolerance of Lithuania's resident native-speaker population."
+ },
+ "fi": {
+  "official": ["FIN", "SWE"],
+  "why": "Wikidata official_in adds Sweden, where Finnish has official minority-language status nationally."
+ },
+ "da": {
+  "official": ["DNK", "FRO"],
+  "why": "Wikidata official_in only lists Denmark and the Faroe Islands; the infobox puts Greenland under 'minority', not 'nation' (Greenlandic, not Danish, is Greenland's official language)."
+ },
+ "br": {
+  "l1": 0.11,
+  "why": "Wikidata's current (2025, preferred) and infobox (2024) figures both give ~107,000 speakers, well below ours (160,000); total (0.21) kept as a plausible broader L1+L2 estimate."
+ },
+ "gl": {
+  "official": ["ESP"],
+  "why": "Wikidata official_in lists Spain (Galician is co-official, like Catalan/Basque); ours had no official status at all."
+ },
+ "nah": {
+  "official": ["MEX"],
+  "why": "Wikidata official_in lists Mexico; Nahuatl has national-language status under Mexico's 2003 General Law of Linguistic Rights of Indigenous Peoples, alongside Spanish.",
+  "unsure": "Bye phrase (Mocheli) doesn't match Wiktionary's 'anej', but Nahuatl has huge dialectal variation and no Wikivoyage data to arbitrate; left phrase unchanged, flagging for human review."
+ },
+ "sm": {
+  "l1": 0.43,
+  "total": 0.43,
+  "why": "Infobox (430,440, 2020-2022) and all Wikidata figures cluster around 0.41-0.43M; ours (0.51) was consistently ~20% above every reference."
+ }
+}
