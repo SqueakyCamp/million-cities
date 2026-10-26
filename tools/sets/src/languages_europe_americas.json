@@ -1,0 +1,3120 @@
+[
+  {
+    "id": "en",
+    "name": "English",
+    "endonym": "English",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 380,
+    "total": 1500,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "USA",
+      "GBR",
+      "IRL",
+      "CAN",
+      "AUS",
+      "NZL",
+      "ZAF",
+      "IND",
+      "PAK",
+      "NGA",
+      "KEN",
+      "UGA",
+      "TZA",
+      "GHA",
+      "SGP",
+      "MLT",
+      "PHL",
+      "JAM",
+      "TTO",
+      "BHS",
+      "BRB",
+      "BLZ",
+      "GUY",
+      "FJI",
+      "PNG",
+      "VUT",
+      "WSM",
+      "ZMB",
+      "ZWE",
+      "MWI",
+      "SLE",
+      "LBR",
+      "GMB",
+      "BWA",
+      "NAM"
+    ],
+    "core": [
+      "USA",
+      "GBR",
+      "IRL",
+      "CAN",
+      "-CAN-683",
+      "AUS",
+      "NZL",
+      "JAM",
+      "TTO",
+      "BHS",
+      "BRB",
+      "BLZ",
+      "GUY",
+      "ATG",
+      "DMA",
+      "GRD",
+      "KNA",
+      "LCA",
+      "VCT",
+      "SGP"
+    ],
+    "also": [
+      "IND",
+      "PAK",
+      "NGA",
+      "KEN",
+      "ZAF",
+      "PHL",
+      "GHA",
+      "UGA",
+      "TZA",
+      "ZMB",
+      "ZWE",
+      "MWI",
+      "SLE",
+      "LBR",
+      "GMB",
+      "BWA",
+      "NAM",
+      "HKG",
+      "MLT",
+      "FJI",
+      "PNG",
+      "VUT",
+      "WSM",
+      "SLB",
+      "KIR"
+    ],
+    "wiki": "English language",
+    "tts": "en-US",
+    "phrases": {
+      "hello": {
+        "text": "Hello",
+        "rom": "",
+        "say": "heh-LOH"
+      },
+      "thanks": {
+        "text": "Thank you",
+        "rom": "",
+        "say": "thank-YOO"
+      },
+      "bye": {
+        "text": "Goodbye",
+        "rom": "",
+        "say": "good-BY"
+      }
+    },
+    "facts": [
+      "The most widely used language in the world as a first or second language, and the main language of international business, science and aviation.",
+      "A West Germanic language that originated in early medieval England, later reshaped by heavy borrowing from French and Latin.",
+      "Written with the Latin alphabet; spelling is notoriously irregular compared to pronunciation.",
+      "Official or widely used in dozens of former British and American territories, from Nigeria to India to the Philippines."
+    ]
+  },
+  {
+    "id": "es",
+    "name": "Spanish",
+    "endonym": "español",
+    "aliases": [
+      "Castilian",
+      "Spanisch",
+      "castellano"
+    ],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 485,
+    "total": 560,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ESP",
+      "MEX",
+      "ARG",
+      "COL",
+      "PER",
+      "VEN",
+      "CHL",
+      "ECU",
+      "GTM",
+      "CUB",
+      "BOL",
+      "DOM",
+      "HND",
+      "PRY",
+      "NIC",
+      "SLV",
+      "CRI",
+      "PAN",
+      "URY",
+      "GNQ"
+    ],
+    "core": [
+      "ESP",
+      "MEX",
+      "ARG",
+      "COL",
+      "PER",
+      "VEN",
+      "CHL",
+      "ECU",
+      "GTM",
+      "CUB",
+      "BOL",
+      "DOM",
+      "HND",
+      "PRY",
+      "NIC",
+      "SLV",
+      "CRI",
+      "PAN",
+      "URY",
+      "GNQ",
+      "PRI"
+    ],
+    "also": [
+      "USA-3520",
+      "USA-3524",
+      "USA-3536",
+      "USA-3521",
+      "USA-3523",
+      "AND"
+    ],
+    "wiki": "Spanish language",
+    "tts": "es-ES",
+    "phrases": {
+      "hello": {
+        "text": "Hola",
+        "rom": "",
+        "say": "OH-lah"
+      },
+      "thanks": {
+        "text": "Gracias",
+        "rom": "",
+        "say": "GRAH-syahs"
+      },
+      "bye": {
+        "text": "Adiós",
+        "rom": "",
+        "say": "ah-DYOHS"
+      }
+    },
+    "facts": [
+      "Official language in Spain and nearly all of mainland Latin America, plus Equatorial Guinea; around 500 million native speakers.",
+      "A Romance language descended from Vulgar Latin spoken on the Iberian Peninsula, spread worldwide by Spanish colonisation from the 16th century.",
+      "Written with the Latin alphabet; distinguishes between formal 'usted' and informal 'tú' for 'you'.",
+      "The second most spoken native language in the world after Mandarin, and a major minority language in the United States."
+    ]
+  },
+  {
+    "id": "pt",
+    "name": "Portuguese",
+    "endonym": "português",
+    "aliases": [
+      "Portugiesisch"
+    ],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 230,
+    "total": 260,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "PRT",
+      "BRA",
+      "AGO",
+      "MOZ",
+      "GNB",
+      "CPV",
+      "STP",
+      "TLS"
+    ],
+    "core": [
+      "PRT",
+      "BRA",
+      "AGO",
+      "MOZ",
+      "GNB",
+      "CPV",
+      "STP",
+      "TLS"
+    ],
+    "also": [
+      "MAC"
+    ],
+    "wiki": "Portuguese language",
+    "tts": "pt-BR",
+    "phrases": {
+      "hello": {
+        "text": "Olá",
+        "rom": "",
+        "say": "oh-LAH"
+      },
+      "thanks": {
+        "text": "Obrigado",
+        "rom": "",
+        "say": "oh-bree-GAH-doo (women say 'obrigada')"
+      },
+      "bye": {
+        "text": "Tchau",
+        "rom": "",
+        "say": "chow"
+      }
+    },
+    "facts": [
+      "Official language of Portugal, Brazil and several African and Asian countries, a legacy of the Portuguese maritime empire.",
+      "A Romance language that evolved from Galician-Latin in north-west Iberia before spreading worldwide from the 15th century.",
+      "Brazilian and European Portuguese differ noticeably in pronunciation and some vocabulary, though they share the same writing system.",
+      "More native speakers live in Brazil than in all other Portuguese-speaking countries combined."
+    ]
+  },
+  {
+    "id": "fr",
+    "name": "French",
+    "endonym": "français",
+    "aliases": [
+      "Französisch"
+    ],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 80,
+    "total": 310,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "FRA",
+      "BEL",
+      "CHE",
+      "MCO",
+      "LUX",
+      "CAN",
+      "HTI",
+      "CAF",
+      "COD",
+      "COG",
+      "GAB",
+      "CMR",
+      "TCD",
+      "BEN",
+      "BFA",
+      "CIV",
+      "GIN",
+      "MLI",
+      "NER",
+      "SEN",
+      "TGO",
+      "DJI",
+      "MDG",
+      "COM",
+      "VUT",
+      "SYC"
+    ],
+    "core": [
+      "FRA",
+      "BEL-3474",
+      "BEL-3475",
+      "BEL-3478",
+      "BEL-3479",
+      "BEL-3482",
+      "CHE-159",
+      "CHE-160",
+      "CHE-3421",
+      "CHE-3422",
+      "CHE-165",
+      "MCO",
+      "LUX",
+      "CAN-683",
+      "CAN-684"
+    ],
+    "also": [
+      "CAF",
+      "COD",
+      "COG",
+      "GAB",
+      "CMR",
+      "TCD",
+      "BEN",
+      "BFA",
+      "CIV",
+      "GIN",
+      "MLI",
+      "NER",
+      "SEN",
+      "TGO",
+      "DJI",
+      "MDG",
+      "COM",
+      "VUT",
+      "SYC",
+      "HTI"
+    ],
+    "wiki": "French language",
+    "tts": "fr-FR",
+    "phrases": {
+      "hello": {
+        "text": "Bonjour",
+        "rom": "",
+        "say": "bohn-ZHOOR"
+      },
+      "thanks": {
+        "text": "Merci",
+        "rom": "",
+        "say": "mehr-SEE"
+      },
+      "bye": {
+        "text": "Au revoir",
+        "rom": "",
+        "say": "oh ruh-VWAHR"
+      }
+    },
+    "facts": [
+      "Official language of France and an official or administrative language across much of francophone sub-Saharan Africa, a legacy of French and Belgian colonial rule.",
+      "A Romance language descended from the Latin spoken in Roman Gaul, standardised from the medieval dialect of the Île-de-France.",
+      "One of the few languages with official status on every inhabited continent, and a working language of the UN, EU and African Union.",
+      "Population growth means more first-language French speakers now live in Africa than in France itself."
+    ]
+  },
+  {
+    "id": "ru",
+    "name": "Russian",
+    "endonym": "русский (russkiy)",
+    "aliases": [
+      "Russisch"
+    ],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 150,
+    "total": 258,
+    "scripts": [
+      "Cyrillic"
+    ],
+    "official": [
+      "RUS",
+      "BLR",
+      "KAZ",
+      "KGZ"
+    ],
+    "core": [
+      "RUS",
+      "BLR"
+    ],
+    "also": [
+      "KAZ",
+      "KGZ",
+      "UZB",
+      "TJK",
+      "TKM",
+      "UKR",
+      "MDA",
+      "GEO",
+      "ARM",
+      "AZE",
+      "EST",
+      "LVA",
+      "LTU"
+    ],
+    "wiki": "Russian language",
+    "tts": "ru-RU",
+    "phrases": {
+      "hello": {
+        "text": "Привет",
+        "rom": "Privet",
+        "say": "pree-VYET"
+      },
+      "thanks": {
+        "text": "Спасибо",
+        "rom": "Spasibo",
+        "say": "spuh-SEE-boh"
+      },
+      "bye": {
+        "text": "До свидания",
+        "rom": "Do svidaniya",
+        "say": "duh svee-DAH-nee-yuh"
+      }
+    },
+    "facts": [
+      "The most widely spoken Slavic language and an official or widely used second language across most of the former Soviet Union.",
+      "An East Slavic language written in the Cyrillic alphabet, with a literary tradition shaped by writers like Pushkin and Tolstoy.",
+      "Has a complex case system with six grammatical cases and a distinction between perfective and imperfective verb aspects.",
+      "Remains a lingua franca in Central Asia and the Caucasus decades after the Soviet Union's dissolution."
+    ]
+  },
+  {
+    "id": "de",
+    "name": "German",
+    "endonym": "Deutsch",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 76,
+    "total": 135,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "DEU",
+      "AUT",
+      "CHE",
+      "LIE",
+      "LUX",
+      "BEL"
+    ],
+    "core": [
+      "DEU",
+      "AUT",
+      "LIE",
+      "CHE-162",
+      "CHE-166",
+      "CHE-3473",
+      "CHE-3423",
+      "CHE-3425",
+      "CHE-3424",
+      "CHE-169",
+      "CHE-170",
+      "CHE-163",
+      "CHE-164",
+      "CHE-3427",
+      "CHE-167",
+      "CHE-171",
+      "CHE-173",
+      "CHE-3426",
+      "CHE-174",
+      "CHE-175",
+      "CHE-177",
+      "CHE-176"
+    ],
+    "also": [
+      "LUX",
+      "BEL-3481",
+      "ITA-5459"
+    ],
+    "wiki": "German language",
+    "tts": "de-DE",
+    "phrases": {
+      "hello": {
+        "text": "Hallo",
+        "rom": "",
+        "say": "HAH-loh"
+      },
+      "thanks": {
+        "text": "Danke",
+        "rom": "",
+        "say": "DAHN-kuh"
+      },
+      "bye": {
+        "text": "Auf Wiedersehen",
+        "rom": "",
+        "say": "owf VEE-der-zayn"
+      }
+    },
+    "facts": [
+      "Official language of Germany, Austria and Liechtenstein, one of four official languages of Switzerland, and co-official in Luxembourg and Belgium.",
+      "A West Germanic language with a system of three grammatical genders and four noun cases.",
+      "Standard German developed partly from Luther's 16th-century Bible translation, which helped unify many regional dialects.",
+      "Known for long compound nouns and a sentence structure that often places the verb at the end of a clause."
+    ]
+  },
+  {
+    "id": "it",
+    "name": "Italian",
+    "endonym": "italiano",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 64,
+    "total": 68,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ITA",
+      "CHE",
+      "SMR",
+      "VAT"
+    ],
+    "core": [
+      "ITA",
+      "CHE-168",
+      "SMR",
+      "VAT"
+    ],
+    "also": [],
+    "wiki": "Italian language",
+    "tts": "it-IT",
+    "phrases": {
+      "hello": {
+        "text": "Ciao",
+        "rom": "",
+        "say": "CHOW"
+      },
+      "thanks": {
+        "text": "Grazie",
+        "rom": "",
+        "say": "GRAHT-syeh"
+      },
+      "bye": {
+        "text": "Arrivederci",
+        "rom": "",
+        "say": "ah-ree-veh-DER-chee"
+      }
+    },
+    "facts": [
+      "Official language of Italy and San Marino, and one of four official languages of Switzerland, mainly in Ticino.",
+      "The Romance language closest to Latin in vocabulary and sound, standardised from the Tuscan dialect of Dante and Florence.",
+      "Vatican City uses Italian for most everyday administration alongside Latin for official church documents.",
+      "Famous for its role in opera, classical music terminology and the visual arts."
+    ]
+  },
+  {
+    "id": "nl",
+    "name": "Dutch",
+    "endonym": "Nederlands",
+    "aliases": [
+      "Hollandic",
+      "Flemish"
+    ],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 24,
+    "total": 30,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "NLD",
+      "BEL",
+      "SUR",
+      "ABW",
+      "CUW",
+      "SXM"
+    ],
+    "core": [
+      "NLD",
+      "BEL-3480",
+      "BEL-3474",
+      "BEL-3478",
+      "BEL-3475",
+      "BEL-3479",
+      "SUR"
+    ],
+    "also": [
+      "ABW",
+      "CUW",
+      "SXM"
+    ],
+    "wiki": "Dutch language",
+    "tts": "nl-NL",
+    "phrases": {
+      "hello": {
+        "text": "Hallo",
+        "rom": "",
+        "say": "HAH-loh"
+      },
+      "thanks": {
+        "text": "Dank je wel",
+        "rom": "",
+        "say": "dahnk yuh VEL"
+      },
+      "bye": {
+        "text": "Tot ziens",
+        "rom": "",
+        "say": "tot ZEENS"
+      }
+    },
+    "facts": [
+      "Official language of the Netherlands, Belgium (as Flemish, mainly in Flanders) and Suriname.",
+      "A West Germanic language closely related to German and English, with a simpler case system than German.",
+      "Known as 'Flemish' in Belgium, though it is essentially the same standard language with regional pronunciation differences.",
+      "Also official in the Dutch Caribbean territories of Aruba, Curaçao and Sint Maarten, alongside Papiamento."
+    ]
+  },
+  {
+    "id": "pl",
+    "name": "Polish",
+    "endonym": "polski",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 40,
+    "total": 45,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "POL"
+    ],
+    "core": [
+      "POL"
+    ],
+    "also": [],
+    "wiki": "Polish language",
+    "tts": "pl-PL",
+    "phrases": {
+      "hello": {
+        "text": "Cześć",
+        "rom": "",
+        "say": "cheshch"
+      },
+      "thanks": {
+        "text": "Dziękuję",
+        "rom": "",
+        "say": "jen-KOO-yeh"
+      },
+      "bye": {
+        "text": "Do widzenia",
+        "rom": "",
+        "say": "doh vee-DZEN-yah"
+      }
+    },
+    "facts": [
+      "Official language of Poland and the native language of nearly all its population.",
+      "A West Slavic language written in the Latin alphabet with added diacritics, such as ą, ę, ł and ż.",
+      "Has a famously dense consonant system, including clusters like sz, cz and rz.",
+      "Spoken by large Polish diaspora communities in the United States, United Kingdom and Germany."
+    ]
+  },
+  {
+    "id": "uk",
+    "name": "Ukrainian",
+    "endonym": "українська (ukrainska)",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 30,
+    "total": 33,
+    "scripts": [
+      "Cyrillic"
+    ],
+    "official": [
+      "UKR"
+    ],
+    "core": [
+      "UKR"
+    ],
+    "also": [],
+    "wiki": "Ukrainian language",
+    "tts": "uk-UA",
+    "phrases": {
+      "hello": {
+        "text": "Привіт",
+        "rom": "Pryvit",
+        "say": "prih-VEET"
+      },
+      "thanks": {
+        "text": "Дякую",
+        "rom": "Diakuiu",
+        "say": "DYAH-koo-yoo"
+      },
+      "bye": {
+        "text": "До побачення",
+        "rom": "Do pobachennia",
+        "say": "doh poh-bah-CHEN-nya"
+      }
+    },
+    "facts": [
+      "Official and national language of Ukraine, spoken by the large majority of the population.",
+      "An East Slavic language written in a Cyrillic alphabet distinct from Russian in several letters and sounds.",
+      "Closely related to Russian and Belarusian but mutually distinguishable, with its own long literary tradition.",
+      "Ukrainian identity and language became a central symbol of national resistance after Russia's 2022 invasion."
+    ]
+  },
+  {
+    "id": "be",
+    "name": "Belarusian",
+    "endonym": "беларуская (bielaruskaya)",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 3.3,
+    "total": 6,
+    "scripts": [
+      "Cyrillic"
+    ],
+    "official": [
+      "BLR"
+    ],
+    "core": [
+      "BLR"
+    ],
+    "also": [],
+    "wiki": "Belarusian language",
+    "tts": "be-BY",
+    "phrases": {
+      "hello": {
+        "text": "Прывіт",
+        "rom": "Pryvit",
+        "say": "prih-VEET"
+      },
+      "thanks": {
+        "text": "Дзякуй",
+        "rom": "Dziakuj",
+        "say": "DZYAH-kooy"
+      },
+      "bye": {
+        "text": "Да пабачэння",
+        "rom": "Da pabachennia",
+        "say": "dah pah-bah-CHEN-nya"
+      }
+    },
+    "facts": [
+      "Co-official language of Belarus alongside Russian, though most Belarusians speak Russian in daily life.",
+      "An East Slavic language closely related to Ukrainian and Russian, written in the Cyrillic alphabet.",
+      "Use of Belarusian declined sharply during the Soviet era and remains a minority home language today.",
+      "Belarusian-language media and schooling have become associated with political opposition in recent years."
+    ]
+  },
+  {
+    "id": "ro",
+    "name": "Romanian",
+    "endonym": "română",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 24,
+    "total": 26,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ROU",
+      "MDA"
+    ],
+    "core": [
+      "ROU",
+      "MDA"
+    ],
+    "also": [],
+    "wiki": "Romanian language",
+    "tts": "ro-RO",
+    "phrases": {
+      "hello": {
+        "text": "Salut",
+        "rom": "",
+        "say": "sah-LOOT"
+      },
+      "thanks": {
+        "text": "Mulțumesc",
+        "rom": "",
+        "say": "mool-tsoo-MESK"
+      },
+      "bye": {
+        "text": "La revedere",
+        "rom": "",
+        "say": "lah reh-veh-DEH-reh"
+      }
+    },
+    "facts": [
+      "Official language of Romania and Moldova, where it is also called 'Moldovan'.",
+      "The only major Romance language in Eastern Europe, descended from the Latin of the Roman province of Dacia.",
+      "Retains some grammatical cases, unlike most other Romance languages, likely from contact with neighbouring Slavic languages.",
+      "Written in the Latin alphabet since the 19th century, replacing an earlier Cyrillic-based script."
+    ]
+  },
+  {
+    "id": "el",
+    "name": "Greek",
+    "endonym": "ελληνικά (elliniká)",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Hellenic",
+    "l1": 13,
+    "total": 13.5,
+    "scripts": [
+      "Greek"
+    ],
+    "official": [
+      "GRC",
+      "CYP"
+    ],
+    "core": [
+      "GRC",
+      "CYP"
+    ],
+    "also": [],
+    "wiki": "Greek language",
+    "tts": "el-GR",
+    "phrases": {
+      "hello": {
+        "text": "Γειά σου",
+        "rom": "Yia sou",
+        "say": "YAH soo"
+      },
+      "thanks": {
+        "text": "Ευχαριστώ",
+        "rom": "Efcharistó",
+        "say": "ehf-khah-ree-STOH"
+      },
+      "bye": {
+        "text": "Αντίο",
+        "rom": "Antío",
+        "say": "ahn-DEE-oh"
+      }
+    },
+    "facts": [
+      "Official language of Greece and Cyprus, with the longest continuously recorded history of any Indo-European language, over 3,000 years.",
+      "Written in its own Greek alphabet, the ancestor of both the Latin and Cyrillic scripts.",
+      "Modern Greek descends from Koine Greek, the common language of the Hellenistic world and the New Testament.",
+      "Contributed enormous amounts of scientific and technical vocabulary to English and other European languages."
+    ]
+  },
+  {
+    "id": "cs",
+    "name": "Czech",
+    "endonym": "čeština",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 10.7,
+    "total": 10.9,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "CZE"
+    ],
+    "core": [
+      "CZE"
+    ],
+    "also": [],
+    "wiki": "Czech language",
+    "tts": "cs-CZ",
+    "phrases": {
+      "hello": {
+        "text": "Ahoj",
+        "rom": "",
+        "say": "AH-hoy"
+      },
+      "thanks": {
+        "text": "Děkuji",
+        "rom": "",
+        "say": "DYEH-koo-yih"
+      },
+      "bye": {
+        "text": "Na shledanou",
+        "rom": "",
+        "say": "nah SKHLE-dah-noh"
+      }
+    },
+    "facts": [
+      "Official language of the Czech Republic, mutually intelligible to a large degree with Slovak.",
+      "A West Slavic language written in the Latin alphabet with diacritics such as č, š, ž and ř.",
+      "The ř sound, a raised alveolar trill, is considered one of the hardest sounds for learners to pronounce.",
+      "Closely tied to Slovak after nearly 75 years as a shared state (Czechoslovakia) until 1993."
+    ]
+  },
+  {
+    "id": "sk",
+    "name": "Slovak",
+    "endonym": "slovenčina",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 5.2,
+    "total": 5.6,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "SVK"
+    ],
+    "core": [
+      "SVK"
+    ],
+    "also": [],
+    "wiki": "Slovak language",
+    "tts": "sk-SK",
+    "phrases": {
+      "hello": {
+        "text": "Ahoj",
+        "rom": "",
+        "say": "AH-hoy"
+      },
+      "thanks": {
+        "text": "Ďakujem",
+        "rom": "",
+        "say": "DYAH-koo-yem"
+      },
+      "bye": {
+        "text": "Dovidenia",
+        "rom": "",
+        "say": "doh-vee-DEN-ya"
+      }
+    },
+    "facts": [
+      "Official language of Slovakia, closely related to and largely mutually intelligible with Czech.",
+      "A West Slavic language written in the Latin alphabet with diacritics including ľ, ŕ and ô.",
+      "Slovak and Czech speakers could generally understand each other during the 20th-century union of Czechoslovakia.",
+      "Standardised relatively late, in the 19th century, based on central Slovak dialects."
+    ]
+  },
+  {
+    "id": "hu",
+    "name": "Hungarian",
+    "endonym": "magyar",
+    "aliases": [],
+    "family": "Uralic",
+    "branch": "Ugric",
+    "l1": 13,
+    "total": 13,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "HUN"
+    ],
+    "core": [
+      "HUN"
+    ],
+    "also": [
+      "ROU",
+      "SRB",
+      "SVK",
+      "UKR"
+    ],
+    "wiki": "Hungarian language",
+    "tts": "hu-HU",
+    "phrases": {
+      "hello": {
+        "text": "Szia",
+        "rom": "",
+        "say": "SEE-ah"
+      },
+      "thanks": {
+        "text": "Köszönöm",
+        "rom": "",
+        "say": "KOH-soh-nohm"
+      },
+      "bye": {
+        "text": "Viszlát",
+        "rom": "",
+        "say": "VEESS-laht"
+      }
+    },
+    "facts": [
+      "Official language of Hungary and a recognised minority language in several neighbouring countries with large Hungarian communities.",
+      "A Uralic language unrelated to its Indo-European neighbours, distantly related to Finnish and Estonian.",
+      "Famous for extensive noun cases (around 18) and vowel harmony rules.",
+      "Hungarian communities remain large in Transylvania (Romania), Slovakia, Serbia's Vojvodina and Ukraine's Zakarpattia."
+    ]
+  },
+  {
+    "id": "sr",
+    "name": "Serbian",
+    "endonym": "српски (srpski)",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 9,
+    "total": 12,
+    "scripts": [
+      "Cyrillic",
+      "Latin"
+    ],
+    "official": [
+      "SRB",
+      "BIH"
+    ],
+    "core": [
+      "SRB"
+    ],
+    "also": [
+      "BIH",
+      "MNE",
+      "KOS"
+    ],
+    "wiki": "Serbian language",
+    "tts": "sr-RS",
+    "phrases": {
+      "hello": {
+        "text": "Здраво",
+        "rom": "Zdravo",
+        "say": "ZDRAH-voh"
+      },
+      "thanks": {
+        "text": "Хвала",
+        "rom": "Hvala",
+        "say": "HVAH-lah"
+      },
+      "bye": {
+        "text": "Довиђења",
+        "rom": "Doviđenja",
+        "say": "doh-vee-JEN-yah"
+      }
+    },
+    "facts": [
+      "Official language of Serbia and one of three official languages of Bosnia and Herzegovina, alongside Bosnian and Croatian.",
+      "A South Slavic language written in both Cyrillic and Latin scripts, almost interchangeably.",
+      "Mutually intelligible with Croatian and Bosnian; the three are often described as variants of one pluricentric language.",
+      "Also spoken as a minority language in Montenegro and in Serb-majority areas of northern Kosovo."
+    ]
+  },
+  {
+    "id": "hr",
+    "name": "Croatian",
+    "endonym": "hrvatski",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 5.5,
+    "total": 6.8,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "HRV",
+      "BIH"
+    ],
+    "core": [
+      "HRV"
+    ],
+    "also": [
+      "BIH"
+    ],
+    "wiki": "Croatian language",
+    "tts": "hr-HR",
+    "phrases": {
+      "hello": {
+        "text": "Bok",
+        "rom": "",
+        "say": "bohk"
+      },
+      "thanks": {
+        "text": "Hvala",
+        "rom": "",
+        "say": "HVAH-lah"
+      },
+      "bye": {
+        "text": "Doviđenja",
+        "rom": "",
+        "say": "doh-vee-JEN-yah"
+      }
+    },
+    "facts": [
+      "Official language of Croatia and one of three official languages of Bosnia and Herzegovina.",
+      "A South Slavic language written exclusively in the Latin alphabet, unlike Serbian which also uses Cyrillic.",
+      "Mutually intelligible with Serbian and Bosnian, though standardised separately with distinct vocabulary choices.",
+      "Became Croatia's sole official language after independence from Yugoslavia in 1991."
+    ]
+  },
+  {
+    "id": "bs",
+    "name": "Bosnian",
+    "endonym": "bosanski",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 2.7,
+    "total": 3,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "BIH"
+    ],
+    "core": [
+      "BIH"
+    ],
+    "also": [
+      "SRB",
+      "MNE"
+    ],
+    "wiki": "Bosnian language",
+    "tts": "bs-BA",
+    "phrases": {
+      "hello": {
+        "text": "Zdravo",
+        "rom": "",
+        "say": "ZDRAH-voh"
+      },
+      "thanks": {
+        "text": "Hvala",
+        "rom": "",
+        "say": "HVAH-lah"
+      },
+      "bye": {
+        "text": "Doviđenja",
+        "rom": "",
+        "say": "doh-vee-JEN-yah"
+      }
+    },
+    "facts": [
+      "Official language of Bosnia and Herzegovina, the mother tongue of its Bosniak Muslim majority community.",
+      "A South Slavic language, mutually intelligible with Serbian and Croatian, written in the Latin alphabet.",
+      "Contains more loanwords from Turkish and Arabic than Serbian or Croatian, reflecting centuries of Ottoman rule.",
+      "Also spoken by Bosniak minorities in the Sandžak region of Serbia and Montenegro."
+    ]
+  },
+  {
+    "id": "sl",
+    "name": "Slovene",
+    "endonym": "slovenščina",
+    "aliases": [
+      "Slovenian"
+    ],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 2.1,
+    "total": 2.5,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "SVN"
+    ],
+    "core": [
+      "SVN"
+    ],
+    "also": [],
+    "wiki": "Slovene language",
+    "tts": "sl-SI",
+    "phrases": {
+      "hello": {
+        "text": "Zdravo",
+        "rom": "",
+        "say": "ZDRAH-voh"
+      },
+      "thanks": {
+        "text": "Hvala",
+        "rom": "",
+        "say": "HVAH-lah"
+      },
+      "bye": {
+        "text": "Adijo",
+        "rom": "",
+        "say": "ah-DEE-yoh"
+      }
+    },
+    "facts": [
+      "Official language of Slovenia, spoken by nearly all of its roughly two million people.",
+      "A South Slavic language notable for retaining the dual grammatical number, used for exactly two of something.",
+      "Written in the Latin alphabet, closely related to but not mutually intelligible with Croatian.",
+      "One of the smallest national languages in the EU to have had full official status since Slovenia joined in 2004."
+    ]
+  },
+  {
+    "id": "mk",
+    "name": "Macedonian",
+    "endonym": "македонски (makedonski)",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 1.6,
+    "total": 2,
+    "scripts": [
+      "Cyrillic"
+    ],
+    "official": [
+      "MKD"
+    ],
+    "core": [
+      "MKD"
+    ],
+    "also": [],
+    "wiki": "Macedonian language",
+    "tts": "mk-MK",
+    "phrases": {
+      "hello": {
+        "text": "Здраво",
+        "rom": "Zdravo",
+        "say": "ZDRAH-voh"
+      },
+      "thanks": {
+        "text": "Благодарам",
+        "rom": "Blagodaram",
+        "say": "blah-goh-DAH-rahm"
+      },
+      "bye": {
+        "text": "Чао",
+        "rom": "Chao",
+        "say": "chow"
+      }
+    },
+    "facts": [
+      "Official language of North Macedonia, written in the Cyrillic alphabet.",
+      "A South Slavic language closely related to Bulgarian, with which it shares a high degree of mutual intelligibility.",
+      "One of the few Slavic languages, like Bulgarian, to have lost most noun case endings under Balkan linguistic influence.",
+      "Recognition of Macedonian as a distinct language has at times been politically disputed by neighbouring Bulgaria."
+    ]
+  },
+  {
+    "id": "bg",
+    "name": "Bulgarian",
+    "endonym": "български (bulgarski)",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Slavic",
+    "l1": 7.8,
+    "total": 8,
+    "scripts": [
+      "Cyrillic"
+    ],
+    "official": [
+      "BGR"
+    ],
+    "core": [
+      "BGR"
+    ],
+    "also": [],
+    "wiki": "Bulgarian language",
+    "tts": "bg-BG",
+    "phrases": {
+      "hello": {
+        "text": "Здравей",
+        "rom": "Zdravey",
+        "say": "ZDRAH-vey"
+      },
+      "thanks": {
+        "text": "Благодаря",
+        "rom": "Blagodarya",
+        "say": "blah-goh-dahr-YAH"
+      },
+      "bye": {
+        "text": "Довиждане",
+        "rom": "Dovizhdane",
+        "say": "doh-VEEZH-dah-neh"
+      }
+    },
+    "facts": [
+      "Official language of Bulgaria, and the first Slavic language to develop a standardised written form, in the 9th century.",
+      "The Cyrillic alphabet itself was devised for Old Church Slavonic, a liturgical ancestor of modern Bulgarian.",
+      "Unusually for a Slavic language, it has lost noun cases but developed a distinctive set of verb forms marking narrated versus witnessed events.",
+      "Closely related to Macedonian, with which it shares high mutual intelligibility."
+    ]
+  },
+  {
+    "id": "sq",
+    "name": "Albanian",
+    "endonym": "shqip",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Albanian",
+    "l1": 6,
+    "total": 7.5,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ALB",
+      "KOS"
+    ],
+    "core": [
+      "ALB",
+      "KOS"
+    ],
+    "also": [
+      "MKD",
+      "MNE"
+    ],
+    "wiki": "Albanian language",
+    "tts": "sq-AL",
+    "phrases": {
+      "hello": {
+        "text": "Përshëndetje",
+        "rom": "",
+        "say": "pur-shun-DET-yeh"
+      },
+      "thanks": {
+        "text": "Faleminderit",
+        "rom": "",
+        "say": "fah-leh-min-DEH-reet"
+      },
+      "bye": {
+        "text": "Mirupafshim",
+        "rom": "",
+        "say": "mee-roo-PAHF-sheem"
+      }
+    },
+    "facts": [
+      "Official language of Albania and Kosovo, and a recognised minority language in North Macedonia and Montenegro.",
+      "Forms its own branch of the Indo-European family, with no other close living relatives.",
+      "Has two main dialect groups, Tosk (the basis of standard Albanian) and Gheg, spoken mainly in the north.",
+      "Written in the Latin alphabet since the early 20th century, after centuries of competing scripts."
+    ]
+  },
+  {
+    "id": "lt",
+    "name": "Lithuanian",
+    "endonym": "lietuvių kalba",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Baltic",
+    "l1": 2.8,
+    "total": 3,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "LTU"
+    ],
+    "core": [
+      "LTU"
+    ],
+    "also": [],
+    "wiki": "Lithuanian language",
+    "tts": "lt-LT",
+    "phrases": {
+      "hello": {
+        "text": "Labas",
+        "rom": "",
+        "say": "LAH-bahs"
+      },
+      "thanks": {
+        "text": "Dėkoju",
+        "rom": "",
+        "say": "deh-KOH-yoo"
+      },
+      "bye": {
+        "text": "Viso gero",
+        "rom": "",
+        "say": "VEE-soh GEH-roh"
+      }
+    },
+    "facts": [
+      "Official language of Lithuania, one of only two surviving Baltic languages along with Latvian.",
+      "Considered one of the most conservative living Indo-European languages, retaining many archaic features close to Proto-Indo-European.",
+      "Written in the Latin alphabet with distinctive letters like ą, ę, ė and ų.",
+      "Has a complex case system with seven grammatical cases and pitch accent."
+    ]
+  },
+  {
+    "id": "lv",
+    "name": "Latvian",
+    "endonym": "latviešu valoda",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Baltic",
+    "l1": 1.5,
+    "total": 1.75,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "LVA"
+    ],
+    "core": [
+      "LVA"
+    ],
+    "also": [],
+    "wiki": "Latvian language",
+    "tts": "lv-LV",
+    "phrases": {
+      "hello": {
+        "text": "Sveiki",
+        "rom": "",
+        "say": "SVAY-kee"
+      },
+      "thanks": {
+        "text": "Paldies",
+        "rom": "",
+        "say": "PAHL-dyess"
+      },
+      "bye": {
+        "text": "Ardievu",
+        "rom": "",
+        "say": "ar-DYEH-voo"
+      }
+    },
+    "facts": [
+      "Official language of Latvia, one of only two living Baltic languages along with Lithuanian.",
+      "Closely related to Lithuanian but not mutually intelligible, both descending from a common Baltic ancestor.",
+      "Uses fixed stress on the first syllable and marks long and short vowels with macrons (ā, ē, ī, ū).",
+      "Became the sole state language again after Latvia regained independence from the Soviet Union in 1991."
+    ]
+  },
+  {
+    "id": "et",
+    "name": "Estonian",
+    "endonym": "eesti keel",
+    "aliases": [],
+    "family": "Uralic",
+    "branch": "Finnic",
+    "l1": 1.1,
+    "total": 1.1,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "EST"
+    ],
+    "core": [
+      "EST"
+    ],
+    "also": [],
+    "wiki": "Estonian language",
+    "tts": "et-EE",
+    "phrases": {
+      "hello": {
+        "text": "Tere",
+        "rom": "",
+        "say": "TEH-reh"
+      },
+      "thanks": {
+        "text": "Tänan",
+        "rom": "",
+        "say": "TAH-nahn"
+      },
+      "bye": {
+        "text": "Head aega",
+        "rom": "",
+        "say": "heh-ahd AI-gah"
+      }
+    },
+    "facts": [
+      "Official language of Estonia, closely related to Finnish and, more distantly, Hungarian.",
+      "A Finnic language with no grammatical gender and up to 14 noun cases, unrelated to neighbouring Indo-European languages.",
+      "Famous for very long vowel and consonant lengths that can change a word's meaning.",
+      "One of the smallest languages to serve as an official EU language, spoken by just over a million people."
+    ]
+  },
+  {
+    "id": "fi",
+    "name": "Finnish",
+    "endonym": "suomi",
+    "aliases": [],
+    "family": "Uralic",
+    "branch": "Finnic",
+    "l1": 5.4,
+    "total": 5.8,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "FIN"
+    ],
+    "core": [
+      "FIN"
+    ],
+    "also": [],
+    "wiki": "Finnish language",
+    "tts": "fi-FI",
+    "phrases": {
+      "hello": {
+        "text": "Hei",
+        "rom": "",
+        "say": "hay"
+      },
+      "thanks": {
+        "text": "Kiitos",
+        "rom": "",
+        "say": "KEE-tohs"
+      },
+      "bye": {
+        "text": "Näkemiin",
+        "rom": "",
+        "say": "NAH-keh-meen"
+      }
+    },
+    "facts": [
+      "Official language of Finland alongside Swedish, spoken by the large majority of the population.",
+      "A Finnic language unrelated to its Scandinavian neighbours, more closely related to Estonian.",
+      "Known for very long agglutinative words built by adding suffixes, and 15 grammatical noun cases.",
+      "Has no grammatical gender and no articles like 'a' or 'the'."
+    ]
+  },
+  {
+    "id": "sv",
+    "name": "Swedish",
+    "endonym": "svenska",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 10,
+    "total": 13,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "SWE",
+      "FIN",
+      "ALD"
+    ],
+    "core": [
+      "SWE",
+      "ALD"
+    ],
+    "also": [
+      "FIN"
+    ],
+    "wiki": "Swedish language",
+    "tts": "sv-SE",
+    "phrases": {
+      "hello": {
+        "text": "Hej",
+        "rom": "",
+        "say": "hay"
+      },
+      "thanks": {
+        "text": "Tack",
+        "rom": "",
+        "say": "tahk"
+      },
+      "bye": {
+        "text": "Hej då",
+        "rom": "",
+        "say": "hay-DOH"
+      }
+    },
+    "facts": [
+      "Official language of Sweden and, alongside Finnish, of Finland, where it is spoken by a historic minority.",
+      "A North Germanic language closely related to Danish and Norwegian, largely mutually intelligible with both.",
+      "Uses a pitch-accent system that can change the meaning of otherwise identical words.",
+      "The autonomous Finnish region of Åland is almost entirely Swedish-speaking."
+    ]
+  },
+  {
+    "id": "no",
+    "name": "Norwegian",
+    "endonym": "norsk",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 5.3,
+    "total": 5.3,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "NOR"
+    ],
+    "core": [
+      "NOR"
+    ],
+    "also": [],
+    "wiki": "Norwegian language",
+    "tts": "nb-NO",
+    "phrases": {
+      "hello": {
+        "text": "Hei",
+        "rom": "",
+        "say": "hay"
+      },
+      "thanks": {
+        "text": "Takk",
+        "rom": "",
+        "say": "tahk"
+      },
+      "bye": {
+        "text": "Ha det",
+        "rom": "",
+        "say": "hah day"
+      }
+    },
+    "facts": [
+      "Official language of Norway, with two official written standards: Bokmål (most widely used) and Nynorsk.",
+      "A North Germanic language largely mutually intelligible with Danish and Swedish.",
+      "Norway has no single enforced spoken standard, and strong regional dialects remain common and socially accepted.",
+      "Historically tied to Danish, which was the written language of Norway for centuries under Danish rule."
+    ]
+  },
+  {
+    "id": "da",
+    "name": "Danish",
+    "endonym": "dansk",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 6,
+    "total": 6,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "DNK",
+      "FRO",
+      "GRL"
+    ],
+    "core": [
+      "DNK"
+    ],
+    "also": [
+      "FRO",
+      "GRL"
+    ],
+    "wiki": "Danish language",
+    "tts": "da-DK",
+    "phrases": {
+      "hello": {
+        "text": "Hej",
+        "rom": "",
+        "say": "hay"
+      },
+      "thanks": {
+        "text": "Tak",
+        "rom": "",
+        "say": "tahk"
+      },
+      "bye": {
+        "text": "Farvel",
+        "rom": "",
+        "say": "fah-VEL"
+      }
+    },
+    "facts": [
+      "Official language of Denmark and co-official in the self-governing territories of Greenland and the Faroe Islands.",
+      "A North Germanic language known for soft, often swallowed consonants, which can make it hard for other Scandinavians to understand when spoken.",
+      "Largely mutually intelligible with Norwegian and Swedish in writing, less so when spoken aloud.",
+      "Danish spelling retains many silent letters reflecting older pronunciations."
+    ]
+  },
+  {
+    "id": "is",
+    "name": "Icelandic",
+    "endonym": "íslenska",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 0.33,
+    "total": 0.36,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ISL"
+    ],
+    "core": [
+      "ISL"
+    ],
+    "also": [],
+    "wiki": "Icelandic language",
+    "tts": "is-IS",
+    "phrases": {
+      "hello": {
+        "text": "Hæ",
+        "rom": "",
+        "say": "hi"
+      },
+      "thanks": {
+        "text": "Takk",
+        "rom": "",
+        "say": "tahk"
+      },
+      "bye": {
+        "text": "Bless",
+        "rom": "",
+        "say": "bless"
+      }
+    },
+    "facts": [
+      "Official language of Iceland, spoken by roughly 330,000 people.",
+      "A North Germanic language that has changed so little since Old Norse that Icelanders can still read medieval sagas largely unaided.",
+      "Retains four noun cases and grammatical gender, unlike most other modern Germanic languages.",
+      "Coins new words from Icelandic roots rather than borrowing foreign terms, such as 'sími' (thread) for telephone."
+    ]
+  },
+  {
+    "id": "fo",
+    "name": "Faroese",
+    "endonym": "føroyskt",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 0.072,
+    "total": 0.08,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "FRO"
+    ],
+    "core": [
+      "FRO"
+    ],
+    "also": [],
+    "wiki": "Faroese language",
+    "tts": "fo-FO",
+    "phrases": {
+      "hello": {
+        "text": "Hey",
+        "rom": "",
+        "say": "hay"
+      },
+      "thanks": {
+        "text": "Takk fyri",
+        "rom": "",
+        "say": "tahk FEE-ree"
+      },
+      "bye": {
+        "text": "Farvæl",
+        "rom": "",
+        "say": "far-VYLE"
+      }
+    },
+    "facts": [
+      "Official language, alongside Danish, of the Faroe Islands, spoken by around 70,000-80,000 people.",
+      "A North Germanic language descended from Old Norse, closely related to Icelandic.",
+      "Was mainly a spoken language until a written standard was devised in the 19th century.",
+      "Its spelling reflects Old Norse etymology rather than modern pronunciation, much like Icelandic."
+    ]
+  },
+  {
+    "id": "ga",
+    "name": "Irish",
+    "endonym": "Gaeilge",
+    "aliases": [
+      "Irish Gaelic"
+    ],
+    "family": "Indo-European",
+    "branch": "Celtic",
+    "l1": 0.17,
+    "total": 1.8,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "IRL"
+    ],
+    "core": [
+      "IRL-729",
+      "IRL-713",
+      "IRL-5568",
+      "IRL-714",
+      "IRL-725"
+    ],
+    "also": [
+      "IRL"
+    ],
+    "wiki": "Irish language",
+    "tts": "ga-IE",
+    "phrases": {
+      "hello": {
+        "text": "Dia duit",
+        "rom": "",
+        "say": "DEE-ah gwit"
+      },
+      "thanks": {
+        "text": "Go raibh maith agat",
+        "rom": "",
+        "say": "guh ROH mah AH-gut"
+      },
+      "bye": {
+        "text": "Slán",
+        "rom": "",
+        "say": "slahn"
+      }
+    },
+    "facts": [
+      "First official language of Ireland (alongside English) and an official EU language, though English is the daily language for most Irish people.",
+      "A Celtic language surviving as a community language mainly in small Gaeltacht regions along the west coast, such as Donegal, Galway and Kerry.",
+      "Belongs to the Goidelic branch of Celtic, closely related to Scottish Gaelic and Manx.",
+      "Uses a system of initial consonant mutations that changes word beginnings depending on grammar."
+    ]
+  },
+  {
+    "id": "cy",
+    "name": "Welsh",
+    "endonym": "Cymraeg",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Celtic",
+    "l1": 0.56,
+    "total": 0.88,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "GBR"
+    ],
+    "core": [
+      "GBR-2128",
+      "GBR-2131",
+      "GBR-2112",
+      "GBR-2113",
+      "GBR-2105",
+      "GBR-2104",
+      "GBR-2129",
+      "GBR-2116",
+      "GBR-2125",
+      "GBR-2126",
+      "GBR-2130",
+      "GBR-2114",
+      "GBR-2132",
+      "GBR-2118",
+      "GBR-2133",
+      "GBR-2106",
+      "GBR-2111",
+      "GBR-2115",
+      "GBR-2119",
+      "GBR-2134",
+      "GBR-2117",
+      "GBR-2127"
+    ],
+    "also": [],
+    "wiki": "Welsh language",
+    "tts": "cy-GB",
+    "phrases": {
+      "hello": {
+        "text": "Shwmae",
+        "rom": "",
+        "say": "SHOO-my"
+      },
+      "thanks": {
+        "text": "Diolch",
+        "rom": "",
+        "say": "DEE-olkh"
+      },
+      "bye": {
+        "text": "Hwyl",
+        "rom": "",
+        "say": "hoo-il"
+      }
+    },
+    "facts": [
+      "Official language of Wales, spoken as a first or additional language by around 20% of the Welsh population.",
+      "A Celtic language of the Brittonic branch, closely related to Breton and the extinct Cornish.",
+      "One of the strongest-surviving Celtic languages, supported by Welsh-medium schools and dedicated media.",
+      "Famous for long place names built from descriptive compounds, like Llanfairpwllgwyngyll."
+    ]
+  },
+  {
+    "id": "gd",
+    "name": "Scottish Gaelic",
+    "endonym": "Gàidhlig",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Celtic",
+    "l1": 0.057,
+    "total": 0.087,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "GBR-2772"
+    ],
+    "also": [
+      "GBR-2745"
+    ],
+    "wiki": "Scottish Gaelic",
+    "tts": "gd-GB",
+    "phrases": {
+      "hello": {
+        "text": "Halò",
+        "rom": "",
+        "say": "hah-LOH"
+      },
+      "thanks": {
+        "text": "Tapadh leat",
+        "rom": "",
+        "say": "TAH-pah lat"
+      },
+      "bye": {
+        "text": "Mar sin leat",
+        "rom": "",
+        "say": "mar shin lat"
+      }
+    },
+    "facts": [
+      "A Celtic language spoken mainly in the Outer Hebrides (Western Isles) and parts of the Scottish Highlands.",
+      "Closely related to Irish, both descending from Old Irish of the Goidelic branch of Celtic.",
+      "Has official recognition in Scotland and support through Gaelic-medium schools, though speaker numbers remain under 60,000.",
+      "Not to be confused with Scots, a separate Germanic language also spoken in Scotland."
+    ]
+  },
+  {
+    "id": "br",
+    "name": "Breton",
+    "endonym": "brezhoneg",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Celtic",
+    "l1": 0.16,
+    "total": 0.21,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "FRA-5292",
+      "FRA-5327",
+      "FRA-5283"
+    ],
+    "also": [
+      "FRA-5308"
+    ],
+    "wiki": "Breton language",
+    "tts": "br-FR",
+    "phrases": {
+      "hello": {
+        "text": "Demat",
+        "rom": "",
+        "say": "DEH-maht"
+      },
+      "thanks": {
+        "text": "Trugarez",
+        "rom": "",
+        "say": "troo-gah-REZ"
+      },
+      "bye": {
+        "text": "Kenavo",
+        "rom": "",
+        "say": "keh-nah-VOH"
+      }
+    },
+    "facts": [
+      "A Celtic language spoken in Brittany, north-west France, with no official status at the national level.",
+      "The only Celtic language still spoken on the European mainland, brought by migrants from Britain in the early Middle Ages.",
+      "Closely related to Cornish and Welsh, part of the Brittonic branch of Celtic.",
+      "Speaker numbers fell sharply over the 20th century, though Breton-medium schools (Diwan) now support revival efforts."
+    ]
+  },
+  {
+    "id": "eu",
+    "name": "Basque",
+    "endonym": "euskara",
+    "aliases": [],
+    "family": "Language isolate",
+    "branch": "",
+    "l1": 0.75,
+    "total": 1.2,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "ESP-5801",
+      "ESP-5823",
+      "ESP-5851",
+      "ESP-5837"
+    ],
+    "also": [
+      "FRA-5336"
+    ],
+    "wiki": "Basque language",
+    "tts": "eu-ES",
+    "phrases": {
+      "hello": {
+        "text": "Kaixo",
+        "rom": "",
+        "say": "KYE-shoh"
+      },
+      "thanks": {
+        "text": "Eskerrik asko",
+        "rom": "",
+        "say": "es-keh-reek AHS-koh"
+      },
+      "bye": {
+        "text": "Agur",
+        "rom": "",
+        "say": "ah-GOOR"
+      }
+    },
+    "facts": [
+      "Spoken in the Basque Country of northern Spain and south-west France, with no known relatives among other languages.",
+      "A language isolate, unrelated to Spanish, French or any other Indo-European language, and likely pre-dating them in the region.",
+      "Co-official with Spanish in the Basque Autonomous Community and parts of Navarre.",
+      "Known for its complex verb system and ergative case marking, unlike neighbouring Romance languages."
+    ]
+  },
+  {
+    "id": "ca",
+    "name": "Catalan",
+    "endonym": "català",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 4.1,
+    "total": 10,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "AND"
+    ],
+    "core": [
+      "AND",
+      "ESP-5809",
+      "ESP-5820",
+      "ESP-5831",
+      "ESP-5846",
+      "ESP-5808"
+    ],
+    "also": [
+      "ESP-5803",
+      "ESP-5814",
+      "ESP-5849"
+    ],
+    "wiki": "Catalan language",
+    "tts": "ca-ES",
+    "phrases": {
+      "hello": {
+        "text": "Hola",
+        "rom": "",
+        "say": "OH-lah"
+      },
+      "thanks": {
+        "text": "Gràcies",
+        "rom": "",
+        "say": "GRAH-syes"
+      },
+      "bye": {
+        "text": "Adéu",
+        "rom": "",
+        "say": "ah-DEH-oo"
+      }
+    },
+    "facts": [
+      "Sole official language of Andorra, and co-official in Catalonia, the Balearic Islands and the Valencian Community (as Valencian) in Spain.",
+      "A Romance language closer to Occitan than to Spanish, despite its geographic position within Spain.",
+      "Has a strong modern literary and media tradition, including its own television channels and a thriving publishing industry.",
+      "Barcelona's metropolitan area holds the largest concentration of Catalan speakers."
+    ]
+  },
+  {
+    "id": "gl",
+    "name": "Galician",
+    "endonym": "galego",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 2.4,
+    "total": 2.4,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "ESP-5827",
+      "ESP-5832",
+      "ESP-5838",
+      "ESP-5840"
+    ],
+    "also": [],
+    "wiki": "Galician language",
+    "tts": "gl-ES",
+    "phrases": {
+      "hello": {
+        "text": "Ola",
+        "rom": "",
+        "say": "OH-lah"
+      },
+      "thanks": {
+        "text": "Grazas",
+        "rom": "",
+        "say": "GRAH-thas"
+      },
+      "bye": {
+        "text": "Adeus",
+        "rom": "",
+        "say": "ah-DEH-oos"
+      }
+    },
+    "facts": [
+      "Co-official language, alongside Spanish, of the autonomous community of Galicia in north-west Spain.",
+      "A Romance language closely related to Portuguese; both descend from medieval Galician-Portuguese.",
+      "Spoken by roughly half of Galicia's population as a first language, mainly in rural areas.",
+      "Has its own standardised spelling distinct from Portuguese, despite the close historical relationship."
+    ]
+  },
+  {
+    "id": "lb",
+    "name": "Luxembourgish",
+    "endonym": "Lëtzebuergesch",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 0.4,
+    "total": 0.4,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "LUX"
+    ],
+    "core": [
+      "LUX"
+    ],
+    "also": [],
+    "wiki": "Luxembourgish",
+    "tts": "lb-LU",
+    "phrases": {
+      "hello": {
+        "text": "Moien",
+        "rom": "",
+        "say": "MOY-en"
+      },
+      "thanks": {
+        "text": "Merci",
+        "rom": "",
+        "say": "mehr-SEE"
+      },
+      "bye": {
+        "text": "Äddi",
+        "rom": "",
+        "say": "EH-dee"
+      }
+    },
+    "facts": [
+      "National language of Luxembourg, alongside French and German, both also used in administration.",
+      "A West Germanic language derived from a Moselle Franconian dialect, closely related to German.",
+      "Only became a standardised, officially recognised national language in the late 20th century.",
+      "Most Luxembourgers are trilingual, switching between Luxembourgish, French and German in daily life."
+    ]
+  },
+  {
+    "id": "mt",
+    "name": "Maltese",
+    "endonym": "Malti",
+    "aliases": [],
+    "family": "Afro-Asiatic",
+    "branch": "Semitic",
+    "l1": 0.52,
+    "total": 0.52,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "MLT"
+    ],
+    "core": [
+      "MLT"
+    ],
+    "also": [],
+    "wiki": "Maltese language",
+    "tts": "mt-MT",
+    "phrases": {
+      "hello": {
+        "text": "Bonġu",
+        "rom": "",
+        "say": "bohn-JOO"
+      },
+      "thanks": {
+        "text": "Grazzi",
+        "rom": "",
+        "say": "GRAHTS-see"
+      },
+      "bye": {
+        "text": "Saħħa",
+        "rom": "",
+        "say": "SAH-hah"
+      }
+    },
+    "facts": [
+      "National language of Malta and the only Semitic language with official status in the European Union.",
+      "Descended from Siculo-Arabic, with heavy later borrowing from Italian, Sicilian and English.",
+      "The only Semitic language whose standard script is a Latin-based alphabet rather than Arabic or Hebrew letters.",
+      "English is also official in Malta, making most Maltese fluently bilingual."
+    ]
+  },
+  {
+    "id": "rm",
+    "name": "Romansh",
+    "endonym": "rumantsch",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Romance",
+    "l1": 0.044,
+    "total": 0.06,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "CHE"
+    ],
+    "core": [
+      "CHE-170"
+    ],
+    "also": [],
+    "wiki": "Romansh language",
+    "tts": "rm-CH",
+    "phrases": {
+      "hello": {
+        "text": "Allegra",
+        "rom": "",
+        "say": "ah-LEH-grah"
+      },
+      "thanks": {
+        "text": "Grazia",
+        "rom": "",
+        "say": "GRAHTS-yah"
+      },
+      "bye": {
+        "text": "A revair",
+        "rom": "",
+        "say": "ah reh-VAIR"
+      }
+    },
+    "facts": [
+      "One of Switzerland's four national languages, spoken only in parts of the canton of Graubünden.",
+      "A Romance language descended from the Latin of the Roman province of Raetia, with several distinct written dialects.",
+      "Has fewer than 50,000 native speakers, making it one of the smallest officially recognised national languages in Europe.",
+      "A unified written standard, Rumantsch Grischun, was created in the 1980s to bridge its local dialects."
+    ]
+  },
+  {
+    "id": "se",
+    "name": "Northern Sami",
+    "endonym": "davvisámegiella",
+    "aliases": [
+      "Sami",
+      "Lappish"
+    ],
+    "family": "Uralic",
+    "branch": "Sami",
+    "l1": 0.02,
+    "total": 0.025,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "NOR-1062",
+      "SWE-190",
+      "FIN-3176"
+    ],
+    "also": [],
+    "wiki": "Northern Sami",
+    "tts": "se-NO",
+    "phrases": {
+      "hello": {
+        "text": "Bures",
+        "rom": "",
+        "say": "BOO-ress"
+      },
+      "thanks": {
+        "text": "Giitu",
+        "rom": "",
+        "say": "GEE-too"
+      },
+      "bye": {
+        "text": "Mana dearvan",
+        "rom": "",
+        "say": "MAH-nah DEAR-vahn"
+      }
+    },
+    "facts": [
+      "The most widely spoken of the Sami languages, used across northern Norway, Sweden and Finland.",
+      "A Uralic language related to Finnish and Estonian, unrelated to the Scandinavian languages spoken around it.",
+      "Has official regional status in parts of Norway, Sweden and Finland, used in schools and local administration.",
+      "Reindeer-herding culture has given it an unusually rich and specific vocabulary for snow, ice and reindeer."
+    ]
+  },
+  {
+    "id": "kl",
+    "name": "Greenlandic",
+    "endonym": "kalaallisut",
+    "aliases": [
+      "Kalaallisut"
+    ],
+    "family": "Eskimo-Aleut",
+    "branch": "Inuit",
+    "l1": 0.057,
+    "total": 0.057,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "GRL"
+    ],
+    "core": [
+      "GRL"
+    ],
+    "also": [],
+    "wiki": "Greenlandic language",
+    "tts": "kl-GL",
+    "phrases": {
+      "hello": {
+        "text": "Aluu",
+        "rom": "",
+        "say": "ah-LOO"
+      },
+      "thanks": {
+        "text": "Qujanaq",
+        "rom": "",
+        "say": "koo-yah-NAHK"
+      },
+      "bye": {
+        "text": "Baaj",
+        "rom": "",
+        "say": "by"
+      }
+    },
+    "facts": [
+      "Official language of Greenland, spoken by the large majority of its roughly 56,000 inhabitants.",
+      "An Inuit language of the Eskimo-Aleut family, closely related to the Inuktitut languages of Canada.",
+      "Famous for extremely long, polysynthetic words built by stringing many suffixes onto a single root.",
+      "Replaced Danish as Greenland's sole official language in 2009 under its home-rule arrangements."
+    ]
+  },
+  {
+    "id": "qu",
+    "name": "Quechua",
+    "endonym": "Runa Simi",
+    "aliases": [],
+    "family": "Quechuan",
+    "branch": "",
+    "l1": 8,
+    "total": 10,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "PER",
+      "BOL",
+      "ECU"
+    ],
+    "core": [
+      "PER-571",
+      "PER-586",
+      "PER-569",
+      "PER-588",
+      "PER-573",
+      "BOL-1291",
+      "BOL-1939",
+      "BOL-1292"
+    ],
+    "also": [
+      "ECU-1284",
+      "BOL-1936"
+    ],
+    "wiki": "Quechua",
+    "tts": "qu-PE",
+    "phrases": {
+      "hello": {
+        "text": "Rimaykullayki",
+        "rom": "",
+        "say": "ree-my-koo-LYE-kee"
+      },
+      "thanks": {
+        "text": "Sulpayki",
+        "rom": "",
+        "say": "sool-PY-kee"
+      },
+      "bye": {
+        "text": "Tupananchiskama",
+        "rom": "",
+        "say": "too-pah-nahn-chees-KAH-mah"
+      }
+    },
+    "facts": [
+      "Official language of Peru, Bolivia and Ecuador alongside Spanish, spoken across the Andean highlands.",
+      "Was the administrative language of the Inca Empire, spread across the Andes centuries before Spanish arrived.",
+      "Not a single language but a family of closely related varieties, with Southern Quechua (Cusco-Collao) the most widely spoken.",
+      "Millions of Peruvians and Bolivians, especially in rural highland areas, use Quechua as their first language."
+    ]
+  },
+  {
+    "id": "gn",
+    "name": "Guarani",
+    "endonym": "Avañe'ẹ",
+    "aliases": [],
+    "family": "Tupian",
+    "branch": "Tupi-Guarani",
+    "l1": 5,
+    "total": 6.5,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "PRY"
+    ],
+    "core": [
+      "PRY"
+    ],
+    "also": [
+      "ARG-1312",
+      "BOL-1940"
+    ],
+    "wiki": "Guarani language",
+    "tts": "gn-PY",
+    "phrases": {
+      "hello": {
+        "text": "Mba'éichapa",
+        "rom": "",
+        "say": "mbah-EH-chah-pah"
+      },
+      "thanks": {
+        "text": "Aguyje",
+        "rom": "",
+        "say": "ah-GOO-yeh"
+      },
+      "bye": {
+        "text": "Jajoecha peve",
+        "rom": "",
+        "say": "hah-ho-EH-chah PEH-veh"
+      }
+    },
+    "facts": [
+      "Co-official language of Paraguay alongside Spanish, spoken and understood by the large majority of Paraguayans.",
+      "The most widely spoken indigenous language in the Americas that is not confined mainly to its own ethnic group.",
+      "Uses nasal vowels marked with a tilde, such as the ẹ in its own name 'Avañe'ẹ'.",
+      "Most Paraguayans are bilingual, often mixing Guarani and Spanish in everyday speech known as Jopará."
+    ]
+  },
+  {
+    "id": "ay",
+    "name": "Aymara",
+    "endonym": "Aymar aru",
+    "aliases": [],
+    "family": "Aymaran",
+    "branch": "",
+    "l1": 1.7,
+    "total": 2,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "BOL",
+      "PER"
+    ],
+    "core": [
+      "BOL-1936",
+      "BOL-1937"
+    ],
+    "also": [
+      "PER-573",
+      "BOL-1939"
+    ],
+    "wiki": "Aymara language",
+    "tts": "ay-BO",
+    "phrases": {
+      "hello": {
+        "text": "Kamisaraki",
+        "rom": "",
+        "say": "kah-mee-sah-RAH-kee"
+      },
+      "thanks": {
+        "text": "Yuspagara",
+        "rom": "",
+        "say": "yoos-pah-GAH-rah"
+      },
+      "bye": {
+        "text": "Jikisiñkama",
+        "rom": "",
+        "say": "hee-kee-SEEN-kah-mah"
+      }
+    },
+    "facts": [
+      "Official language of Bolivia and Peru, spoken mainly on the high Andean plateau around Lake Titicaca.",
+      "Spoken by several million people across the Bolivian departments of La Paz and Oruro and in southern Peru.",
+      "Noted by linguists for a three-way evidential system marking how certain a speaker is about their statement.",
+      "Sometimes described, with debate, as encoding time in reverse of most languages, with the past 'in front'."
+    ]
+  },
+  {
+    "id": "nah",
+    "name": "Nahuatl",
+    "endonym": "Nāhuatl",
+    "aliases": [
+      "Aztec"
+    ],
+    "family": "Uto-Aztecan",
+    "branch": "Aztecan",
+    "l1": 1.7,
+    "total": 1.7,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "MEX-2724",
+      "MEX-2734",
+      "MEX-2730",
+      "MEX-2729",
+      "MEX-2731"
+    ],
+    "also": [
+      "MEX-2715"
+    ],
+    "wiki": "Nahuatl",
+    "tts": "nah-MX",
+    "phrases": {
+      "hello": {
+        "text": "Niltze",
+        "rom": "",
+        "say": "NEEL-tseh"
+      },
+      "thanks": {
+        "text": "Tlazohcamati",
+        "rom": "",
+        "say": "tlah-soh-kah-MAH-tee"
+      },
+      "bye": {
+        "text": "Mocheli",
+        "rom": "",
+        "say": "moh-CHEH-lee"
+      }
+    },
+    "facts": [
+      "The most widely spoken indigenous language of Mexico, with around 1.7 million speakers, mainly in central Mexico.",
+      "Was the language of the Aztec Empire, written before the Spanish conquest in its own pictographic script.",
+      "Has given many words to Spanish and English, including 'chocolate', 'tomato', 'avocado' and 'coyote'.",
+      "Today spoken in many mutually distinct regional varieties rather than one uniform standard."
+    ]
+  },
+  {
+    "id": "yua",
+    "name": "Yucatec Maya",
+    "endonym": "Màaya t'àan",
+    "aliases": [
+      "Yucatec"
+    ],
+    "family": "Mayan",
+    "branch": "Yucatecan",
+    "l1": 0.77,
+    "total": 0.8,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "MEX-2737",
+      "MEX-2736",
+      "MEX-2722"
+    ],
+    "also": [
+      "BLZ"
+    ],
+    "wiki": "Yucatec Maya language",
+    "tts": "yua-MX",
+    "phrases": {
+      "hello": {
+        "text": "Ba'ax ka wa'alik",
+        "rom": "",
+        "say": "BAH-ahsh kah wah-AH-leek"
+      },
+      "thanks": {
+        "text": "Nib óolal",
+        "rom": "",
+        "say": "neeb OH-oh-lahl"
+      },
+      "bye": {
+        "text": "Jach ma'alob k'iin",
+        "rom": "",
+        "say": "hahch mah-AH-lohb keen (lit. 'very good day')"
+      }
+    },
+    "facts": [
+      "Spoken on Mexico's Yucatán Peninsula (Yucatán, Quintana Roo and Campeche) and in northern Belize.",
+      "A Mayan language descended from the writing tradition of the Classic Maya civilisation, one of the few fully deciphered pre-Columbian scripts.",
+      "Has around 800,000 speakers, making it the second most spoken Mayan language after K'iche'.",
+      "Uses a set of glottalised ('ejective') consonants not found in Spanish, written with an apostrophe, such as k' and ts'."
+    ]
+  },
+  {
+    "id": "quc",
+    "name": "K'iche'",
+    "endonym": "K'iche'",
+    "aliases": [
+      "Quiche"
+    ],
+    "family": "Mayan",
+    "branch": "K'ichean",
+    "l1": 1.1,
+    "total": 1.1,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "GTM-3467",
+      "GTM-1945",
+      "GTM-1955",
+      "GTM-1954"
+    ],
+    "also": [],
+    "wiki": "K'iche' language",
+    "tts": "quc-GT",
+    "phrases": {
+      "hello": {
+        "text": "La utz awäch",
+        "rom": "",
+        "say": "lah oots ah-WAHCH"
+      },
+      "thanks": {
+        "text": "Maltyox",
+        "rom": "",
+        "say": "mahl-TYOSH"
+      },
+      "bye": {
+        "text": "Chab'ej",
+        "rom": "",
+        "say": "chah-BEHJ"
+      }
+    },
+    "facts": [
+      "The most widely spoken Mayan language, used in the western highlands of Guatemala.",
+      "Became internationally known through the Popol Vuh, a 16th-century K'iche' mythological and historical narrative.",
+      "Nobel Peace Prize laureate Rigoberta Menchú is a native K'iche' speaker and advocate for Maya rights.",
+      "Like other Mayan languages, it uses ejective ('glottalised') consonants marked with an apostrophe."
+    ]
+  },
+  {
+    "id": "ht",
+    "name": "Haitian Creole",
+    "endonym": "Kreyòl ayisyen",
+    "aliases": [
+      "Haitian"
+    ],
+    "family": "Creole",
+    "branch": "French-based",
+    "l1": 11,
+    "total": 12,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "HTI"
+    ],
+    "core": [
+      "HTI"
+    ],
+    "also": [],
+    "wiki": "Haitian Creole",
+    "tts": "ht-HT",
+    "phrases": {
+      "hello": {
+        "text": "Bonjou",
+        "rom": "",
+        "say": "bohn-ZHOO"
+      },
+      "thanks": {
+        "text": "Mèsi",
+        "rom": "",
+        "say": "MEH-see"
+      },
+      "bye": {
+        "text": "Orevwa",
+        "rom": "",
+        "say": "oh-ray-VWAH"
+      }
+    },
+    "facts": [
+      "Official language of Haiti, alongside French, and the first language of nearly the entire population.",
+      "A French-based creole that developed among enslaved Africans on the colonial plantations of Saint-Domingue.",
+      "Has its own standardised grammar and spelling, distinct from French despite most vocabulary deriving from it.",
+      "Unlike French, verbs do not conjugate for person or number, instead using separate tense and mood markers."
+    ]
+  },
+  {
+    "id": "pap",
+    "name": "Papiamento",
+    "endonym": "Papiamentu",
+    "aliases": [],
+    "family": "Creole",
+    "branch": "Iberian-based",
+    "l1": 0.34,
+    "total": 0.34,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ABW",
+      "CUW"
+    ],
+    "core": [
+      "ABW",
+      "CUW"
+    ],
+    "also": [
+      "SXM"
+    ],
+    "wiki": "Papiamento",
+    "tts": "pap-CW",
+    "phrases": {
+      "hello": {
+        "text": "Bon dia",
+        "rom": "",
+        "say": "bohn DEE-ah"
+      },
+      "thanks": {
+        "text": "Danki",
+        "rom": "",
+        "say": "DAHN-kee"
+      },
+      "bye": {
+        "text": "Ayo",
+        "rom": "",
+        "say": "AH-yoh"
+      }
+    },
+    "facts": [
+      "Official language, alongside Dutch, of Aruba and Curaçao in the Dutch Caribbean.",
+      "A creole based mainly on Portuguese and Spanish, with substantial Dutch and some African and Arawak influence.",
+      "One of the few creole languages with official status and its own press, schools and parliamentary use.",
+      "Spelling differs slightly between Aruba (more Spanish-influenced) and Curaçao/Bonaire (more phonetic)."
+    ]
+  },
+  {
+    "id": "nv",
+    "name": "Navajo",
+    "endonym": "Diné bizaad",
+    "aliases": [
+      "Dine"
+    ],
+    "family": "Na-Dene",
+    "branch": "Athabaskan",
+    "l1": 0.17,
+    "total": 0.17,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [],
+    "also": [
+      "USA-3520",
+      "USA-3524",
+      "USA-3526",
+      "USA-3522"
+    ],
+    "wiki": "Navajo language",
+    "tts": "nv-US",
+    "phrases": {
+      "hello": {
+        "text": "Yá'át'ééh",
+        "rom": "",
+        "say": "yah-AHT-tay"
+      },
+      "thanks": {
+        "text": "Ahéhee'",
+        "rom": "",
+        "say": "ah-HAY-hay"
+      },
+      "bye": {
+        "text": "Hágoónee'",
+        "rom": "",
+        "say": "hah-goh-NAY"
+      }
+    },
+    "facts": [
+      "Spoken on the Navajo Nation, which spans parts of Arizona, New Mexico, Utah and Colorado in the south-western United States.",
+      "An Athabaskan language, related to languages spoken much further north in Alaska and north-western Canada.",
+      "Famous for its use by Navajo 'code talkers', who transmitted unbreakable military messages during the Second World War.",
+      "Has one of the largest numbers of native speakers of any indigenous language in the United States, though numbers are declining among younger generations."
+    ]
+  },
+  {
+    "id": "iu",
+    "name": "Inuktitut",
+    "endonym": "ᐃᓄᒃᑎᑐᑦ (Inuktitut)",
+    "aliases": [],
+    "family": "Eskimo-Aleut",
+    "branch": "Inuit",
+    "l1": 0.039,
+    "total": 0.04,
+    "scripts": [
+      "Inuktitut syllabics",
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "CAN-634"
+    ],
+    "also": [
+      "CAN-635",
+      "CAN-683"
+    ],
+    "wiki": "Inuktitut",
+    "tts": "iu-CA",
+    "phrases": {
+      "hello": {
+        "text": "ᐊᐃ",
+        "rom": "Ai",
+        "say": "eye"
+      },
+      "thanks": {
+        "text": "ᖁᔭᓐᓇᒦᒃ",
+        "rom": "Qujannamiik",
+        "say": "koo-yah-nah-MEEK"
+      },
+      "bye": {
+        "text": "ᑕᕝᕙᐅᖓ",
+        "rom": "Tavvauvunga",
+        "say": "tah-vah-oo-VOON-gah"
+      }
+    },
+    "facts": [
+      "An official language of the Canadian territory of Nunavut, alongside English and French.",
+      "An Inuit language of the Eskimo-Aleut family, closely related to Greenlandic and Alaska's Inupiaq.",
+      "Traditionally written in a unique syllabic script, alongside the Latin alphabet in some regions.",
+      "Like other Inuit languages, it builds very long words through extensive use of suffixes rather than separate words."
+    ]
+  },
+  {
+    "id": "haw",
+    "name": "Hawaiian",
+    "endonym": "ʻŌlelo Hawaiʻi",
+    "aliases": [],
+    "family": "Austronesian",
+    "branch": "Polynesian",
+    "l1": 0.0024,
+    "total": 0.018,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "USA-3517"
+    ],
+    "also": [],
+    "wiki": "Hawaiian language",
+    "tts": "haw-US",
+    "phrases": {
+      "hello": {
+        "text": "Aloha",
+        "rom": "",
+        "say": "ah-LOH-hah"
+      },
+      "thanks": {
+        "text": "Mahalo",
+        "rom": "",
+        "say": "mah-HAH-loh"
+      },
+      "bye": {
+        "text": "A hui hou",
+        "rom": "",
+        "say": "ah HOO-ee hoh"
+      }
+    },
+    "facts": [
+      "Official language of the US state of Hawaii, alongside English, after coming close to extinction in the 20th century.",
+      "A Polynesian language closely related to Māori, Tahitian and Samoan.",
+      "Revived through Hawaiian-language immersion schools since the 1980s after decades of suppression in public education.",
+      "Uses only 13 letters along with the ʻokina (glottal stop) and macrons marking long vowels."
+    ]
+  },
+  {
+    "id": "mi",
+    "name": "Māori",
+    "endonym": "te reo Māori",
+    "aliases": [
+      "Maori"
+    ],
+    "family": "Austronesian",
+    "branch": "Polynesian",
+    "l1": 0.05,
+    "total": 0.19,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "NZL"
+    ],
+    "core": [],
+    "also": [
+      "NZL"
+    ],
+    "wiki": "Māori language",
+    "tts": "mi-NZ",
+    "phrases": {
+      "hello": {
+        "text": "Kia ora",
+        "rom": "",
+        "say": "KEE-ah OR-ah"
+      },
+      "thanks": {
+        "text": "Ngā mihi",
+        "rom": "",
+        "say": "ngah MEE-hee"
+      },
+      "bye": {
+        "text": "Ka kite",
+        "rom": "",
+        "say": "kah KEE-teh"
+      }
+    },
+    "facts": [
+      "An official language of New Zealand, the language of its indigenous Māori people.",
+      "A Polynesian language closely related to Hawaiian, Tahitian and Cook Islands Māori.",
+      "Underwent a major revival from the 1980s through Māori-language preschools (kōhanga reo) and broadcasting.",
+      "Everyday Kiwi English now borrows Māori words freely, such as the greeting 'kia ora' and 'whānau' (family)."
+    ]
+  },
+  {
+    "id": "sm",
+    "name": "Samoan",
+    "endonym": "Gagana Samoa",
+    "aliases": [],
+    "family": "Austronesian",
+    "branch": "Polynesian",
+    "l1": 0.51,
+    "total": 0.51,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "WSM",
+      "ASM"
+    ],
+    "core": [
+      "WSM",
+      "ASM"
+    ],
+    "also": [],
+    "wiki": "Samoan language",
+    "tts": "sm-WS",
+    "phrases": {
+      "hello": {
+        "text": "Talofa",
+        "rom": "",
+        "say": "tah-LOH-fah"
+      },
+      "thanks": {
+        "text": "Fa'afetai",
+        "rom": "",
+        "say": "fah-ah-feh-TYE"
+      },
+      "bye": {
+        "text": "Tofā",
+        "rom": "",
+        "say": "toh-FAH"
+      }
+    },
+    "facts": [
+      "Official language of Samoa and co-official, with English, in American Samoa.",
+      "A Polynesian language with one of the largest speaker populations in the Pacific, over half a million people.",
+      "Samoan society's communal 'fa'a Samoa' way of life is deeply embedded in the language's vocabulary and honorific speech levels.",
+      "Widely spoken among large Samoan diaspora communities in New Zealand and the United States."
+    ]
+  },
+  {
+    "id": "to",
+    "name": "Tongan",
+    "endonym": "lea Tonga",
+    "aliases": [],
+    "family": "Austronesian",
+    "branch": "Polynesian",
+    "l1": 0.19,
+    "total": 0.19,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "TON"
+    ],
+    "core": [
+      "TON"
+    ],
+    "also": [],
+    "wiki": "Tongan language",
+    "tts": "to-TO",
+    "phrases": {
+      "hello": {
+        "text": "Mālō e lelei",
+        "rom": "",
+        "say": "MAH-loh eh leh-LAY"
+      },
+      "thanks": {
+        "text": "Mālō",
+        "rom": "",
+        "say": "MAH-loh"
+      },
+      "bye": {
+        "text": "Nofo ā",
+        "rom": "",
+        "say": "NOH-foh ah"
+      }
+    },
+    "facts": [
+      "Official language of the Kingdom of Tonga, alongside English.",
+      "A Polynesian language with a complex honorific system reflecting Tonga's traditional chiefly hierarchy.",
+      "Tonga is the only Pacific island nation never formally colonised, helping the language retain strong everyday use.",
+      "Closely related to Niuean, and more distantly to Samoan and other Polynesian languages."
+    ]
+  },
+  {
+    "id": "fj",
+    "name": "Fijian",
+    "endonym": "Na Vosa Vakaviti",
+    "aliases": [],
+    "family": "Austronesian",
+    "branch": "Oceanic",
+    "l1": 0.64,
+    "total": 0.64,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "FJI"
+    ],
+    "core": [
+      "FJI"
+    ],
+    "also": [],
+    "wiki": "Fijian language",
+    "tts": "fj-FJ",
+    "phrases": {
+      "hello": {
+        "text": "Bula",
+        "rom": "",
+        "say": "BOO-lah"
+      },
+      "thanks": {
+        "text": "Vinaka",
+        "rom": "",
+        "say": "vee-NAH-kah"
+      },
+      "bye": {
+        "text": "Moce",
+        "rom": "",
+        "say": "MOH-theh"
+      }
+    },
+    "facts": [
+      "Official language of Fiji, spoken natively by the indigenous Fijian (iTaukei) population.",
+      "An Austronesian language of the Oceanic branch, related to other Pacific island languages though not Polynesian.",
+      "Fiji Hindi and English are also widely spoken, reflecting the country's large Indo-Fijian community.",
+      "The friendly greeting 'bula', meaning 'life' or 'hello', is one of the best-known Fijian words internationally."
+    ]
+  },
+  {
+    "id": "tpi",
+    "name": "Tok Pisin",
+    "endonym": "Tok Pisin",
+    "aliases": [
+      "Melanesian Pidgin"
+    ],
+    "family": "Creole",
+    "branch": "English-based",
+    "l1": 0.12,
+    "total": 4,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "PNG"
+    ],
+    "core": [
+      "PNG"
+    ],
+    "also": [],
+    "wiki": "Tok Pisin",
+    "tts": "tpi-PG",
+    "phrases": {
+      "hello": {
+        "text": "Gude",
+        "rom": "",
+        "say": "GOO-day"
+      },
+      "thanks": {
+        "text": "Tenkyu",
+        "rom": "",
+        "say": "TEN-kyoo"
+      },
+      "bye": {
+        "text": "Lukim yu",
+        "rom": "",
+        "say": "LOO-kim yoo"
+      }
+    },
+    "facts": [
+      "An official language of Papua New Guinea and the country's most widely used lingua franca, bridging hundreds of indigenous languages.",
+      "An English-based creole, also drawing vocabulary from German, Portuguese and local Austronesian and Papuan languages.",
+      "Functions as a main language of parliament, media and much everyday communication across the country.",
+      "Words are often playfully transparent, such as 'maus gras' (moustache, literally 'mouth grass')."
+    ]
+  }
+]

@@ -1,0 +1,1204 @@
+[
+  {
+    "name": "Nile",
+    "wiki": "Nile",
+    "segments": [
+      "Nile#4",
+      "Rosetta Branch#19",
+      "Damietta Branch#20"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "White Nile",
+    "wiki": "White Nile",
+    "segments": [
+      "El Bahr el Abyad#17",
+      "Bahr el Jebel#16",
+      "Bahr el Jebel#14",
+      "Victoria Nile#5",
+      "Albert Nile#9",
+      "Kagera#6"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Blue Nile",
+    "wiki": "Blue Nile",
+    "segments": [
+      "El Bahr el Azraq#73",
+      "Abay#85",
+      "Abay#67"
+    ],
+    "aliases": [
+      "Abay"
+    ]
+  },
+  {
+    "name": "Congo River",
+    "wiki": "Congo River",
+    "segments": [
+      "Congo#45",
+      "Congo#41",
+      "Lualaba#43",
+      "Lualaba#37"
+    ],
+    "aliases": [
+      "Lualaba"
+    ]
+  },
+  {
+    "name": "Niger River",
+    "wiki": "Niger River",
+    "segments": [
+      "Niger#59"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Zambezi",
+    "wiki": "Zambezi",
+    "segments": [
+      "Zambezi#70"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Limpopo River",
+    "wiki": "Limpopo River",
+    "segments": [
+      "Limpopo#336"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Orange River",
+    "wiki": "Orange River",
+    "segments": [
+      "Orange#98",
+      "Orange#222"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Vaal River",
+    "wiki": "Vaal River",
+    "segments": [
+      "Vaal#101"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Senegal River",
+    "wiki": "Senegal River",
+    "segments": [
+      "Sénégal#132",
+      "Bafing#118"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Volta River",
+    "wiki": "Volta River",
+    "segments": [
+      "Volta#176",
+      "Mouhoun#175"
+    ],
+    "aliases": [
+      "Black Volta"
+    ]
+  },
+  {
+    "name": "Kasai River",
+    "wiki": "Kasai River",
+    "segments": [
+      "Kasai#81"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Uele River",
+    "wiki": "Uele River",
+    "segments": [
+      "Uele#83"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Ubangi River",
+    "wiki": "Ubangi River",
+    "segments": [
+      "Ubangi#60"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Shire River",
+    "wiki": "Shire River",
+    "segments": [
+      "Shire#71"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Kibali River",
+    "wiki": "Kibali River",
+    "segments": [
+      "Kibali#79"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Yangtze",
+    "wiki": "Yangtze",
+    "segments": [
+      "Jinsha#15",
+      "Chang Jiang#18",
+      "Yangtze#1",
+      "Tongtian#13",
+      "Tuotuo#11"
+    ],
+    "aliases": [
+      "Chang Jiang",
+      "Jangtse",
+      "Jangtsekiang"
+    ]
+  },
+  {
+    "name": "Mekong",
+    "wiki": "Mekong",
+    "segments": [
+      "Lancang#40",
+      "Mekong#46"
+    ],
+    "aliases": [
+      "Lancang Jiang"
+    ]
+  },
+  {
+    "name": "Irtysh River",
+    "wiki": "Irtysh River",
+    "segments": [
+      "Irtysh#44",
+      "Ertis#29",
+      "Ertix#30"
+    ],
+    "aliases": [
+      "Ertis",
+      "Ertix"
+    ]
+  },
+  {
+    "name": "Brahmaputra River",
+    "wiki": "Brahmaputra River",
+    "segments": [
+      "Yarlung#42",
+      "Maquan#31",
+      "Dihang#47",
+      "Za#35",
+      "Brahmaputra#51"
+    ],
+    "aliases": [
+      "Yarlung Tsangpo",
+      "Jamuna"
+    ]
+  },
+  {
+    "name": "Ob River",
+    "wiki": "Ob River",
+    "segments": [
+      "Ob#24",
+      "Ob#114",
+      "Malaya Ob#633"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Angara River",
+    "wiki": "Angara (river)",
+    "segments": [
+      "Angara#32",
+      "Angara#28"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Selenga River",
+    "wiki": "Selenge River",
+    "segments": [
+      "Selenga#27",
+      "Ideriyn#26"
+    ],
+    "aliases": [
+      "Ider"
+    ]
+  },
+  {
+    "name": "Yenisei River",
+    "wiki": "Yenisei River",
+    "segments": [
+      "Yenisey#113",
+      "Verkhniy Yenisey#145"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Lena River",
+    "wiki": "Lena River",
+    "segments": [
+      "Lena#12",
+      "Olenekskaya Protoka#22",
+      "Bykovskaya Protoka#21",
+      "Trofimovskaya Protoka#202",
+      "Tumatskaya Protoka#203"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Amur River",
+    "wiki": "Amur River",
+    "segments": [
+      "Amur#72",
+      "Heilong Jiang#93",
+      "Argun’#84",
+      "Hailar#74"
+    ],
+    "aliases": [
+      "Heilong Jiang"
+    ]
+  },
+  {
+    "name": "Yellow River",
+    "wiki": "Yellow River",
+    "segments": [
+      "Huang#66",
+      "Huang#95"
+    ],
+    "aliases": [
+      "Huang He",
+      "Gelber Fluss"
+    ]
+  },
+  {
+    "name": "Pearl River",
+    "wiki": "Pearl River (China)",
+    "segments": [
+      "Nanpan#128",
+      "Hongshui#147",
+      "Xi#96",
+      "Xun#149",
+      "Quan#148"
+    ],
+    "aliases": [
+      "Zhu Jiang",
+      "Xi Jiang"
+    ]
+  },
+  {
+    "name": "Salween River",
+    "wiki": "Salween River",
+    "segments": [
+      "Salween#153",
+      "Nu#146",
+      "Nu#134"
+    ],
+    "aliases": [
+      "Nu Jiang"
+    ]
+  },
+  {
+    "name": "Indus River",
+    "wiki": "Indus River",
+    "segments": [
+      "Indus#56",
+      "Shiquan#63"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Ganges",
+    "wiki": "Ganges",
+    "segments": [
+      "Ganges#55"
+    ],
+    "aliases": [
+      "Ganga"
+    ]
+  },
+  {
+    "name": "Godavari River",
+    "wiki": "Godavari River",
+    "segments": [
+      "Godävari#179"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Irrawaddy River",
+    "wiki": "Irrawaddy River",
+    "segments": [
+      "Irrawaddy Delta#0",
+      "Ayeyarwady#138"
+    ],
+    "aliases": [
+      "Ayeyarwady"
+    ]
+  },
+  {
+    "name": "Euphrates",
+    "wiki": "Euphrates",
+    "segments": [
+      "Euphrates#62",
+      "Firat#65",
+      "Al Furat#69"
+    ],
+    "aliases": [
+      "Firat"
+    ]
+  },
+  {
+    "name": "Tigris",
+    "wiki": "Tigris",
+    "segments": [
+      "Tigris#135",
+      "Dicle#120"
+    ],
+    "aliases": [
+      "Dicle"
+    ]
+  },
+  {
+    "name": "Shatt al-Arab",
+    "wiki": "Shatt al-Arab",
+    "segments": [
+      "Shatt al Arab#94"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Jordan River",
+    "wiki": "Jordan River",
+    "segments": [
+      "Jordan#229"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Danube",
+    "wiki": "Danube",
+    "segments": [
+      "Danube#25",
+      "Donau#38",
+      "Bratul Chillia#48",
+      "Borcea#52",
+      "Bratul Sfintu Gheorghe#49",
+      "Bratul Sulina#50",
+      "Soroksari Duna#352"
+    ],
+    "aliases": [
+      "Donau",
+      "Duna",
+      "Dunărea"
+    ]
+  },
+  {
+    "name": "Volga",
+    "wiki": "Volga",
+    "segments": [
+      "Volga#68"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Don",
+    "wiki": "Don (river)",
+    "segments": [
+      "Don#277"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Dnieper",
+    "wiki": "Dnieper",
+    "segments": [
+      "Dnipro#116",
+      "Dnepre#121"
+    ],
+    "aliases": [
+      "Dnipro",
+      "Dnepr"
+    ]
+  },
+  {
+    "name": "Rhine",
+    "wiki": "Rhine",
+    "segments": [
+      "Rhine#150",
+      "Rhin#140",
+      "Rhein#105",
+      "IJssel#1147",
+      "Lek#142",
+      "Nederrijn#141",
+      "Waal#151"
+    ],
+    "aliases": [
+      "Rhein"
+    ]
+  },
+  {
+    "name": "Seine",
+    "wiki": "Seine",
+    "segments": [
+      "Seine#129"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Loire",
+    "wiki": "Loire",
+    "segments": [
+      "Loire#178"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Rhône",
+    "wiki": "Rhône",
+    "segments": [
+      "Rhône#255"
+    ],
+    "aliases": [
+      "Rhone"
+    ]
+  },
+  {
+    "name": "Elbe",
+    "wiki": "Elbe",
+    "segments": [
+      "Elbe#160"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Oder",
+    "wiki": "Oder",
+    "segments": [
+      "Oder#130"
+    ],
+    "aliases": [
+      "Odra"
+    ]
+  },
+  {
+    "name": "Vistula",
+    "wiki": "Vistula",
+    "segments": [
+      "Vistula#166"
+    ],
+    "aliases": [
+      "Weichsel"
+    ]
+  },
+  {
+    "name": "Po",
+    "wiki": "Po (river)",
+    "segments": [
+      "Po#219"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Thames",
+    "wiki": "River Thames",
+    "segments": [
+      "Thames#302"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Tagus",
+    "wiki": "Tagus",
+    "segments": [
+      "Tajo#165",
+      "Tejo#198"
+    ],
+    "aliases": [
+      "Tajo",
+      "Tejo"
+    ]
+  },
+  {
+    "name": "Ebro",
+    "wiki": "Ebro",
+    "segments": [
+      "Ebro#155"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Inn",
+    "wiki": "Inn (river)",
+    "segments": [
+      "Inn#718"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Drava",
+    "wiki": "Drava",
+    "segments": [
+      "Drau#303"
+    ],
+    "aliases": [
+      "Drau"
+    ]
+  },
+  {
+    "name": "Sava",
+    "wiki": "Sava",
+    "segments": [
+      "Sava#494"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Tisza",
+    "wiki": "Tisza",
+    "segments": [
+      "Tisa#363"
+    ],
+    "aliases": [
+      "Tisa"
+    ]
+  },
+  {
+    "name": "Vltava",
+    "wiki": "Vltava",
+    "segments": [
+      "Vltava#1050"
+    ],
+    "aliases": [
+      "Moldau"
+    ]
+  },
+  {
+    "name": "Daugava",
+    "wiki": "Daugava",
+    "segments": [
+      "Daugava#182"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Northern Dvina",
+    "wiki": "Northern Dvina",
+    "segments": [
+      "Severnaya Dvina#136",
+      "Sukhona#106"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Neva",
+    "wiki": "Neva River",
+    "segments": [
+      "Neva#168"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Mur",
+    "wiki": "Mur (river)",
+    "segments": [
+      "Mur#208"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Mississippi River",
+    "wiki": "Mississippi River",
+    "segments": [
+      "Mississippi#3",
+      "Mississippi#156"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Missouri River",
+    "wiki": "Missouri River",
+    "segments": [
+      "Missouri#8"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Ohio River",
+    "wiki": "Ohio River",
+    "segments": [
+      "Ohio#92"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Allegheny River",
+    "wiki": "Allegheny River",
+    "segments": [
+      "Allegheny#80"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Arkansas River",
+    "wiki": "Arkansas River",
+    "segments": [
+      "Arkansas#131"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Rio Grande",
+    "wiki": "Rio Grande",
+    "segments": [
+      "Rio Grande#110"
+    ],
+    "aliases": [
+      "Río Bravo"
+    ]
+  },
+  {
+    "name": "Colorado River",
+    "wiki": "Colorado River",
+    "segments": [
+      "Colorado#163"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Columbia River",
+    "wiki": "Columbia River",
+    "segments": [
+      "Columbia#64",
+      "Columbia#103"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Yukon River",
+    "wiki": "Yukon River",
+    "segments": [
+      "Yukon#53"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Teslin River",
+    "wiki": "Teslin River",
+    "segments": [
+      "Teslin#61"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Mackenzie River",
+    "wiki": "Mackenzie River",
+    "segments": [
+      "Mackenzie#34",
+      "Slave#39"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Peace River",
+    "wiki": "Peace River (Canada)",
+    "segments": [
+      "Peace#33"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "North Saskatchewan River",
+    "wiki": "North Saskatchewan River",
+    "segments": [
+      "North Saskatchewan#117"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Saskatchewan River",
+    "wiki": "Saskatchewan River",
+    "segments": [
+      "Saskatchewan#112"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Nelson River",
+    "wiki": "Nelson River",
+    "segments": [
+      "Nelson#275"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "St. Lawrence River",
+    "wiki": "Saint Lawrence River",
+    "segments": [
+      "St. Lawrence#23"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Hudson River",
+    "wiki": "Hudson River",
+    "segments": [
+      "Hudson#326"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Niagara River",
+    "wiki": "Niagara River",
+    "segments": [
+      "Niagara#88"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Kolyma River",
+    "wiki": "Kolyma River",
+    "segments": [
+      "Kolyma#124"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Aldan River",
+    "wiki": "Aldan River",
+    "segments": [
+      "Aldan#102"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Pechora River",
+    "wiki": "Pechora River",
+    "segments": [
+      "Pechora#122"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Ural River",
+    "wiki": "Ural (river)",
+    "segments": [
+      "Ural#111"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Magdalena River",
+    "wiki": "Magdalena River",
+    "segments": [
+      "Magdalena#126"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Benue River",
+    "wiki": "Benue River",
+    "segments": [
+      "Benue#137",
+      "Bénoué#119"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Neuquén River",
+    "wiki": "Neuquén River",
+    "segments": [
+      "Neuquén#127"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "La Grande River",
+    "wiki": "La Grande River",
+    "segments": [
+      "La Grande#109"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Amazon River",
+    "wiki": "Amazon River",
+    "segments": [
+      "Amazonas#2",
+      "Ucayali#10",
+      "Marañón#183"
+    ],
+    "aliases": [
+      "Amazonas"
+    ]
+  },
+  {
+    "name": "Paraná River",
+    "wiki": "Paraná River",
+    "segments": [
+      "Paraná#36",
+      "Paraná#99"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Paranaíba River",
+    "wiki": "Paranaíba River",
+    "segments": [
+      "Paranaíba#108"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Rio Grande (Brazil)",
+    "wiki": "Rio Grande (Minas Gerais)",
+    "segments": [
+      "Grande#164"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Río Grande (Bolivia)",
+    "wiki": "Grande River (Bolivia)",
+    "segments": [
+      "Grande#77"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Orinoco",
+    "wiki": "Orinoco",
+    "segments": [
+      "Orinoco#75"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Rio Negro (Amazon)",
+    "wiki": "Rio Negro (Amazon)",
+    "segments": [
+      "Negro#78"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Río Negro (Argentina)",
+    "wiki": "Río Negro (Argentina)",
+    "segments": [
+      "Negro#139"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Madeira River",
+    "wiki": "Madeira River",
+    "segments": [
+      "Madeira#91"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Mamoré River",
+    "wiki": "Mamoré River",
+    "segments": [
+      "Mamoré#87"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Guaporé River",
+    "wiki": "Guaporé River",
+    "segments": [
+      "Guaporé#90"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "São Francisco River",
+    "wiki": "São Francisco River",
+    "segments": [
+      "São  Francisco#104"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Tocantins River",
+    "wiki": "Tocantins River",
+    "segments": [
+      "Tocantins#115",
+      "Tocantins#335"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Araguaia River",
+    "wiki": "Araguaia River",
+    "segments": [
+      "Araguaia#100"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Caquetá River",
+    "wiki": "Caquetá River",
+    "segments": [
+      "Caquetá#184",
+      "Japurá#204"
+    ],
+    "aliases": [
+      "Japurá"
+    ]
+  },
+  {
+    "name": "Xingu River",
+    "wiki": "Xingu River",
+    "segments": [
+      "Xingu#197"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Tapajós River",
+    "wiki": "Tapajós River",
+    "segments": [
+      "Tapajós#200"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Juruena River",
+    "wiki": "Juruena River",
+    "segments": [
+      "Juruena#190"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Culuene River",
+    "wiki": "Culuene River",
+    "segments": [
+      "Culuene#177"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Bío-Bío River",
+    "wiki": "Biobío River",
+    "segments": [
+      "Bío-Bío#194"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Santa Cruz River",
+    "wiki": "Santa Cruz River (Argentina)",
+    "segments": [
+      "Santa Cruz#196"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Colorado River (Argentina)",
+    "wiki": "Colorado River (Argentina)",
+    "segments": [
+      "Colorado#192"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Chixoy River",
+    "wiki": "Chixoy River",
+    "segments": [
+      "Chixoy#193"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "San Juan River (Nicaragua)",
+    "wiki": "San Juan River (Nicaragua)",
+    "segments": [
+      "San Juan#159"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Murray River",
+    "wiki": "Murray River",
+    "segments": [
+      "Murray#54",
+      "Murray#97"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Darling River",
+    "wiki": "Darling River",
+    "segments": [
+      "Darling#86",
+      "Barwon#82"
+    ],
+    "aliases": [
+      "Barwon River"
+    ]
+  },
+  {
+    "name": "Amu Darya",
+    "wiki": "Amu Darya",
+    "segments": [
+      "Amu  Darya#199"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Syr Darya",
+    "wiki": "Syr Darya",
+    "segments": [
+      "Syr  Darya#170"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Naryn River",
+    "wiki": "Naryn River",
+    "segments": [
+      "Naryn#171"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Panj River",
+    "wiki": "Panj River",
+    "segments": [
+      "Panj#195"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Pamir River",
+    "wiki": "Pamir River",
+    "segments": [
+      "Pamir#186"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Tobol River",
+    "wiki": "Tobol River",
+    "segments": [
+      "Tobol#180"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Lower Tunguska",
+    "wiki": "Lower Tunguska",
+    "segments": [
+      "Lower Tunguska#181"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Indigirka River",
+    "wiki": "Indigirka River",
+    "segments": [
+      "Indigirka#188"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Vychegda River",
+    "wiki": "Vychegda",
+    "segments": [
+      "Vychegda#191"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Svir River",
+    "wiki": "Svir River",
+    "segments": [
+      "Svir#174"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Fraser River",
+    "wiki": "Fraser River",
+    "segments": [
+      "Fraser#187"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Stikine River",
+    "wiki": "Stikine River",
+    "segments": [
+      "Stikine#158"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Athabasca River",
+    "wiki": "Athabasca River",
+    "segments": [
+      "Athabasca#173"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Thelon River",
+    "wiki": "Thelon River",
+    "segments": [
+      "Thelon#161"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Sacramento River",
+    "wiki": "Sacramento River",
+    "segments": [
+      "Sacramento#167"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Klamath River",
+    "wiki": "Klamath River",
+    "segments": [
+      "Klamath#172"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Tennessee River",
+    "wiki": "Tennessee River",
+    "segments": [
+      "Tennessee#169"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Holston River",
+    "wiki": "Holston River",
+    "segments": [
+      "Holston#185"
+    ],
+    "aliases": []
+  },
+  {
+    "name": "Sprague River",
+    "wiki": "Sprague River",
+    "segments": [
+      "Sprague#189"
+    ],
+    "aliases": []
+  }
+]

@@ -3,146 +3,81 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Million Cities</title>
+<title>Atlas Quiz</title>
+<meta name="description" content="Learn the world's big cities, physical features and languages, and Austria's largest towns — quiz, practice and atlas on a map.">
 <link rel="icon" href="icon.svg">
-<link rel="stylesheet" href="vendor/maplibre-gl.css">
 <link rel="stylesheet" href="app.css">
 </head>
-<body>
-<header class="top">
-  <div class="brand">
-    <img src="icon.svg" alt="" width="22" height="22">
-    <div><b>Million Cities</b><small id="subtitle">UN WUP 2025</small></div>
+<body class="hub">
+<header class="hub-head">
+  <img src="icon.svg" alt="" width="40" height="40">
+  <div>
+    <h1>Atlas Quiz</h1>
+    <p>Learn the map: type-in quizzes, practice and an atlas to browse.</p>
   </div>
-  <nav class="modes" role="tablist">
-    <button data-mode="quiz" role="tab">Quiz</button>
-    <button data-mode="practice" role="tab">Practice</button>
-    <button data-mode="atlas" role="tab">Atlas</button>
-  </nav>
-  <button class="icon-btn" id="aboutBtn" title="About the data" aria-label="About the data">?</button>
 </header>
 
-<main>
-  <div id="map"></div>
-
-  <div class="layers" id="layers">
-    <button class="icon-btn layers-btn" id="layersBtn" title="Map layers" aria-label="Map layers">
-      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3 2 8.5l10 5.5 10-5.5L12 3Zm-7.6 9.4L2 13.7 12 19.2l10-5.5-2.4-1.3L12 16.6l-7.6-4.2Z" fill="currentColor"/></svg>
-    </button>
-    <div class="layers-pop" id="layersPop" hidden>
-      <div class="lp-title">Base map</div>
-      <div class="seg" id="basemapSeg">
-        <button data-v="plain">Plain</button><button data-v="terrain">Terrain</button><button data-v="physical">Physical</button><button data-v="satellite">Satellite</button>
-      </div>
-      <div class="lp-title">Overlays</div>
-      <div class="lp-row"><label><input type="checkbox" data-layer="borders"> Country borders</label>
-        <label class="bold" title="Thicker, darker lines"><input type="checkbox" data-layer="bordersBold" data-bold="borders"> Bold</label></div>
-      <div class="lp-row"><label title="States, provinces, regions"><input type="checkbox" data-layer="admin1"> Subdivision borders</label>
-        <label class="bold" title="Thicker, darker lines"><input type="checkbox" data-layer="admin1Bold" data-bold="admin1"> Bold</label></div>
-      <label><input type="checkbox" data-layer="rivers"> Rivers &amp; lakes</label>
-      <label><input type="checkbox" data-layer="wlabels"> River &amp; lake names</label>
-      <label><input type="checkbox" data-layer="clabels"> Country names</label>
-      <label><input type="checkbox" data-layer="slabels"> Subdivision names</label>
-      <label><input type="checkbox" data-layer="outlines"> City outlines <small>(urban extent)</small></label>
-    </div>
+<main class="hub-main">
+  <div class="seg hub-seg" id="hubSeg" role="tablist">
+    <button data-v="world" role="tab">🌍 World</button>
+    <button data-v="countries" role="tab">🏳️ Single countries</button>
   </div>
 
-  <aside class="panel" id="panel">
-    <div class="grip" id="grip" aria-hidden="true"></div>
-    <div class="dbbar">
-      <label><span>Database</span><select id="dbSel"></select></label>
-      <label><span>Cities</span><select id="minPopSel" class="minpop"></select></label>
-      <div class="dbdesc" id="dbDesc"></div>
+  <section class="hub-sec" id="sec-world">
+    <a class="qcard" href="cities.html" data-set="cities">
+      <span class="qi">🏙️</span>
+      <span class="qt"><b>Million Cities</b><small>Every city with more than one million people (UN 2025), with three ways to count them</small></span>
+      <span class="qp"></span>
+    </a>
+    <a class="qcard" href="set.html?s=physical" data-set="physical">
+      <span class="qi">⛰️</span>
+      <span class="qt"><b>Physical features</b><small>Oceans, seas, rivers, lakes, mountains, deserts, islands and more — pick one type or play them all</small></span>
+      <span class="qp"></span>
+    </a>
+    <a class="qcard" href="set.html?s=languages" data-set="languages">
+      <span class="qi">🗣️</span>
+      <span class="qt"><b>Languages</b><small>Where the world's languages are spoken, with hello, thank you and goodbye in each</small></span>
+      <span class="qp"></span>
+    </a>
+  </section>
+
+  <section class="hub-sec" id="sec-countries" hidden>
+    <div class="country">
+      <h2>🇦🇹 Austria</h2>
+      <a class="qcard" href="set.html?s=at-gemeinden" data-set="at-gemeinden">
+        <span class="qi">🏘️</span>
+        <span class="qt"><b>Largest Gemeinden</b><small>The 100 largest municipalities by population, from Vienna to the smaller district towns</small></span>
+        <span class="qp"></span>
+      </a>
     </div>
+    <p class="dim small">More countries can be added the same way.</p>
+  </section>
 
-    <!-- ============ QUIZ ============ -->
-    <section class="mode" id="mode-quiz">
-      <div class="row scope-row">
-        <select id="quizScope" class="scope" aria-label="Which cities"></select>
-      </div>
-      <div class="answer">
-        <input id="answer" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Loading…" enterkeyhint="done" disabled>
-        <div class="msg" id="quizMsg" aria-live="polite"></div>
-      </div>
-      <div class="score">
-        <div class="big"><span id="qFound">0</span><span class="of"> / <span id="qTotal">0</span></span></div>
-        <div class="meta">
-          <div><span id="qPct">0</span>% of cities · <span id="qPopPct">0</span>% of people</div>
-          <div class="timer" id="qTimer">0:00</div>
-        </div>
-      </div>
-      <div class="bar"><i id="qBar"></i></div>
-      <div class="row tools">
-        <label class="chk"><input type="checkbox" id="hintDots"> Show dots for missing</label>
-        <label class="chk"><input type="checkbox" id="flyTo"> Fly to answers</label>
-        <label class="chk"><input type="checkbox" id="acceptParts"> Accept places inside an agglomeration</label>
-      </div>
-      <div class="row btns">
-        <button id="giveUp" class="btn">Give up &amp; show missing</button>
-        <button id="resetQuiz" class="btn ghost">Restart</button>
-      </div>
-      <h3>By region</h3>
-      <div id="qRegions" class="regions"></div>
-      <h3 id="qListTitle">Found</h3>
-      <ol id="qList" class="clist"></ol>
-    </section>
-
-    <!-- ============ PRACTICE ============ -->
-    <section class="mode" id="mode-practice">
-      <div class="row scope-row">
-        <select id="pracScope" class="scope" aria-label="Which cities"></select>
-      </div>
-      <div class="seg wide" id="pracSeg">
-        <button data-v="name">Name it</button><button data-v="find">Find it</button><button data-v="bigger">Bigger?</button>
-      </div>
-      <div class="card" id="pracCard"></div>
-      <div class="known">
-        <div class="bar"><i id="pKnownBar"></i></div>
-        <div class="small"><span id="pKnown">0</span> of <span id="pTotal">0</span> known (answered right twice in a row) · session <span id="pSession">0 / 0</span></div>
-      </div>
-      <p class="small dim">Cities you miss come back more often; the ones you know show up less.</p>
-    </section>
-
-    <!-- ============ ATLAS ============ -->
-    <section class="mode" id="mode-atlas">
-      <div class="row">
-        <input id="atlasSearch" type="search" placeholder="Search city, country or place…" autocomplete="off">
-      </div>
-      <div class="row filters">
-        <select id="atlasScope" class="scope" aria-label="Filter"></select>
-        <select id="atlasSort" aria-label="Sort">
-          <option value="pop">By population</option>
-          <option value="name">A–Z</option>
-          <option value="country">By country</option>
-          <option value="growth">By growth 2000–25</option>
-        </select>
-      </div>
-      <label class="chk"><input type="checkbox" id="atlasHideNames"> Hide names on map <small>(tap a dot to reveal)</small></label>
-      <div id="detail" class="detail" hidden></div>
-      <div class="small dim" id="atlasCount"></div>
-      <ol id="atlasList" class="clist atlas"></ol>
-    </section>
-  </aside>
+  <p class="dim small hub-foot">Progress is kept per quiz<span id="storeNote"></span>. Each quiz has its own “?” page with the data sources.</p>
 </main>
 
-<dialog id="about">
-  <form method="dialog"><button class="icon-btn close" aria-label="Close">×</button></form>
-  <h2>About the data</h2>
-  <p>"Which cities have over a million people?" depends on where a city ends. The <b>Database</b> menu switches between three answers:</p>
-  <ul>
-    <li><b>Agglomerations · UN 2025</b> (default): the same method everywhere, explained below.</li>
-    <li><b>National definitions · UN 2018</b>: the classic UN list from the <a href="https://population.un.org/wup/" target="_blank" rel="noopener">2018 revision</a>. Each country defines its cities itself, as city proper, urban agglomeration or metropolitan area (shown on each city's card). Figures are that revision's projection for 2025, and old names are shown with today's spelling.</li>
-    <li><b>City proper · Wikidata</b>: the population inside the official city limits, mostly from the latest census, as recorded in <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a> (CC0). Chinese prefecture-level cities count only their urban districts, not the rural counties. Metro areas, provinces and districts are filtered out. City limits differ hugely between countries (Chongqing 26M, Paris 2.1M), which is the classic problem with city-proper lists.</li>
-  </ul>
-  <p>Quiz and practice progress is kept separately for each database.</p>
-  <h3>UN 2025 agglomerations</h3>
-  <p>Cities and populations come from the UN <a href="https://population.un.org/wup/" target="_blank" rel="noopener">World Urbanization Prospects 2025</a> (UN DESA, Population Division), mid-2025 estimates. Since this revision every country is measured the same way, with the <i>Degree of Urbanisation</i>: a city is a contiguous block of 1 km² grid cells with at least 1,500 inhabitants per km², and at least 50,000 people in total. This makes the numbers comparable worldwide.</p>
-  <p>Contiguous built-up areas are counted as one city (Tokyo includes Yokohama, Guangzhou includes Foshan and Dongguan). WUP 2025 still lists centres like <b>Shenzhen</b>, Zhongshan, Wuxi or The Hague as their own cities, even where the satellite-based GHSL database merges them into one big blob.</p>
-  <p>A few names look unusual because WUP names agglomerations after a district or a neighbouring town (e.g. <i>Kasaï-Oriental</i> = Mbuji-Mayi, <i>Xiuying District</i> = Haikou). The map shows the familiar name and the quiz accepts both. Some fast-growing, very dense rural areas in India, Bangladesh and Nigeria (e.g. Hajipur, Kozhikode, Onitsha) count as cities under this method. WUP gives every estimate a plausibility rating, shown on each city's card.</p>
-  <p><b>Outlines</b> (UN 2025 only) are the urban centres of the <a href="https://human-settlement.emergency.copernicus.eu/ghs_ucdb_2024.php" target="_blank" rel="noopener">GHSL Urban Centre Database R2024A</a> (European Commission, JRC). Where WUP splits one GHSL centre into several cities, the outline is divided between their centres, so it's only approximate. <b>Places inside</b> and alternative names (including German ones) come from <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a> (CC BY 4.0). Borders, rivers and lakes come from <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>. Terrain uses AWS Terrain Tiles (Mapzen); the physical and satellite maps are © Esri.</p>
-  <p class="dim small">UN data © United Nations, CC BY 3.0 IGO. <span id="storageNote"></span></p>
-</dialog>
-
-<script type="module" src="app.js"></script>
+<script type="module">
+import { $, $$ } from './lib/util.js';
+import { store, loadState, save } from './lib/store.js';
+const S = await loadState();
+$('#storeNote').textContent = store.local ? ', in this browser' : ' on the server, shared by your devices';
+const show = v => {
+  $$('#hubSeg button').forEach(b => b.classList.toggle('on', b.dataset.v === v));
+  $('#sec-world').hidden = v !== 'world'; $('#sec-countries').hidden = v !== 'countries';
+};
+show(S.hub || 'world');
+$('#hubSeg').onclick = e => { const v = e.target.closest('button')?.dataset.v; if (v) { S.hub = v; show(v); save(); } };
+// progress: found in the full quiz + known practice cards
+const idx = await fetch('data/sets/index.json').then(r => r.json()).catch(() => ({}));
+const known = cards => Object.values(cards || {}).filter(c => c.box >= 2).length;
+for (const a of $$('.qcard')) {
+  const k = a.dataset.set;
+  let found = 0, total = 0, kn = 0;
+  if (k === 'cities') { found = Object.keys(S.quiz?.all?.found || {}).length; total = 511; kn = known(Object.fromEntries(Object.entries(S.cards || {}).filter(([id]) => !id.includes(':')))); }
+  else { const p = S.sets?.[k]; found = Object.keys(p?.quiz?.['all|all']?.found || {}).length; total = idx[k]?.n || 0; kn = known(p?.cards); }
+  const qp = a.querySelector('.qp');
+  qp.innerHTML = total ? `<b>${found} / ${total}</b><small>found${kn ? ` · ${kn} known` : ''}</small><i style="--w:${100 * found / total}%"></i>` : '';
+}
+</script>
 </body>
 </html>

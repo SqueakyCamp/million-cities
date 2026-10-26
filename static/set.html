@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atlas Quiz</title>
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./" title="All quizzes">
+    <span class="home" aria-hidden="true">‹</span>
+    <img src="icon.svg" alt="" width="22" height="22">
+    <div><b id="setTitle">Atlas Quiz</b><small id="subtitle"></small></div>
+  </a>
+  <nav class="modes" role="tablist">
+    <button data-mode="quiz" role="tab">Quiz</button>
+    <button data-mode="practice" role="tab">Practice</button>
+    <button data-mode="atlas" role="tab">Atlas</button>
+  </nav>
+  <button class="icon-btn" id="aboutBtn" title="About the data" aria-label="About the data">?</button>
+</header>
+
+<main>
+  <div id="map"></div>
+  <div class="layers" id="layers"></div>
+
+  <aside class="panel" id="panel">
+    <div class="grip" id="grip" aria-hidden="true"></div>
+    <div class="dbbar">
+      <label><span id="whatLabel">What</span><select id="whatSel"></select></label>
+      <label><span id="whereLabel">Where</span><select id="whereSel"></select></label>
+    </div>
+
+    <!-- ============ QUIZ ============ -->
+    <section class="mode" id="mode-quiz">
+      <div class="answer">
+        <input id="answer" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Loading…" enterkeyhint="done" disabled>
+        <div class="msg" id="quizMsg" aria-live="polite"></div>
+      </div>
+      <div id="qDetail" class="detail" hidden></div>
+      <div class="score">
+        <div class="big"><span id="qFound">0</span><span class="of"> / <span id="qTotal">0</span></span></div>
+        <div class="meta">
+          <div><span id="qPct">0</span>% found</div>
+          <div class="timer" id="qTimer">0:00</div>
+        </div>
+      </div>
+      <div class="bar"><i id="qBar"></i></div>
+      <div class="row tools">
+        <label class="chk"><input type="checkbox" id="hintDots"> <span id="hintLabel">Show the missing ones (unnamed)</span></label>
+        <label class="chk"><input type="checkbox" id="flyTo"> Fly to answers</label>
+      </div>
+      <div class="row btns">
+        <button id="giveUp" class="btn">Give up &amp; show missing</button>
+        <button id="resetQuiz" class="btn ghost">Restart</button>
+      </div>
+      <h3 id="qRegionsTitle">By region</h3>
+      <div id="qRegions" class="regions"></div>
+      <h3 id="qListTitle">Found</h3>
+      <ol id="qList" class="clist"></ol>
+    </section>
+
+    <!-- ============ PRACTICE ============ -->
+    <section class="mode" id="mode-practice">
+      <div class="seg wide" id="pracSeg">
+        <button data-v="name">Name it</button><button data-v="find">Find it</button><button data-v="bigger" id="biggerBtn">Bigger?</button>
+      </div>
+      <div class="level">
+        <button class="btn ghost" id="pEasier" title="Better-known ones">‹ Easier</button>
+        <div id="pLevel"></div>
+        <button class="btn ghost" id="pHarder" title="Start with less-known ones">Harder ›</button>
+      </div>
+      <div class="card" id="pracCard"></div>
+      <div class="known">
+        <div class="bar"><i id="pKnownBar"></i></div>
+        <div class="small"><span id="pKnown">0</span> of <span id="pTotal">0</span> known (answered right twice in a row) · session <span id="pSession">0 / 0</span></div>
+      </div>
+      <p class="small dim">The ones you miss come back more often; the ones you know show up less. “Harder” skips the well-known ones you already know.</p>
+    </section>
+
+    <!-- ============ ATLAS ============ -->
+    <section class="mode" id="mode-atlas">
+      <div class="row">
+        <input id="atlasSearch" type="search" placeholder="Search…" autocomplete="off">
+      </div>
+      <div class="row filters">
+        <select id="atlasSort" aria-label="Sort"></select>
+      </div>
+      <label class="chk"><input type="checkbox" id="atlasHideNames"> Hide names on map <small>(tap to reveal)</small></label>
+      <div id="detail" class="detail" hidden></div>
+      <div class="small dim" id="atlasCount"></div>
+      <ol id="atlasList" class="clist atlas"></ol>
+    </section>
+  </aside>
+</main>
+
+<dialog id="about">
+  <form method="dialog"><button class="icon-btn close" aria-label="Close">×</button></form>
+  <h2 id="aboutTitle">About the data</h2>
+  <div id="aboutBody"></div>
+  <p>Base maps: borders, rivers and lakes from <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>; terrain uses AWS Terrain Tiles (Mapzen); the physical and satellite maps are © Esri.</p>
+  <p class="dim small" id="storageNote"></p>
+</dialog>
+
+<script type="module" src="set.js"></script>
+</body>
+</html>

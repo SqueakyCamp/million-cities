@@ -1,0 +1,113 @@
+{
+  "items": {
+    "m1159120335": {"drop": true},
+
+    "m1159119215": {"cat": "lake", "name": "Lake Maracaibo"},
+    "m1159119471": {"cat": "lake", "name": "Lake Pontchartrain"},
+    "m1159120609": {"cat": "strait", "name": "Øresund"},
+    "m1159118085": {"drop": true},
+    "m1159118111": {"drop": true},
+    "m1159117651": {"drop": true},
+    "m1159119013": {"drop": true},
+    "m1159119141": {"drop": true},
+    "m1159120643": {"drop": true},
+    "m1159119075": {"drop": true},
+    "m1159118975": {"drop": true},
+    "m1159118905": {"drop": true},
+    "m1159118871": {"drop": true},
+    "m1159117159": {"drop": true},
+
+    "m1159119037": {"cat": "river", "wiki": "Saint Lawrence River", "name": "St. Lawrence River"},
+    "m1159120015": {"drop": true},
+    "m1159118213": {"drop": true},
+    "m1159118261": {"drop": true},
+    "m1159120135": {"drop": true},
+    "m1159117427": {"drop": true},
+    "m1159120519": {"drop": true},
+    "m1159118511": {"drop": true},
+    "m1159117561": {"drop": true},
+
+    "xQ631789": {"wiki": "Fedchenko Glacier", "name": "Fedchenko Glacier"},
+    "xQ764134": {"drop": true},
+    "r1159103109": {"cat": "glacier"},
+
+    "xQ189849": {"drop": true},
+
+    "r1159103353": {"wiki": "Karelia", "name": "Karelia"},
+    "r1159103347": {"wiki": "Brittany", "name": "Brittany"},
+    "r1159103345": {"wiki": "Normandy", "name": "Normandy"},
+    "r1159103739": {"wiki": "Lapland", "name": "Lapland"},
+    "r1159104413": {"drop": true},
+    "r1159104381": {"drop": true},
+    "r1730074397": {"drop": true},
+    "r1159104497": {"drop": true},
+    "r1159104593": {"drop": true},
+    "r1159104431": {"drop": true},
+    "r1159104395": {"drop": true},
+    "r1159104495": {"drop": true},
+    "r1159104589": {"drop": true},
+
+    "r1159104011": {"name": "Florida Peninsula"},
+    "r1159104489": {"drop": true},
+    "r1159103191": {"drop": true},
+    "r1730072869": {"drop": true},
+    "r1730072875": {"drop": true},
+    "p1159104695": {"drop": true},
+
+    "r1159104343": {"cat": "peninsula"},
+    "r1730071945": {"drop": true},
+    "r1159104021": {"drop": true},
+    "r1159103235": {"drop": true},
+
+    "r1159104097": {"cat": "plateau"},
+    "r1159104103": {"drop": true},
+    "r1730073001": {"drop": true},
+
+    "r1159104245": {"drop": true},
+
+    "r1159103611": {"name": "Sierra Nevada (Spain)"},
+
+    "e1159105945": {"alias": ["Großglockner"]},
+    "e1159105715": {"alias": ["Chomolungma", "Sagarmatha"]},
+
+    "l1159126747": {"alias": ["Totes Meer"]},
+    "l1159114259": {"alias": ["Bodensee"]},
+
+    "vQ270627": {"name": "Colorado River (Argentina)"},
+    "vQ386331": {"name": "Rio Grande (Brazil)"},
+    "vQ817337": {"name": "Río Negro (Argentina)"},
+    "vQ7580186": {"drop": true},
+    "vQ1333747": {"drop": true},
+    "vQ1726738": {"drop": true},
+    "vQ1644776": {"drop": true},
+    "vQ31379": {"drop": true},
+    "vQ284495": {"drop": true},
+    "vQ2416760": {"drop": true},
+    "vQ1478566": {"drop": true},
+    "vQ1472009": {"drop": true},
+    "vQ1519602": {"drop": true},
+    "vQ776155": {"drop": true},
+    "vQ472816": {"drop": true},
+    "vQ916349": {"drop": true},
+    "vQ8550": {"drop": true},
+
+    "r1159104291": {"wiki": "Japanese archipelago", "name": "Japanese Archipelago"},
+    "r1159102735": {"alias": ["Fraser Island"]},
+
+    "m1159115321": {"alias": ["Mittelmeer"]},
+    "m1159115171": {"alias": ["Schwarzes Meer"]},
+    "m1159116535": {"alias": ["Ärmelkanal"]},
+    "m1159115879": {"alias": ["Nordsee"]},
+    "m1159115831": {"alias": ["Ostsee"]},
+    "m1159115521": {"alias": ["Rotes Meer"]},
+    "r1159104297": {"alias": ["Alpen"]},
+    "r1159103937": {"alias": ["Karpaten"]},
+    "r1159104305": {"alias": ["Kaukasus"]},
+    "r1159104311": {"alias": ["Felsengebirge"]}
+  },
+  "add": [
+    {"cat": "peak", "wiki": "Mount Vesuvius", "name": "Vesuvius"},
+    {"cat": "peak", "wiki": "Mount Etna", "name": "Etna"},
+    {"cat": "peak", "wiki": "Table Mountain", "name": "Table Mountain"}
+  ]
+}

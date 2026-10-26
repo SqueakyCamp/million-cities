@@ -1,21 +1,6 @@
-import * as maplibregl from './vendor/maplibre-gl.mjs';
-
-const $ = (s, el = document) => el.querySelector(s);
-const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-
-// Same key as tools/build_data.py:norm()
-function norm(s) {
-  s = s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '');
-  s = s.replace(/ß/g, 'ss').replace(/ø/g, 'o').replace(/đ/g, 'd').replace(/ł/g, 'l').replace(/ı/g, 'i').replace(/æ/g, 'ae').replace(/œ/g, 'oe');
-  return s.replace(/[^a-z0-9]+/g, '');
-}
-const fmtPop = p => p >= 1e7 ? (p / 1e6).toFixed(1) + ' M' : p >= 1e6 ? (p / 1e6).toFixed(2) + ' M' : Math.round(p / 1e3) + ' k';
-const fmtInt = n => n.toLocaleString('en-US');
-const flag = cc => cc && cc.length === 2 ? String.fromCodePoint(...[...cc.toUpperCase()].map(c => 0x1f1a5 + c.charCodeAt(0))) : '';
-const fmtTime = ms => { const s = Math.floor(ms / 1000), h = Math.floor(s / 3600), m = Math.floor(s / 60) % 60; return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(s % 60).padStart(2, '0'); };
-const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-const isPhone = () => matchMedia('(max-width: 760px)').matches;
+import { $, $$, esc, norm, fmtPop, fmtInt, flag, fmtTime, dark, isPhone, haversine, toast, pickCard, LEVELS, levelStart } from './lib/util.js';
+import { store, loadState, save, watchVisibility } from './lib/store.js';
+import { maplibregl, COL, PAL, empty, DEFAULT_LAYERS, createMap, applyBaseLayers, layersPopover, bindLayers } from './lib/mapbase.js';
 
 // ------------------------------------------------------------------ databases
 // Each database is one file in data/db/ (built by tools/build_data.py and build_alt.py).
@@ -83,178 +68,45 @@ function fillScopeSelect(sel, withAllCountries) {
 // ------------------------------------------------------------------ state (shared via server)
 const DEFAULT = {
   mode: 'quiz', quizScope: 'all', pracScope: 'all', pracMode: 'name', atlasScope: 'all', atlasSort: 'pop',
-  basemap: 'terrain', layers: { borders: true, bordersBold: false, admin1: false, admin1Bold: false, rivers: true, wlabels: false, clabels: false, slabels: false, outlines: true },
+  basemap: 'terrain', layers: DEFAULT_LAYERS,
   hintDots: false, flyTo: false, acceptParts: false, atlasHideNames: false,
   db: 'wup2025', // which database (DBS)
   minPop: 1e6,   // 1e6 or 8e5
   quiz: {},      // [db:]scope[@800k] -> {found: {id: ts}, ms, gaveUp}
   cards: {},     // [db:]id -> {box, ok, bad, last}
   bigger: { ok: 0, n: 0 },
+  pracLevel: {}, // practice difficulty per [db:]scope (0 = largest cities first … LEVELS-1)
 };
-let S = structuredClone(DEFAULT), rev = 0, saveTimer = null, saving = false;
-
-// With server.py, progress lives on the server (shared by all devices). As a static site
-// (GitHub Pages) there is no API, so each browser keeps its own copy in localStorage.
-let local = false;
-const LS_KEY = 'million-cities-state';
-function readLocal() { try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch { return {}; } }
-function adopt(st) {
-  S = Object.assign(structuredClone(DEFAULT), st);
-  S.layers = Object.assign({}, DEFAULT.layers, st.layers);
+// progress lives in the shared store (lib/store.js); this app uses its top level
+let S;
+function adopt() {
+  S = store.S;
+  for (const [k, v] of Object.entries(DEFAULT)) if (!(k in S)) S[k] = structuredClone(v);
+  S.layers = Object.assign({}, DEFAULT.layers, S.layers);
 }
-async function loadState() {
-  try {
-    if (location.hostname.endsWith('github.io')) throw new Error('static host');
-    const r = await fetch('api/state');
-    if (!r.ok || !(r.headers.get('content-type') || '').includes('json')) throw new Error('no api');
-    const d = await r.json();
-    rev = d.rev;
-    adopt(d.state);
-  } catch {
-    local = true;
-    adopt(readLocal());
-  }
-}
-// merge another copy (e.g. from the phone) into ours: union of found cities, newest card stats
-function mergeState(other) {
-  for (const [k, q] of Object.entries(other.quiz || {})) {
-    const mine = S.quiz[k];
-    if (!mine) { S.quiz[k] = q; continue; }
-    if ((q.reset || 0) > (mine.reset || 0)) { S.quiz[k] = q; continue; }
-    if ((q.reset || 0) < (mine.reset || 0)) continue;
-    Object.assign(mine.found, q.found);
-    mine.ms = Math.max(mine.ms || 0, q.ms || 0);
-    mine.gaveUp = mine.gaveUp || q.gaveUp;
-  }
-  for (const [id, c] of Object.entries(other.cards || {})) {
-    if (!S.cards[id] || (c.last || 0) > (S.cards[id].last || 0)) S.cards[id] = c;
-  }
-  if ((other.bigger?.n || 0) > S.bigger.n) S.bigger = other.bigger;
-}
-function save() {
-  clearTimeout(saveTimer);
-  saveTimer = setTimeout(flush, 700);
-}
-async function flush() {
-  if (local) { try { localStorage.setItem(LS_KEY, JSON.stringify(S)); } catch { } return; }
-  if (saving) return save();
-  saving = true;
-  try {
-    let r = await fetch('api/state', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rev, state: S }) });
-    if (r.status === 409) {
-      const cur = await r.json();
-      mergeState(cur.state); rev = cur.rev;
-      r = await fetch('api/state', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rev, state: S }) });
-      renderAll();
-    }
-    if (r.ok) rev = (await r.json()).rev;
-  } catch (e) { console.warn('save failed', e); }
-  saving = false;
-}
-document.addEventListener('visibilitychange', async () => {
-  if (document.visibilityState === 'hidden') { quizTick(); if (saveTimer) { clearTimeout(saveTimer); flush(); } return; }
-  if (local) { lastTick = Date.now(); return; }
-  try {
-    const r = await fetch('api/state').then(r => r.json());
-    if (r.rev !== rev) { mergeState(r.state); rev = r.rev; renderAll(); }
-  } catch { }
-  lastTick = Date.now();
-});
+store.onRemote = () => { adopt(); renderAll(); };
+watchVisibility(() => quizTick(), () => { lastTick = Date.now(); });
 
 await loadState();
+adopt();
+const local = store.local;
 await loadDb(S.db);
 $('#storageNote').textContent = local
   ? 'Your progress is saved in this browser only.'
   : 'Progress is saved on the server, so all your devices share it.';
 
 // ------------------------------------------------------------------ map
-const PAL = dark
-  ? { ocean: '#0e1a24', land: '#1d262e', lake: '#0e1a24', river: '#2b4a63', border: '#6c7a86', admin: '#46525d', text: '#c9d2da', halo: '#0e1a24', ctext: '#8c99a5', wtext: '#7fa9c9', bold: '#e6ebef', boldAdmin: '#b8c2ca', casing: '#0e1a24' }
-  : { ocean: '#c6dbe7', land: '#f4f2ec', lake: '#c6dbe7', river: '#8fb6cf', border: '#8b8f94', admin: '#b9b6ad', text: '#22292f', halo: '#ffffff', ctext: '#6d757c', wtext: '#2f6286', bold: '#2a2a2a', boldAdmin: '#4f4a44', casing: '#ffffff' };
-const COL = dark
-  ? { found: '#3ecf7a', miss: '#ff6b6b', hint: '#7b8894', atlas: '#ffcc4d', target: '#ff9f1c', outline: '#ffcc4d' }
-  : { found: '#1f9d55', miss: '#d64545', hint: '#7d8790', atlas: '#c2410c', target: '#e8590c', outline: '#c2410c' };
-
-const empty = { type: 'FeatureCollection', features: [] };
-const map = new maplibregl.Map({
-  container: 'map',
-  attributionControl: { compact: true },
-  center: [30, 22], zoom: isPhone() ? 0.6 : 1.6, minZoom: 0.3, maxZoom: 13,
-  renderWorldCopies: true,
-  style: {
-    version: 8,
-    glyphs: 'fonts/{fontstack}/{range}.pbf',
-    sources: {
-      land: { type: 'geojson', data: 'data/geo/land.geojson', attribution: 'Natural Earth' },
-      dem: { type: 'raster-dem', encoding: 'terrarium', tiles: ['https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png'], tileSize: 256, maxzoom: 12, attribution: 'Terrain: Mapzen/AWS' },
-      physical: { type: 'raster', tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}'], tileSize: 256, maxzoom: 8, attribution: '© Esri, US NPS' },
-      satellite: { type: 'raster', tiles: ['https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'], tileSize: 256, maxzoom: 18, attribution: '© Esri, Maxar, Earthstar Geographics' },
-      oceanpoly: { type: 'geojson', data: empty }, lakes: { type: 'geojson', data: empty }, rivers: { type: 'geojson', data: empty },
-      rlines: { type: 'geojson', data: empty }, borders: { type: 'geojson', data: empty }, admin1: { type: 'geojson', data: empty }, labels: { type: 'geojson', data: empty },
-      outlines: { type: 'geojson', data: empty, attribution: 'GHSL UCDB R2024A' },
-      cities: { type: 'geojson', data: empty, attribution: 'UN WUP 2025 · GeoNames' },
-      mark: { type: 'geojson', data: empty },
-    },
-    layers: [
-      { id: 'ocean', type: 'background', paint: { 'background-color': PAL.ocean } },
-      { id: 'land', type: 'fill', source: 'land', paint: { 'fill-color': PAL.land } },
-      { id: 'physical', type: 'raster', source: 'physical', layout: { visibility: 'none' } },
-      { id: 'satellite', type: 'raster', source: 'satellite', layout: { visibility: 'none' } },
-      {
-        id: 'relief', type: 'color-relief', source: 'dem', layout: { visibility: 'none' },
-        paint: {
-          'color-relief-opacity': dark ? 0.55 : 0.75,
-          'color-relief-color': ['interpolate', ['linear'], ['elevation'],
-            -12000, 'rgba(0,0,0,0)', -1, 'rgba(0,0,0,0)', 0, '#a7c99a', 200, '#c8d9a4', 600, '#e5dfae', 1200, '#d9bf8c', 2000, '#c19a6b', 3000, '#a8876a', 4500, '#e6e2dc', 6000, '#ffffff'],
-        },
-      },
-      {
-        id: 'hillshade', type: 'hillshade', source: 'dem', layout: { visibility: 'none' },
-        paint: { 'hillshade-exaggeration': 0.55, 'hillshade-shadow-color': dark ? '#000' : '#5a5040', 'hillshade-highlight-color': dark ? '#3a4650' : '#fff' },
-      },
-      { id: 'oceanpoly', type: 'fill', source: 'oceanpoly', layout: { visibility: 'none' }, paint: { 'fill-color': PAL.ocean, 'fill-antialias': false } },
-      { id: 'lakes', type: 'fill', source: 'lakes', paint: { 'fill-color': PAL.lake } },
-      {
-        id: 'rivers', type: 'line', source: 'rivers', paint: {
-          'line-color': PAL.river,
-          'line-width': ['interpolate', ['linear'], ['zoom'], 1, ['match', ['get', 'r'], [0, 1, 2, 3], 0.9, 0.3], 6, ['match', ['get', 'r'], [0, 1, 2, 3], 2, 1], 10, 2.5],
-          'line-opacity': ['interpolate', ['linear'], ['zoom'], 1, ['match', ['get', 'r'], [0, 1, 2, 3, 4, 5], 0.9, 0], 3, ['match', ['get', 'r'], [0, 1, 2, 3, 4, 5, 6, 7], 0.9, 0], 5, 0.9],
-        },
-      },
-      // "bold" borders: a light casing under a dark line so they read on terrain/physical maps
-      { id: 'admin1-casing', type: 'line', source: 'admin1', minzoom: 1.5, layout: { visibility: 'none', 'line-join': 'round' }, paint: { 'line-color': PAL.casing, 'line-opacity': 0.6, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, 2, 8, 4] } },
-      { id: 'borders-casing', type: 'line', source: 'borders', layout: { visibility: 'none', 'line-join': 'round' }, paint: { 'line-color': PAL.casing, 'line-opacity': 0.7, 'line-width': ['interpolate', ['linear'], ['zoom'], 1, 2.6, 8, 6] } },
-      { id: 'admin1', type: 'line', source: 'admin1', minzoom: 1.5, paint: { 'line-color': PAL.admin, 'line-width': ['interpolate', ['linear'], ['zoom'], 2, 0.4, 8, 1.2], 'line-dasharray': [3, 2] } },
-      { id: 'borders', type: 'line', source: 'borders', paint: { 'line-color': PAL.border, 'line-width': ['interpolate', ['linear'], ['zoom'], 1, 0.6, 8, 1.6] } },
-      // river names follow smoothed copies of the rivers (rlines): coarse below zoom 6, fine above
-      ...[[0, 3, 2], [4, 6, 4], [7, 99, 5.5]].flatMap(([lo, hi, z]) => [[z, 6, 0], [6, 24, 1]].map(([z0, z1, fine]) => ({
-        id: `rlabels${lo}-${fine}`, type: 'symbol', source: 'rlines', minzoom: Math.max(z, z0), maxzoom: z1,
-        filter: ['all', ['==', ['get', 'z'], fine], ['>=', ['get', 'r'], lo], ['<=', ['get', 'r'], hi]],
-        layout: {
-          'symbol-placement': 'line', 'symbol-spacing': 250, 'text-field': ['get', 'n'], 'text-font': ['Noto Sans Italic'],
-          'text-size': ['interpolate', ['linear'], ['zoom'], 2, 10.5, 8, 13], 'text-max-angle': 70, 'text-padding': 4, visibility: 'none',
-        },
-        paint: { 'text-color': PAL.wtext, 'text-halo-color': PAL.halo, 'text-halo-width': 1.3 },
-      }))),
-      {
-        id: 'llabels', type: 'symbol', source: 'labels', filter: ['==', ['get', 't'], 'l'], minzoom: 2.5, layout: {
-          'text-field': ['get', 'n'], 'text-font': ['Noto Sans Italic'], 'text-size': ['interpolate', ['linear'], ['zoom'], 3, 10, 8, 13],
-          'symbol-sort-key': ['get', 'r'], 'text-max-width': 7, visibility: 'none',
-        }, paint: { 'text-color': PAL.wtext, 'text-halo-color': PAL.halo, 'text-halo-width': 1.3 },
-      },
+const map = createMap({
+  sources: {
+    outlines: { type: 'geojson', data: empty, attribution: 'GHSL UCDB R2024A' },
+    cities: { type: 'geojson', data: empty, attribution: 'UN WUP 2025 · GeoNames' },
+    mark: { type: 'geojson', data: empty },
+  },
+  middle: [
       { id: 'outline-fill', type: 'fill', source: 'outlines', filter: ['in', ['get', 'id'], ['literal', []]], paint: { 'fill-color': COL.outline, 'fill-opacity': 0.16 } },
       { id: 'outline-line', type: 'line', source: 'outlines', minzoom: 4, filter: ['in', ['get', 'id'], ['literal', []]], paint: { 'line-color': COL.outline, 'line-width': 1.2, 'line-opacity': 0.8 } },
-      {
-        id: 'slabels', type: 'symbol', source: 'labels', filter: ['==', ['get', 't'], 's'], minzoom: 3.5, layout: {
-          'text-field': ['get', 'n'], 'text-font': ['Noto Sans Italic'], 'text-size': 11, 'symbol-sort-key': ['get', 'r'], 'text-max-width': 7, visibility: 'none',
-        }, paint: { 'text-color': PAL.ctext, 'text-halo-color': PAL.halo, 'text-halo-width': 1.2, 'text-opacity': 0.85 },
-      },
-      {
-        id: 'clabels', type: 'symbol', source: 'labels', filter: ['==', ['get', 't'], 'c'], layout: {
-          'text-field': ['get', 'n'], 'text-font': ['Noto Sans Bold'], 'text-transform': 'uppercase', 'text-letter-spacing': 0.08,
-          'text-size': ['interpolate', ['linear'], ['zoom'], 1, 9, 5, 13], 'symbol-sort-key': ['get', 'r'], 'text-max-width': 8, visibility: 'none',
-        }, paint: { 'text-color': PAL.ctext, 'text-halo-color': PAL.halo, 'text-halo-width': 1.2 },
-      },
+  ],
+  top: [
       { id: 'mark-line', type: 'line', source: 'mark', filter: ['==', ['geometry-type'], 'LineString'], paint: { 'line-color': COL.target, 'line-width': 2, 'line-dasharray': [2, 2] } },
       {
         id: 'cities', type: 'circle', source: 'cities', layout: { 'circle-sort-key': ['get', 'pop'] }, paint: {
@@ -279,70 +131,21 @@ const map = new maplibregl.Map({
           'text-halo-color': PAL.halo, 'text-halo-width': 1.6,
         },
       },
-    ],
-  },
+  ],
 });
-map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
-map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-left');
-map.touchZoomRotate.disableRotation(); 
-map.dragRotate.disable();
 
-const geoLoaded = {};
-async function ensureGeo(name, ...more) {
-  for (const n of [name, ...more]) {
-    if (geoLoaded[n]) continue;
-    geoLoaded[n] = true;
-    map.getSource(n).setData(`data/geo/${n}.geojson`);
-  }
-}
 let outlinesLoaded = false;
-const RLABELS = ['rlabels0-0', 'rlabels0-1', 'rlabels4-0', 'rlabels4-1', 'rlabels7-0', 'rlabels7-1'];
-
+$('#layers').innerHTML = layersPopover([['outlines', 'City outlines <small>(urban extent)</small>']]);
 function applyLayers() {
   const vis = (id, on) => map.getLayer(id) && map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');
-  const b = S.basemap;
-  vis('relief', b === 'terrain'); vis('hillshade', b === 'terrain' || b === 'plain_relief');
-  if (b === 'terrain') { if (!geoLoaded.oceanpoly) { geoLoaded.oceanpoly = true; map.getSource('oceanpoly').setData('data/geo/ocean.geojson'); } }
-  vis('oceanpoly', b === 'terrain');
-  vis('physical', b === 'physical'); vis('satellite', b === 'satellite');
-  vis('land', b !== 'satellite' && b !== 'physical');
-  // under the terrain colours, land below sea level should look like lowland, not like paper
-  map.setPaintProperty('land', 'fill-color', b === 'terrain' ? (dark ? '#5d6f55' : '#a7c99a') : PAL.land);
-  const L = S.layers;
-  if (L.borders) ensureGeo('borders');
-  if (L.admin1) ensureGeo('admin1');
-  if (L.rivers) ensureGeo('rivers', 'lakes');
-  if (L.wlabels) ensureGeo('rlines');
-  if (L.clabels || L.slabels || L.wlabels) ensureGeo('labels');
-  vis('borders', L.borders); vis('admin1', L.admin1); vis('rivers', L.rivers);
-  vis('lakes', L.rivers && b !== 'satellite' && b !== 'physical');
-  vis('clabels', L.clabels); vis('slabels', L.slabels);
-  RLABELS.forEach(id => vis(id, L.wlabels)); vis('llabels', L.wlabels);
-  vis('borders-casing', L.borders && L.bordersBold); vis('admin1-casing', L.admin1 && L.admin1Bold);
+  const sat = applyBaseLayers(map, S), L = S.layers;
   if (L.outlines && data.outlines && !outlinesLoaded) { outlinesLoaded = true; map.getSource('outlines').setData('data/outlines.geojson'); }
   vis('outline-fill', L.outlines); vis('outline-line', L.outlines);
   // labels over imagery need a darker halo
-  const sat = b === 'satellite';
   map.setPaintProperty('city-labels', 'text-halo-color', sat ? '#000' : PAL.halo);
   map.setPaintProperty('city-labels', 'text-color', ['match', ['get', 'st'], 'miss', sat ? '#ff8a8a' : COL.miss, sat ? '#fff' : PAL.text]);
-  const bb = L.bordersBold, ab = L.admin1Bold;
-  map.setPaintProperty('borders', 'line-color', bb ? (sat ? '#fff' : PAL.bold) : sat ? '#ffffffaa' : PAL.border);
-  map.setPaintProperty('borders', 'line-width', ['interpolate', ['linear'], ['zoom'], 1, bb ? 1.3 : 0.6, 8, bb ? 3 : 1.6]);
-  map.setPaintProperty('admin1', 'line-color', ab ? (sat ? '#ffffffdd' : PAL.boldAdmin) : sat ? '#ffffff66' : PAL.admin);
-  map.setPaintProperty('admin1', 'line-width', ['interpolate', ['linear'], ['zoom'], 2, ab ? 0.9 : 0.4, 8, ab ? 2.2 : 1.2]);
-  for (const id of ['borders-casing', 'admin1-casing']) map.setPaintProperty(id, 'line-color', sat ? '#000' : PAL.casing);
-  for (const id of [...RLABELS, 'llabels']) {
-    map.setPaintProperty(id, 'text-color', sat ? '#cfe6ff' : PAL.wtext);
-    map.setPaintProperty(id, 'text-halo-color', sat ? '#000' : PAL.halo);
-  }
-  $$('#basemapSeg button').forEach(x => x.classList.toggle('on', x.dataset.v === b));
-  $$('#layersPop [data-layer]').forEach(x => { x.checked = !!L[x.dataset.layer]; });
-  $$('#layersPop [data-bold]').forEach(x => { x.disabled = !L[x.dataset.bold]; });
 }
-$('#layersBtn').onclick = () => { $('#layersPop').hidden = !$('#layersPop').hidden; };
-map.on('click', () => { $('#layersPop').hidden = true; });
-$('#basemapSeg').onclick = e => { const v = e.target.closest('button')?.dataset.v; if (v) { S.basemap = v; applyLayers(); save(); } };
-$$('#layersPop [data-layer]').forEach(x => x.onchange = () => { S.layers[x.dataset.layer] = x.checked; applyLayers(); save(); });
+bindLayers(map, S, () => { applyLayers(); save(); });
 
 function setCities(list) {
   // list: [{c, st, label}]
@@ -376,13 +179,6 @@ function fitCities(list, maxZoom = 6) {
   map.fitBounds([[w, s], [e, n]], { padding: isPhone() ? 40 : 90, maxZoom, duration: 900 });
 }
 
-let toastTimer;
-function toast(t) {
-  let el = $('.toast');
-  if (!el) { el = document.createElement('div'); el.className = 'toast'; $('main').append(el); }
-  el.textContent = t; el.classList.add('on');
-  clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('on'), 2200);
-}
 
 // ------------------------------------------------------------------ modes
 function setMode(m) {
@@ -391,6 +187,7 @@ function setMode(m) {
   $$('.mode').forEach(s => s.classList.toggle('on', s.id === 'mode-' + m));
   setMark([]);
   popup?.remove();
+  $('#qDetail').hidden = true;
   if (m === 'quiz') renderQuiz(true);
   if (m === 'practice') startPractice();
   if (m === 'atlas') renderAtlas(true);
@@ -520,6 +317,7 @@ $('#answer').addEventListener('input', () => tryAnswer(false));
 $('#answer').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); tryAnswer(true); } });
 
 function renderQuiz(refit) {
+  if (refit) $('#qDetail').hidden = true;
   const q = QZ(), pool = scopeCities(S.quizScope);
   $('#quizScope').value = S.quizScope;
   $('#hintDots').checked = S.hintDots; $('#flyTo').checked = S.flyTo; $('#acceptParts').checked = S.acceptParts;
@@ -552,7 +350,7 @@ function renderQuiz(refit) {
   $('#qListTitle').textContent = q.gaveUp ? `Missing (${missing.length}) and found (${found.length})` : `Found (${found.length})`;
   const rows = [...missing.map(c => [c, 'miss']), ...found.sort((a, b) => q.found[b.id] - q.found[a.id]).map(c => [c, 'found'])];
   $('#qList').innerHTML = rows.map(([c, cls]) => `<li class="${cls}" data-id="${c.id}"><span class="rk">${c.rank}</span><span class="nm">${esc(c.name)} <small>${flag(c.iso2)} ${esc(c.country)}</small></span><span class="pp">${fmtPop(c.pop)}</span></li>`).join('');
-  $$('#qList li').forEach(li => li.onclick = () => { const c = cityOf(li.dataset.id); flyToCity(c, Math.max(map.getZoom(), 5)); showPopup(c); });
+  $$('#qList li').forEach(li => li.onclick = () => { const c = cityOf(li.dataset.id); flyToCity(c, Math.max(map.getZoom(), 5)); showPopup(c); quizInfo(c); });
 
   // map
   const list = [];
@@ -572,7 +370,6 @@ function renderQuiz(refit) {
 
 // ------------------------------------------------------------------ PRACTICE
 // Leitner-style boxes: 0 = new/missed … 4 = solid. "Known" = box >= 2.
-const BOXW = [10, 6, 2.5, 1, 0.4];
 const recent = [];
 let cur = null, session = { ok: 0, n: 0 };
 $('#pracScope').onchange = e => { S.pracScope = e.target.value; recent.length = 0; save(); startPractice(); };
@@ -587,19 +384,20 @@ function grade(c, ok) {
   recent.push(c.id); if (recent.length > 8) recent.shift();
   renderPracticeStats(); save();
 }
+// difficulty: at higher levels new cities start further down the size ranking (lib/util.js pickCard)
+const levelKey = () => dbPrefix() + S.pracScope + (S.minPop < 1e6 ? '@800k' : '');
+const pracLevel = () => Math.min(LEVELS - 1, S.pracLevel[levelKey()] || 0);
+const bySize = pool => [...pool].sort((a, b) => b.pop - a.pop);
 function pick(pool) {
-  const avoid = new Set(recent.slice(-Math.min(recent.length, Math.max(1, Math.floor(pool.length / 2)))));
-  let cands = pool.filter(c => !avoid.has(c.id));
-  if (!cands.length) cands = pool;
-  // unseen cities come in roughly by size, so the big ones are learned first
-  const seenAny = cands.filter(c => S.cards[ck(c.id)]);
-  const unseen = cands.filter(c => !S.cards[ck(c.id)]).sort((a, b) => b.pop - a.pop).slice(0, 8);
-  const pickFrom = [...seenAny, ...unseen];
-  const w = pickFrom.map(c => S.cards[ck(c.id)] ? BOXW[S.cards[ck(c.id)].box] : 5);
-  let r = Math.random() * w.reduce((a, b) => a + b, 0);
-  for (let i = 0; i < pickFrom.length; i++) { r -= w[i]; if (r <= 0) return pickFrom[i]; }
-  return pickFrom[pickFrom.length - 1];
+  return pickCard(bySize(pool), pracLevel(), c => S.cards[ck(c.id)], recent);
 }
+function renderLevel() {
+  const pool = bySize(scopeCities(S.pracScope)), L = pracLevel(), i = levelStart(pool.length, L), c = pool[i];
+  $('#pLevel').innerHTML = `<b>Level ${L + 1} of ${LEVELS}</b><small>${L === 0 ? 'New cities come in largest first' : c ? `New cities from #${i + 1} (${esc(c.name)}, ${fmtPop(c.pop)}) down; bigger ones only come back until you know them` : ''}</small>`;
+  $('#pEasier').disabled = L === 0; $('#pHarder').disabled = L === LEVELS - 1 || pool.length < LEVELS;
+}
+$('#pEasier').onclick = () => { S.pracLevel[levelKey()] = Math.max(0, pracLevel() - 1); recent.length = 0; save(); renderLevel(); nextCard(); };
+$('#pHarder').onclick = () => { S.pracLevel[levelKey()] = Math.min(LEVELS - 1, pracLevel() + 1); recent.length = 0; save(); renderLevel(); nextCard(); };
 function renderPracticeStats() {
   const pool = scopeCities(S.pracScope);
   const known = pool.filter(c => (S.cards[ck(c.id)]?.box || 0) >= 2).length;
@@ -607,6 +405,7 @@ function renderPracticeStats() {
   $('#pKnownBar').style.width = (100 * known / pool.length) + '%';
   $('#pSession').textContent = `${session.ok} / ${session.n}`;
   $('#pracScope').value = S.pracScope;
+  renderLevel();
   $$('#pracSeg button').forEach(b => b.classList.toggle('on', b.dataset.v === S.pracMode));
 }
 function contextLine(c) { return `${flag(c.iso2)} ${esc(c.country)} · ${fmtPop(c.pop)} · #${c.rank} in the world`; }
@@ -693,11 +492,6 @@ function findCard(c, pool) {
   findHandler = e => done(e.lngLat);
   map.on('click', findHandler);
   $('#pSkip').onclick = () => done(null);
-}
-function haversine(a1, o1, a2, o2) {
-  const R = 6371, r = Math.PI / 180, dA = (a2 - a1) * r, dO = (o2 - o1) * r;
-  const h = Math.sin(dA / 2) ** 2 + Math.cos(a1 * r) * Math.cos(a2 * r) * Math.sin(dO / 2) ** 2;
-  return 2 * R * Math.asin(Math.sqrt(h));
 }
 function biggerCard(pool) {
   if (pool.length < 2) { $('#pracCard').innerHTML = '<div class="q">Pick a selection with at least two cities.</div>'; return; }
@@ -803,14 +597,15 @@ function factsHtml(c) {
   return `<div class="dh">Good to know</div><ul class="cfacts">${f.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
     ${t ? `<div class="small dim">From Wikipedia: <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(t.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(t)}</a></div>` : ''}`;
 }
-function selectCity(c, fly) {
-  selected = c.id;
-  if (!factsData) loadFacts().then(() => { if (selected === c.id) $('#cityFacts').innerHTML = factsHtml(c); });
+// the info box for a city (atlas detail, and in the quiz for cities already found)
+function showCityInfo(el, c, onClose) {
+  if (!factsData) loadFacts().then(() => { const f = $('.cityFacts', el); if (f && el.dataset.id === String(c.id)) f.innerHTML = factsHtml(c); });
+  el.dataset.id = c.id;
   const k = S.cards[ck(c.id)];
   const density = c.area ? Math.round(c.pop / c.area) : null;
   const other = c.aliases.filter(a => norm(a) !== norm(c.name) && a !== c.wup && a !== c.local).slice(0, 12);
-  $('#detail').hidden = false;
-  $('#detail').innerHTML = `<button class="icon-btn close" aria-label="Close">×</button>
+    el.hidden = false;
+  el.innerHTML = `<button class="icon-btn close" aria-label="Close">×</button>
     <h2>${esc(c.name)}${c.cap ? '<span class="badge cap">capital</span>' : ''}${c.plaus === 'Low' ? '<span class="badge low" title="WUP 2025 plausibility rating">low plausibility</span>' : ''}${c.pop < 1e6 ? '<span class="badge">800k–1M</span>' : ''}</h2>
     <div class="sub">${c.local ? esc(c.local) + ' · ' : ''}${flag(c.iso2)} ${esc(c.country)} · ${esc(c.sub || c.cont)}</div>
     <div class="facts">
@@ -820,17 +615,27 @@ function selectCity(c, fly) {
                : `<div><b class="def">${esc(c.concept || c.defn || '')}</b><small>${c.concept ? 'national definition' : 'counted area'}</small></div>`}
     </div>
     ${c.ts ? spark(c) : ''}
-    <div id="cityFacts">${factsHtml(c)}</div>
+    <div class="cityFacts">${factsHtml(c)}</div>
     ${c.note ? `<div class="note">${esc(c.note)}</div>` : ''}
     ${c.wup && c.wup !== c.name ? `<div class="small dim">Name in the UN list: ${esc(c.wup)}</div>` : ''}
     ${c.popsrc ? `<div class="small dim">Figure: ${esc(c.popsrc)}${c.popyear ? ' (' + esc(c.popyear) + ')' : ''}</div>` : ''}
     ${c.contains.length ? `<div class="dh">Includes</div><div class="chips">${c.contains.slice(0, 18).map(p => `<span>${esc(p.n)} <small>${fmtPop(p.p)}</small></span>`).join('')}</div>` : ''}
     ${other.length ? `<div class="dh">Also accepted</div><div class="chips">${other.map(a => `<span>${esc(a)}</span>`).join('')}</div>` : ''}
     <div class="small dim">${k ? `Practice: ${k.ok}× right, ${k.bad}× wrong` : 'Not practised yet'}${c.plaus ? ' · plausibility ' + esc(c.plaus.toLowerCase()) : ''}${c.split ? ' · outline approximate' : ''}${c.wikidata ? ` · <a href="https://www.wikidata.org/wiki/${esc(c.wikidata)}" target="_blank" rel="noopener">Wikidata</a>` : ''}</div>`;
-  $('#detail .close').onclick = () => { selected = null; $('#detail').hidden = true; popup?.remove(); renderAtlas(); };
+  $('.close', el).onclick = () => { el.hidden = true; popup?.remove(); onClose?.(); };
+}
+function selectCity(c, fly) {
+  selected = c.id;
+  showCityInfo($('#detail'), c, () => { selected = null; renderAtlas(); });
   renderAtlas();
   if (fly) flyToCity(c, Math.max(map.getZoom(), 6.5));
   $('#panel').scrollTo({ top: 0, behavior: 'smooth' });
+  if (isPhone()) $('#panel').classList.remove('short');
+}
+// quiz: open the info box of a found (or revealed) city without leaving the quiz
+function quizInfo(c) {
+  showCityInfo($('#qDetail'), c);
+  $('#qDetail').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   if (isPhone()) $('#panel').classList.remove('short');
 }
 
@@ -847,7 +652,7 @@ map.on('click', 'cities', e => {
   const f = e.features[0]; if (!f) return;
   const c = byId.get(f.properties.id);
   if (S.mode === 'atlas') { selectCity(c); showPopup(c); }
-  else if (S.mode === 'quiz' && (f.properties.st === 'found' || f.properties.st === 'miss')) showPopup(c);
+  else if (S.mode === 'quiz' && (f.properties.st === 'found' || f.properties.st === 'miss')) { showPopup(c); quizInfo(c); }
 });
 map.on('mouseenter', 'cities', e => {
   const st = e.features[0]?.properties.st;

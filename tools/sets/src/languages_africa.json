@@ -1,0 +1,2248 @@
+[
+  {
+    "id": "ar",
+    "name": "Arabic",
+    "endonym": "العربية (al-ʿArabiyya)",
+    "aliases": [
+      "Modern Standard Arabic",
+      "Fusha"
+    ],
+    "family": "Afroasiatic",
+    "branch": "Semitic",
+    "l1": 270,
+    "total": 420,
+    "scripts": [
+      "Arabic"
+    ],
+    "official": [
+      "EGY",
+      "SAU",
+      "ARE",
+      "QAT",
+      "BHR",
+      "KWT",
+      "OMN",
+      "YEM",
+      "IRQ",
+      "SYR",
+      "JOR",
+      "LBN",
+      "PSX",
+      "DZA",
+      "MAR",
+      "TUN",
+      "LBY",
+      "MRT",
+      "SDN",
+      "SOM",
+      "DJI",
+      "COM",
+      "SAH"
+    ],
+    "core": [
+      "EGY",
+      "SAU",
+      "ARE",
+      "QAT",
+      "BHR",
+      "KWT",
+      "OMN",
+      "YEM",
+      "IRQ",
+      "SYR",
+      "JOR",
+      "LBN",
+      "PSX",
+      "DZA",
+      "MAR",
+      "TUN",
+      "LBY",
+      "MRT",
+      "SDN",
+      "SAH"
+    ],
+    "also": [
+      "ISR",
+      "TCD",
+      "ERI",
+      "DJI",
+      "SOM",
+      "SOL",
+      "COM"
+    ],
+    "wiki": "Arabic",
+    "tts": "ar-SA",
+    "phrases": {
+      "hello": {
+        "text": "السلام عليكم",
+        "rom": "as-salāmu ʿalaykum",
+        "say": "ah-sah-LAHM ah-LAY-koom"
+      },
+      "thanks": {
+        "text": "شكراً",
+        "rom": "shukran",
+        "say": "SHOOK-rahn"
+      },
+      "bye": {
+        "text": "مع السلامة",
+        "rom": "maʿa as-salāma",
+        "say": "MAH-ah ah-sah-LAH-mah"
+      }
+    },
+    "facts": [
+      "Official or national language in over 20 countries across North Africa and the Middle East, the Arab world.",
+      "Modern Standard Arabic, used in writing and formal speech, differs widely from everyday spoken dialects such as Egyptian, Levantine, Gulf and Maghrebi Arabic.",
+      "Written right-to-left in the Arabic script; it is the liturgical language of Islam and the language of the Quran.",
+      "Has given many loanwords to other languages, including Spanish, Swahili and Persian."
+    ]
+  },
+  {
+    "id": "zgh",
+    "name": "Berber",
+    "endonym": "ⵜⴰⵎⴰⵣⵉⵖⵜ (Tamazight)",
+    "aliases": [
+      "Tamazight",
+      "Kabyle",
+      "Amazigh"
+    ],
+    "family": "Afroasiatic",
+    "branch": "Berber",
+    "l1": 35,
+    "total": 40,
+    "scripts": [
+      "Latin",
+      "Tifinagh",
+      "Arabic"
+    ],
+    "official": [
+      "MAR",
+      "DZA"
+    ],
+    "core": [
+      "MAR-1455",
+      "DZA-2197",
+      "DZA-2208"
+    ],
+    "also": [
+      "MAR",
+      "DZA",
+      "LBY",
+      "TUN",
+      "NER",
+      "MLI",
+      "SAH"
+    ],
+    "wiki": "Berber languages",
+    "tts": "ar-MA",
+    "phrases": {
+      "hello": {
+        "text": "ⴰⵣⵓⵍ",
+        "rom": "azul",
+        "say": "ah-ZOOL"
+      },
+      "thanks": {
+        "text": "ⵜⴰⵏⵎⵉⵔⵜ",
+        "rom": "tanemmirt",
+        "say": "tah-neh-MEERT"
+      },
+      "bye": {
+        "text": "ⴰⵔ ⵜⵓⴼⴰⵜ",
+        "rom": "ar tufat",
+        "say": "ar too-FAHT"
+      }
+    },
+    "facts": [
+      "Covers a family of closely related varieties spoken across North Africa and the Sahara, including Kabyle (Algeria), Tashelhit and Tarifit (Morocco), and Tuareg (Sahel).",
+      "Co-official with Arabic in Morocco and Algeria since constitutional reforms in the 2000s–2010s.",
+      "Has its own ancient alphabet, Tifinagh, though Latin and Arabic scripts are also widely used today.",
+      "Spoken by indigenous Amazigh (Berber) peoples who predate the Arab conquest of North Africa."
+    ]
+  },
+  {
+    "id": "am",
+    "name": "Amharic",
+    "endonym": "አማርኛ (Amarəñña)",
+    "aliases": [],
+    "family": "Afroasiatic",
+    "branch": "Semitic",
+    "l1": 32,
+    "total": 57,
+    "scripts": [
+      "Ge'ez"
+    ],
+    "official": [
+      "ETH"
+    ],
+    "core": [
+      "ETH-3109",
+      "ETH-3133",
+      "ETH-3135"
+    ],
+    "also": [
+      "ETH"
+    ],
+    "wiki": "Amharic",
+    "tts": "am-ET",
+    "phrases": {
+      "hello": {
+        "text": "ሰላም",
+        "rom": "selam",
+        "say": "SEH-lahm"
+      },
+      "thanks": {
+        "text": "አመሰግናለሁ",
+        "rom": "ameseginalehu",
+        "say": "ah-meh-SEH-gee-nah-leh-hoo"
+      },
+      "bye": {
+        "text": "ቻው",
+        "rom": "chaw",
+        "say": "chow"
+      }
+    },
+    "facts": [
+      "The working/federal language of Ethiopia and native tongue of the Amhara people, centred on the Amhara region and Addis Ababa.",
+      "Written in the Ge'ez script, a unique syllabary also used for Tigrinya; it reads left to right.",
+      "A Semitic language despite being spoken deep in East Africa, related to Hebrew and Arabic.",
+      "Second most spoken Semitic language in the world after Arabic."
+    ]
+  },
+  {
+    "id": "om",
+    "name": "Oromo",
+    "endonym": "Afaan Oromoo",
+    "aliases": [
+      "Afaan Oromo",
+      "Oromiffa"
+    ],
+    "family": "Afroasiatic",
+    "branch": "Cushitic",
+    "l1": 37,
+    "total": 40,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ETH"
+    ],
+    "core": [
+      "ETH-3131"
+    ],
+    "also": [
+      "ETH",
+      "KEN"
+    ],
+    "wiki": "Oromo language",
+    "tts": "om-ET",
+    "phrases": {
+      "hello": {
+        "text": "Akkam",
+        "rom": "",
+        "say": "AH-kahm"
+      },
+      "thanks": {
+        "text": "Galatoomi",
+        "rom": "",
+        "say": "gah-lah-TOH-mee"
+      },
+      "bye": {
+        "text": "Nagaatti",
+        "rom": "",
+        "say": "nah-GAHT-tee"
+      }
+    },
+    "facts": [
+      "Most widely spoken native language in Ethiopia, the language of the Oromo people in the Oromia region surrounding Addis Ababa.",
+      "A Cushitic language, written in the Latin-based Qubee alphabet since 1991.",
+      "Also spoken by Oromo communities in northern Kenya.",
+      "One of Ethiopia's federally recognised working languages alongside Amharic."
+    ]
+  },
+  {
+    "id": "ti",
+    "name": "Tigrinya",
+    "endonym": "ትግርኛ (Təgrəñña)",
+    "aliases": [
+      "Tigrigna"
+    ],
+    "family": "Afroasiatic",
+    "branch": "Semitic",
+    "l1": 9.9,
+    "total": 10,
+    "scripts": [
+      "Ge'ez"
+    ],
+    "official": [
+      "ERI"
+    ],
+    "core": [
+      "ERI-1564",
+      "ERI-1561",
+      "ERI-1562",
+      "ETH-3110"
+    ],
+    "also": [
+      "ERI"
+    ],
+    "wiki": "Tigrinya language",
+    "tts": "ti-ER",
+    "phrases": {
+      "hello": {
+        "text": "ሰላም",
+        "rom": "selam",
+        "say": "SEH-lahm"
+      },
+      "thanks": {
+        "text": "የቐንየለይ",
+        "rom": "yeqenyeley",
+        "say": "yeh-keh-nyeh-LEY"
+      },
+      "bye": {
+        "text": "ቻው",
+        "rom": "chaw",
+        "say": "chow"
+      }
+    },
+    "facts": [
+      "Main language of Eritrea, the country's largest working language, and of Ethiopia's Tigray region.",
+      "Written in the Ge'ez script, shared with Amharic and Tigre.",
+      "Closely related to Tigre and more distantly to Amharic; it descends from the ancient Semitic language Ge'ez.",
+      "The 1998–2000 and 2020–2022 Ethiopia–Eritrea/Tigray conflicts were fought largely in Tigrinya-speaking areas."
+    ]
+  },
+  {
+    "id": "so",
+    "name": "Somali",
+    "endonym": "Soomaali",
+    "aliases": [],
+    "family": "Afroasiatic",
+    "branch": "Cushitic",
+    "l1": 22,
+    "total": 25,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "SOM",
+      "SOL"
+    ],
+    "core": [
+      "SOM",
+      "SOL",
+      "ETH-3134",
+      "KEN-893",
+      "DJI"
+    ],
+    "also": [],
+    "wiki": "Somali language",
+    "tts": "so-SO",
+    "phrases": {
+      "hello": {
+        "text": "Salaan",
+        "rom": "",
+        "say": "sah-LAHN"
+      },
+      "thanks": {
+        "text": "Mahadsanid",
+        "rom": "",
+        "say": "mah-hahd-sah-NEED"
+      },
+      "bye": {
+        "text": "Nabadgelyo",
+        "rom": "",
+        "say": "nah-bahd-GEL-yoh"
+      }
+    },
+    "facts": [
+      "National language of Somalia and Somaliland, also spoken across the Somali-inhabited Horn of Africa in Ethiopia, Kenya and Djibouti.",
+      "A Cushitic language, written in the Latin alphabet (Somali script) adopted officially in 1972.",
+      "Has an unusually rich oral poetry tradition, sometimes called a 'nation of poets'.",
+      "One of the few African languages spoken natively by a single ethnic group across several modern state borders."
+    ]
+  },
+  {
+    "id": "aa",
+    "name": "Afar",
+    "endonym": "Qafar af",
+    "aliases": [
+      "Qafar"
+    ],
+    "family": "Afroasiatic",
+    "branch": "Cushitic",
+    "l1": 2.2,
+    "total": 2.2,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ETH"
+    ],
+    "core": [
+      "ETH-3111",
+      "DJI"
+    ],
+    "also": [
+      "ERI-1563"
+    ],
+    "wiki": "Afar language",
+    "tts": "aa-ET",
+    "phrases": {
+      "hello": {
+        "text": "Salam",
+        "rom": "",
+        "say": "sah-LAHM"
+      },
+      "thanks": {
+        "text": "Yakke'en",
+        "rom": "",
+        "say": "yah-keh-EN"
+      },
+      "bye": {
+        "text": "Nagaaytoh",
+        "rom": "",
+        "say": "nah-gah-ee-TOH"
+      }
+    },
+    "facts": [
+      "Spoken by the Afar people across the arid Afar Triangle: the Afar Region of Ethiopia, Djibouti, and coastal Eritrea.",
+      "A Cushitic language, written in the Latin alphabet; traditionally has no single standardized orthography across all regions.",
+      "The Afar Region of Ethiopia includes the Danakil Depression, one of the hottest and lowest places on Earth.",
+      "Co-official regional language alongside French and Arabic in Djibouti's administration."
+    ]
+  },
+  {
+    "id": "tig",
+    "name": "Tigre",
+    "endonym": "ትግረ (Tigre)",
+    "aliases": [
+      "Tigrayit",
+      "Xasa"
+    ],
+    "family": "Afroasiatic",
+    "branch": "Semitic",
+    "l1": 1.3,
+    "total": 1.3,
+    "scripts": [
+      "Ge'ez",
+      "Arabic",
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "ERI-1560",
+      "ERI-1563"
+    ],
+    "also": [
+      "ERI"
+    ],
+    "wiki": "Tigre language",
+    "tts": "ti-ER",
+    "phrases": {
+      "hello": {
+        "text": "ሰላም",
+        "rom": "selam",
+        "say": "SEH-lahm"
+      },
+      "thanks": {
+        "text": "ባርካለኹ",
+        "rom": "barakalkuh",
+        "say": "bah-rah-KAHL-koo"
+      },
+      "bye": {
+        "text": "ደሓን ህለው",
+        "rom": "dehan hlew",
+        "say": "deh-HAHN hleh-oo"
+      }
+    },
+    "facts": [
+      "Spoken by the Tigre people mainly in the Gash-Barka and northern lowland regions of Eritrea.",
+      "A Semitic language closer to the ancient Ge'ez than Tigrinya or Amharic are, but not mutually intelligible with Tigrinya despite the similar name.",
+      "Traditionally written in the Ge'ez script; some communities also use Arabic script.",
+      "Most speakers are Muslim, unlike the mostly Christian Tigrinya speakers to the south."
+    ]
+  },
+  {
+    "id": "sw",
+    "name": "Swahili",
+    "endonym": "Kiswahili",
+    "aliases": [
+      "Kiswahili"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 20,
+    "total": 100,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "TZA",
+      "KEN",
+      "UGA",
+      "COD",
+      "RWA"
+    ],
+    "core": [
+      "TZA",
+      "KEN-1193"
+    ],
+    "also": [
+      "KEN",
+      "UGA",
+      "COD-1894",
+      "COD-1898",
+      "COD-1897",
+      "COD-1559",
+      "RWA",
+      "BDI"
+    ],
+    "wiki": "Swahili language",
+    "tts": "sw-KE",
+    "phrases": {
+      "hello": {
+        "text": "Jambo",
+        "rom": "",
+        "say": "JAHM-boh"
+      },
+      "thanks": {
+        "text": "Asante",
+        "rom": "",
+        "say": "ah-SAHN-teh"
+      },
+      "bye": {
+        "text": "Kwaheri",
+        "rom": "",
+        "say": "kwah-HEH-ree"
+      }
+    },
+    "facts": [
+      "A Bantu language with heavy Arabic influence, native to the Swahili coast of Tanzania and Kenya, and a lingua franca across East Africa.",
+      "Official language of Tanzania, Kenya, Uganda, and the African Union; co-official in the DR Congo and Rwanda.",
+      "Developed as a trade language along the Indian Ocean coast through centuries of contact between Bantu-speaking Africans and Arab traders.",
+      "Written in the Latin alphabet today, though historically also in Arabic script (Kiswahili cha Kiarabu)."
+    ]
+  },
+  {
+    "id": "ha",
+    "name": "Hausa",
+    "endonym": "Harshen Hausa",
+    "aliases": [],
+    "family": "Afroasiatic",
+    "branch": "Chadic",
+    "l1": 54,
+    "total": 90,
+    "scripts": [
+      "Latin",
+      "Arabic"
+    ],
+    "official": [],
+    "core": [
+      "NGA-2869",
+      "NGA-2870",
+      "NGA-2871",
+      "NGA-2872",
+      "NGA-2868",
+      "NGA-2879",
+      "NGA-2858",
+      "NGA-2864",
+      "NGA-2851",
+      "NER-91",
+      "NER-92"
+    ],
+    "also": [
+      "NGA-2881",
+      "NGA-2859",
+      "NGA-2873",
+      "NGA-2839",
+      "NER",
+      "GHA",
+      "CMR-1462",
+      "TCD"
+    ],
+    "wiki": "Hausa language",
+    "tts": "ha-NG",
+    "phrases": {
+      "hello": {
+        "text": "Sannu",
+        "rom": "",
+        "say": "SAHN-noo"
+      },
+      "thanks": {
+        "text": "Na gode",
+        "rom": "",
+        "say": "nah GOH-deh"
+      },
+      "bye": {
+        "text": "Sai an jima",
+        "rom": "",
+        "say": "sigh ahn JEE-mah"
+      }
+    },
+    "facts": [
+      "Most widely spoken language of the Sahel, concentrated in northern Nigeria and southern Niger.",
+      "A Chadic branch of the Afroasiatic family; traditionally written in Ajami (Arabic script) as well as the Latin-based Boko alphabet.",
+      "Major lingua franca of West African trade, spoken as a second language far beyond its core states.",
+      "Kano, Nigeria's second-largest city, is the historic heart of Hausa culture and commerce."
+    ]
+  },
+  {
+    "id": "yo",
+    "name": "Yoruba",
+    "endonym": "Yorùbá",
+    "aliases": [],
+    "family": "Niger–Congo",
+    "branch": "Volta-Niger",
+    "l1": 46,
+    "total": 50,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "NGA-2850",
+      "NGA-2852",
+      "NGA-2856",
+      "NGA-2855",
+      "NGA-2853",
+      "NGA-2854",
+      "NGA-2849"
+    ],
+    "also": [
+      "BEN",
+      "TGO"
+    ],
+    "wiki": "Yoruba language",
+    "tts": "yo-NG",
+    "phrases": {
+      "hello": {
+        "text": "Bawo",
+        "rom": "",
+        "say": "BAH-woh"
+      },
+      "thanks": {
+        "text": "E se",
+        "rom": "",
+        "say": "eh SHEH"
+      },
+      "bye": {
+        "text": "O dabo",
+        "rom": "",
+        "say": "oh DAH-boh"
+      }
+    },
+    "facts": [
+      "Spoken by the Yoruba people of southwestern Nigeria, centred on Lagos, Ibadan and Oyo, with communities in Benin and Togo.",
+      "A tonal language with three pitch tones; small diacritic marks show the tones in writing.",
+      "Carried to the Americas by the slave trade, it shaped Afro-Caribbean religions such as Santería and Candomblé.",
+      "Has a rich tradition of oral praise poetry (oriki) and drum-based talking communication."
+    ]
+  },
+  {
+    "id": "ig",
+    "name": "Igbo",
+    "endonym": "Ásụ̀sụ́ Ìgbò",
+    "aliases": [],
+    "family": "Niger–Congo",
+    "branch": "Volta-Niger",
+    "l1": 31,
+    "total": 35,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "NGA-2857",
+      "NGA-2862",
+      "NGA-2863",
+      "NGA-2843",
+      "NGA-2841"
+    ],
+    "also": [
+      "NGA-2860",
+      "NGA-2844"
+    ],
+    "wiki": "Igbo language",
+    "tts": "ig-NG",
+    "phrases": {
+      "hello": {
+        "text": "Ndewo",
+        "rom": "",
+        "say": "en-DEH-woh"
+      },
+      "thanks": {
+        "text": "Daalu",
+        "rom": "",
+        "say": "DAH-loo"
+      },
+      "bye": {
+        "text": "Ka ọ dị",
+        "rom": "",
+        "say": "kah oh DEE"
+      }
+    },
+    "facts": [
+      "Spoken by the Igbo people of southeastern Nigeria, centred on Anambra, Imo, Abia, Enugu and Ebonyi states.",
+      "A tonal language with numerous dialects; a standard literary form was developed in the 20th century.",
+      "The former short-lived state of Biafra (1967–1970) was based in Igbo-speaking territory.",
+      "Chinua Achebe, author of Things Fall Apart, was a native Igbo speaker and drew heavily on Igbo culture."
+    ]
+  },
+  {
+    "id": "ff",
+    "name": "Fula",
+    "endonym": "Fulfulde",
+    "aliases": [
+      "Fulani",
+      "Pulaar",
+      "Pular",
+      "Peul"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Senegambian",
+    "l1": 24,
+    "total": 45,
+    "scripts": [
+      "Latin",
+      "Arabic"
+    ],
+    "official": [
+      "GNB"
+    ],
+    "core": [
+      "GIN-5648",
+      "GIN-5633",
+      "GIN-5656",
+      "GIN-5653",
+      "GIN-5658",
+      "GIN-5645",
+      "GIN-5649",
+      "SEN-767",
+      "SEN-5517"
+    ],
+    "also": [
+      "GIN",
+      "SEN",
+      "MLI",
+      "NER",
+      "NGA-2881",
+      "NGA-2858",
+      "NGA-2871",
+      "CMR-1462",
+      "GNB",
+      "SLE",
+      "GMB",
+      "BFA",
+      "MRT"
+    ],
+    "wiki": "Fula language",
+    "tts": "ff-SN",
+    "phrases": {
+      "hello": {
+        "text": "Jam na?",
+        "rom": "",
+        "say": "jahm nah"
+      },
+      "thanks": {
+        "text": "A jaraama",
+        "rom": "",
+        "say": "ah jah-RAH-mah"
+      },
+      "bye": {
+        "text": "Ñalleen",
+        "rom": "",
+        "say": "nyah-LEH-ehn"
+      }
+    },
+    "facts": [
+      "Spoken by the Fula (Fulani) people, traditionally cattle-herding, scattered in communities across the Sahel from Senegal to Sudan — one of the widest ranges of any African language.",
+      "Largest single ethnic group in Guinea, centred on the Fouta Djallon highlands; also a large minority in Senegal, Mali, Nigeria and Cameroon.",
+      "Belongs to the Senegambian branch of Niger–Congo, related to Wolof and Serer, and has grammatical noun classes marked by consonant changes.",
+      "Historically written in Arabic-based Ajami script before the modern Latin alphabet."
+    ]
+  },
+  {
+    "id": "wo",
+    "name": "Wolof",
+    "endonym": "Wolof",
+    "aliases": [],
+    "family": "Niger–Congo",
+    "branch": "Senegambian",
+    "l1": 6,
+    "total": 12,
+    "scripts": [
+      "Latin",
+      "Arabic"
+    ],
+    "official": [],
+    "core": [
+      "SEN"
+    ],
+    "also": [
+      "GMB",
+      "MRT"
+    ],
+    "wiki": "Wolof language",
+    "tts": "wo-SN",
+    "phrases": {
+      "hello": {
+        "text": "Nanga def",
+        "rom": "",
+        "say": "NAHN-gah def"
+      },
+      "thanks": {
+        "text": "Jërejëf",
+        "rom": "",
+        "say": "jeh-reh-JEF"
+      },
+      "bye": {
+        "text": "Ba beneen",
+        "rom": "",
+        "say": "bah beh-NEEN"
+      }
+    },
+    "facts": [
+      "Native language of the Wolof people and the de facto lingua franca of Senegal, understood by around 90% of the population.",
+      "Also spoken in the Gambia and southern Mauritania.",
+      "Not Senegal's official language (that is French), but its most widely spoken, including in Dakar's street culture and music (mbalax).",
+      "Belongs to the Senegambian branch of Niger–Congo, related to Fula and Serer."
+    ]
+  },
+  {
+    "id": "bm",
+    "name": "Bambara",
+    "endonym": "Bamanankan",
+    "aliases": [
+      "Manding",
+      "Bamana"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Mande",
+    "l1": 14,
+    "total": 18,
+    "scripts": [
+      "Latin",
+      "N'Ko"
+    ],
+    "official": [],
+    "core": [
+      "MLI-2792",
+      "MLI-4860",
+      "MLI-2810",
+      "MLI-2794"
+    ],
+    "also": [
+      "MLI-2793",
+      "MLI-2809",
+      "GIN",
+      "CIV",
+      "BFA"
+    ],
+    "wiki": "Bambara language",
+    "tts": "bm-ML",
+    "phrases": {
+      "hello": {
+        "text": "I ni ce",
+        "rom": "",
+        "say": "ee nee CHEH"
+      },
+      "thanks": {
+        "text": "I ni ce",
+        "rom": "",
+        "say": "ee nee CHEH"
+      },
+      "bye": {
+        "text": "K'an bɛn",
+        "rom": "",
+        "say": "kahn BEN"
+      }
+    },
+    "facts": [
+      "National lingua franca of Mali, understood by most of the population even where it is not the first language.",
+      "Part of the Manding group of Mande languages, mutually intelligible with Dioula/Malinke across Mali, Guinea and Ivory Coast.",
+      "Traditionally also written in the N'Ko alphabet, invented in 1949 specifically for Manding languages.",
+      "Centred on Bamako and the Niger River heartland of southern Mali."
+    ]
+  },
+  {
+    "id": "ak",
+    "name": "Akan",
+    "endonym": "Akan",
+    "aliases": [
+      "Twi",
+      "Asante Twi",
+      "Fante"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Kwa",
+    "l1": 11,
+    "total": 17,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "GHA-2158",
+      "GHA-2159",
+      "GHA-2160",
+      "GHA-2172",
+      "GHA-2161"
+    ],
+    "also": [
+      "GHA",
+      "CIV"
+    ],
+    "wiki": "Akan language",
+    "tts": "ak-GH",
+    "phrases": {
+      "hello": {
+        "text": "Akwaaba",
+        "rom": "",
+        "say": "ah-KWAH-bah"
+      },
+      "thanks": {
+        "text": "Medaase",
+        "rom": "",
+        "say": "meh-DAH-seh"
+      },
+      "bye": {
+        "text": "Yɛbɛhyia bio",
+        "rom": "",
+        "say": "yeh-beh-HYEE-ah bee-oh"
+      }
+    },
+    "facts": [
+      "Most widely spoken indigenous language of Ghana; Twi and Fante are its two main varieties.",
+      "Akwaaba, the Twi word for 'welcome', is widely recognised across Ghana.",
+      "A Kwa branch Niger–Congo language, tonal, written in a Latin-based alphabet since the 19th century.",
+      "The historic Ashanti Empire, centred on Kumasi, was an Akan-speaking kingdom."
+    ]
+  },
+  {
+    "id": "ee",
+    "name": "Ewe",
+    "endonym": "Eʋegbe",
+    "aliases": [],
+    "family": "Niger–Congo",
+    "branch": "Kwa",
+    "l1": 7,
+    "total": 7,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "GHA-2173",
+      "TGO"
+    ],
+    "also": [
+      "BEN"
+    ],
+    "wiki": "Ewe language",
+    "tts": "ee-GH",
+    "phrases": {
+      "hello": {
+        "text": "Woezor",
+        "rom": "",
+        "say": "woh-eh-ZOR"
+      },
+      "thanks": {
+        "text": "Akpe",
+        "rom": "",
+        "say": "AHK-peh"
+      },
+      "bye": {
+        "text": "Yoo",
+        "rom": "",
+        "say": "yoh"
+      }
+    },
+    "facts": [
+      "Spoken by the Ewe people across the Volta Region of Ghana, Togo, and southwestern Benin.",
+      "A tonal Kwa language with a tradition of drum-based talking and praise poetry similar to neighbouring Akan.",
+      "Shares part of its homeland with and is closely related to Fon, spoken mainly in Benin.",
+      "Written in a Latin-based alphabet standardized in the colonial period."
+    ]
+  },
+  {
+    "id": "mos",
+    "name": "Mooré",
+    "endonym": "Mooré",
+    "aliases": [
+      "Mossi"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Gur",
+    "l1": 8,
+    "total": 9,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "BFA"
+    ],
+    "also": [],
+    "wiki": "Mossi language",
+    "tts": "mos-BF",
+    "phrases": {
+      "hello": {
+        "text": "Ne y windga",
+        "rom": "",
+        "say": "neh ee WIND-gah"
+      },
+      "thanks": {
+        "text": "Barka",
+        "rom": "",
+        "say": "BAHR-kah"
+      },
+      "bye": {
+        "text": "Wend na kõ-d sõngr",
+        "rom": "",
+        "say": "wend nah kaw-d SONG-r"
+      }
+    },
+    "facts": [
+      "Native language of the Mossi people, the largest ethnic group in Burkina Faso, and the country's most widely spoken language.",
+      "Centred on the old Mossi kingdoms and the capital Ouagadougou.",
+      "A Gur (Voltaic) branch Niger–Congo language, tonal, written in the Latin alphabet.",
+      "French remains Burkina Faso's official language, but Mooré is the common everyday lingua franca."
+    ]
+  },
+  {
+    "id": "kr",
+    "name": "Kanuri",
+    "endonym": "Kanuri",
+    "aliases": [],
+    "family": "Nilo-Saharan",
+    "branch": "Saharan",
+    "l1": 6,
+    "total": 6,
+    "scripts": [
+      "Latin",
+      "Arabic"
+    ],
+    "official": [],
+    "core": [
+      "NGA-2839",
+      "NGA-2873"
+    ],
+    "also": [
+      "NER",
+      "TCD",
+      "CMR-1462"
+    ],
+    "wiki": "Kanuri language",
+    "tts": "kr-NG",
+    "phrases": {
+      "hello": {
+        "text": "Lafiya",
+        "rom": "",
+        "say": "lah-FEE-yah"
+      },
+      "thanks": {
+        "text": "Ngawa",
+        "rom": "",
+        "say": "en-GAH-wah"
+      },
+      "bye": {
+        "text": "Yerima",
+        "rom": "",
+        "say": "yeh-REE-mah"
+      }
+    },
+    "facts": [
+      "Spoken around Lake Chad by the Kanuri people, centred on Borno State in northeastern Nigeria, the historic Kanem-Bornu Empire.",
+      "A Saharan branch Nilo-Saharan language, unrelated to its neighbouring Niger–Congo and Chadic languages.",
+      "Written both in a Latin-based orthography and in Arabic-derived Ajami script.",
+      "Kanem-Bornu was one of the oldest and longest-lived states in African history, lasting from roughly the 9th to the 19th century."
+    ]
+  },
+  {
+    "id": "ln",
+    "name": "Lingala",
+    "endonym": "Lingála",
+    "aliases": [],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 20,
+    "total": 40,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "COD"
+    ],
+    "core": [
+      "COD-1884",
+      "COD-1461"
+    ],
+    "also": [
+      "COD-1871",
+      "COD-1883",
+      "COG"
+    ],
+    "wiki": "Lingala language",
+    "tts": "ln-CD",
+    "phrases": {
+      "hello": {
+        "text": "Mbote",
+        "rom": "",
+        "say": "em-BOH-teh"
+      },
+      "thanks": {
+        "text": "Melesi",
+        "rom": "",
+        "say": "meh-LEH-see"
+      },
+      "bye": {
+        "text": "Kende malamu",
+        "rom": "",
+        "say": "ken-DEH mah-LAH-moo"
+      }
+    },
+    "facts": [
+      "A Bantu lingua franca of the Congo River basin, widely used in Kinshasa, the Democratic Republic of the Congo's army, and popular Congolese music (soukous).",
+      "Also one of the national languages of the Republic of the Congo, across the river from Kinshasa.",
+      "Developed in the 19th century from a riverine trade language as colonial and missionary activity spread it widely.",
+      "One of four national languages of the DR Congo alongside Kikongo, Tshiluba and Swahili, French being the official language."
+    ]
+  },
+  {
+    "id": "kg",
+    "name": "Kongo",
+    "endonym": "Kikongo",
+    "aliases": [
+      "Kikongo"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 7,
+    "total": 10,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "COD",
+      "AGO"
+    ],
+    "core": [
+      "COD-1883",
+      "AGO-1885",
+      "AGO-1882"
+    ],
+    "also": [
+      "COD-1871",
+      "COG",
+      "AGO-1881"
+    ],
+    "wiki": "Kongo language",
+    "tts": "kg-CD",
+    "phrases": {
+      "hello": {
+        "text": "Mbote",
+        "rom": "",
+        "say": "em-BOH-teh"
+      },
+      "thanks": {
+        "text": "Matondo",
+        "rom": "",
+        "say": "mah-TOHN-doh"
+      },
+      "bye": {
+        "text": "Kwenda mbote",
+        "rom": "",
+        "say": "KWEN-dah em-BOH-teh"
+      }
+    },
+    "facts": [
+      "Language of the historic Kingdom of Kongo, spoken around the Congo River mouth in western DR Congo, Angola's Cabinda/Zaire provinces, and the Republic of the Congo.",
+      "A Bantu language; its speakers' descendants, taken in the slave trade, carried Kikongo-derived words and traditions to the Americas (e.g. into Haitian Creole and Kumina in Jamaica).",
+      "One of the DR Congo's four recognised national languages.",
+      "Closely related to, but distinct from, Lingala, the other major lingua franca of the lower Congo River region."
+    ]
+  },
+  {
+    "id": "lua",
+    "name": "Luba-Kasai",
+    "endonym": "Tshiluba",
+    "aliases": [
+      "Tshiluba",
+      "Ciluba"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 9,
+    "total": 13,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "COD"
+    ],
+    "core": [
+      "COD-1872",
+      "COD-1896"
+    ],
+    "also": [
+      "COD-1897"
+    ],
+    "wiki": "Luba-Kasai language",
+    "tts": "lua-CD",
+    "phrases": {
+      "hello": {
+        "text": "Moyo",
+        "rom": "",
+        "say": "MOH-yoh"
+      },
+      "thanks": {
+        "text": "Tuasakidila",
+        "rom": "",
+        "say": "too-ah-sah-kee-DEE-lah"
+      },
+      "bye": {
+        "text": "Tudimusangana",
+        "rom": "",
+        "say": "too-dee-moo-sahn-GAH-nah"
+      }
+    },
+    "facts": [
+      "Also called Tshiluba, spoken by the Luba people of the Kasai region in south-central DR Congo.",
+      "One of the DR Congo's four national languages alongside Lingala, Kikongo and Swahili.",
+      "A Bantu language, tonal, used widely in Kananga and Mbuji-Mayi, major cities of the Kasai provinces.",
+      "The diamond-mining region of Kasai gives Tshiluba speakers an outsized role in the Congolese economy."
+    ]
+  },
+  {
+    "id": "rw",
+    "name": "Kinyarwanda",
+    "endonym": "Ikinyarwanda",
+    "aliases": [
+      "Rwanda"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 12,
+    "total": 14,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "RWA"
+    ],
+    "core": [
+      "RWA"
+    ],
+    "also": [
+      "COD-1898"
+    ],
+    "wiki": "Kinyarwanda",
+    "tts": "rw-RW",
+    "phrases": {
+      "hello": {
+        "text": "Muraho",
+        "rom": "",
+        "say": "moo-RAH-hoh"
+      },
+      "thanks": {
+        "text": "Murakoze",
+        "rom": "",
+        "say": "moo-rah-KOH-zeh"
+      },
+      "bye": {
+        "text": "Murabeho",
+        "rom": "",
+        "say": "moo-rah-BEH-hoh"
+      }
+    },
+    "facts": [
+      "National and official language of Rwanda, spoken by virtually the entire population regardless of ethnicity.",
+      "A Bantu language, nearly mutually intelligible with Kirundi, spoken just across the border in Burundi.",
+      "Also spoken by Rwandan communities in eastern DR Congo (North Kivu).",
+      "One of the few African languages with near-universal national monolingual coverage within its country."
+    ]
+  },
+  {
+    "id": "rn",
+    "name": "Kirundi",
+    "endonym": "Ikirundi",
+    "aliases": [
+      "Rundi"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 11,
+    "total": 11,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "BDI"
+    ],
+    "core": [
+      "BDI"
+    ],
+    "also": [],
+    "wiki": "Kirundi",
+    "tts": "rn-BI",
+    "phrases": {
+      "hello": {
+        "text": "Amahoro",
+        "rom": "",
+        "say": "ah-mah-HOH-roh"
+      },
+      "thanks": {
+        "text": "Urakoze",
+        "rom": "",
+        "say": "oo-rah-KOH-zeh"
+      },
+      "bye": {
+        "text": "Turabonana",
+        "rom": "",
+        "say": "too-rah-boh-NAH-nah"
+      }
+    },
+    "facts": [
+      "National and official language of Burundi, spoken by nearly the entire population.",
+      "A Bantu language, closely related to and largely mutually intelligible with Kinyarwanda across the border in Rwanda.",
+      "Tonal, with a complex noun-class system typical of Bantu languages.",
+      "Amahoro, meaning 'peace', is a common greeting and a frequent theme in post-conflict Burundian public life."
+    ]
+  },
+  {
+    "id": "lg",
+    "name": "Luganda",
+    "endonym": "Oluganda",
+    "aliases": [
+      "Ganda"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 11,
+    "total": 11,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "UGA-3088"
+    ],
+    "also": [
+      "UGA"
+    ],
+    "wiki": "Luganda",
+    "tts": "lg-UG",
+    "phrases": {
+      "hello": {
+        "text": "Kodi",
+        "rom": "",
+        "say": "KOH-dee"
+      },
+      "thanks": {
+        "text": "Weebale",
+        "rom": "",
+        "say": "weh-BAH-leh"
+      },
+      "bye": {
+        "text": "Weeraba",
+        "rom": "",
+        "say": "weh-RAH-bah"
+      }
+    },
+    "facts": [
+      "Language of the Buganda kingdom, centred on the capital Kampala, and the most widely spoken local language in Uganda.",
+      "A Bantu language serving as an everyday lingua franca across much of southern and central Uganda, alongside the official English.",
+      "Buganda is Uganda's largest traditional kingdom, with its own king (Kabaka) still recognised as a cultural institution.",
+      "Noun classes and extensive vowel-length distinctions are characteristic features of its grammar."
+    ]
+  },
+  {
+    "id": "ki",
+    "name": "Kikuyu",
+    "endonym": "Gĩkũyũ",
+    "aliases": [
+      "Gikuyu"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 8.5,
+    "total": 8.5,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "KEN-1195"
+    ],
+    "also": [
+      "KEN-1196"
+    ],
+    "wiki": "Kikuyu language",
+    "tts": "ki-KE",
+    "phrases": {
+      "hello": {
+        "text": "Wĩ mwega?",
+        "rom": "",
+        "say": "wee MWEH-gah"
+      },
+      "thanks": {
+        "text": "Nĩ ngaatho",
+        "rom": "",
+        "say": "nee ngah-AH-thoh"
+      },
+      "bye": {
+        "text": "Tũkeyonana",
+        "rom": "",
+        "say": "too-keh-yoh-NAH-nah"
+      }
+    },
+    "facts": [
+      "Largest single ethnic language of Kenya, spoken by the Kikuyu people of the Central region around Mount Kenya.",
+      "A Bantu language, closely related to Embu and Meru, the neighbouring peoples of the same highland area.",
+      "The Mau Mau uprising against British colonial rule in the 1950s was centred in Kikuyu-speaking areas.",
+      "Many of Kenya's post-independence political and business elite have come from the Kikuyu community."
+    ]
+  },
+  {
+    "id": "luo",
+    "name": "Luo",
+    "endonym": "Dholuo",
+    "aliases": [
+      "Dholuo"
+    ],
+    "family": "Nilo-Saharan",
+    "branch": "Nilotic",
+    "l1": 4.2,
+    "total": 4.4,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "KEN-1197"
+    ],
+    "also": [],
+    "wiki": "Luo language (Kenya and Tanzania)",
+    "tts": "luo-KE",
+    "phrases": {
+      "hello": {
+        "text": "Misawa",
+        "rom": "",
+        "say": "mee-SAH-wah"
+      },
+      "thanks": {
+        "text": "Erokamano",
+        "rom": "",
+        "say": "eh-roh-kah-MAH-noh"
+      },
+      "bye": {
+        "text": "Oriti",
+        "rom": "",
+        "say": "oh-REE-tee"
+      }
+    },
+    "facts": [
+      "Spoken by the Luo people around Lake Victoria in western Kenya's Nyanza region, and across the lake in northern Tanzania.",
+      "A Nilotic language, unlike most of its Bantu-speaking Kenyan neighbours, reflecting Luo migration south from South Sudan centuries ago.",
+      "Has no grammatical tones for lexical meaning but uses them for grammar, unlike many Niger–Congo languages.",
+      "Barack Obama's father was a Luo speaker from western Kenya."
+    ]
+  },
+  {
+    "id": "zu",
+    "name": "Zulu",
+    "endonym": "isiZulu",
+    "aliases": [
+      "isiZulu"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 12,
+    "total": 27,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZAF"
+    ],
+    "core": [
+      "ZAF-1216"
+    ],
+    "also": [
+      "ZAF"
+    ],
+    "wiki": "Zulu language",
+    "tts": "zu-ZA",
+    "phrases": {
+      "hello": {
+        "text": "Sawubona",
+        "rom": "",
+        "say": "sah-woo-BOH-nah"
+      },
+      "thanks": {
+        "text": "Ngiyabonga",
+        "rom": "",
+        "say": "ngee-yah-BOHN-gah"
+      },
+      "bye": {
+        "text": "Hamba kahle",
+        "rom": "",
+        "say": "HAHM-bah KAHSH-leh"
+      }
+    },
+    "facts": [
+      "Most widely spoken home language in South Africa, native to KwaZulu-Natal and the Zulu kingdom founded by Shaka in the early 19th century.",
+      "A Bantu language famous for its click consonants, borrowed from neighbouring Khoisan languages.",
+      "One of South Africa's 12 official languages, and widely understood as a second language across the country.",
+      "Sawubona, literally 'we see you', is a well-known Zulu greeting."
+    ]
+  },
+  {
+    "id": "xh",
+    "name": "Xhosa",
+    "endonym": "isiXhosa",
+    "aliases": [
+      "isiXhosa"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 8.2,
+    "total": 19,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZAF"
+    ],
+    "core": [
+      "ZAF-1926",
+      "ZAF-1189"
+    ],
+    "also": [
+      "ZAF"
+    ],
+    "wiki": "Xhosa language",
+    "tts": "xh-ZA",
+    "phrases": {
+      "hello": {
+        "text": "Molo",
+        "rom": "",
+        "say": "MOH-loh"
+      },
+      "thanks": {
+        "text": "Enkosi",
+        "rom": "",
+        "say": "en-KOH-see"
+      },
+      "bye": {
+        "text": "Sala kakuhle",
+        "rom": "",
+        "say": "SAH-lah kah-KOOSH-leh"
+      }
+    },
+    "facts": [
+      "Native to the Eastern Cape of South Africa; like Zulu, it borrows distinctive click consonants from Khoisan languages.",
+      "Nelson Mandela and Thabo Mbeki were both native Xhosa speakers.",
+      "One of South Africa's 12 official languages, widely spoken in Cape Town and the Western Cape as well as the Eastern Cape.",
+      "Closely related to Zulu; the two are partly mutually intelligible."
+    ]
+  },
+  {
+    "id": "af",
+    "name": "Afrikaans",
+    "endonym": "Afrikaans",
+    "aliases": [],
+    "family": "Indo-European",
+    "branch": "Germanic",
+    "l1": 7.2,
+    "total": 17,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZAF"
+    ],
+    "core": [
+      "ZAF-1189",
+      "ZAF-1188",
+      "NAM"
+    ],
+    "also": [
+      "ZAF"
+    ],
+    "wiki": "Afrikaans",
+    "tts": "af-ZA",
+    "phrases": {
+      "hello": {
+        "text": "Hallo",
+        "rom": "",
+        "say": "HAH-loh"
+      },
+      "thanks": {
+        "text": "Dankie",
+        "rom": "",
+        "say": "DAHN-kee"
+      },
+      "bye": {
+        "text": "Totsiens",
+        "rom": "",
+        "say": "TOHT-seens"
+      }
+    },
+    "facts": [
+      "Descended from 17th-century Dutch brought by settlers to the Cape, with influences from Khoisan, Malay, Portuguese and African languages.",
+      "Mutually intelligible to a large extent with Dutch, though with simplified grammar.",
+      "Widely spoken as a first language among both white Afrikaner and Cape Coloured communities, especially in the Western and Northern Cape.",
+      "Also an official and widely spoken language in neighbouring Namibia, a former South African territory."
+    ]
+  },
+  {
+    "id": "st",
+    "name": "Sotho",
+    "endonym": "Sesotho",
+    "aliases": [
+      "Sesotho",
+      "Southern Sotho"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 5.6,
+    "total": 14,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZAF",
+      "LSO"
+    ],
+    "core": [
+      "LSO",
+      "ZAF-1206"
+    ],
+    "also": [
+      "ZAF"
+    ],
+    "wiki": "Sotho language",
+    "tts": "st-LS",
+    "phrases": {
+      "hello": {
+        "text": "Lumela",
+        "rom": "",
+        "say": "loo-MEH-lah"
+      },
+      "thanks": {
+        "text": "Kea leboha",
+        "rom": "",
+        "say": "keh-ah leh-BOH-hah"
+      },
+      "bye": {
+        "text": "Sala hantle",
+        "rom": "",
+        "say": "SAH-lah HAHNT-leh"
+      }
+    },
+    "facts": [
+      "National language of Lesotho, a kingdom entirely surrounded by South Africa, and also one of South Africa's 12 official languages.",
+      "Centred on South Africa's Free State province and the whole of Lesotho.",
+      "A Bantu language closely related to Tswana and Northern Sotho, with mutual intelligibility between them.",
+      "Lesotho's near-total ethnic homogeneity makes Sesotho one of Africa's most universally spoken national languages."
+    ]
+  },
+  {
+    "id": "tn",
+    "name": "Tswana",
+    "endonym": "Setswana",
+    "aliases": [
+      "Setswana"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 5.8,
+    "total": 8.5,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "BWA",
+      "ZAF"
+    ],
+    "core": [
+      "BWA",
+      "ZAF-1201"
+    ],
+    "also": [
+      "ZAF"
+    ],
+    "wiki": "Tswana language",
+    "tts": "tn-BW",
+    "phrases": {
+      "hello": {
+        "text": "Dumela",
+        "rom": "",
+        "say": "doo-MEH-lah"
+      },
+      "thanks": {
+        "text": "Ke a leboga",
+        "rom": "",
+        "say": "keh ah leh-BOH-gah"
+      },
+      "bye": {
+        "text": "Sala sentle",
+        "rom": "",
+        "say": "SAH-lah SENT-leh"
+      }
+    },
+    "facts": [
+      "National and majority language of Botswana, where almost all citizens speak it either as a first or second language.",
+      "Also official and spoken in South Africa's North West province, bordering Botswana.",
+      "A Bantu language closely related to Sotho and Northern Sotho (the Sotho-Tswana group).",
+      "English remains Botswana's official language of government, but Setswana dominates daily and cultural life."
+    ]
+  },
+  {
+    "id": "nso",
+    "name": "Northern Sotho",
+    "endonym": "Sepedi",
+    "aliases": [
+      "Sepedi",
+      "Pedi"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 4.7,
+    "total": 13,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZAF"
+    ],
+    "core": [
+      "ZAF-1210"
+    ],
+    "also": [
+      "ZAF"
+    ],
+    "wiki": "Northern Sotho language",
+    "tts": "nso-ZA",
+    "phrases": {
+      "hello": {
+        "text": "Thobela",
+        "rom": "",
+        "say": "toh-BEH-lah"
+      },
+      "thanks": {
+        "text": "Ke a leboga",
+        "rom": "",
+        "say": "keh ah leh-BOH-gah"
+      },
+      "bye": {
+        "text": "Sala gabotse",
+        "rom": "",
+        "say": "SAH-lah gah-BOHT-seh"
+      }
+    },
+    "facts": [
+      "Also known as Sepedi, centred on South Africa's Limpopo province.",
+      "One of South Africa's 12 official languages and among the five most widely spoken.",
+      "A Bantu language of the Sotho-Tswana group, closely related to Southern Sotho and Tswana.",
+      "Named Sepedi after the historic Pedi kingdom, though the language covers several related Northern Sotho dialects."
+    ]
+  },
+  {
+    "id": "ts",
+    "name": "Tsonga",
+    "endonym": "Xitsonga",
+    "aliases": [
+      "Xitsonga"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 4.6,
+    "total": 12,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZAF"
+    ],
+    "core": [
+      "ZAF-1209",
+      "MOZ-1207",
+      "MOZ-1927"
+    ],
+    "also": [
+      "ZAF",
+      "MOZ"
+    ],
+    "wiki": "Tsonga language",
+    "tts": "ts-ZA",
+    "phrases": {
+      "hello": {
+        "text": "Avuxeni",
+        "rom": "",
+        "say": "ah-voo-SHEH-nee"
+      },
+      "thanks": {
+        "text": "Ndzi khense",
+        "rom": "",
+        "say": "en-dzee KHEN-seh"
+      },
+      "bye": {
+        "text": "Salani kahle",
+        "rom": "",
+        "say": "sah-LAH-nee KAHSH-leh"
+      }
+    },
+    "facts": [
+      "Spoken by the Tsonga people across South Africa's Mpumalanga and Limpopo provinces and southern Mozambique.",
+      "One of South Africa's 12 official languages.",
+      "A Bantu language; called Changana in Mozambique, where it is a widely spoken trade language in the south.",
+      "Closely related to, but distinct from, the Shona languages spoken further north."
+    ]
+  },
+  {
+    "id": "ss",
+    "name": "Swati",
+    "endonym": "siSwati",
+    "aliases": [
+      "Swazi",
+      "siSwati"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 2.5,
+    "total": 3.0,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "SWZ",
+      "ZAF"
+    ],
+    "core": [
+      "SWZ",
+      "ZAF-1209"
+    ],
+    "also": [
+      "ZAF"
+    ],
+    "wiki": "Swazi language",
+    "tts": "ss-SZ",
+    "phrases": {
+      "hello": {
+        "text": "Sawubona",
+        "rom": "",
+        "say": "sah-woo-BOH-nah"
+      },
+      "thanks": {
+        "text": "Ngiyabonga",
+        "rom": "",
+        "say": "ngee-yah-BOHN-gah"
+      },
+      "bye": {
+        "text": "Sala kahle",
+        "rom": "",
+        "say": "SAH-lah KAHSH-leh"
+      }
+    },
+    "facts": [
+      "National language of Eswatini (formerly Swaziland), one of Africa's last remaining monarchies.",
+      "Also one of South Africa's 12 official languages, spoken in Mpumalanga near the Eswatini border.",
+      "A Bantu language closely related to Zulu, with similar click consonants and grammar.",
+      "Nearly the entire population of Eswatini speaks siSwati as a first language."
+    ]
+  },
+  {
+    "id": "sn",
+    "name": "Shona",
+    "endonym": "chiShona",
+    "aliases": [
+      "chiShona"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 9,
+    "total": 14,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZWE"
+    ],
+    "core": [
+      "ZWE-529",
+      "ZWE-524",
+      "ZWE-528",
+      "ZWE-533",
+      "ZWE-532",
+      "ZWE-525"
+    ],
+    "also": [
+      "ZWE",
+      "MOZ-1192"
+    ],
+    "wiki": "Shona language",
+    "tts": "sn-ZW",
+    "phrases": {
+      "hello": {
+        "text": "Mhoro",
+        "rom": "",
+        "say": "MOH-roh"
+      },
+      "thanks": {
+        "text": "Ndatenda",
+        "rom": "",
+        "say": "en-dah-TEN-dah"
+      },
+      "bye": {
+        "text": "Sara zvakanaka",
+        "rom": "",
+        "say": "SAH-rah zvah-kah-NAH-kah"
+      }
+    },
+    "facts": [
+      "Most widely spoken home language of Zimbabwe, used across most of the country except the southwest.",
+      "A Bantu language, named after the Shona people; the medieval stone city of Great Zimbabwe was built by Shona-speaking ancestors.",
+      "Written in a Latin-based orthography standardized in the 20th century from several related dialects.",
+      "Also spoken by communities in Mozambique's Manica province, bordering Zimbabwe."
+    ]
+  },
+  {
+    "id": "nd",
+    "name": "Northern Ndebele",
+    "endonym": "isiNdebele",
+    "aliases": [
+      "Ndebele",
+      "Zimbabwean Ndebele"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 1.6,
+    "total": 2.0,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "ZWE"
+    ],
+    "core": [
+      "ZWE-526",
+      "ZWE-530",
+      "ZWE-531"
+    ],
+    "also": [],
+    "wiki": "Northern Ndebele language",
+    "tts": "nd-ZW",
+    "phrases": {
+      "hello": {
+        "text": "Sawubona",
+        "rom": "",
+        "say": "sah-woo-BOH-nah"
+      },
+      "thanks": {
+        "text": "Ngiyabonga",
+        "rom": "",
+        "say": "ngee-yah-BOHN-gah"
+      },
+      "bye": {
+        "text": "Sala kuhle",
+        "rom": "",
+        "say": "SAH-lah KOOSH-leh"
+      }
+    },
+    "facts": [
+      "Spoken in Matabeleland in southwestern Zimbabwe, centred on the city of Bulawayo.",
+      "A Bantu language closely related to Zulu; Ndebele groups migrated north from Zululand in the 19th century under Mzilikazi.",
+      "Distinct from the Southern Ndebele language spoken in South Africa's Mpumalanga province, though related.",
+      "One of Zimbabwe's 16 officially recognised languages, second in speakers only to Shona."
+    ]
+  },
+  {
+    "id": "ny",
+    "name": "Chichewa",
+    "endonym": "Chichewa",
+    "aliases": [
+      "Nyanja",
+      "Chinyanja"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 14,
+    "total": 16,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "MWI",
+      "ZMB"
+    ],
+    "core": [
+      "MWI"
+    ],
+    "also": [
+      "ZMB-516",
+      "ZMB-520",
+      "MOZ-1906"
+    ],
+    "wiki": "Chichewa language",
+    "tts": "ny-MW",
+    "phrases": {
+      "hello": {
+        "text": "Moni",
+        "rom": "",
+        "say": "MOH-nee"
+      },
+      "thanks": {
+        "text": "Zikomo",
+        "rom": "",
+        "say": "zee-KOH-moh"
+      },
+      "bye": {
+        "text": "Tsalani bwino",
+        "rom": "",
+        "say": "tsah-LAH-nee BWEE-noh"
+      }
+    },
+    "facts": [
+      "National language of Malawi, spoken by the large majority of the population as mother tongue or lingua franca.",
+      "Known as Nyanja in Zambia and Mozambique, where it is also an important lingua franca.",
+      "A Bantu language with a well-developed literary tradition and its own radio broadcasting history dating to colonial times.",
+      "Named after the Chewa people, historically linked to the Maravi Empire around Lake Malawi (Lake Nyasa)."
+    ]
+  },
+  {
+    "id": "bem",
+    "name": "Bemba",
+    "endonym": "Ichibemba",
+    "aliases": [
+      "Chibemba"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 4.4,
+    "total": 6.5,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "ZMB-517",
+      "ZMB-515",
+      "ZMB-514",
+      "ZMB-5511"
+    ],
+    "also": [
+      "ZMB"
+    ],
+    "wiki": "Bemba language",
+    "tts": "bem-ZM",
+    "phrases": {
+      "hello": {
+        "text": "Mwashibukeni",
+        "rom": "",
+        "say": "mwah-shee-boo-KEH-nee"
+      },
+      "thanks": {
+        "text": "Natotela",
+        "rom": "",
+        "say": "nah-toh-TEH-lah"
+      },
+      "bye": {
+        "text": "Twalolwenu",
+        "rom": "",
+        "say": "twah-loh-LWEH-noo"
+      }
+    },
+    "facts": [
+      "Most widely spoken Zambian language, centred on the Copperbelt and Northern provinces.",
+      "A Bantu language used widely as a lingua franca across Zambia's mining towns, beyond its home region.",
+      "English is Zambia's official language, but Bemba is one of several recognised regional languages used in media and schools.",
+      "Closely related to other Bantu languages of the wider Luba-Bemba cultural cluster spanning Zambia and southern DR Congo."
+    ]
+  },
+  {
+    "id": "umb",
+    "name": "Umbundu",
+    "endonym": "Umbundu",
+    "aliases": [
+      "Ovimbundu"
+    ],
+    "family": "Niger–Congo",
+    "branch": "Bantu",
+    "l1": 7,
+    "total": 7,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "AGO-1890",
+      "AGO-1891",
+      "AGO-1887",
+      "AGO-1886"
+    ],
+    "also": [
+      "AGO"
+    ],
+    "wiki": "Umbundu language",
+    "tts": "umb-AO",
+    "phrases": {
+      "hello": {
+        "text": "Kalunga",
+        "rom": "",
+        "say": "kah-LOON-gah"
+      },
+      "thanks": {
+        "text": "Ndapandula",
+        "rom": "",
+        "say": "en-dah-pahn-DOO-lah"
+      },
+      "bye": {
+        "text": "Katiana",
+        "rom": "",
+        "say": "kah-tee-AH-nah"
+      }
+    },
+    "facts": [
+      "Spoken by the Ovimbundu, Angola's largest ethnic group, centred on the central highlands around Huambo and Benguela.",
+      "A Bantu language; most speakers are also fluent in Portuguese, Angola's official language.",
+      "Historically tied to the Benguela highland kingdoms and 19th-century caravan trade routes to the coast.",
+      "Despite being the largest Angolan ethnic language by speaker numbers, it has no official status nationally."
+    ]
+  },
+  {
+    "id": "mg",
+    "name": "Malagasy",
+    "endonym": "Malagasy",
+    "aliases": [],
+    "family": "Austronesian",
+    "branch": "Malayo-Polynesian",
+    "l1": 25,
+    "total": 25,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "MDG"
+    ],
+    "core": [
+      "MDG"
+    ],
+    "also": [],
+    "wiki": "Malagasy language",
+    "tts": "mg-MG",
+    "phrases": {
+      "hello": {
+        "text": "Manao ahoana",
+        "rom": "",
+        "say": "mah-nah-OH ah-OH-nah"
+      },
+      "thanks": {
+        "text": "Misaotra",
+        "rom": "",
+        "say": "mee-SOW-trah"
+      },
+      "bye": {
+        "text": "Veloma",
+        "rom": "",
+        "say": "veh-LOH-mah"
+      }
+    },
+    "facts": [
+      "National language of Madagascar, remarkably an Austronesian language, not an African one, brought by seafarers from Borneo roughly 1,500–2,000 years ago.",
+      "Closely related to Ma'anyan, a language of southern Borneo, far across the Indian Ocean.",
+      "Written in the Latin alphabet since the 19th century, replacing an earlier Arabic-derived Sorabe script used on the island.",
+      "Shows later layers of Bantu, Arabic and French loanwords from later waves of contact."
+    ]
+  },
+  {
+    "id": "sg",
+    "name": "Sango",
+    "endonym": "Sängö",
+    "aliases": [],
+    "family": "Creole",
+    "branch": "",
+    "l1": 1,
+    "total": 5,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [
+      "CAF"
+    ],
+    "core": [
+      "CAF"
+    ],
+    "also": [],
+    "wiki": "Sango language",
+    "tts": "sg-CF",
+    "phrases": {
+      "hello": {
+        "text": "Balao",
+        "rom": "",
+        "say": "bah-LAH-oh"
+      },
+      "thanks": {
+        "text": "Merci mingi",
+        "rom": "",
+        "say": "mer-SEE MEEN-gee"
+      },
+      "bye": {
+        "text": "E ke ba",
+        "rom": "",
+        "say": "eh keh BAH"
+      }
+    },
+    "facts": [
+      "National language and lingua franca of the Central African Republic, spoken as a first or second language by nearly everyone.",
+      "A creole that developed from Ngbandi, a local Niger–Congo language, mixed through river trade along the Ubangi.",
+      "French remains the official language of government and higher education, but Sango dominates daily communication.",
+      "Despite being spoken natively by relatively few, it functions as a true national lingua franca across dozens of local ethnic languages."
+    ]
+  },
+  {
+    "id": "kri",
+    "name": "Krio",
+    "endonym": "Krio",
+    "aliases": [
+      "Sierra Leone Creole"
+    ],
+    "family": "Creole",
+    "branch": "",
+    "l1": 4,
+    "total": 6,
+    "scripts": [
+      "Latin"
+    ],
+    "official": [],
+    "core": [
+      "SLE"
+    ],
+    "also": [],
+    "wiki": "Krio language",
+    "tts": "en-SL",
+    "phrases": {
+      "hello": {
+        "text": "Kushe",
+        "rom": "",
+        "say": "koo-SHEH"
+      },
+      "thanks": {
+        "text": "Tenki",
+        "rom": "",
+        "say": "TEN-kee"
+      },
+      "bye": {
+        "text": "A go so",
+        "rom": "",
+        "say": "ah goh soh"
+      }
+    },
+    "facts": [
+      "English-based creole that is the lingua franca of Sierra Leone, spoken as a first language mainly in and around Freetown.",
+      "Originated among freed and resettled slaves brought to Freetown from Britain, Nova Scotia and the Caribbean from 1787 onward.",
+      "Although spoken natively by a minority, it is understood by almost all Sierra Leoneans as a second language.",
+      "English remains the official language, but Krio is the dominant everyday spoken language across the country."
+    ]
+  }
+]

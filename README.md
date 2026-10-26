@@ -1,4 +1,10 @@
-# Million Cities
+# Atlas Quiz (Million Cities)
+
+Map quizzes: **Million Cities**, **Physical features** (oceans, seas, rivers, lakes, mountains, deserts, islands …),
+**Languages** (where they're spoken, with hello / thank you / goodbye and pronunciation) and, per country,
+**Austria · largest Gemeinden**. Each has a type-in quiz, practice modes with an easier/harder setting and an atlas.
+
+## Million Cities
 
 Learn all 511 cities in the world with more than one million inhabitants: a type-in **quiz** with a map,
 **practice** modes (name the city, find it on the map, which one is bigger?) and an **atlas** with every city's
@@ -14,6 +20,15 @@ populations from Wikidata).
 Progress is saved in your browser (localStorage).
 
 ## Data
+
+Quiz sets (see each quiz's “?” page):
+- **Physical features:** [Natural Earth](https://www.naturalearthdata.com/) 1:10m physical layers (public domain); selection,
+  lengths/areas/heights and article links from [Wikidata](https://www.wikidata.org/) (CC0).
+- **Languages:** areas built from Natural Earth country/state borders; areas, speaker estimates, phrases and facts compiled with Claude.
+- **Austria:** population by Gemeinde and boundaries © [Statistik Austria](https://data.statistik.gv.at/) (CC BY 4.0).
+- Facts in the info boxes were written with Claude from the English (and for Austria also German) Wikipedia intros (CC BY-SA 4.0).
+
+Million Cities:
 
 - **Cities and populations:** United Nations, Department of Economic and Social Affairs, Population Division (2025).
   *World Urbanization Prospects 2025*, mid-2025 estimates of cities defined by the Degree of Urbanisation

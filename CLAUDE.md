@@ -1,6 +1,33 @@
-# Million Cities
+# Atlas Quiz (repo: million-cities)
 
-Quiz, practice and atlas for the 511 cities with ≥ 1 million people (UN WUP 2025). Built 2026-10-24.
+Map quizzes with quiz / practice / atlas modes. Home page `static/index.html` (World | Single countries) links to:
+- **Million Cities** (`cities.html` + `cities.js`): the 511 cities ≥ 1M (UN WUP 2025). Built 2026-10-24; described below.
+- **Quiz sets** (`set.html?s=<key>` + `set.js`, generic engine), added 2026-10-26: `physical` (≈1100 physical features),
+  `languages` (158 languages as map areas, with phrases + browser speech), `at-gemeinden` (Austria, 100 largest Gemeinden).
+Shared modules in `static/lib/`: `util.js` (helpers, practice picking with difficulty levels), `store.js` (progress doc,
+server or localStorage), `mapbase.js` (base map style, layers popover).
+
+Progress doc: the cities app uses the top level (quiz, cards, …); each set uses `sets[<key>] = {quiz, cards, bigger, ui}`;
+`basemap`/`layers` are shared. Quiz progress per scope `<what>|<where>` (what: all | g:<group> | c:<cat> | b:<branch>).
+Practice "Easier/Harder" (`LEVELS` = 5): the pool sorted easiest-first (cities by population, sets by `imp`) is cut into
+bands; at level L new cards come from band L on, easier ones only while not yet known.
+
+Quiz sets data (`tools/sets/`, run from that folder; `tools/sets/prepare_raw.sh` fetches raw inputs):
+- Set file `static/data/sets/<key>.json`: {key, title, kind (features|languages|places), cats, regs, measures, bigger, items[
+  {id, name, alias, cat, cat2, reg, g (pt|line|poly), ll (label point), bb, m (measures), imp (1 = best known), stats, wiki, …}]},
+  plus `<key>.geojson` (shapes with property id; languages also `t`: core|also) and `<key>.facts.json` ({id: [facts]}).
+- `physical_fetch.py` -> candidates from Natural Earth geography layers + lakes + rivers (`src/rivers.json` groups NE river
+  segments into rivers), Wikidata (sitelinks = how well known, length/area/elevation), cached in data/raw/sets/.
+  `build_physical.py` selects by sitelinks per type (MIN_SL), applies `src/phys_overrides.json` (drop/cat/name/wiki/alias, add
+  point features by wiki title), computes continents/countries/measures, writes data/raw/sets/phys_factsrc.json (intros).
+- `build_languages.py`: `src/languages_*.json` (spec in `src/LANG_SPEC.md`: areas as NE admin-0 ADM0_A3 / admin-1 adm1_code
+  lists, speakers, phrases, facts; compiled with Claude) dissolved into core/also areas.
+- `build_austria.py`: Statistik Austria population 1 Jan (Vienna's districts summed into Wien), Gemeinde polygons (WFS),
+  Wikidata links; facts in `facts/at-gemeinden.json`.
+- Facts for sets: `facts/*.json`, written by Claude from the Wikipedia intros per `src/FACTS_SPEC.md`.
+- `build_index.py` -> data/sets/index.json (counts for the home page). Everything is in `tools/build.sh`.
+
+## Million Cities
 
 - `server.py` (stdlib), host/port from `settings.local.json` (git-ignored; default 127.0.0.1:8170), user unit `million-cities`.
   Serves `static/` (sends `*.gz` siblings when it can, ETag/304) and `GET/PUT /api/state` → `data/state.json`

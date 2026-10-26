@@ -1,0 +1,1133 @@
+# key | type | display name | enwiki title | Natural Earth name | continent | geometry | countries (first 3) | importance rank
+m1159115597 | bay | Persian Gulf | Persian Gulf | Persian Gulf | Asia | poly | Iran, United Arab Emirates, Saudi Arabia | 74
+m1159115399 | bay | Gulf of Mexico | Gulf of Mexico | Gulf of Mexico | North America | poly | United States of America, Mexico, Cuba | 106
+m1159115253 | bay | Bay of Bengal | Bay of Bengal | Bay of Bengal | Asia | poly | Bangladesh, India, Myanmar | 117
+m1159115791 | bay | Gulf of Guinea | Gulf of Guinea | Gulf of Guinea | Africa | poly | Ivory Coast, Gabon, Ghana | 147
+m1159115749 | bay | Bay of Biscay | Bay of Biscay | Bay of Biscay | Europe | poly | France, Spain | 181
+m1159116333 | bay | Gulf of Aden | Gulf of Aden | Gulf of Aden | Asia | poly | Yemen, Somaliland, Djibouti | 183
+m1159116517 | bay | Gulf of Finland | Gulf of Finland | Gulf of Finland | Europe | poly | Finland, Russia, Estonia | 184
+m1159115441 | bay | Hudson Bay | Hudson Bay | Hudson Bay | North America | poly | Canada | 192
+m1159116359 | bay | Gulf of Oman | Gulf of Oman | Gulf of Oman | Asia | poly | Iran, Oman, United Arab Emirates | 194
+m1159116123 | bay | Gulf of Thailand | Gulf of Thailand | Gulf of Thailand | Asia | poly | Thailand, Cambodia, Vietnam | 228
+m1159119199 | bay | Gulf of Aqaba | Gulf of Aqaba | Gulf of Aqaba | Africa | poly | Egypt, Saudi Arabia, Jordan | 241
+m1159115483 | bay | Baffin Bay | Baffin Bay | Baffin Bay | North America | poly | Canada, Greenland | 246
+m1159116479 | bay | Gulf of California | Gulf of California | Golfo de California | North America | poly | Mexico | 287
+m1159116815 | bay | Río de la Plata | Río de la Plata | Río de la Plata | South America | poly | Argentina, Uruguay | 295
+m1159116589 | bay | Gulf of Bothnia | Gulf of Bothnia | Gulf of Bothnia | Europe | poly | Finland, Sweden, Aland | 306
+m1159117723 | bay | Skagerrak | Skagerrak | Skagerrak | Europe | poly | Norway, Sweden, Denmark | 328
+m1159116715 | bay | Gulf of St. Lawrence | Gulf of St. Lawrence | Gulf of Saint Lawrence | North America | poly | Canada, Saint Pierre and Miquelon | 355
+m1159119103 | bay | Gulf of Suez | Gulf of Suez | Gulf of Suez | Africa | poly | Egypt | 369
+m1159115503 | bay | Gulf of Alaska | Gulf of Alaska | Gulf of Alaska | North America | poly | United States of America | 381
+m1159116451 | bay | Gulf of Carpentaria | Gulf of Carpentaria | Gulf of Carpentaria | Oceania | poly | Australia | 383
+m1159118385 | bay | Wadden Sea | Wadden Sea | Waddenzee | Europe | poly | Netherlands | 411
+m1159120609 | bay | Øresund | Øresund | Øresund | Europe | poly | Denmark, Sweden | 413
+m1159118365 | bay | Gulf of Riga | Gulf of Riga | Gulf of Riga | Europe | poly | Estonia, Latvia | 438
+m1159119215 | bay | Lake Maracaibo | Lake Maracaibo | Lago de Maracaibo | South America | poly | Venezuela | 445
+m1159116315 | bay | Great Australian Bight | Great Australian Bight | Great Australian Bight | Oceania | poly | Australia | 467
+m1159116797 | bay | Bay of Fundy | Bay of Fundy | Bay of Fundy | North America | poly | Canada, United States of America | 468
+m1159116787 | bay | Gulf of Tonkin | Gulf of Tonkin | Gulf of Tonkin | Asia | poly | Vietnam, China | 505
+m1159120685 | bay | San Francisco Bay | San Francisco Bay | San Francisco Bay | North America | poly | United States of America | 547
+m1159117223 | bay | Amundsen Gulf | Amundsen Gulf | Amundsen Gulf | North America | poly | Canada | 585
+m1159117043 | bay | Chesapeake Bay | Chesapeake Bay | Chesapeake Bay | North America | poly | United States of America | 601
+m1159118407 | bay | Gulf of Sidra | Gulf of Sidra | Gulf of Sidra | Africa | poly | Libya | 603
+m1159117827 | bay | Gulf of Khambhāt | Gulf of Khambhāt | Gulf of Khambhät | Asia | poly | India | 615
+m1159117185 | bay | Gulf of Kutch | Gulf of Kutch | Gulf of Kutch | Asia | poly | India | 642
+m1159116431 | bay | James Bay | James Bay | James Bay | North America | poly | Canada | 704
+m1159117781 | bay | Sognefjord | Sognefjord | Sognefjorden | Europe | poly | Norway | 740
+m1159118475 | bay | Bight of Benin | Bight of Benin | Bight of Benin | Africa | poly | Nigeria, Ghana, Benin | 755
+m1159116571 | bay | Gulf of Lion | Gulf of Lion | Golfe du Lion | Europe | poly | France, Spain | 778
+m1159117135 | bay | Gulf of Mannar | Gulf of Mannar | Gulf of Mannar | Asia | poly | Sri Lanka, India | 779
+m1159117955 | bay | Shark Bay | Shark Bay | Shark Bay | Oceania | poly | Australia | 780
+m1159118493 | bay | Bight of Biafra | Bight of Biafra | Bight of Biafra | Africa | poly | Nigeria, Cameroon, Equatorial Guinea | 781
+m1159119095 | bay | Garabogazköl | Garabogazköl | Garabogaz Bay | Asia | poly | Turkmenistan | 801
+m1159119119 | bay | Gulf of Ob | Gulf of Ob | Gulf of Ob | Europe | poly | Russia | 843
+m1159117203 | bay | Gulf of Panama | Gulf of Panama | Golfo de Panamá | North America | poly | Panama | 866
+m1159117973 | bay | Gulf of Gabès | Gulf of Gabès | Gulf of Gabès | Africa | poly | Tunisia | 867
+m1159120779 | bay | Gulf of Anadyr | Gulf of Anadyr | Gulf of Anadyr' | Europe | poly | Russia | 868
+m1159116059 | bay | Bay of Campeche | Bay of Campeche | Bahía de Campeche | North America | poly | Mexico | 882
+m1159116553 | bay | Gulf of Honduras | Gulf of Honduras | Gulf of Honduras | North America | poly | Belize, Honduras, Guatemala | 883
+m1159117021 | bay | Gulf of Maine | Gulf of Maine | Gulf of Maine | North America | poly | United States of America, Canada | 884
+m1159118329 | bay | Gulf of Papua | Gulf of Papua | Gulf of Papua | Oceania | poly | Papua New Guinea | 930
+m1159119293 | bay | Long Island Sound | Long Island Sound | Long Island Sound | North America | poly | United States of America | 931
+m1159118085 | bay | Gulf of Boothia | Gulf of Boothia | Gulf of Boothia | North America | poly | Canada | 943
+m1159118111 | bay | Foxe Basin | Foxe Basin | Foxe Basin | North America | poly | Canada | 944
+m1159117651 | bay | Disko Bay | Disko Bay | Disko Bay | North America | poly | Greenland | 979
+m1159119013 | bay | Scoresby Sound | Scoresby Sound | Kangertittivaq | North America | poly | Greenland | 980
+m1159119141 | bay | Yenisei Gulf | Yenisei Gulf | Yenisey Gulf | Europe | poly | Russia | 981
+m1159120643 | bay | Bay of Mecklenburg | Bay of Mecklenburg | Mecklenburger Bucht | Europe | poly | Germany, Denmark | 983
+m1159117579 | bay | McMurdo Sound | McMurdo Sound | McMurdo Sound | Antarctica | poly | Antarctica | 999
+m1159118151 | bay | Gulf of Guayaquil | Gulf of Guayaquil | Golfo de Guayaquil | South America | poly | Ecuador, Peru | 1000
+m1159119075 | bay | Khatanga Gulf | Khatanga Gulf | Khatanga Gulf | Europe | poly | Russia | 1001
+m1159119271 | bay | Delaware Bay | Delaware Bay | Delaware Bay | North America | poly | United States of America | 1002
+m1159118537 | bay | Prince William Sound | Prince William Sound | Prince William Sound | North America | poly | United States of America | 1008
+m1159118905 | bay | Maputo Bay | Maputo Bay | Baia de Maputo | Africa | poly | Mozambique | 1009
+m1159116967 | bay | Cook Inlet | Cook Inlet | Cook Inlet | North America | poly | United States of America | 1020
+m1159119247 | bay | Massachusetts Bay | Massachusetts Bay | Massachusetts Bay | North America | poly | United States of America | 1022
+m1159119471 | bay | Lake Pontchartrain | Lake Pontchartrain | Lake Pontchartrain | North America | poly | United States of America | 1023
+m1159117797 | bay | Trondheim Fjord | Trondheim Fjord | Trondheimsfjorden | Europe | poly | Norway | 1038
+m1159118783 | bay | Hangzhou Bay | Hangzhou Bay | Hangzhou Bay | Asia | poly | China | 1039
+m1159118975 | bay | Gulf of Martaban | Gulf of Martaban | Gulf of Martaban | Asia | poly | Myanmar | 1040
+m1159116991 | bay | Bristol Bay | Bristol Bay | Bristol Bay | North America | poly | United States of America | 1053
+m1159117159 | bay | Shelikhov Gulf | Shelikhov Gulf | Shelikhova Gulf | Europe | poly | Russia | 1054
+m1159118871 | bay | Gulf St Vincent | Gulf St Vincent | Gulf St. Vincent | Oceania | poly | Australia | 1056
+r1159104603 | continent | Europe | Europe | EUROPE | World | poly |  | 2
+r1159104365 | continent | Africa | Africa | AFRICA | World | poly |  | 3
+r1159104597 | continent | Asia | Asia | ASIA | World | poly |  | 4
+r1159104361 | continent | South America | South America | SOUTH AMERICA | World | poly |  | 6
+r1159104367 | continent | Antarctica | Antarctica | ANTARCTICA | World | poly |  | 8
+r1159104607 | continent | North America | North America | NORTH AMERICA | World | poly |  | 9
+r1159104363 | continent | Australia | Australia (continent) | AUSTRALIA | World | poly |  | 105
+r1159104337 | desert | Sahara | Sahara | SAHARA | Africa | poly | Algeria, Sudan, Libya | 28
+r1159104335 | desert | Gobi Desert | Gobi Desert | GOBI DESERT | Asia | poly | China, Mongolia | 135
+r1159104253 | desert | Kalahari Desert | Kalahari Desert | KALAHARI DESERT | Africa | poly | Namibia, Botswana, South Africa | 186
+r1159104081 | desert | Atacama Desert | Atacama Desert | DESIERTO DE ATACAMA | South America | poly | Chile | 198
+r1159103261 | desert | Negev | Negev | Negev Desert | Asia | poly | Israel, Jordan, Egypt | 234
+r1159104245 | desert | Punjab | Punjab | PUNJAB | Asia | poly | Pakistan, India | 252
+r1159103651 | desert | Taklamakan Desert | Taklamakan Desert | TAKLIMAKAN DESERT | Asia | poly | China | 268
+r1159104077 | desert | Karakum Desert | Karakum Desert | GARAGUM DESERT | Asia | poly | Turkmenistan, Uzbekistan | 275
+r1159104059 | desert | Namib | Namib | NAMIB DESERT | Africa | poly | Namibia, Angola | 288
+r1159104073 | desert | Thar Desert | Thar Desert | THAR DESERT | Asia | poly | India, Pakistan | 340
+r1159104071 | desert | Great Victoria Desert | Great Victoria Desert | GREAT VICTORIA DESERT | Oceania | poly | Australia | 395
+r1159104079 | desert | Kyzylkum Desert | Kyzylkum Desert | QIZILQUM DESERT | Asia | poly | Kazakhstan, Uzbekistan, Baykonur Cosmodrome | 439
+r1159104075 | desert | Syrian desert | Syrian desert | SYRIAN DESERT | Asia | poly | Iraq, Saudi Arabia, Jordan | 459
+r1730072791 | desert | Tassili n'Ajjer | Tassili n'Ajjer | Tassili-n-Ajjer | Africa | poly | Algeria, Libya, Niger | 476
+r1159104247 | desert | Rub' al Khali | Rub' al Khali | RUB’ AL KHALI | Asia | poly | Saudi Arabia, Yemen, Oman | 486
+r1159103643 | desert | Sonoran Desert | Sonoran Desert | SONORAN DESERT | North America | poly | United States of America, Mexico | 507
+r1159103253 | desert | Salar de Uyuni | Salar de Uyuni | Salar de Uyuni | South America | poly | Bolivia | 525
+r1159104067 | desert | Libyan Desert | Libyan Desert | LIBYAN DESERT | Africa | poly | Sudan, Libya, Egypt | 531
+r1159103653 | desert | Lut Desert | Lut Desert | LUT DESERT | Asia | poly | Iran | 543
+r1159104065 | desert | Great Sandy Desert | Great Sandy Desert | GREAT SANDY DESERT | Oceania | poly | Australia | 664
+r1159104063 | desert | Nubian Desert | Nubian Desert | NUBIAN DESERT | Africa | poly | Sudan, Egypt, Bir Tawil | 734
+r1159103287 | desert | Great Salt Desert | Great Salt Desert | Kavir Desert | Asia | poly | Iran | 743
+r1159103289 | desert | Nafud desert | Nafud desert | An Nafud Desert | Asia | poly | Saudi Arabia | 744
+r1159103647 | desert | Gibson Desert | Gibson Desert | Gibson Desert | Oceania | poly | Australia | 762
+r1159103641 | desert | Chihuahuan Desert | Chihuahuan Desert | CHIHUAHUAN DESERT | North America | poly | Mexico, United States of America | 786
+r1159103279 | desert | Simpson Desert | Simpson Desert | Simpson Desert | Oceania | poly | Australia | 806
+r1159103265 | desert | Eastern Desert | Eastern Desert | Eastern Desert | Africa | poly | Egypt | 831
+r1159103257 | desert | Danakil Desert | Danakil Desert | Danakil | Africa | poly | Ethiopia, Eritrea, Djibouti | 870
+r1159103623 | desert | Ténéré | Ténéré | Ténéré | Africa | poly | Niger, Chad, Algeria | 873
+r1159103281 | desert | Tanami Desert | Tanami Desert | Tanami Desert | Oceania | poly | Australia | 932
+r1159104243 | desert | Betpak-Dala | Betpak-Dala | BETPAQDALA DESERT | Asia | poly | Kazakhstan | 940
+r1159103263 | desert | Chalbi Desert | Chalbi Desert | Chalbi Desert | Africa | poly | Kenya, Ethiopia | 953
+r1159104251 | desert | Caatinga | Caatinga | CAATINGAS | South America | poly | Brazil | 1005
+r1159103649 | desert | Ordos Desert | Ordos Desert | Mu Us Desert | Asia | poly | China | 1029
+r1159102625 | desert | Makgadikgadi Pan | Makgadikgadi Pan | Makgadikgadi Pan | Africa | poly | Botswana | 1041
+r1159103631 | desert | Grand Erg Oriental | Grand Erg Oriental | Grand Erg Oriental | Africa | poly | Algeria, Tunisia | 1046
+r1159103283 | desert | Registan Desert | Registan Desert | Rigestan | Asia | poly | Afghanistan | 1069
+r1159102635 | desert | Black Rock Desert | Black Rock Desert | Black Rock Desert | North America | poly | United States of America | 1082
+r1159103645 | desert | Great Salt Lake Desert | Great Salt Lake Desert | Great Salt Lake Desert | North America | poly | United States of America | 1084
+r1730070763 | desert | Etosha Pan | Etosha Pan | Etosha Pan | Africa | poly | Namibia | 1092
+r1159103285 | desert | Dasht-e Margo | Dasht-e Margo | Margo Desert | Asia | poly | Afghanistan, Iran | 1100
+r1159103633 | desert | Grand Erg Occidental | Grand Erg Occidental | Grand Erg Occidental | Africa | poly | Algeria | 1101
+r1159103275 | desert | Strzelecki Desert | Strzelecki Desert | Strzelecki Desert | Oceania | poly | Australia | 1103
+r1730072041 | desert | Sharqiya Sands | Sharqiya Sands | Wahiba Sands | Asia | poly | Oman | 1108
+r1159104061 | desert | Western Desert | Western Desert | WESTERN DESERT | Africa | poly | Egypt | 1109
+xQ204658 | glacier | Aletsch Glacier | Aletsch Glacier | Aletsch Glacier | Europe | pt | Switzerland | 701
+xQ333946 | glacier | Siachen Glacier | Siachen Glacier | Siachen Glacier | Asia | pt | Siachen Glacier, India | 796
+xQ367943 | glacier | Perito Moreno Glacier | Perito Moreno Glacier | Perito Moreno Glacier | South America | pt | Argentina | 906
+xQ654352 | glacier | Jostedal Glacier | Jostedal Glacier | Jostedalsbreen | Europe | pt | Norway | 928
+xQ1542432 | glacier | Greenland ice sheet | Greenland ice sheet | Greenland ice sheet | North America | pt | Greenland | 951
+xQ631789 | glacier | Vanch-Yakh Glacier | Vanch-Yakh Glacier | Fedchenko Glacier | Asia | pt | Tajikistan | 975
+xQ691557 | glacier | Gangotri Glacier | Gangotri Glacier | Gangotri Glacier | Asia | pt | India | 976
+xQ571430 | glacier | Antarctic ice sheet | Antarctic ice sheet | Antarctic ice sheet | Antarctica | pt | Antarctica | 1006
+xQ805806 | glacier | Baltoro Glacier | Baltoro Glacier | Baltoro Glacier | Asia | pt | Pakistan | 1036
+xQ278245 | glacier | Lambert Glacier | Lambert Glacier | Lambert Glacier | Antarctica | pt |  | 1071
+xQ684169 | glacier | Pasterze Glacier | Pasterze Glacier | Pasterze | Europe | pt | Austria | 1072
+xQ673150 | glacier | Franz Josef Glacier | Franz Josef Glacier | Franz Josef Glacier | Oceania | pt | New Zealand | 1080
+xQ583591 | glacier | Mer de Glace | Mer de Glace | Mer de Glace | Europe | pt | France | 1090
+xQ7799533 | glacier | Thwaites Glacier | Thwaites Glacier | Thwaites Glacier | Antarctica | pt | Antarctica | 1091
+xQ1031467 | glacier | Southern Patagonian Ice Field | Southern Patagonian Ice Field | Southern Patagonian Ice Field | South America | pt | Southern Patagonian Ice Field | 1096
+xQ770424 | glacier | Jakobshavn Glacier | Jakobshavn Glacier | Jakobshavn Glacier | North America | pt | Greenland | 1106
+xQ855226 | glacier | Biafo Glacier | Biafo Glacier | Biafo Glacier | Asia | pt | Pakistan | 1110
+xQ1434582 | glacier | Rongbuk Glacier | Rongbuk Glacier | Rongbuk Glacier | Asia | pt | China | 1113
+xQ391165 | glacier | Athabasca Glacier | Athabasca Glacier | Athabasca Glacier | North America | pt | Canada | 1115
+xQ1514989 | glacier | Pine Island Glacier | Pine Island Glacier | Pine Island Glacier | Antarctica | pt |  | 1116
+xQ962630 | glacier | Upsala Glacier | Upsala Glacier | Upsala Glacier | South America | pt | Argentina | 1117
+xQ1632936 | glacier | Hubbard Glacier | Hubbard Glacier | Hubbard Glacier | North America | pt | United States of America, Canada | 1120
+xQ617835 | glacier | Malaspina Glacier | Malaspina Glacier | Malaspina Glacier | North America | pt | United States of America | 1121
+xQ764134 | glacier | Byrd Glacier | Byrd Glacier | Byrd Glacier | Antarctica | pt |  | 1122
+xQ1920336 | glacier | Mendenhall Glacier | Mendenhall Glacier | Mendenhall Glacier | North America | pt | United States of America | 1126
+r1159104291 | island | Japan | Japan | JAPAN | Asia | poly | Japan | 1
+r1159104631 | island | New Zealand | New Zealand | NEW ZEALAND | Oceania | poly | New Zealand | 5
+r1159104289 | island | Philippines | Philippines | PHILIPPINES | Asia | poly | Philippines | 7
+r1159103489 | island | Cape Verde | Cape Verde | ILHAS DE CABO VERDE | Africa | poly | Cabo Verde | 10
+r1730072397 | island | Fiji | Fiji | FIJI | Oceania | poly | Fiji | 11
+r1159103843 | island | Seychelles | Seychelles | SEYCHELLES | World | poly | Seychelles, Mauritius | 12
+r1159102893 | island | Vanuatu | Vanuatu | VANUATU | Oceania | poly | Vanuatu | 17
+r1159104263 | island | Greenland | Greenland | GREENLAND | North America | poly | Greenland | 19
+r1730071307 | island | Tuvalu | Tuvalu | TUVALU | Oceania | poly | Tuvalu | 20
+r1159104273 | island | Kiribati | Kiribati | KIRIBATI | North America | poly | Kiribati, United States Minor Outlying Islands | 22
+r1730073191 | island | Marshall Islands | Marshall Islands | MARSHALL ISLANDS | Oceania | poly | Marshall Islands | 26
+r1159102961 | island | Faroe Islands | Faroe Islands | Føroyar | Europe | poly | Faroe Islands | 31
+p1159104871 | island | Aruba | Aruba | Aruba | North America | pt | Aruba | 35
+r1159103491 | island | Canary Islands | Canary Islands | ISLAS CANARIAS | Europe | poly | Spain | 39
+r1159103479 | island | Guam | Guam | Guam | Oceania | poly | Guam | 40
+r1159103805 | island | Sardinia | Sardinia | Sardegna | Europe | poly | Italy | 48
+r1730071301 | island | New Caledonia | New Caledonia | NOUVELLE-CALÉDONIE | Oceania | poly | New Caledonia | 49
+p1159104855 | island | Martinique | Martinique | Martinique | Europe | pt | France | 51
+r1159103807 | island | Corsica | Corsica | Corse | Europe | poly | France | 52
+r1159102381 | island | Réunion | Réunion | Reunion | Europe | poly | France | 55
+r1730070893 | island | Niue | Niue | Niue | Oceania | poly | Niue | 58
+r1159104133 | island | Great Britain | Great Britain | GREAT BRITAIN | Europe | poly | United Kingdom | 60
+r1159103787 | island | Java | Java | JAVA | Asia | poly | Indonesia | 62
+r1159104131 | island | Ireland | Ireland | IRELAND | Europe | poly | Ireland, United Kingdom | 63
+p1159104869 | island | Curaçao | Curaçao | Curaçao | North America | pt | Curaçao | 65
+r1159102351 | island | Mayotte | Mayotte | Mayotte | Europe | poly | France | 67
+r1159103801 | island | Hokkaido | Hokkaido | HOKKAIDÖ | Asia | poly | Japan | 69
+r1730073279 | island | Balearic Islands | Balearic Islands | Balearic Islands | Europe | poly | Spain | 70
+p1159104835 | island | Easter Island | Easter Island | I. de Pascua | South America | pt | Chile | 71
+r1159104127 | island | Sumatra | Sumatra | SUMATRA | Asia | poly | Indonesia | 75
+r1159102805 | island | Crete | Crete | Crete | Europe | poly | Greece | 78
+r1159103769 | island | Nova Scotia | Nova Scotia | Nova Scotia | North America | poly | Canada | 80
+r1159102581 | island | Tokelau | Tokelau | TOKELAU | Oceania | poly | New Zealand | 81
+r1159103851 | island | Svalbard | Svalbard | SVALBARD | Europe | poly | Norway | 85
+p1159105083 | island | Christmas Island | Christmas Island | Christmas Island | Asia | pt | Indian Ocean Territories | 86
+r1159104355 | island | Micronesia | Micronesia | MICRONESIA | Oceania | poly | Federated States of Micronesia, Northern Mariana Islands, Guam | 87
+r1159104359 | island | Polynesia | Polynesia | POLYNESIA | Oceania | poly | New Zealand, United States of America, French Polynesia | 88
+p1159105105 | island | Saint Helena | Saint Helena | Saint Helena | World | pt | Saint Helena | 89
+r1159104121 | island | New Guinea | New Guinea | NEW GUINEA | Asia | poly | Papua New Guinea, Indonesia | 90
+r1159104125 | island | Borneo | Borneo | BORNEO | Asia | poly | Indonesia, Malaysia, Brunei | 91
+r1159104129 | island | Honshu | Honshu | HONSHÜ | Asia | poly | Japan | 93
+r1159104353 | island | Melanesia | Melanesia | MELANESIA | Oceania | poly | Indonesia, Papua New Guinea, Solomon Islands | 97
+p1159104725 | island | Norfolk Island | Norfolk Island | Norfolk Island | Oceania | pt | Norfolk Island | 98
+r1159103795 | island | Kyushu | Kyushu | KYÜSHÜ | Asia | poly | Japan | 102
+r1159104651 | island | Azores | Azores | AÇORES | Europe | poly | Portugal | 103
+r1159102909 | island | Galápagos Islands | Galápagos Islands | ARCHIPIÉLAGO DE COLÓN | South America | poly | Ecuador | 109
+r1159102853 | island | Tenerife | Tenerife | Tenerife | Europe | poly | Spain | 113
+r1159103797 | island | Shikoku | Shikoku | SHIKOKU | Asia | poly | Japan | 114
+r1159103785 | island | Sulawesi | Sulawesi | SULAWESI | Asia | poly | Indonesia | 125
+r1159102819 | island | Mallorca | Mallorca | Mallorca | Europe | poly | Spain | 127
+r1159104601 | island | British Isles | British Isles | BRITISH ISLES | Europe | poly | United Kingdom, Ireland | 128
+r1159103427 | island | Hispaniola | Hispaniola | HISPANIOLA | North America | poly | Dominican Republic, Haiti | 131
+r1159103831 | island | Tahiti | Tahiti | Tahiti | Oceania | poly | French Polynesia | 132
+r1159103791 | island | Luzon | Luzon | LUZON | Asia | poly | Philippines | 134
+r1159103803 | island | Sakhalin | Sakhalin | SAKHALIN | Europe | poly | Russia | 138
+r1159102803 | island | Rhodes | Rhodes | Rhodes | Europe | poly | Greece | 141
+r1159102839 | island | Jan Mayen | Jan Mayen | Jan Mayen | Europe | poly | Norway | 145
+r1159103789 | island | Mindanao | Mindanao | MINDANAO | Asia | poly | Philippines | 155
+r1159104143 | island | Maluku Islands | Maluku Islands | MOLUCCAS | Asia | poly | Indonesia | 163
+r1159103431 | island | Kuril Islands | Kuril Islands | KURIL ISLANDS | Europe | poly | Russia | 177
+r1159102793 | island | Gotland | Gotland | Gotland | Europe | poly | Sweden | 196
+r1159102821 | island | Ibiza | Ibiza | Ibiza | Europe | poly | Spain | 197
+r1159103861 | island | Lesser Sunda Islands | Lesser Sunda Islands | LESSER SUNDA ISLANDS | Asia | poly | Indonesia, East Timor | 200
+r1159103767 | island | Tierra del Fuego | Tierra del Fuego | TIERRA DEL FUEGO | South America | poly | Chile, Argentina | 202
+r1159102765 | island | Bali | Bali (island) | Bali | Asia | poly | Indonesia | 204
+r1159103393 | island | Timor | Timor | TIMOR | Asia | poly | East Timor, Indonesia | 205
+r1159103783 | island | Newfoundland | Newfoundland (island) | ISLAND OF NEWFOUNDLAND | North America | poly | Canada | 206
+r1159103873 | island | Lesser Antilles | Lesser Antilles | LESSER ANTILLES | Europe | poly | Trinidad and Tobago, France, Venezuela | 208
+p1159105073 | island | Bouvet Island | Bouvet Island | Bouvet Island | Europe | pt | Norway | 209
+r1730071111 | island | Peloponnese | Peloponnese | Pelopónnisos | Europe | poly | Greece | 215
+r1159104629 | island | North Island | North Island | NORTH ISLAND | Oceania | poly | New Zealand | 217
+r1159102963 | island | Shetland | Shetland | Shetland Is. | Europe | poly | United Kingdom | 218
+p1159105067 | island | Ascension Island | Ascension Island | Ascension | World | pt | Saint Helena | 219
+r1159104625 | island | South Island | South Island | SOUTH ISLAND | Oceania | poly | New Zealand | 226
+r1159103857 | island | Novaya Zemlya | Novaya Zemlya | NOVAYA ZEMLYA | Europe | poly | Russia | 231
+r1159103793 | island | Taiwan | Taiwan (island) | TAIWAN | Asia | poly | Taiwan | 236
+r1159102795 | island | Zealand | Zealand | Zealand | Europe | poly | Denmark | 242
+r1159103867 | island | Greater Antilles | Greater Antilles | GREATER ANTILLES | North America | poly | Cuba, Dominican Republic, Haiti | 244
+r1159103779 | island | Baffin Island | Baffin Island | BAFFIN ISLAND | North America | poly | Canada | 250
+r1159102825 | island | Lesbos | Lesbos | Lesbos | Europe | poly | Greece | 257
+r1159102451 | island | Baker Island | Baker Island | Baker I. | North America | poly | United States Minor Outlying Islands | 265
+r1159102849 | island | Socotra | Socotra | Socotra | Asia | poly | Yemen | 267
+r1159102959 | island | Orkney | Orkney | Orkney Is. | Europe | poly | United Kingdom | 269
+r1159102855 | island | Gran Canaria | Gran Canaria | Gran Canaria | Europe | poly | Spain | 274
+r1159102817 | island | Menorca | Menorca | Menorca | Europe | poly | Spain | 282
+r1730072495 | island | Okinawa Island | Okinawa Island | Okinawa | Asia | poly | Japan | 289
+p1159105055 | island | Clipperton Island | Clipperton Island | Clipperton Island | World | pt | Clipperton Island | 290
+r1159102859 | island | Long Island | Long Island | Long I. | North America | poly | United States of America | 297
+r1159104145 | island | Aleutian Islands | Aleutian Islands | ALEUTIAN ISLANDS | North America | poly | United States of America | 300
+r1159104599 | island | Malay Archipelago | Malay Archipelago | MALAY ARCHIPELAGO | Asia | poly | Indonesia, Philippines, Malaysia | 301
+r1159102901 | island | Mariana Islands | Mariana Islands | MARIANA ISANDS | Oceania | poly | Northern Mariana Islands, Guam | 313
+r1159102907 | island | Marquesas Islands | Marquesas Islands | ÎLES MARQUESAS | Oceania | poly | French Polynesia | 314
+r1159102965 | island | Cyclades | Cyclades | Cyclades | Europe | poly | Greece | 315
+r1159103771 | island | Vancouver Island | Vancouver Island | Vancouver Island | North America | poly | Canada | 321
+r1159103777 | island | Ellesmere Island | Ellesmere Island | ELLESMERE  ISLAND | North America | poly | Canada | 322
+r1159104147 | island | West Indies | West Indies | WEST INDIES | North America | poly | Cuba, Dominican Republic, Haiti | 323
+r1159102955 | island | Ionian Islands | Ionian Islands | Ionian Is. | Europe | poly | Greece | 330
+r1159104275 | island | Hawaiian Islands | Hawaiian Islands | HAWAIIAN ISLANDS | North America | poly | United States of America | 331
+r1159102667 | island | Saipan | Saipan, Northern Mariana Islands | Saipan | Oceania | poly | Northern Mariana Islands | 335
+r1159102787 | island | Saaremaa | Saaremaa | Saaremaa | Europe | poly | Estonia | 336
+r1159103419 | island | Trinidad | Trinidad | Trinidad | North America | poly | Trinidad and Tobago | 337
+r1159103855 | island | Franz Josef Land | Franz Josef Land | FRANZ JOSEF LAND | Europe | poly | Russia | 341
+p1159104793 | island | Howland Island | Howland Island | Howland I. | North America | pt | United States Minor Outlying Islands | 342
+r1159102763 | island | Lombok | Lombok | Lombok | Asia | poly | Indonesia | 345
+r1159102797 | island | Lofoten | Lofoten | Lofoten | Europe | poly | Norway | 346
+r1159103471 | island | Oʻahu | Oʻahu | O‘ahu | North America | poly | United States of America | 349
+r1159104137 | island | Andaman Islands | Andaman Islands | ANDAMAN ISLANDS | Asia | poly | India | 350
+r1159102343 | island | Lanzarote | Lanzarote | Lanzarote | Europe | poly | Spain | 357
+r1159104281 | island | New Britain | New Britain | NEW BRITAIN | Oceania | poly | Papua New Guinea | 361
+r1159104283 | island | Hawaiʻi | Hawaiʻi (island) | Hawai‘i | North America | poly | United States of America | 362
+r1159102379 | island | Fuerteventura | Fuerteventura | Fuerteventura | Europe | poly | Spain | 367
+r1159102757 | island | Flores | Flores | Flores | Asia | poly | Indonesia, Portugal | 371
+r1159104529 | island | Kerguelen Islands | Kerguelen Islands | Îles Kerguelen | World | poly | French Southern and Antarctic Lands | 374
+r1159103773 | island | Victoria Island | Victoria Island | VICTORIA ISLAND | North America | poly | Canada | 384
+r1159102673 | island | Bora Bora | Bora Bora | Bora Bora | Oceania | poly | French Polynesia | 387
+r1730070381 | island | Johnston Atoll | Johnston Atoll | Johnston Atoll | North America | poly | United States Minor Outlying Islands | 396
+p1159104847 | island | Barbuda | Barbuda | Barbuda | North America | pt | Antigua and Barbuda | 397
+r1730071319 | island | Society Islands | Society Islands | ÎLES DE LA SOCIÉTÉ | Oceania | poly | French Polynesia | 405
+r1159104293 | island | Arctic Archipelago | Arctic Archipelago | ARCTIC ARCHIPELAGO | North America | poly | Canada | 406
+r1159102831 | island | Spitsbergen | Spitsbergen | Spitsbergen | Europe | poly | Norway | 414
+r1159103821 | island | Tuamotus | Tuamotus | ARCHIPEL DES TUAMOTU | Oceania | poly | French Polynesia | 419
+r1159102385 | island | La Palma | La Palma | La Palma | Europe | poly | Spain | 427
+r1159102717 | island | Wrangel Island | Wrangel Island | Wrangel I. | Europe | poly | Russia | 428
+r1159103823 | island | Bismarck Archipelago | Bismarck Archipelago | Bismarck Archipelago | Oceania | poly | Papua New Guinea | 431
+p1159105103 | island | Lord Howe Island | Lord Howe Island | Lord Howe Island | Oceania | pt | Australia | 432
+r1159103865 | island | New Siberian Islands | New Siberian Islands | NEW SIBERIAN ISLANDS | Europe | poly | Russia | 440
+r1159103833 | island | Maui | Maui | Maui | North America | poly | United States of America | 448
+r1159103863 | island | Spratly Islands | Spratly Islands | Spratly Islands | Asia | poly | Spratly Islands | 449
+r1159104287 | island | Greater Sunda Islands | Greater Sunda Islands | GREATER SUNDA ISLANDS | Asia | poly | Indonesia, Malaysia | 450
+r1159103425 | island | Cape Breton Island | Cape Breton Island | Cape Breton Island | North America | poly | Canada | 457
+r1159102573 | island | Chatham Islands | Chatham Islands | Chatham Islands | Oceania | poly | New Zealand | 461
+r1159103473 | island | Kauaʻi | Kauaʻi | Kaua‘i | North America | poly | United States of America | 462
+r1159103847 | island | Severnaya Zemlya | Severnaya Zemlya | SEVERNAYA ZEMLYA | Europe | poly | Russia | 463
+r1159102433 | island | Tarawa | Tarawa | Tarawa | Oceania | poly | Kiribati | 472
+r1159102695 | island | Marajó | Marajó | Ilha de Marajó | South America | poly | Brazil | 473
+r1159102851 | island | Bioko | Bioko | Bioko | Africa | poly | Equatorial Guinea | 474
+r1159103413 | island | Banks Island | Banks Island | BANKS ISLAND | North America | poly | Canada | 475
+r1159102571 | island | Juan Fernández Islands | Juan Fernández Islands | Islas Juan Fernandez | South America | poly | Chile | 478
+r1159102957 | island | Outer Hebrides | Outer Hebrides | Outer Hebrides | Europe | poly | United Kingdom | 479
+p1159104849 | island | Antigua | Antigua | Antigua | North America | pt | Antigua and Barbuda | 480
+r1159102761 | island | Sumbawa | Sumbawa | Sumbawa | Asia | poly | Indonesia | 484
+r1159103469 | island | Kiritimati | Kiritimati | Kiritimati | Oceania | poly | Kiribati | 487
+r1159104139 | island | Nicobar Islands | Nicobar Islands | NICOBAR ISLANDS | Asia | poly | India | 488
+r1159104531 | island | Chagos Archipelago | Chagos Archipelago | Chagos Archipelago | World | poly | British Indian Ocean Territory | 489
+p1159104715 | island | Diego Garcia | Diego Garcia | Diego Garcia | World | pt | British Indian Ocean Territory | 490
+p1159104865 | island | Tobago | Tobago | Tobago | North America | pt | Trinidad and Tobago | 491
+p1159105093 | island | Peter I Island | Peter I Island | Peter I Island | Antarctica | pt | Antarctica | 492
+r1159102383 | island | El Hierro | El Hierro | Hierro | Europe | poly | Spain | 499
+r1159102767 | island | Madura | Madura | Madura I. | Asia | poly | Indonesia | 500
+r1159102875 | island | Devon Island | Devon Island | Devon Island | North America | poly | Canada | 501
+r1730074507 | island | Alexander Island | Alexander Island | Alexander Island | Antarctica | poly | Antarctica | 510
+r1159104279 | island | Caroline Islands | Caroline Islands | CAROLINE ISLANDS | Oceania | poly | Federated States of Micronesia, Palau | 511
+p1159105087 | island | Macquarie Island | Macquarie Island | Macquarie Island | Oceania | pt | Australia | 512
+r1159103391 | island | Halmahera | Halmahera | Halmahera | Asia | poly | Indonesia | 526
+r1159103401 | island | Leyte | Leyte | Leyte | Asia | poly | Philippines | 527
+r1159103409 | island | Mindoro | Mindoro | Mindoro | Asia | poly | Philippines | 528
+r1159103411 | island | Cyprus | Cyprus (island) | Cyprus | Asia | poly | Cyprus, Northern Cyprus, Cyprus No Mans Area | 529
+r1159103825 | island | Bougainville Island | Bougainville Island | Bougainville | Oceania | poly | Papua New Guinea | 532
+r1159103827 | island | Guadalcanal | Guadalcanal | Guadalcanal | Oceania | poly | Solomon Islands | 533
+r1159102823 | island | Bjørnøya | Bjørnøya | Bjørnøya | Europe | poly | Norway | 539
+r1159102759 | island | Sumba | Sumba | Sumba | Asia | poly | Indonesia | 548
+r1159103389 | island | Seram Island | Seram Island | Ceram | Asia | poly | Indonesia | 549
+r1159103405 | island | Samar | Samar | Samar | Asia | poly | Philippines | 550
+p1159104707 | island | Surtsey | Surtsey | Surtsey | Europe | pt |  | 555
+p1159105057 | island | Île Amsterdam | Île Amsterdam | Île Amsterdam | World | pt | French Southern and Antarctic Lands | 556
+r1159102545 | island | São Miguel Island | São Miguel Island | São Miguel | Europe | poly | Portugal | 562
+r1159102685 | island | Upolu | Upolu | Upolu | Oceania | poly | Samoa | 563
+r1159102735 | island | K'gari | K'gari | Fraser I. | Oceania | poly | Australia | 564
+r1159102847 | island | Zanzibar Archipelago | Zanzibar Archipelago | Zanzibar I. | Africa | poly | United Republic of Tanzania | 565
+r1159103837 | island | Viti Levu | Viti Levu | Viti Levu | Oceania | poly | Fiji | 570
+r1159102815 | island | Malta | Malta (island) | Malta | Europe | poly | Malta | 577
+r1159102867 | island | Melville Island | Melville Island (Northwest Territories and Nunavut) | Melville Island | North America | poly | Canada | 578
+r1159102347 | island | Mahé | Mahé | Mahé I. | World | poly | Seychelles | 587
+r1159102733 | island | Kangaroo Island | Kangaroo Island | Kangaroo I. | Oceania | poly | Australia | 588
+r1159102873 | island | Axel Heiberg Island | Axel Heiberg Island | Axel Heiberg I. | North America | poly | Canada | 589
+r1159103399 | island | Negros | Negros | Negros | Asia | poly | Philippines | 591
+r1159103449 | island | New Ireland | New Ireland (island) | New Ireland | Oceania | poly | Papua New Guinea | 593
+r1159103839 | island | Mascarene Islands | Mascarene Islands | MASCARENE ISLANDS | World | poly | France, Mauritius | 594
+r1159104277 | island | Line Islands | Line Islands | LINE ISLANDS | Oceania | poly | Kiribati, United States Minor Outlying Islands | 595
+r1159104535 | island | Crozet Islands | Crozet Islands | Îles Crozet | World | poly | French Southern and Antarctic Lands | 596
+r1159102353 | island | Anjouan | Anjouan | Anjouan | Africa | poly | Comoros | 604
+r1159102869 | island | Southampton Island | Southampton Island | Southampton I. | North America | poly | Canada | 606
+r1159102877 | island | Kodiak Island | Kodiak Island | Kodiak Island | North America | poly | United States of America | 607
+r1159102943 | island | Commander Islands | Commander Islands | Commander Islands | Europe | poly | Russia | 609
+r1159102547 | island | Grande Comore | Grande Comore | Grande Comore | Africa | poly | Comoros, France | 616
+r1159103407 | island | Panay | Panay | Panay | Asia | poly | Philippines | 618
+r1159102483 | island | Iwo Jima | Iwo Jima | Iwo Jima | Asia | poly | Japan | 620
+p1159105063 | island | Europa Island | Europa Island | Île Europa | World | pt |  | 621
+r1159102671 | island | Molokaʻi | Molokaʻi | Moloka‘i | North America | poly | United States of America | 628
+r1159102871 | island | Prince of Wales Island | Prince of Wales Island (Nunavut) | Prince of Wales I. | North America | poly | Canada | 629
+r1159104617 | island | Stewart Island | Stewart Island | Stewart I. | Oceania | poly | New Zealand | 633
+r1159104149 | island | Queen Elizabeth Islands | Queen Elizabeth Islands | QUEEN ELIZABETH ISLANDS | North America | poly | Canada | 634
+r1159104471 | island | South Shetland Islands | South Shetland Islands | South Shetland Islands | Antarctica | poly | Antarctica | 635
+r1159102543 | island | Santiago | Santiago, Cape Verde | Santiago | Africa | poly | Cabo Verde | 644
+r1159102771 | island | Bangka Island | Bangka Island | Bangka | Asia | poly | Indonesia | 645
+r1159102601 | island | Paracel Islands | Paracel Islands | Paracel Islands | Asia | poly | China | 649
+r1159103461 | island | Savaiʻi | Savaiʻi | Savai‘i | Oceania | poly | Samoa | 650
+r1159104541 | island | South Orkney Islands | South Orkney Islands | South Orkney Islands | Antarctica | poly | Antarctica | 651
+p1159104867 | island | Margarita Island | Margarita Island | Margarita | South America | pt | Venezuela | 652
+r1159102529 | island | Kunashir | Kunashir | Kunashir | Europe | poly | Russia | 656
+r1159102745 | island | Buru | Buru | Buru | Asia | poly | Indonesia | 657
+r1159102783 | island | Nias | Nias | Nias | Asia | poly | Indonesia | 658
+r1159102841 | island | São Tomé | São Tomé (island) | São Tomé | Africa | poly | São Tomé and Principe | 659
+r1159102843 | island | Príncipe | Príncipe | Príncipe | Africa | poly | São Tomé and Principe | 660
+r1159103387 | island | Chiloé Island | Chiloé Island | Isla de Chiloé | South America | poly | Chile | 661
+r1159102915 | island | Samoan Islands | Samoan Islands | SAMOA IS. | Oceania | poly | Samoa, American Samoa | 666
+r1159102361 | island | Pico Island | Pico Island | Pico | Europe | poly | Portugal | 675
+r1159102533 | island | Bering Island | Bering Island | Bering I. | Europe | poly | Russia | 676
+r1159102691 | island | Tongatapu | Tongatapu | Tongatapu | Oceania | poly | Tonga | 677
+r1159102345 | island | Pemba Island | Pemba Island | Pemba I. | Africa | poly | United Republic of Tanzania | 688
+r1159102367 | island | Fogo | Fogo, Cape Verde | Fogo | Africa | poly | Cabo Verde | 689
+r1159102373 | island | Sal | Sal, Cape Verde | Sal | Africa | poly | Cabo Verde | 690
+r1159102889 | island | Phoenix Islands | Phoenix Islands | PHOENIX ISLANDS | Oceania | poly | Kiribati | 693
+r1159102903 | island | Gambier Islands | Gambier Islands | ÎLES GAMBIER | Oceania | poly | French Polynesia | 694
+r1159102951 | island | Auckland Islands | Auckland Islands | Auckland Islands | Oceania | poly | New Zealand | 695
+p1159104827 | island | Rarotonga | Rarotonga | Rarotonga | Oceania | pt | Cook Islands | 696
+r1159102835 | island | Vaygach Island | Vaygach Island | Vaygach I. | Europe | poly | Russia | 707
+r1159103775 | island | Labrador | Labrador | LABRADOR | North America | poly | Canada | 709
+r1730070601 | island | Aldabra | Aldabra | Aldabra I. | World | poly | Seychelles | 712
+r1159103477 | island | Vanua Levu | Vanua Levu | Vanua Levu | Oceania | poly | Fiji | 713
+r1159104539 | island | Prince Edward Islands | Prince Edward Islands | Prince Edward Islands | Africa | poly | South Africa | 714
+p1159104733 | island | Kosrae | Kosrae | Kosrae | Oceania | pt | Federated States of Micronesia | 715
+p1159104811 | island | Henderson Island | Henderson Island (Pitcairn Islands) | Henderson Island | Oceania | pt | Pitcairn Islands | 716
+p1159104859 | island | Saint Vincent | Saint Vincent (Saint Vincent and the Grenadines) | Saint Vincent | North America | pt | Saint Vincent and the Grenadines | 717
+p1159105071 | island | Gough Island | Gough Island | Gough Island | World | pt | Saint Helena | 718
+p1159105153 | island | Cozumel | Cozumel | I. de Cozumel | North America | pt | Mexico | 719
+r1159102363 | island | Terceira Island | Terceira Island | Terceira | Europe | poly | Portugal | 729
+r1159102393 | island | Prince Patrick Island | Prince Patrick Island | Prince Patrick I. | North America | poly | Canada | 730
+r1159102403 | island | King William Island | King William Island | King William I. | North America | poly | Canada | 731
+r1159104543 | island | South Georgia | South Georgia | South Georgia | World | poly | South Georgia and the Islands | 736
+r1159102375 | island | Boa Vista | Boa Vista, Cape Verde | Boa Vista | Africa | poly | Cabo Verde | 741
+r1159102679 | island | Lānaʻi | Lānaʻi | Läna‘i | North America | poly | United States of America | 742
+r1730074339 | island | Ross Island | Ross Island | Ross Island | Antarctica | poly | Antarctica | 746
+p1159105151 | island | Rockall | Rockall | Rockall | Europe | pt |  | 747
+r1159102407 | island | Somerset Island | Somerset Island (Nunavut) | Somerset I. | North America | poly | Canada | 756
+r1159102435 | island | Banaba | Banaba | Banaba | Oceania | poly | Kiribati | 757
+r1159102555 | island | St. Lawrence Island | St. Lawrence Island | St. Lawrence I. | North America | poly | United States of America | 758
+r1159102681 | island | Niʻihau | Niʻihau | Ni‘ihau | North America | poly | United States of America | 759
+r1159102585 | island | Yap | Yap | Yap Is. | Oceania | poly | Federated States of Micronesia | 766
+r1159102913 | island | Iturup | Iturup | Iturup | Europe | poly | Russia | 767
+r1159103497 | island | Alexander Archipelago | Alexander Archipelago | Alexander Archipelago | North America | poly | United States of America | 768
+p1159105101 | island | Ball's Pyramid | Ball's Pyramid | Ball's Pyramid | Oceania | pt |  | 769
+r1159102561 | island | Anticosti Island | Anticosti Island | î. d’Anticosti | North America | poly | Canada | 782
+r1159102687 | island | Tutuila | Tutuila | Tutuila | Oceania | poly | American Samoa | 783
+r1159103395 | island | Palawan | Palawan (island) | Palawan | Asia | poly | Philippines | 785
+r1159103811 | island | Espiritu Santo | Espiritu Santo | Espiritu Santo | Oceania | poly | Vanuatu | 791
+r1159102675 | island | Moʼorea | Moʼorea | Moorea | Oceania | poly | French Polynesia | 802
+r1159102769 | island | Belitung | Belitung | Belitung | Asia | poly | Indonesia | 803
+r1159102833 | island | Nordaustlandet | Nordaustlandet | Nordaustlandet | Europe | poly | Norway | 804
+r1159102857 | island | Madeira Island | Madeira Island | Madeira | Europe | poly | Portugal | 805
+r1159103377 | island | Bolshevik Island | Bolshevik Island | Bol’shevik I. | Europe | poly | Russia | 807
+r1159103487 | island | Sulu Archipelago | Sulu Archipelago | Sulu Archipelago | Asia | poly | Philippines | 813
+p1159104837 | island | Saint Croix | Saint Croix | Saint Croix | North America | pt | United States Virgin Islands | 815
+p1159105027 | island | Robinson Crusoe Island | Robinson Crusoe Island | I. Robinson Crusoe | South America | pt | Chile | 816
+r1159102355 | island | Mafia Island | Mafia Island | Mafia I. | Africa | poly | United Republic of Tanzania | 829
+r1159102725 | island | Kotelny Island | Kotelny Island | Kotel’nyy I. | Europe | poly | Russia | 830
+r1159103379 | island | October Revolution Island | October Revolution Island | October Revolution I. | Europe | poly | Russia | 833
+r1159103495 | island | Haida Gwaii | Haida Gwaii | Haida Gwaii | North America | poly | Canada | 837
+r1159102371 | island | Santo Antão | Santo Antão, Cape Verde | Santo Antão | Africa | poly | Cabo Verde | 844
+r1730070385 | island | Atafu | Atafu | Atafu | Oceania | poly | New Zealand | 845
+r1159102657 | island | Efate | Efate | Éfaté | Oceania | poly | Vanuatu | 846
+r1159102743 | island | Yos Sudarso Island | Yos Sudarso Island | Yos Sudarso I. | Asia | poly | Indonesia | 847
+l1159126747 | lake | Dead Sea | Dead Sea | Dead Sea | Asia | poly | Jordan, Palestine, Israel | 73
+l1159113279 | lake | Lake Titicaca | Lake Titicaca | Lago Titicaca | South America | poly | Peru, Bolivia | 111
+l1159113219 | lake | Lake Chad | Lake Chad | Lake Chad | Africa | poly | Chad, Cameroon | 191
+l1159114143 | lake | Lake Geneva | Lake Geneva | Lake Geneva | Europe | poly | Switzerland, France | 213
+l1159114259 | lake | Lake Constance | Lake Constance | Bodensee | Europe | poly | Germany, Switzerland, Austria | 221
+l1159114609 | lake | Lake Balaton | Lake Balaton | Lake Balaton | Europe | poly | Hungary | 238
+l1159114879 | lake | Sea of Galilee | Sea of Galilee | Sea of Galilee | Asia | poly | Israel | 239
+l1159126829 | lake | Lake Van | Lake Van | Lake Van | Asia | poly | Turkey | 285
+l1159126655 | lake | Issyk-Kul | Issyk-Kul | Issyk-Kul | Asia | poly | Kyrgyzstan | 302
+l1159126669 | lake | Lake Turkana | Lake Turkana | Lake Turkana | Africa | poly | Kenya, Ethiopia | 324
+l1159113251 | lake | Lake Onega | Lake Onega | Lake Onega | Europe | poly | Russia | 333
+l1159113577 | lake | Lake Kivu | Lake Kivu | Lake Kivu | Africa | poly | Democratic Republic of the Congo, Rwanda | 351
+l1159126761 | lake | Lake Urmia | Lake Urmia | Lake Urmia | Asia | poly | Iran | 352
+l1159113235 | lake | Vänern | Vänern | Vänern | Europe | poly | Sweden | 377
+l1159115833 | lake | Loch Ness | Loch Ness | Loch Ness | Europe | poly | United Kingdom | 378
+l1159106791 | lake | Lake Nicaragua | Lake Nicaragua | Lago de Nicaragua | North America | poly | Nicaragua | 389
+l1159114361 | lake | Lake Toba | Lake Toba | Danau Toba | Asia | poly | Indonesia | 390
+l1159113265 | lake | Lake Tana | Lake Tana | Lake Tana | Africa | poly | Ethiopia | 400
+l1159113295 | lake | Saimaa | Saimaa | Lake Saimaa | Europe | poly | Finland | 401
+l1159115109 | lake | Lake Sevan | Lake Sevan | Lake Sevan | Asia | poly | Armenia | 408
+l1159113595 | lake | Lake Edward | Lake Edward | Lake Edward | Africa | poly | Democratic Republic of the Congo, Uganda | 422
+l1159126725 | lake | Qinghai Lake | Qinghai Lake | Qinghai Hu | Asia | poly | China | 452
+l1159126421 | lake | Great Salt Lake | Great Salt Lake | Great Salt Lake | North America | poly | United States of America | 464
+l1159113405 | lake | Lake Mweru | Lake Mweru | Lac Moeru | Africa | poly | Zambia, Democratic Republic of the Congo | 503
+l1159113563 | lake | Lake Peipus | Lake Peipus | Lake Peipus | Europe | poly | Estonia, Russia | 513
+l1159114015 | lake | Poyang Lake | Poyang Lake | Poyang Hu | Asia | poly | China | 520
+l1159115641 | lake | Lake Biwa | Lake Biwa | Biwa Ko | Asia | poly | Japan | 521
+l1159114173 | lake | Vättern | Vättern | Vättern | Europe | poly | Sweden | 536
+l1159122891 | lake | Mälaren | Mälaren | Mälaren | Europe | poly | Sweden | 546
+l1159113439 | lake | Tonle Sap | Tonle Sap | Tonlé Sap | Asia | poly | Cambodia | 558
+l1159114553 | lake | Lake Manasarovar | Lake Manasarovar | Mapam Yumco | Asia | poly | China | 574
+l1159113373 | lake | Lake Khövsgöl | Lake Khövsgöl | Khövsgöl Nuur | Asia | poly | Mongolia | 581
+l1159113545 | lake | Lake Inari | Lake Inari | Inarijrvi | Europe | poly | Finland | 582
+l1159125095 | lake | Lake Nasser | Lake Nasser | Lake Nasser | Africa | poly | Egypt, Sudan | 583
+l1159106907 | lake | Lake Tahoe | Lake Tahoe | Lake Tahoe | North America | poly | United States of America | 599
+l1159113423 | lake | Lake Khanka | Lake Khanka | Lake Khanka | Europe | poly | Russia, China | 624
+l1159125149 | lake | Lake Volta | Lake Volta | Lake Volta | Africa | poly | Ghana | 625
+l1159106863 | lake | Lake Athabasca | Lake Athabasca | Lake Athabasca | North America | poly | Canada | 638
+l1159127099 | lake | Lake Taupō | Lake Taupō | Lake Taupo | Oceania | poly | New Zealand | 639
+l1159115429 | lake | Lake Skadar | Lake Skadar | Lake Skadar | Europe | poly | Albania, Montenegro | 670
+l1159126631 | lake | IJsselmeer | IJsselmeer | IJsselmeer | Europe | poly | Netherlands | 671
+l1159126709 | lake | Uvs Lake | Uvs Lake | Uvs Nuur | Asia | poly | Mongolia | 672
+l1159126901 | lake | Lake Assal | Lake Assal (Djibouti) | Lake Assal | Africa | poly | Djibouti | 700
+l1159114155 | lake | Lough Neagh | Lough Neagh | Lough Neagh | Europe | poly | United Kingdom | 726
+l1159123281 | lake | Lake Ilmen | Lake Ilmen | Lake Il'Men' | Europe | poly | Russia | 727
+l1159113611 | lake | Lake Tai | Lake Tai | Tai Hu | Asia | poly | China | 738
+l1159114279 | lake | Lake Kyoga | Lake Kyoga | Lake Kyoga | Africa | poly | Uganda | 739
+l1159107259 | lake | Lake Managua | Lake Managua | Lago de Managua | North America | poly | Nicaragua | 752
+l1159115043 | lake | Võrtsjärv | Võrtsjärv | Võrtsjärv | Europe | poly | Estonia | 753
+l1159113637 | lake | Namtso | Namtso | Nam Co | Asia | poly | China | 772
+l1159126815 | lake | Lake Tuz | Lake Tuz | Lake Tuz | Asia | poly | Turkey | 773
+l1159126453 | lake | Salton Sea | Salton Sea | Salton Sea | North America | poly | United States of America | 794
+l1159106953 | lake | Lake Champlain | Lake Champlain | Lake Champlain | North America | poly | United States of America, Canada | 822
+l1159114189 | lake | Lake Taymyr | Lake Taymyr | Lake Taymyr | Europe | poly | Russia | 823
+l1159115773 | lake | Pangong Tso | Pangong Tso | Banggong Co | Asia | poly | India, China | 824
+l1159123091 | lake | Lake Zaysan | Lake Zaysan | Lake Zaysan | Asia | poly | Kazakhstan | 825
+l1159126775 | lake | Sarygamysh Lake | Sarygamysh Lake | Sarygamysh Köli | Asia | poly | Turkmenistan, Uzbekistan | 842
+l1159113531 | lake | Lake Bangweulu | Lake Bangweulu | Lake Bangweulu | Africa | poly | Zambia | 863
+l1159114299 | lake | Lake Rukwa | Lake Rukwa | Lake Rukwa | Africa | poly | United Republic of Tanzania | 864
+l1159113395 | lake | Päijänne | Päijänne | Päijänne | Europe | poly | Finland | 876
+l1159113621 | lake | Lake Argentino | Lake Argentino | Lago Argentino | South America | poly | Argentina | 877
+l1159114391 | lake | Hjälmaren | Hjälmaren | Hjälmaren | Europe | poly | Sweden | 890
+l1159125055 | lake | Lake Kariba | Lake Kariba | Lake Kariba | Africa | poly | Zimbabwe, Zambia | 891
+l1159126693 | lake | Vistula Lagoon | Vistula Lagoon | Zalew Wislany | Europe | poly | Poland, Russia | 892
+l1159106843 | lake | Lake Manitoba | Lake Manitoba | Lake Manitoba | North America | poly | Canada | 903
+l1159113513 | lake | Hulun Lake | Hulun Lake | Hulun Nuur | Asia | poly | China | 904
+l1159106833 | lake | Lake Nipigon | Lake Nipigon | Lake Nipigon | North America | poly | Canada | 912
+l1159113323 | lake | General Carrera Lake | General Carrera Lake | Lago Buenos Aires | South America | poly | Chile, Argentina | 913
+l1159113927 | lake | Bosten Lake | Bosten Lake | Bosten Hu | Asia | poly | China | 914
+l1159106781 | lake | Lake Okeechobee | Lake Okeechobee | Lake Okeechobee | North America | poly | United States of America | 924
+l1159124989 | lake | Kakhovka Reservoir | Kakhovka Reservoir | Kakhovka Reservoir | Europe | poly | Ukraine | 925
+l1159123579 | lake | Gatun Lake | Gatun Lake | Lago Gatun | North America | poly | Panama | 926
+l1159106825 | lake | Lake of the Woods | Lake of the Woods | Lake of the Woods | North America | poly | Canada, United States of America | 941
+l1159114573 | lake | Lake Beloye | Lake Beloye (Vologda Oblast) | Lake Beloye | Europe | poly | Russia | 947
+l1159114641 | lake | Viedma Lake | Viedma Lake | Lago Viedma | South America | poly | Argentina | 948
+l1159123301 | lake | Oulujärvi | Oulujärvi | Oulujärvi | Europe | poly | Finland | 949
+l1159113343 | lake | Llanquihue Lake | Llanquihue Lake | Lago Llanquihue | South America | poly | Chile | 959
+l1159123217 | lake | Lake Imandra | Lake Imandra | Lake Imandra | Europe | poly | Russia | 960
+l1159106851 | lake | Lake Winnipegosis | Lake Winnipegosis | Lake Winnipegosis | North America | poly | Canada | 971
+l1159114537 | lake | Lake Rakshastal | Lake Rakshastal | Langa Co | Asia | poly | China | 972
+l1159126789 | lake | Lake Alakol | Lake Alakol | Alakol | Asia | poly | Kazakhstan | 973
+l1159126845 | lake | Lake Abaya | Lake Abaya | Lake Abaya | Africa | poly | Ethiopia | 974
+l1159106925 | lake | Nettilling Lake | Nettilling Lake | Nettilling Lake | North America | poly | Canada | 990
+l1159107241 | lake | Lake Izabal | Lake Izabal | Lago de Izabal | North America | poly | Guatemala | 991
+l1159107251 | lake | Lake Chapala | Lake Chapala | Lago de Chapala | North America | poly | Mexico | 992
+l1159114237 | lake | Storsjön | Storsjön | Storsjön | Europe | poly | Sweden | 993
+l1159125013 | lake | Kuybyshev Reservoir | Kuybyshev Reservoir | Samara Reservoir | Europe | poly | Russia | 994
+l1159126917 | lake | Lake Tengiz | Lake Tengiz | Tengiz Köli | Asia | poly | Kazakhstan | 995
+r1159103741 | lowland | Grand Canyon | Grand Canyon | Grand Canyon | North America | poly | United States of America | 142
+r1159104319 | lowland | Great Plains | Great Plains | GREAT PLAINS | North America | poly | United States of America, Canada | 264
+r1159103991 | lowland | Great Rift Valley | Great Rift Valley | GREAT RIFT VALLEY | Africa | poly | Ethiopia, United Republic of Tanzania, Kenya | 298
+e1159106291 | lowland | Death Valley | Death Valley | Death Valley | North America | pt | United States of America | 376
+r1730072209 | lowland | Sundarbans | Sundarbans | Sundarbans | Asia | poly | Bangladesh, India | 394
+r1159104221 | lowland | Pampas | Pampas | PAMPAS | South America | poly | Argentina | 416
+r1159104237 | lowland | Fergana Valley | Fergana Valley | Fergana Valley | Asia | poly | Uzbekistan, Kyrgyzstan, Tajikistan | 417
+r1159103505 | lowland | Nile Delta | Nile Delta | Nile Delta | Africa | poly | Egypt | 458
+r1159104101 | lowland | Pantanal | Pantanal | PANTANAL | South America | poly | Brazil, Bolivia, Paraguay | 460
+r1159104223 | lowland | Indo-Gangetic Plain | Indo-Gangetic Plain | GANGES PLAIN | Asia | poly | India, Bangladesh, Nepal | 502
+r1159103983 | lowland | Danube Delta | Danube Delta | Danube Delta | Europe | poly | Romania, Ukraine | 508
+r1159104093 | lowland | Tarim Basin | Tarim Basin | TARIM BASIN | Asia | poly | China | 554
+r1159104107 | lowland | West Siberian Plain | West Siberian Plain | WESTERN SIBERIAN PLAIN | Europe | poly | Russia | 568
+r1159104313 | lowland | North China Plain | North China Plain | NORTH CHINA PLAIN | Asia | poly | China | 632
+r1159104217 | lowland | Gran Chaco | Gran Chaco | GRAN CHACO | South America | poly | Argentina, Paraguay, Bolivia | 665
+r1159104317 | lowland | North European Plain | North European Plain | NORTHERN EUROPEAN PLAIN | Europe | poly | Russia, France, Poland | 692
+r1159103307 | lowland | Great Hungarian Plain | Great Hungarian Plain | Alföld | Europe | poly | Hungary, Republic of Serbia, Romania | 708
+r1159104161 | lowland | Great Basin | Great Basin | GREAT BASIN | North America | poly | United States of America | 710
+r1159104271 | lowland | Canadian Shield | Canadian Shield | CANADIAN SHIELD | North America | poly | Canada, United States of America | 711
+r1159104325 | lowland | Amazon basin | Amazon basin | AMAZON BASIN | South America | poly | Brazil, Peru, Bolivia | 735
+r1159104219 | lowland | Llanos | Llanos | LLANOS | South America | poly | Venezuela, Colombia | 764
+r1159103987 | lowland | Mekong Delta | Mekong Delta | Mekong Delta | Asia | poly | Vietnam, Cambodia | 809
+r1159104205 | lowland | Turan Depression | Turan Depression | TURAN LOWLAND | Asia | poly | Turkmenistan, Uzbekistan, Kazakhstan | 812
+r1159103293 | lowland | Serengeti | Serengeti | Serengeti Plains | Africa | poly | United Republic of Tanzania, Kenya | 832
+r1159104323 | lowland | Congo Basin | Congo Basin | CONGO BASIN | Africa | poly | Democratic Republic of the Congo, Central African Republic, Angola | 836
+r1159103751 | lowland | Central Valley | Central Valley (California) | Central Valley | North America | poly | United States of America | 887
+r1159104109 | lowland | Caspian Depression | Caspian Depression | CASPIAN DEPRESSION | Asia | poly | Kazakhstan, Russia | 900
+e1159105721 | lowland | Turpan Depression | Turpan Depression | Turpan Depression | Asia | pt | China | 902
+r1159103515 | lowland | Ganges Delta | Ganges Delta | Ganges Delta | Asia | poly | Bangladesh, India | 907
+r1159103977 | lowland | Niger Delta | Niger Delta | Niger Delta | Africa | poly | Nigeria | 910
+r1159103721 | lowland | Qaidam Basin | Qaidam Basin | Qaidam Basin | Asia | poly | China | 919
+r1730073981 | lowland | Pontic–Caspian steppe | Pontic–Caspian steppe | PONTIC STEPPE | Europe | poly | Russia, Ukraine, Kazakhstan | 921
+r1159104055 | lowland | Nullarbor Plain | Nullarbor Plain | NULLARBOR PLAIN | Oceania | poly | Australia | 955
+r1159104163 | lowland | Great Artesian Basin | Great Artesian Basin | GREAT ARTESIAN BASIN | Oceania | poly | Australia | 1049
+r1159104315 | lowland | Kazakh Steppe | Kazakh Steppe | KAZAKH STEPPE | Asia | poly | Kazakhstan, Russia | 1050
+r1159104091 | lowland | Sichuan Basin | Sichuan Basin | SICHUAN BASIN | Asia | poly | China | 1065
+r1159104097 | lowland | Piedmont | Piedmont (plateau) | PIEDMONT | North America | poly | United States of America | 1066
+r1159103311 | lowland | Llano Estacado | Llano Estacado | Llano Estacado | North America | poly | United States of America | 1083
+r1159103981 | lowland | Volga Delta | Volga Delta | Volga Delta | Europe | poly | Russia | 1085
+r1159104103 | lowland | North Siberian Lowland | North Siberian Lowland | NORTH SIBERIAN LOWLAND | Europe | poly | Russia | 1086
+r1730073001 | lowland | Kolyma Lowland | Kolyma Lowland | KOLYMA LOWLAND | Europe | poly | Russia | 1093
+m1159115057 | ocean | Atlantic Ocean | Atlantic Ocean | North Atlantic Ocean | World | poly |  | 14
+m1159115079 | ocean | Pacific Ocean | Pacific Ocean | North Pacific Ocean | World | poly |  | 15
+m1159115123 | ocean | Indian Ocean | Indian Ocean | INDIAN OCEAN | World | poly |  | 21
+m1159115017 | ocean | Arctic Ocean | Arctic Ocean | Arctic Ocean | World | poly |  | 27
+m1159115037 | ocean | Southern Ocean | Southern Ocean | SOUTHERN OCEAN | World | poly |  | 37
+e1159105715 | peak | Mount Everest | Mount Everest | Mount Everest | Asia | pt | China, Nepal | 25
+e1159105301 | peak | Mount Kilimanjaro | Mount Kilimanjaro | Mount Kilimanjaro | Africa | pt | United Republic of Tanzania | 50
+e1159105623 | peak | Mount Fuji | Mount Fuji | Fuji | Asia | pt | Japan | 95
+e1159105949 | peak | Mont Blanc | Mont Blanc | Mont Blanc | Europe | pt | Italy, France | 122
+e1159105953 | peak | Mount Elbrus | Mount Elbrus | Gora Elbrus | Europe | pt | Russia | 149
+e1159108719 | peak | Aconcagua | Aconcagua | Cerro Aconcagua | South America | pt | Argentina | 150
+e1159105729 | peak | K2 | K2 | K2 | Asia | pt | China, Pakistan | 157
+e1159105799 | peak | Mount Ararat | Mount Ararat | Mount Ararat | Asia | pt | Turkey | 158
+e1159105881 | peak | Mount Bazardüzü | Mount Bazardüzü | Bazar Dyuzi | Europe | pt | Russia, Azerbaijan | 178
+e1159107857 | peak | Teide | Teide | Pico del Teide | Europe | pt | Spain | 190
+e1159105823 | peak | Kangchenjunga | Kangchenjunga | Kanchenjunga | Asia | pt | India, Nepal | 210
+e1159106297 | peak | Denali | Denali | Denali | North America | pt | United States of America | 220
+e1159106673 | peak | Uluru | Uluru | Uluru (Ayers Rock) | Oceania | pt | Australia | 258
+e1159105929 | peak | Matterhorn | Matterhorn | Matterhorn | Europe | pt | Switzerland, Italy | 270
+e1159107245 | peak | Krakatoa | Krakatoa | Krakatau | Asia | pt |  | 271
+e1159105733 | peak | Mount Kailash | Mount Kailash | Kailash | Asia | pt | China | 276
+e1159105705 | peak | Dhaulagiri | Dhaulagiri | Dhaulagiri | Asia | pt | Nepal | 283
+e1159105791 | peak | Nanga Parbat | Nanga Parbat | Nanga Parbat | Asia | pt | Pakistan | 284
+e1159105297 | peak | Mount Kenya | Mount Kenya | Mount Kenya | Africa | pt | Kenya | 291
+e1159107911 | peak | Mauna Kea | Mauna Kea | Mauna Kea | North America | pt | United States of America | 308
+e1159106753 | peak | Mount Kosciuszko | Mount Kosciuszko | Mount Kosciuszko | Oceania | pt | Australia | 316
+e1159108689 | peak | Chimborazo | Chimborazo | Chimborazo | South America | pt | Ecuador | 332
+e1159105649 | peak | Mount Damavand | Mount Damavand | Mount Damavand | Asia | pt | Iran | 375
+e1159106815 | peak | Ben Nevis | Ben Nevis | Ben Nevis | Europe | pt | United Kingdom | 388
+e1159105787 | peak | Mount Paektu | Mount Paektu | Paektu-san | Asia | pt | North Korea, China | 398
+e1159107539 | peak | Puncak Jaya | Puncak Jaya | Puncak Jaya | Asia | pt | Indonesia | 399
+e1159105413 | peak | Vinson Massif | Vinson Massif | Vinson Massif | Antarctica | pt | Antarctica | 407
+e1159105955 | peak | Zugspitze | Zugspitze | Zugspitze | Europe | pt | Germany, Austria | 420
+e1159106177 | peak | Mount Logan | Mount Logan | Mount Logan | North America | pt | Canada | 421
+e1159107205 | peak | Mount Tambora | Mount Tambora | Gunung Tambora | Asia | pt | Indonesia | 441
+e1159106545 | peak | Ojos del Salado | Ojos del Salado | Nevado Ojos del Salado | South America | pt | Argentina, Chile | 451
+e1159107181 | peak | Mount Kinabalu | Mount Kinabalu | Gunung Kinabalu | Asia | pt | Malaysia | 481
+e1159107313 | peak | Mount Pinatubo | Mount Pinatubo | Mount Pinatubo | Asia | pt | Philippines | 482
+e1159105397 | peak | Mount Erebus | Mount Erebus | Mount Erebus | Antarctica | pt | Antarctica | 493
+e1159105889 | peak | Mount Aragats | Mount Aragats | Aragats Lerr | Asia | pt | Armenia | 494
+e1159106339 | peak | Mount Rainier | Mount Rainier | Mount Rainier | North America | pt | United States of America | 495
+e1159107729 | peak | Aoraki / Mount Cook | Aoraki / Mount Cook | Aoraki (Mount Cook) | Oceania | pt | New Zealand | 496
+e1159105963 | peak | Triglav | Triglav | Triglav | Europe | pt | Slovenia | 534
+e1159106093 | peak | Pico de Orizaba | Pico de Orizaba | Pico de Orizaba | North America | pt | Mexico | 535
+e1159105865 | peak | Gangkhar Puensum | Gangkhar Puensum | Gangkar Punsum | Asia | pt | Bhutan, China | 545
+e1159105945 | peak | Grossglockner | Grossglockner | Grossglockner | Europe | pt | Austria | 557
+e1159105637 | peak | Klyuchevskaya Sopka | Klyuchevskaya Sopka | Klyuchevskaya Sopka | Europe | pt | Russia | 572
+e1159108379 | peak | Mount Pelée | Mount Pelée | Montagne Pelée | Europe | pt | France | 573
+e1159106313 | peak | Mount Whitney | Mount Whitney | Mount Whitney | North America | pt | United States of America | 580
+e1159105349 | peak | Mount Cameroon | Mount Cameroon | Mont Cameroun | Africa | pt | Cameroon | 598
+e1159105751 | peak | Terich Mir | Terich Mir | Tirich Mir | Asia | pt | Pakistan | 611
+e1159106019 | peak | Hoverla | Hoverla | Gora Goverla | Europe | pt | Ukraine | 612
+e1159106519 | peak | Mount Roraima | Mount Roraima | Mount Roraima | South America | pt | Venezuela | 613
+e1159105967 | peak | Sněžka | Sněžka | Sněžka | Europe | pt | Poland, Czechia | 622
+e1159107215 | peak | Semeru | Semeru | Gunung Semeru | Asia | pt | Indonesia | 623
+e1159105789 | peak | Noshaq | Noshaq | Nowshak | Asia | pt | Pakistan, Afghanistan | 636
+e1159105985 | peak | Monte Rosa | Monte Rosa | Monte Rosa | Europe | pt | Italy, Switzerland | 637
+e1159105901 | peak | Gerlachovský štít | Gerlachovský štít | Gerlach | Europe | pt | Slovakia | 653
+e1159105931 | peak | Kebnekaise | Kebnekaise | Kebnekaise | Europe | pt | Sweden | 654
+e1159108555 | peak | Llullaillaco | Llullaillaco | Volcán Llullaillaco | South America | pt | Argentina, Chile | 655
+e1159105691 | peak | Ismoil Somoni Peak | Ismoil Somoni Peak | Pik Imeni Ismail Samani | Asia | pt | Tajikistan | 667
+e1159105775 | peak | Jengish Chokusu | Jengish Chokusu | Pik Pobeda | Asia | pt | Kyrgyzstan, China | 668
+e1159105939 | peak | Musala | Musala | Musala | Europe | pt | Bulgaria | 669
+e1159105855 | peak | Shkhara | Shkhara | Gora Shkhara | Europe | pt | Russia, Georgia | 684
+e1159106509 | peak | Nevado del Ruiz | Nevado del Ruiz | Nevado del Ruiz | South America | pt | Colombia | 685
+e1159105269 | peak | Toubkal | Toubkal | Jebel Toubkal | Africa | pt | Morocco | 698
+e1159105983 | peak | Monte Titano | Monte Titano | Monte Titano | Europe | pt | San Marino, Italy | 699
+e1159105613 | peak | Yushan | Yushan (mountain) | Yu Shan | Asia | pt | Taiwan | 720
+e1159105709 | peak | Belukha Mountain | Belukha Mountain | Belukha | Europe | pt | Russia, Kazakhstan | 721
+e1159105915 | peak | Aneto | Aneto | Pico de Aneto | Europe | pt | Spain | 722
+e1159105919 | peak | Mulhacén | Mulhacén | Mulhacén | Europe | pt | Spain | 723
+e1159105935 | peak | Galdhøpiggen | Galdhøpiggen | Galdhpiggen | Europe | pt | Norway | 724
+e1159107739 | peak | Mount Ruapehu | Mount Ruapehu | Mount Ruapehu | Oceania | pt | New Zealand | 725
+e1159105621 | peak | Sakurajima | Sakurajima | Sakurajima | Asia | pt | Japan | 748
+e1159105965 | peak | Suur Munamägi | Suur Munamägi | Suur Munamagi | Europe | pt | Estonia | 749
+e1159106827 | peak | Snowdon | Snowdon | Snowdon | Europe | pt | United Kingdom | 750
+e1159108575 | peak | Nevado Sajama | Nevado Sajama | Nevado Sajama | South America | pt | Bolivia | 751
+e1159105701 | peak | Mount Wutai | Mount Wutai | Wutai Shan | Asia | pt | China | 770
+e1159108665 | peak | Huascarán | Huascarán | Nevado Huascarán | South America | pt | Peru | 771
+e1159105943 | peak | Moldoveanu Peak | Moldoveanu Peak | Moldoveanu | Europe | pt | Romania | 792
+e1159106835 | peak | Carrauntoohil | Carrauntoohil | Carrauntoohil | Europe | pt | Ireland | 793
+e1159105283 | peak | Ras Dashen | Ras Dashen | Ras Dejen | Africa | pt | Ethiopia | 817
+e1159105927 | peak | Mount Yamantau | Mount Yamantau | Gora Yamantau | Europe | pt | Russia | 818
+e1159105957 | peak | Vaalserberg | Vaalserberg | Vaalserberg | Europe | pt | Germany, Belgium, Netherlands | 819
+e1159107269 | peak | Mount Kerinci | Mount Kerinci | Gunung Kerinci | Asia | pt | Indonesia | 820
+e1159108707 | peak | Pico Bolívar | Pico Bolívar | Pico Bolívar | South America | pt | Venezuela | 821
+e1159105847 | peak | Hallasan | Hallasan | Halla-san | Asia | pt | South Korea | 839
+e1159107349 | peak | Mount Rinjani | Mount Rinjani | Gunung Rinjani | Asia | pt | Indonesia | 840
+e1159108681 | peak | Galeras | Galeras | Volcán Galeras | South America | pt | Colombia | 841
+e1159105501 | peak | Fansipan | Fansipan | Fan Si Pan | Asia | pt | Vietnam | 855
+e1159106007 | peak | Kékes | Kékes | Kékes | Europe | pt | Hungary | 856
+e1159106011 | peak | Halti | Halti | Haltiatunturi | Europe | pt | Norway, Finland | 857
+e1159106027 | peak | Durmitor | Durmitor | Durmitor | Europe | pt | Montenegro | 858
+e1159106029 | peak | Dinara | Dinara | Dinara | Europe | pt | Bosnia and Herzegovina, Croatia | 859
+e1159106091 | peak | Volcán de Colima | Volcán de Colima | Volcán de Colima | North America | pt | Mexico | 860
+e1159106633 | peak | Beerenberg | Beerenberg | Beerenberg | Europe | pt | Norway | 861
+e1159107023 | peak | Hvannadalshnjúkur | Hvannadalshnjúkur | Hvannadalshnkur | Europe | pt | Iceland | 862
+r1159104011 | peninsula | Florida | Florida | FLORIDA | North America | poly | United States of America | 18
+r1159104347 | peninsula | Central America | Central America | CENTRAL AMERICA | North America | poly | Mexico, Nicaragua, Honduras | 38
+r1159103999 | peninsula | Crimea | Crimea | CRIMEA | Europe | poly | Russia | 42
+r1159104241 | peninsula | Balkans | Balkans | BALKAN PEN. | Europe | poly | Bulgaria, Greece, Republic of Serbia | 44
+r1159104329 | peninsula | Scandinavia | Scandinavia | SCANDINAVIA | Europe | poly | Sweden, Norway, Finland | 61
+r1159104333 | peninsula | Arabian Peninsula | Arabian Peninsula | ARABIAN PENINSULA | Asia | poly | Saudi Arabia, Yemen, Oman | 92
+r1159104239 | peninsula | Horn of Africa | Horn of Africa | SOMALI PENINSULA | Africa | poly | Somalia, Ethiopia, Somaliland | 143
+r1159104327 | peninsula | Indian subcontinent | Indian subcontinent | INDIA | Asia | poly | India, Pakistan, Bangladesh | 156
+r1159104331 | peninsula | Mainland Southeast Asia | Mainland Southeast Asia | INDOCHINA PENINSULA | Asia | poly | Myanmar, Thailand, Vietnam | 173
+r1159104007 | peninsula | Yucatán Peninsula | Yucatán Peninsula | PEN. DE YUCATÁN | North America | poly | Mexico, Guatemala, Belize | 187
+r1159104155 | peninsula | Kamchatka Peninsula | Kamchatka Peninsula | KAMCHATKA PENINSULA | Europe | poly | Russia | 188
+p1159105165 | peninsula | Cape of Good Hope | Cape of Good Hope | Cape of Good Hope | Africa | pt | South Africa | 189
+r1159103669 | peninsula | Korean Peninsula | Korean Peninsula | KOREA | Asia | poly | South Korea, North Korea, China | 223
+r1159104157 | peninsula | Malay Peninsula | Malay Peninsula | MALAY PENINSULA | Asia | poly | Malaysia, Thailand | 251
+r1159104005 | peninsula | Baja California peninsula | Baja California peninsula | BAJA CALIFORNIA | North America | poly | Mexico | 312
+r1159104001 | peninsula | Kola Peninsula | Kola Peninsula | KOLA PENINSULA | Europe | poly | Russia | 329
+p1159105049 | peninsula | Cape Horn | Cape Horn | Cabo de Hornos | South America | pt | Chile | 343
+r1159104439 | peninsula | Antarctic Peninsula | Antarctic Peninsula | Antarctic Peninsula | Antarctica | poly | Antarctica | 373
+r1159104151 | peninsula | Taymyr Peninsula | Taymyr Peninsula | TAYMYR PENINSULA | Europe | poly | Russia | 415
+r1159103661 | peninsula | Chukchi Peninsula | Chukchi Peninsula | CHUKCHI PENINSULA | Europe | poly | Russia | 429
+r1159104085 | peninsula | Isthmus of Panama | Isthmus of Panama | Is. de Panamá | North America | poly | Panama | 485
+r1159103993 | peninsula | Cape York Peninsula | Cape York Peninsula | CAPE YORK PEN. | Oceania | poly | Australia | 544
+r1159104009 | peninsula | Alaska Peninsula | Alaska Peninsula | ALASKA PENINSULA | North America | poly | United States of America | 567
+p1159104971 | peninsula | North Cape | North Cape (Norway) | Nordkapp | Europe | pt | Norway | 571
+p1159105007 | peninsula | Cape Canaveral | Cape Canaveral | Cape Canaveral | North America | pt | United States of America | 597
+p1159104883 | peninsula | Cape Agulhas | Cape Agulhas | Cape Agulhas | Africa | pt | South Africa | 610
+r1159104013 | peninsula | Valdés Peninsula | Valdés Peninsula | Península Valdés | South America | poly | Argentina | 619
+r1159104153 | peninsula | Yamal Peninsula | Yamal Peninsula | YAMAL PENINSULA | Europe | poly | Russia | 648
+r1159103677 | peninsula | Liaodong Peninsula | Liaodong Peninsula | Liaodong Pen. | Asia | poly | China | 680
+r1159103171 | peninsula | Absheron Peninsula | Absheron Peninsula | Absheron Pen. | Asia | poly | Azerbaijan | 691
+p1159105015 | peninsula | Cape Cod | Cape Cod | Cape Cod | North America | pt | United States of America | 697
+p1159105171 | peninsula | Cap-Vert | Cap-Vert | Cape Verde | Africa | pt | Senegal | 737
+r1159103675 | peninsula | Cape Chelyuskin | Cape Chelyuskin | Cape Chelyuskin | Europe | poly | Russia | 763
+p1159104689 | peninsula | Land's End | Land's End | Lands End | Europe | pt | United Kingdom | 814
+p1159105011 | peninsula | Cabo San Lucas | Cabo San Lucas | Cabo San Lucas | North America | pt | Mexico | 838
+r1159104017 | peninsula | Shandong Peninsula | Shandong Peninsula | Shandong Pen. | Asia | poly | China | 851
+r1159104083 | peninsula | Isthmus of Tehuantepec | Isthmus of Tehuantepec | Istmo de Tehuantepec | North America | poly | Mexico | 889
+r1159103679 | peninsula | Kathiawar | Kathiawar | Kathiawar Pen. | Asia | poly | India | 899
+r1159103197 | peninsula | Kenai Peninsula | Kenai Peninsula | Kenai Peninsula | North America | poly | United States of America | 916
+r1159104095 | peninsula | Kra Isthmus | Kra Isthmus | ISTHMUS OF KRA | Asia | poly | Thailand, Myanmar | 920
+p1159104701 | peninsula | Cape Farewell | Cape Farewell, Greenland | Nunap Isua | North America | pt | Greenland | 923
+p1159105003 | peninsula | Point Barrow | Point Barrow | Point Barrow | North America | pt | United States of America | 958
+p1159105173 | peninsula | Cape Bon | Cape Bon | Cap Bon | Africa | pt | Tunisia | 970
+r1159103681 | peninsula | Leizhou Peninsula | Leizhou Peninsula | Leizhou Pen. | Asia | poly | China | 987
+p1159104885 | peninsula | Cape Guardafui | Cape Guardafui | Gees Gwardafuy | Africa | pt | Somalia | 989
+r1159103177 | peninsula | Noto Peninsula | Noto Peninsula | Noto Pen. | Asia | poly | Japan | 1011
+r1730072879 | peninsula | Gaspé Peninsula | Gaspé Peninsula | Gaspé Peninsula | North America | poly | Canada | 1013
+r1159104489 | peninsula | King Edward VII Land | King Edward VII Land | Edward VII Peninsula | Antarctica | poly | Antarctica | 1032
+p1159104973 | peninsula | Cape St. Vincent | Cape St. Vincent | Cabo de São Vicente | Europe | pt | Portugal | 1034
+r1159103173 | peninsula | Musandam Peninsula | Musandam Peninsula | Musandam Peninsula | Asia | poly | Oman, United Arab Emirates | 1043
+r1159103191 | peninsula | Boothia Peninsula | Boothia Peninsula | Boothia Peninsula | North America | poly | Canada | 1044
+p1159104881 | peninsula | Cape Bojador | Cape Bojador | Cabo Bojador | Africa | pt | Morocco | 1052
+r1159103199 | peninsula | Seward Peninsula | Seward Peninsula | Seward Peninsula | North America | poly | United States of America | 1061
+p1159104695 | peninsula | Cape Morris Jesup | Cape Morris Jesup | Cape Morris Jesup | North America | pt | Greenland | 1067
+r1159104633 | peninsula | Coromandel Peninsula | Coromandel Peninsula | Coromandel | Oceania | poly | New Zealand | 1070
+r1730070755 | peninsula | Nicoya Peninsula | Nicoya Peninsula | Pen. de Nicoya | North America | poly | Costa Rica | 1075
+r1730072869 | peninsula | Melville Peninsula | Melville Peninsula | Melville Peninsula | North America | poly | Canada | 1076
+r1730072875 | peninsula | Ungava Peninsula | Ungava Peninsula | PÉNINSULE D’UNGAVA | North America | poly | Canada | 1077
+r1159104619 | peninsula | Banks Peninsula | Banks Peninsula | Banks Pen. | Oceania | poly | New Zealand | 1094
+r1159104343 | plateau | Iberian Peninsula | Iberian Peninsula | PENÍNSULA IBÉRICA | Europe | poly | Spain, Portugal, France | 68
+r1159104345 | plateau | Tibetan Plateau | Tibetan Plateau | PLATEAU OF TIBET | Asia | poly | China, India, Nepal | 307
+r1159104233 | plateau | Deccan Plateau | Deccan Plateau | DECCAN PLATEAU | Asia | poly | India | 386
+r1159104045 | plateau | Altiplano | Altiplano | ALTIPLANO | South America | poly | Bolivia, Argentina, Peru | 530
+r1159103243 | plateau | Massif Central | Massif Central | Massif Central | Europe | poly | France | 566
+r1159104227 | plateau | Central Siberian Plateau | Central Siberian Plateau | CENTRAL SIBERIAN PLATEAU | Europe | poly | Russia | 592
+r1159104049 | plateau | Brazilian Highlands | Brazilian Highlands | PLANALTO CENTRAL | South America | poly | Brazil, Paraguay, Argentina | 682
+r1159104025 | plateau | Putorana Plateau | Putorana Plateau | PUTORANA PLATEAU | Europe | poly | Russia | 788
+r1159104229 | plateau | Mongolian Plateau | Mongolian Plateau | MONGOLIAN PLATEAU | Asia | poly | Mongolia, China, Russia | 789
+r1159103699 | plateau | Ozarks | Ozarks | Ozark Plateau | North America | poly | United States of America | 834
+r1159103211 | plateau | Fouta Djallon | Fouta Djallon | Fouta Djallon | Africa | poly | Guinea, Senegal, Mali | 848
+r1159103251 | plateau | Karoo | Karoo | Northern Karroo | Africa | poly | South Africa | 869
+r1159103713 | plateau | Ustyurt Plateau | Ustyurt Plateau | Ustyurt Plateau | Asia | poly | Kazakhstan, Uzbekistan | 909
+r1159104035 | plateau | Colorado Plateau | Colorado Plateau | COLORADO PLATEAU | North America | poly | United States of America | 911
+r1159104027 | plateau | Yunnan–Guizhou Plateau | Yunnan–Guizhou Plateau | YUNGUI PLATEAU | Asia | poly | China, Myanmar | 937
+r1159104037 | plateau | Columbia Plateau | Columbia Plateau | COLUMBIA PLAT. | North America | poly | United States of America | 938
+r1730073629 | plateau | Mexican Plateau | Mexican Plateau | ALTI-PLANICIE MEXICANA | North America | poly | Mexico | 954
+r1159104021 | plateau | Central Russian Upland | Central Russian Upland | CENTRAL RUSSIAN UPLAND | Europe | poly | Russia, Ukraine | 969
+r1159102643 | plateau | Ennedi Plateau | Ennedi Plateau | Ennedi Plat. | Africa | poly | Chad, Sudan | 985
+r1159103231 | plateau | Chota Nagpur Plateau | Chota Nagpur Plateau | Chota Nägpur Plateau | Asia | poly | India | 986
+r1159103717 | plateau | Loess Plateau | Loess Plateau | Loess Plateau | Asia | poly | China | 1004
+r1159103689 | plateau | Adamawa Plateau | Adamawa Plateau | Adamawa Plateau | Africa | poly | Cameroon, Nigeria, Chad | 1014
+r1730071945 | plateau | Tagant region | Tagant region | Tagant | Africa | poly | Mauritania | 1026
+r1159102645 | plateau | Jos Plateau | Jos Plateau | Jos Plateau | Africa | poly | Nigeria | 1042
+r1159104029 | plateau | Khorat Plateau | Khorat Plateau | Khorat Plat. | Asia | poly | Thailand, Laos | 1048
+r1159104525 | plateau | Antarctic Plateau | Antarctic Plateau | Polar Plateau | Antarctica | poly | Antarctica | 1051
+r1159103235 | plateau | Volga Upland | Volga Upland | Volga Upland | Europe | poly | Russia | 1062
+r1159103215 | plateau | Gilf Kebir | Gilf Kebir | Jilf al Kabir Plateau | Africa | poly | Egypt, Libya | 1099
+r1159104297 | range | Alps | Alps | ALPS | Europe | poly | Austria, Italy, France | 30
+r1159104307 | range | Himalayas | Himalayas | HIMALAYAS | Asia | poly | China, India, Nepal | 32
+r1159104309 | range | Andes | Andes | ANDES | South America | poly | Peru, Argentina, Chile | 45
+r1159104311 | range | Rocky Mountains | Rocky Mountains | ROCKY MOUNTAINS | North America | poly | United States of America, Canada | 72
+r1159104301 | range | Ural Mountains | Ural Mountains | URAL MOUNTAINS | Europe | poly | Russia | 101
+r1159103941 | range | Pyrenees | Pyrenees | PYRENEES | Europe | poly | France, Spain, Andorra | 110
+r1159103937 | range | Carpathian Mountains | Carpathian Mountains | CARPATHIAN MOUNTAINS | Europe | poly | Romania, Slovakia, Ukraine | 121
+r1159104305 | range | Caucasus Mountains | Caucasus Mountains | CAUCASUS MTS. | Europe | poly | Russia, Georgia, Azerbaijan | 139
+r1159104183 | range | Hindu Kush | Hindu Kush | HINDU KUSH | Asia | poly | Afghanistan, Pakistan, Tajikistan | 207
+r1159104185 | range | Karakoram | Karakoram | KARAKORAM RA. | Asia | poly | China, India, Pakistan | 216
+r1159104189 | range | Atlas Mountains | Atlas Mountains | ATLAS MOUNTAINS | Africa | poly | Morocco, Algeria, Tunisia | 224
+r1159104299 | range | Tian Shan | Tian Shan | TIAN SHAN | Asia | poly | China, Kyrgyzstan, Kazakhstan | 225
+r1159104191 | range | Appalachian Mountains | Appalachian Mountains | APPALACHIAN MTS. | North America | poly | United States of America, Canada | 230
+r1159104181 | range | Pamir Mountains | Pamir Mountains | PAMIRS | Asia | poly | Tajikistan, China, Kyrgyzstan | 237
+r1159104169 | range | Altai Mountains | Altai Mountains | ALTAY MOUNTAINS | Asia | poly | Mongolia, Russia, China | 243
+r1159104167 | range | Zagros Mountains | Zagros Mountains | ZAGROS MOUNTAINS | Asia | poly | Iran | 299
+r1159103605 | range | Balkan Mountains | Balkan Mountains | Balkan Mts. | Europe | poly | Bulgaria, Republic of Serbia | 338
+r1159103915 | range | Western Ghats | Western Ghats | WESTERN GHATS | Asia | poly | India | 339
+r1159103077 | range | Taurus Mountains | Taurus Mountains | Taurus Mts. | Asia | poly | Turkey | 347
+r1159103101 | range | Ardennes | Ardennes | Ardennes | Europe | poly | Belgium, France, Luxembourg | 348
+r1730073425 | range | Alborz | Alborz | ELBURZ MTS. | Asia | poly | Iran | 359
+r1159103951 | range | Sierra Nevada | Sierra Nevada | SIERRA NEVADA | North America | poly | United States of America | 360
+r1159104187 | range | Kunlun Mountains | Kunlun Mountains | KUNLUN MOUNTAINS | Asia | poly | China | 372
+r1159103881 | range | Drakensberg | Drakensberg | DRAKENSBERG | Africa | poly | South Africa, Lesotho, eSwatini | 385
+r1159104623 | range | Southern Alps | Southern Alps | SOUTHERN ALPS | Oceania | poly | New Zealand | 418
+r1159103935 | range | Scandinavian Mountains | Scandinavian Mountains | KJØLEN MOUNTAINS | Europe | poly | Norway, Sweden, Finland | 430
+r1159104199 | range | Cascade Range | Cascade Range | CASCADE RANGE | North America | poly | United States of America, Canada | 447
+r1159104295 | range | Great Dividing Range | Great Dividing Range | GREAT DIVIDING RANGE | Oceania | poly | Australia | 477
+r1159103103 | range | Jura Mountains | Jura Mountains | Jura | Europe | poly | France, Switzerland | 506
+r1159104165 | range | Ethiopian Highlands | Ethiopian Highlands | ETHIOPIAN HIGHLANDS | Africa | poly | Ethiopia, Eritrea, Sudan | 519
+r1159103093 | range | Vosges | Vosges | Vosges | Europe | poly | France, Germany | 524
+r1159103091 | range | Harz | Harz | Harz | Europe | poly | Germany | 540
+r1159103095 | range | Sudetes | Sudetes | Sudetes Mts. | Europe | poly | Poland, Czechia, Germany | 541
+r1159103597 | range | Lesser Caucasus | Lesser Caucasus | Lesser Caucasus | Asia | poly | Georgia, Armenia, Azerbaijan | 542
+r1159103599 | range | Pontic Mountains | Pontic Mountains | PONTIC MOUNTAINS | Asia | poly | Turkey, Georgia | 551
+r1730072751 | range | Dinaric Alps | Dinaric Alps | Dinaric Alps | Europe | poly | Bosnia and Herzegovina, Republic of Serbia, Croatia | 552
+r1159103611 | range | Sierra Nevada | Sierra Nevada (Spain) | S. Nevada | Europe | poly | Spain | 553
+r1159104505 | range | Transantarctic Mountains | Transantarctic Mountains | Transantarctic Mountains | Antarctica | poly | Antarctica | 569
+r1159103109 | range | Vatnajökull | Vatnajökull | Vatnajökull | Europe | poly | Iceland | 579
+r1159103099 | range | Ore Mountains | Ore Mountains | Erzgebirge | Europe | poly | Germany, Czechia | 590
+r1730070733 | range | Rwenzori Mountains | Rwenzori Mountains | Ruwenzori Range | Africa | poly | Uganda, Democratic Republic of the Congo | 605
+r1730071761 | range | Adirondack Mountains | Adirondack Mountains | Adirondack Mts. | North America | poly | United States of America, Canada | 608
+r1159103087 | range | Pindus | Pindus | Pindus Mts. | Europe | poly | Greece, Albania, North Macedonia | 617
+r1159103005 | range | Rif | Rif | Er Rif | Africa | poly | Morocco | 630
+r1159103891 | range | Aïr Mountains | Aïr Mountains | AÏR MTS. | Africa | poly | Niger | 631
+r1159103069 | range | Kopet Dag | Kopet Dag | Kopet Dag Mts . | Asia | poly | Turkmenistan, Iran | 646
+r1159103917 | range | Eastern Ghats | Eastern Ghats | EASTERN GHATS | Asia | poly | India | 647
+r1159103897 | range | Sikhote-Alin | Sikhote-Alin | SIKHOTE-ALIN’ RANGE | Europe | poly | Russia | 662
+r1159103921 | range | Wuyi Mountains | Wuyi Mountains | Wuyi Mts. | Asia | poly | China | 663
+r1159103131 | range | Black Hills | Black Hills | Black Hills | North America | poly | United States of America | 678
+r1159103609 | range | Cantabrian Mountains | Cantabrian Mountains | Cord. Cantábrica | Europe | poly | Spain | 679
+r1159103899 | range | Verkhoyansk Range | Verkhoyansk Range | VERKHOYANSK RANGE | Europe | poly | Russia | 681
+r1730072581 | range | Serra do Mar | Serra do Mar | Serra do Mar | South America | poly | Brazil | 732
+r1159103919 | range | Vindhya Range | Vindhya Range | Vindhya Range | Asia | poly | India | 733
+r1159103013 | range | Australian Alps | Australian Alps | Australian Alps | Oceania | poly | Australia | 760
+r1159103017 | range | Blue Mountains | Blue Mountains (New South Wales) | Blue Mts. | Oceania | poly | Australia | 761
+r1730071661 | range | Hajar Mountains | Hajar Mountains | Al Hajar Mts. | Asia | poly | Oman, United Arab Emirates | 784
+r1159103885 | range | Tibesti Mountains | Tibesti Mountains | TIBESTI MTS. | Africa | poly | Chad, Libya | 787
+r1730072595 | range | Guiana Highlands | Guiana Highlands | GUIANA HIGHLANDS | South America | poly | Brazil, Venezuela, Guyana | 808
+r1159104173 | range | Stanovoy Range | Stanovoy Range | STANOVOY RANGE | Europe | poly | Russia | 810
+r1159104201 | range | Alaska Range | Alaska Range | ALASKA RANGE | North America | poly | United States of America | 811
+r1159104171 | range | Greater Khingan | Greater Khingan | GREATER KHINGAN RANGE | Asia | poly | China, Mongolia | 835
+r1730073913 | range | Annamite Range | Annamite Range | CHAÎNE ANNAMITIQUE | Asia | poly | Vietnam, Laos, Cambodia | 852
+r1159103573 | range | Qinling | Qinling | Qinling Mountains | Asia | poly | China | 871
+r1159103613 | range | Sierra Morena | Sierra Morena | Sierra Morena | Europe | poly | Spain | 872
+r1159103879 | range | High Atlas | High Atlas | HAUT ATLAS | Africa | poly | Morocco | 874
+r1159103947 | range | Pacific Coast Ranges | Pacific Coast Ranges | COAST RANGES | North America | poly | United States of America | 875
+r1159103123 | range | Blue Ridge Mountains | Blue Ridge Mountains | Blue Ridge | North America | poly | United States of America | 885
+r1159103543 | range | Khangai Mountains | Khangai Mountains | Hangayn Mts. | Asia | poly | Mongolia | 886
+r1730073379 | range | Yablonovy Mountains | Yablonovy Mountains | YABLONOVYY RANGE | Europe | poly | Russia, Mongolia | 888
+r1159102615 | range | Middle Atlas | Middle Atlas | Moyen Atlas | Africa | poly | Morocco | 895
+r1159103037 | range | Khentii Mountains | Khentii Mountains | Hentiyn Mts. | Asia | poly | Mongolia, Russia | 896
+r1730071679 | range | Southern Carpathians | Southern Carpathians | Transylvanian Alps | Europe | poly | Romania, Republic of Serbia | 897
+r1159103555 | range | Chersky Range | Chersky Range | CHERSKIY RANGE | Europe | poly | Russia | 898
+r1730072769 | range | Hadhramaut | Hadhramaut | Hadhramaut | Asia | poly | Yemen | 908
+r1159103521 | range | Anti-Atlas | Anti-Atlas | Anti Atlas | Africa | poly | Morocco | 917
+r1159103569 | range | Taihang Mountains | Taihang Mountains | Taihang Mts. | Asia | poly | China | 918
+r1730073315 | range | Saharan Atlas | Saharan Atlas | ATLAS SAHARIEN | Africa | poly | Algeria, Morocco | 934
+r1159103927 | range | Altyn-Tagh | Altyn-Tagh | ALTUN MTS. | Asia | poly | China | 935
+r1159103953 | range | Sierra Madre Occidental | Sierra Madre Occidental | SIERRA MADRE OCCIDENTAL | North America | poly | Mexico | 936
+r1159103059 | range | Sulaiman Mountains | Sulaiman Mountains | Sulaiman Ra. | Asia | poly | Pakistan, Afghanistan | 945
+r1159103587 | range | Satpura Range | Satpura Range | Satpura Range | Asia | poly | India | 946
+r1159104437 | range | Ellsworth Mountains | Ellsworth Mountains | Ellsworth Mountains | Antarctica | poly | Antarctica | 957
+r1730071533 | range | Tell Atlas | Tell Atlas | Atlas Tellien | Africa | poly | Algeria, Morocco | 966
+r1159103567 | range | Tannu-Ola mountains | Tannu-Ola mountains | Tannu-Ola Ra. | Europe | poly | Russia, Mongolia | 967
+r1159103971 | range | Cordillera Blanca | Cordillera Blanca | CORD. CENTRAL | South America | poly | Peru, Colombia, Ecuador | 968
+r1159102603 | range | Witwatersrand | Witwatersrand | Witwatersrand | Africa | poly | South Africa, Botswana | 984
+r1159103949 | range | Sierra Madre Oriental | Sierra Madre Oriental | SIERRA MADRE ORIENTAL | North America | poly | Mexico | 988
+r1159103107 | range | Cambrian Mountains | Cambrian Mountains | Cambrian Mts. | Europe | poly | United Kingdom | 1003
+r1159103035 | range | Barisan Mountains | Barisan Mountains | Barisan Mountains | Asia | poly | Indonesia | 1010
+r1159104193 | range | Brooks Range | Brooks Range | BROOKS RANGE | North America | poly | United States of America, Canada | 1015
+r1159104197 | range | Coast Mountains | Coast Mountains | COAST MOUNTAINS | North America | poly | Canada, United States of America | 1016
+r1159102607 | range | Wasatch Range | Wasatch Range | Wasatch Range | North America | poly | United States of America | 1025
+r1159103549 | range | Sredinny Range | Sredinny Range | SREDINNYY RANGE | Europe | poly | Russia | 1027
+r1159103553 | range | Kolyma Mountains | Kolyma Mountains | KOLYMA RANGE | Europe | poly | Russia | 1028
+r1159103895 | range | Lesser Khingan | Lesser Khingan | Lesser Khingan Range | Asia | poly | China, Russia | 1030
+r1159103903 | range | Qilian Mountains | Qilian Mountains | QUILIAN MOUNTAINS | Asia | poly | China | 1031
+r1159103581 | range | Arakan Mountains | Arakan Mountains | Arakan Yoma | Asia | poly | Myanmar | 1045
+r1159102981 | range | Maya Mountains | Maya Mountains | Maya Mts. | North America | poly | Belize, Guatemala | 1058
+r1159102987 | range | Hardangervidda | Hardangervidda | Hardanger-vidda | Europe | poly | Norway | 1059
+r1159103121 | range | Wrangell Mountains | Wrangell Mountains | Wrangell Mts. | North America | poly | United States of America | 1060
+r1159103533 | range | Sierra Madre de Chiapas | Sierra Madre de Chiapas | Sierra Chiapas | North America | poly | Mexico, Guatemala | 1063
+r1159103945 | range | Sierra Madre del Sur | Sierra Madre del Sur | Sierra Madre del Sur | North America | poly | Mexico | 1064
+r1159104349 | region | Alaska | Alaska | ALASKA | North America | poly | United States of America | 16
+r1159104351 | region | Siberia | Siberia | SIBERIA | Europe | poly | Russia, China, Mongolia | 54
+r1159104115 | region | Mesopotamia | Mesopotamia | Mesopotamia | Asia | poly | Iraq, Syria | 59
+m1159117285 | region | Great Barrier Reef | Great Barrier Reef | Great Barrier Reef | Oceania | poly | Australia | 77
+r1159104259 | region | Anatolia | Anatolia | ANATOLIA | Asia | poly | Turkey, Syria | 94
+r1159103353 | region | Republic of Karelia | Republic of Karelia | Karelia | Europe | poly | Russia, Finland | 99
+r1159103347 | region | Brittany | Brittany (administrative region) | Bretagne | Europe | poly | France | 162
+r1159104261 | region | Patagonia | Patagonia | PATAGONIA | South America | poly | Argentina, Chile | 199
+r1159104641 | region | Jutland | Jutland | JUTLAND | Europe | poly | Denmark, Germany | 212
+r1730072855 | region | Dalmatia | Dalmatia | Dalmatia | Europe | poly | Croatia, Bosnia and Herzegovina | 235
+r1159103345 | region | Normandy | Normandy (administrative region) | Normandie | Europe | poly | France | 249
+r1159103739 | region | Lapland | Lapland (Finland) | LAPLAND | Europe | poly | Sweden, Finland, Russia | 311
+r1159103737 | region | Balochistan | Balochistan | BALUCHISTAN | Asia | poly | Pakistan, Iran, Afghanistan | 358
+r1159103327 | region | French Riviera | French Riviera | Riviera | Europe | poly | France, Italy | 446
+r1159104413 | region | Queen Maud Land | Queen Maud Land | Queen Maud Land | Antarctica | poly | Antarctica | 509
+r1159104381 | region | Victoria Land | Victoria Land | Victoria Land | Antarctica | poly | Antarctica | 683
+r1730072563 | region | Malabar Coast | Malabar Coast | Malabar Coast | Asia | poly | India | 745
+r1159104371 | region | West Antarctica | West Antarctica | West Antarctica | Antarctica | poly | Antarctica | 765
+r1159104369 | region | East Antarctica | East Antarctica | East Antarctica | Antarctica | poly | Antarctica | 790
+r1159103519 | region | Coromandel Coast | Coromandel Coast | Coromandel Coast | Asia | poly | India | 849
+r1159103729 | region | Ogaden | Ogaden | Ogaden | Africa | poly | Ethiopia, Somalia, Somaliland | 850
+r1730074397 | region | New Swabia | New Swabia | New Swabia | Antarctica | poly | Antarctica | 853
+r1159104497 | region | Marie Byrd Land | Marie Byrd Land | Marie Byrd Land | Antarctica | poly | Antarctica | 854
+r1159104593 | region | Graham Land | Graham Land | Graham Land | Antarctica | poly | Antarctica | 901
+r1159104431 | region | Coats Land | Coats Land | Coats Land | Antarctica | poly | Antarctica | 922
+r1730073011 | region | Banaadir | Banaadir | Banaadir Coast | Africa | poly | Somalia | 933
+r1159104111 | region | Sudd | Sudd | SUDD | Africa | poly | South Sudan, Ethiopia | 939
+r1159102979 | region | Skeleton Coast | Skeleton Coast | Skeleton Coast | Africa | poly | Namibia | 952
+r1159104395 | region | Wilkes Land | Wilkes Land | Wilkes Land | Antarctica | poly | Antarctica | 956
+r1730072167 | region | Slave Coast of West Africa | Slave Coast of West Africa | Slave Coast | Africa | poly | Nigeria, Benin, Togo | 1012
+r1159104495 | region | Ellsworth Land | Ellsworth Land | Ellsworth Land | Antarctica | poly | Antarctica | 1017
+r1159104589 | region | Palmer Land | Palmer Land | Palmer Land | Antarctica | poly | Antarctica | 1033
+r1159103735 | region | Hexi Corridor | Hexi Corridor | Hexi Corridor | Asia | poly | China | 1047
+vQ3392 | river | Nile | Nile | Nile | Africa | line | Sudan, Egypt | 23
+vQ3783 | river | Amazon River | Amazon River | Amazon River | South America | line | Peru, Brazil, Colombia | 29
+vQ1653 | river | Danube | Danube | Danube | Europe | line | Romania, Germany, Republic of Serbia | 36
+vQ584 | river | Rhine | Rhine | Rhine | Europe | line | Germany, Netherlands, Switzerland | 46
+vQ626 | river | Volga | Volga | Volga | Europe | line | Russia | 47
+vQ5089 | river | Ganges | Ganges | Ganges | Asia | line | India, Bangladesh | 56
+vQ1497 | river | Mississippi River | Mississippi River | Mississippi River | North America | line | United States of America | 57
+vQ3503 | river | Congo River | Congo River | Congo River | Africa | line | Democratic Republic of the Congo, Republic of the Congo, Angola | 64
+vQ5413 | river | Yangtze | Yangtze | Yangtze | Asia | line | China | 66
+vQ7348 | river | Indus River | Indus River | Indus River | Asia | line | Pakistan, India, China | 76
+vQ3542 | river | Niger River | Niger River | Niger River | Africa | line | Mali, Nigeria, Guinea | 82
+vQ7355 | river | Yellow River | Yellow River | Yellow River | Asia | line | China | 83
+vQ34589 | river | Euphrates | Euphrates | Euphrates | Asia | line | Iraq, Turkey, Syria | 100
+vQ1471 | river | Seine | Seine | Seine | Europe | line | France | 115
+vQ19686 | river | River Thames | River Thames | Thames | Europe | line | United Kingdom | 116
+vQ35591 | river | Tigris | Tigris | Tigris | Asia | line | Iraq, Turkey, Syria | 118
+vQ40855 | river | Dnieper | Dnieper | Dnieper | Europe | line | Ukraine, Belarus, Russia | 126
+vQ40059 | river | Jordan River | Jordan River | Jordan River | Asia | line | Israel, Jordan, Lebanon | 129
+vQ1644 | river | Elbe | Elbe | Elbe | Europe | line | Germany, Czechia | 133
+vQ41179 | river | Mekong | Mekong | Mekong | Asia | line | China, Laos, Cambodia | 136
+vQ548 | river | Vistula | Vistula | Vistula | Europe | line | Poland | 137
+vQ6862 | river | Amur | Amur | Amur River | Asia | line | Russia, China | 146
+vQ45403 | river | Brahmaputra River | Brahmaputra River | Brahmaputra River | Asia | line | China, India, Bangladesh | 151
+vQ973 | river | Ob | Ob | Ob River | Europe | line | Russia | 159
+vQ46841 | river | Lena River | Lena River | Lena River | Europe | line | Russia | 160
+vQ80240 | river | Ural | Ural (river) | Ural River | Asia | line | Russia, Kazakhstan | 161
+vQ43106 | river | Zambezi | Zambezi | Zambezi | Africa | line | Zambia, Mozambique, Angola | 165
+vQ1229 | river | Don | Don (river) | Don | Europe | line | Russia | 168
+vQ5419 | river | Missouri River | Missouri River | Missouri River | North America | line | United States of America | 169
+vQ1469 | river | Loire | Loire | Loire | Europe | line | France | 174
+vQ643 | river | Po | Po (river) | Po | Europe | line | Italy | 175
+vQ602 | river | Rhône | Rhône | Rhône | Europe | line | France, Switzerland | 179
+vQ552 | river | Oder | Oder | Oder | Europe | line | Poland, Germany, Czechia | 180
+vQ78707 | river | Yenisei | Yenisei | Yenisei River | Europe | line | Russia | 201
+vQ8493 | river | Amu Darya | Amu Darya | Amu Darya | Asia | line | Uzbekistan, Turkmenistan, Afghanistan | 203
+vQ14294 | river | Tagus | Tagus | Tagus | Europe | line | Spain, Portugal | 211
+vQ131792 | river | Orinoco | Orinoco | Orinoco | South America | line | Venezuela, Colombia | 214
+vQ1265 | river | Colorado River | Colorado River | Colorado River | North America | line | United States of America, Mexico | 222
+vQ645 | river | Neva | Neva | Neva | Europe | line | Russia | 240
+vQ128102 | river | Irtysh | Irtysh | Irtysh River | Europe | line | Russia, Kazakhstan, China | 245
+vQ882739 | river | Blue Nile | Blue Nile | Blue Nile | Africa | line | Ethiopia, Sudan | 253
+vQ8197 | river | Daugava | Daugava | Daugava | Europe | line | Belarus, Latvia, Russia | 259
+vQ104437 | river | Yukon River | Yukon River | Yukon River | North America | line | United States of America, Canada | 260
+vQ483159 | river | Syr Darya | Syr Darya | Syr Darya | Asia | line | Kazakhstan, Uzbekistan, Baykonur Cosmodrome | 261
+vQ10965 | river | Ebro | Ebro | Ebro | Europe | line | Spain | 277
+vQ160636 | river | Rio Grande | Rio Grande | Rio Grande | North America | line | United States of America, Mexico | 278
+vQ2251 | river | Columbia River | Columbia River | Columbia River | North America | line | United States of America, Canada | 279
+vQ3140 | river | Hudson River | Hudson River | Hudson River | North America | line | United States of America | 280
+vQ173017 | river | Limpopo River | Limpopo River | Limpopo River | Africa | line | Mozambique, South Africa, Botswana | 286
+vQ4814791 | river | White Nile | White Nile | White Nile | Africa | line | South Sudan, Uganda, Sudan | 292
+vQ4915 | river | Ohio River | Ohio River | Ohio River | North America | line | United States of America | 293
+vQ127892 | river | Paraná River | Paraná River | Paraná River | South America | line | Brazil, Argentina, Paraguay | 294
+vQ181475 | river | Orange River | Orange River | Orange River | Africa | line | South Africa, Lesotho, Namibia | 303
+vQ134350 | river | Tisza | Tisza | Tisza | Europe | line | Republic of Serbia, Hungary | 304
+vQ183078 | river | Murray River | Murray River | Murray River | Oceania | line | Australia | 305
+vQ191314 | river | Godavari River | Godavari River | Godavari River | Asia | line | India | 309
+vQ131574 | river | Vltava | Vltava | Vltava | Europe | line | Czechia | 310
+vQ26076 | river | Irrawaddy River | Irrawaddy River | Irrawaddy River | Asia | line | Myanmar | 317
+vQ3569 | river | Senegal River | Senegal River | Senegal River | Africa | line | Mali, Mauritania, Senegal | 325
+vQ14383 | river | Sava | Sava | Sava | Europe | line | Croatia, Republic of Serbia, Bosnia and Herzegovina | 344
+vQ118771 | river | Rio Negro | Rio Negro (Amazon) | Rio Negro (Amazon) | South America | line | Brazil, Colombia, Venezuela | 353
+vQ3411 | river | Mackenzie River | Mackenzie River | Mackenzie River | North America | line | Canada | 363
+vQ8168 | river | Pechora | Pechora (river) | Pechora River | Europe | line | Russia | 364
+vQ118251 | river | Madeira River | Madeira River | Madeira River | South America | line | Brazil, Bolivia | 365
+vQ14369 | river | Inn | Inn (river) | Inn | Europe | line | Austria, Germany, Switzerland | 368
+vQ78879 | river | Kolyma | Kolyma (river) | Kolyma River | Europe | line | Russia | 379
+vQ191829 | river | Magdalena River | Magdalena River | Magdalena River | South America | line | Colombia | 380
+vQ192415 | river | Volta River | Volta River | Volta River | Africa | line | Burkina Faso, Ghana, Ivory Coast | 391
+vQ166966 | river | Shatt al-Arab | Shatt al-Arab | Shatt al-Arab | Asia | line | Iraq, Iran | 392
+vQ171649 | river | Ubangi River | Ubangi River | Ubangi River | Africa | line | Democratic Republic of the Congo, Republic of the Congo, Central African Republic | 402
+vQ8187 | river | Northern Dvina | Northern Dvina | Northern Dvina | Europe | line | Russia | 403
+vQ171009 | river | Drava | Drava | Drava | Europe | line | Austria, Slovenia, Croatia | 409
+vQ201463 | river | Pearl River | Pearl River | Pearl River | Asia | line | China | 423
+vQ26422 | river | Salween River | Salween River | Salween River | Asia | line | China, Myanmar, Thailand | 424
+vQ142148 | river | São Francisco River | São Francisco River | São Francisco River | South America | line | Brazil | 425
+vQ93360 | river | Biobío River | Biobío River | Bío-Bío River | South America | line | Chile | 426
+vQ8319 | river | Arkansas River | Arkansas River | Arkansas River | North America | line | United States of America | 433
+vQ181482 | river | Darling River | Darling River | Darling River | Oceania | line | Australia | 434
+vQ186541 | river | Kasai River | Kasai River | Kasai River | Africa | line | Democratic Republic of the Congo, Angola | 442
+vQ204806 | river | Benue River | Benue River | Benue River | Africa | line | Nigeria, Cameroon | 453
+vQ156054 | river | Tocantins River | Tocantins River | Tocantins River | South America | line | Brazil | 454
+vQ82207 | river | Indigirka | Indigirka | Indigirka River | Europe | line | Russia | 455
+vQ193737 | river | Tennessee River | Tennessee River | Tennessee River | North America | line | United States of America | 504
+vQ182343 | river | Niagara River | Niagara River | Niagara River | North America | line | Canada, United States of America | 514
+vQ75745 | river | Selenga | Selenga | Selenga River | Asia | line | Mongolia, Russia | 522
+vQ124653 | river | Tobol | Tobol | Tobol River | Europe | line | Russia, Kazakhstan | 600
+vQ209530 | river | Vaal River | Vaal River | Vaal River | Africa | line | South Africa | 614
+vQ191832 | river | Aldan | Aldan (river) | Aldan River | Europe | line | Russia | 626
+vQ26428 | river | Nizhnyaya Tunguska | Nizhnyaya Tunguska | Lower Tunguska | Europe | line | Russia | 627
+vQ204040 | river | Mur | Mur (river) | Mur | Europe | line | Austria, Croatia, Hungary | 640
+vQ8542 | river | Panj | Panj (river) | Panj River | Asia | line | Tajikistan, Afghanistan | 641
+vQ171840 | river | Japurá River | Japurá River | Caquetá River | South America | line | Colombia, Brazil | 673
+vQ269710 | river | Fraser River | Fraser River | Fraser River | North America | line | Canada | 686
+vQ335575 | river | Sacramento River | Sacramento River | Sacramento River | North America | line | United States of America | 687
+vQ49544 | river | Xingu River | Xingu River | Xingu River | South America | line | Brazil | 702
+vQ65383 | river | Vychegda | Vychegda | Vychegda River | Europe | line | Russia | 703
+vQ171847 | river | Araguaia River | Araguaia River | Araguaia River | South America | line | Brazil | 728
+vQ117615 | river | Mamoré River | Mamoré River | Mamoré River | South America | line | Bolivia, Brazil | 754
+vQ2279579 | river | Shire River | Shire River | Shire River | Africa | line | Malawi, Mozambique | 774
+vQ752674 | river | Tapajós | Tapajós | Tapajós River | South America | line | Brazil | 775
+vQ270627 | river | Colorado River | Colorado River (Argentina) | Colorado River (Argentina) | South America | line | Argentina | 776
+vQ2216 | river | Athabasca River | Athabasca River | Athabasca River | North America | line | Canada | 777
+vQ2220 | river | Peace River | Peace River | Peace River | North America | line | Canada | 797
+vQ3047 | river | Saskatchewan River | Saskatchewan River | Saskatchewan River | North America | line | Canada | 798
+vQ651195 | river | Naryn | Naryn (river) | Naryn River | Asia | line | Kyrgyzstan, Uzbekistan, Tajikistan | 799
+vQ213067 | river | Svir | Svir | Svir River | Europe | line | Russia | 828
+vQ171436 | river | Uele River | Uele River | Uele River | Africa | line | Democratic Republic of the Congo, Central African Republic | 878
+vQ686021 | river | Allegheny River | Allegheny River | Allegheny River | North America | line | United States of America | 879
+vQ3292 | river | Nelson River | Nelson River | Nelson River | North America | line | Canada | 880
+vQ817337 | river | Río Negro | Río Negro (Argentina) | Río Negro (Argentina) | South America | line | Argentina | 893
+vQ916349 | river | Guaporé River | Guaporé River | Guaporé River | South America | line | Bolivia, Brazil | 929
+vQ1161204 | river | San Juan River | San Juan River (Nicaragua) | San Juan River (Nicaragua) | North America | line | Nicaragua, Costa Rica | 977
+vQ8550 | river | Pamir River | Pamir River | Pamir River | Asia | line | Tajikistan, Afghanistan | 978
+vQ2237 | river | North Saskatchewan River | North Saskatchewan River | North Saskatchewan River | North America | line | Canada | 997
+vQ386331 | river | Rio Grande | Rio Grande (Paraná River tributary) | Rio Grande (Brazil) | South America | line | Brazil | 998
+vQ472816 | river | Juruena River | Juruena River | Juruena River | South America | line | Brazil | 1037
+vQ776155 | river | Paranaíba River | Paranaíba River | Paranaíba River | South America | line | Brazil | 1068
+vQ968640 | river | Klamath River | Klamath River | Klamath River | North America | line | United States of America | 1073
+vQ1519602 | river | Río Grande | Río Grande (Bolivia) | Río Grande (Bolivia) | South America | line | Bolivia | 1081
+vQ1472009 | river | Neuquén River | Neuquén River | Neuquén River | South America | line | Argentina | 1097
+vQ1478566 | river | Santa Cruz River | Santa Cruz River (Argentina) | Santa Cruz River | South America | line | Argentina | 1107
+vQ2416760 | river | Thelon River | Thelon River | Thelon River | North America | line | Canada | 1111
+vQ2092571 | river | Stikine River | Stikine River | Stikine River | North America | line | Canada, United States of America | 1118
+vQ284495 | river | Teslin River | Teslin River | Teslin River | North America | line | Canada | 1119
+vQ31379 | river | La Grande River | La Grande River | La Grande River | North America | line | Canada | 1124
+vQ1644776 | river | Culuene River | Culuene River | Culuene River | South America | line | Brazil | 1127
+vQ1726738 | river | Chixoy River | Chixoy River | Chixoy River | North America | line | Guatemala, Mexico | 1128
+vQ1120933 | river | Kibali River | Kibali River | Kibali River | Africa | line | Democratic Republic of the Congo | 1129
+vQ1333747 | river | Holston River | Holston River | Holston River | North America | line | United States of America | 1131
+vQ7580186 | river | Sprague River | Sprague River | Sprague River | North America | line | United States of America | 1132
+m1159115321 | sea | Mediterranean Sea | Mediterranean Sea | Mediterranean Sea | Europe | poly | Algeria, Greece, Italy | 13
+m1159115171 | sea | Black Sea | Black Sea | Black Sea | Europe | poly | Ukraine, Russia, Turkey | 24
+m1159115461 | sea | Caspian Sea | Caspian Sea | Caspian Sea | Asia | poly | Kazakhstan, Russia, Turkmenistan | 33
+m1159115831 | sea | Baltic Sea | Baltic Sea | Baltic Sea | Europe | poly | Sweden, Denmark, Germany | 34
+m1159115879 | sea | North Sea | North Sea | North Sea | Europe | poly | United Kingdom, Norway, Germany | 41
+m1159115521 | sea | Red Sea | Red Sea | Red Sea | Asia | poly | Saudi Arabia, Eritrea, Egypt | 43
+m1159115379 | sea | Caribbean Sea | Caribbean Sea | Caribbean Sea | North America | poly | Venezuela, Cuba, Colombia | 53
+m1159116607 | sea | Adriatic Sea | Adriatic Sea | Adriatic Sea | Europe | poly | Croatia, Italy, Albania | 79
+m1159117123 | sea | Aegean Sea | Aegean Sea | Aegean Sea | Europe | poly | Greece, Turkey | 84
+m1159115273 | sea | South China Sea | South China Sea | South China Sea | Asia | poly | Indonesia, China, Philippines | 96
+m1159115343 | sea | Arabian Sea | Arabian Sea | Arabian Sea | Asia | poly | India, Pakistan, Oman | 104
+m1159116409 | sea | Sea of Azov | Sea of Azov | Sea of Azov | Europe | poly | Russia, Ukraine | 108
+m1159115305 | sea | Sea of Japan | Sea of Japan | Sea of Japan | Europe | poly | Japan, Russia, North Korea | 120
+m1159119181 | sea | Sea of Marmara | Sea of Marmara | Sea of Marmara | Asia | poly | Turkey | 124
+m1159116697 | sea | Ionian Sea | Ionian Sea | Ionian Sea | Europe | poly | Greece, Italy, Albania | 130
+m1159115861 | sea | Barents Sea | Barents Sea | Barents Sea | Europe | poly | Russia, Norway | 140
+m1159117319 | sea | Bering Sea | Bering Sea | Bering Sea | North America | poly | United States of America, Russia | 144
+m1159118439 | sea | Ligurian Sea | Ligurian Sea | Ligurian Sea | Europe | poly | Italy | 148
+m1159115935 | sea | Irish Sea | Irish Sea | Irish Sea | Europe | poly | United Kingdom, Ireland, Isle of Man | 152
+m1159116377 | sea | Tyrrhenian Sea | Tyrrhenian Sea | Tyrrhenian Sea | Europe | poly | Italy, France | 153
+m1159116395 | sea | White Sea | White Sea | White Sea | Europe | poly | Russia | 154
+m1159115541 | sea | Sea of Okhotsk | Sea of Okhotsk | Sea of Okhotsk | Europe | poly | Russia, Japan | 166
+m1159115987 | sea | Andaman Sea | Andaman Sea | Andaman Sea | Asia | poly | Myanmar, India, Thailand | 167
+m1159115675 | sea | Norwegian Sea | Norwegian Sea | Norwegian Sea | Europe | poly | Norway, Faroe Islands, United Kingdom | 170
+m1159115999 | sea | Yellow Sea | Yellow Sea | Yellow Sea | Asia | poly | South Korea, China, North Korea | 171
+m1159116027 | sea | East China Sea | East China Sea | East China Sea | Asia | poly | China, Japan, Taiwan | 176
+m1159115959 | sea | Java Sea | Java Sea | Java Sea | Asia | poly | Indonesia | 182
+m1159116231 | sea | Kara Sea | Kara Sea | Kara Sea | Europe | poly | Russia | 193
+m1159116253 | sea | Laptev Sea | Laptev Sea | Laptev Sea | Europe | poly | Russia | 229
+m1159115219 | sea | Coral Sea | Coral Sea | Coral Sea | Oceania | poly | Australia, New Caledonia, Vanuatu | 233
+m1159116037 | sea | Chukchi Sea | Chukchi Sea | Chukchi Sea | Europe | poly | Russia, United States of America | 247
+m1159117337 | sea | East Siberian Sea | East Siberian Sea | East Siberian Sea | Europe | poly | Russia | 248
+m1159115233 | sea | Tasman Sea | Tasman Sea | Tasman Sea | Oceania | poly | New Zealand, Australia | 254
+m1159115359 | sea | Beaufort Sea | Beaufort Sea | Beaufort Sea | North America | poly | Canada, United States of America | 255
+m1159115695 | sea | Greenland Sea | Greenland Sea | Greenland Sea | Europe | poly | Greenland, Norway, Iceland | 256
+m1159116081 | sea | Arafura Sea | Arafura Sea | Arafura Sea | Asia | poly | Indonesia, Australia | 262
+m1159115197 | sea | Philippine Sea | Philippine Sea | Philippine Sea | Asia | poly | Philippines, Japan, Northern Mariana Islands | 272
+m1159116101 | sea | Timor Sea | Timor Sea | Timor Sea | Oceania | poly | Australia, Indonesia, East Timor | 273
+m1159115635 | sea | Celebes Sea | Celebes Sea | Celebes Sea | Asia | poly | Indonesia, Philippines, Malaysia | 281
+m1159115615 | sea | Ross Sea | Ross Sea | Ross Sea | Antarctica | poly | Antarctica | 296
+m1159117819 | sea | Kattegat | Kattegat | Kattegat | Europe | poly | Denmark, Sweden | 319
+m1159120667 | sea | Sargasso Sea | Sargasso Sea | Sargasso Sea | North America | poly | Bermuda | 320
+m1159115419 | sea | Labrador Sea | Labrador Sea | Labrador Sea | North America | poly | Canada, Greenland | 326
+m1159115655 | sea | Sulu Sea | Sulu Sea | Sulu Sea | Asia | poly | Philippines, Malaysia | 327
+m1159115579 | sea | Weddell Sea | Weddell Sea | Weddell Sea | Antarctica | poly | Antarctica | 354
+m1159120167 | sea | Flores Sea | Flores Sea | Flores Sea | Asia | poly | Indonesia | 356
+m1159116181 | sea | Amundsen Sea | Amundsen Sea | Amundsen Sea | Antarctica | poly | Antarctica | 382
+m1159115717 | sea | Banda Sea | Banda Sea | Banda Sea | Asia | poly | Indonesia, East Timor | 404
+m1159115811 | sea | Scotia Sea | Scotia Sea | Scotia Sea | Antarctica | poly | Antarctica | 435
+m1159116731 | sea | Molucca Sea | Molucca Sea | Molucca Sea | Asia | poly | Indonesia | 437
+m1159116767 | sea | Solomon Sea | Solomon Sea | Solomon Sea | Oceania | poly | Solomon Islands, Papua New Guinea | 443
+m1159118457 | sea | Alboran Sea | Alboran Sea | Alboran Sea | Africa | poly | Spain, Morocco, Algeria | 456
+m1159116143 | sea | Laccadive Sea | Laccadive Sea | Laccadive Sea | World | poly | India, Maldives, Sri Lanka | 466
+m1159116927 | sea | Seto Inland Sea | Seto Inland Sea | Inner Sea | Asia | poly | Japan | 469
+m1159117105 | sea | Balearic Sea | Balearic Sea | Balearic Sea | Europe | poly | Spain | 470
+m1159117171 | sea | Bohai Sea | Bohai Sea | Bo Hai | Asia | poly | China | 471
+m1159116169 | sea | Bellingshausen Sea | Bellingshausen Sea | Bellingshausen Sea | Antarctica | poly | Antarctica | 497
+m1159120073 | sea | Bali Sea | Bali Sea | Bali Sea | Asia | poly | Indonesia | 518
+m1159117355 | sea | Lincoln Sea | Lincoln Sea | Lincoln Sea | North America | poly | Greenland, Canada | 537
+m1159118425 | sea | Sea of Crete | Sea of Crete | Sea of Crete | Europe | poly | Greece, Turkey | 538
+m1159116735 | sea | Bismarck Sea | Bismarck Sea | Bismarck Sea | Oceania | poly | Papua New Guinea | 560
+m1159120109 | sea | Halmahera Sea | Halmahera Sea | Halmahera Sea | Asia | poly | Indonesia | 575
+m1159120417 | sea | Savu Sea | Savu Sea | Savu Sea | Asia | poly | Indonesia, East Timor | 576
+m1159116897 | sea | Seram Sea | Seram Sea | Ceram Sea | Asia | poly | Indonesia | 584
+m1159120253 | sea | Bohol Sea | Bohol Sea | Bohol Sea | Asia | poly | Philippines | 643
+m1159120401 | sea | Visayan Sea | Visayan Sea | Visayan Sea | Asia | poly | Philippines | 674
+m1159120183 | sea | Sibuyan Sea | Sibuyan Sea | Sibuyan Sea | Asia | poly | Philippines | 706
+m1159118715 | sea | Davis Sea | Davis Sea | Davis Sea | Antarctica | poly | Antarctica | 800
+m1159115921 | sea | Sea of the Hebrides | Sea of the Hebrides | Inner Seas | Europe | poly | United Kingdom, Ireland | 894
+m1159120759 | sea | Salish Sea | Salish Sea | Salish Sea | North America | poly | Canada, United States of America | 965
+m1159120335 | sea | Samar Sea | Samar Sea | Samar Sea | Asia | poly | Philippines | 982
+m1159118835 | strait | Bosporus | Bosporus | Bosporus | Asia | poly | Turkey | 112
+m1159116535 | strait | English Channel | English Channel | English Channel | Europe | poly | France, United Kingdom, Jersey | 119
+m1159117067 | strait | Strait of Gibraltar | Strait of Gibraltar | Strait of Gibraltar | Africa | poly | Morocco, Spain | 123
+m1159119155 | strait | Dardanelles | Dardanelles | Dardanelles | Asia | poly | Turkey | 172
+m1159116835 | strait | Strait of Malacca | Strait of Malacca | Strait of Malacca | Asia | poly | Indonesia, Malaysia, Thailand | 185
+m1159119037 | strait | St. Lawrence River | St. Lawrence River | Saint Lawrence River | North America | poly | Canada | 195
+m1159118553 | strait | Strait of Magellan | Strait of Magellan | Estrecho de Magellanes | South America | poly | Chile | 232
+m1159118853 | strait | Bab al-Mandab Strait | Bab al-Mandab Strait | Bab el Mandeb | Asia | poly | Yemen, Djibouti, Eritrea | 263
+m1159115771 | strait | Mozambique Channel | Mozambique Channel | Mozambique Channel | World | poly | Madagascar, Mozambique, Comoros | 318
+m1159116947 | strait | Taiwan Strait | Taiwan Strait | Taiwan Strait | Asia | poly | China, Taiwan | 334
+m1159116269 | strait | Drake Passage | Drake Passage | Drake Passage | Antarctica | poly | Antarctica, Chile | 366
+m1159116907 | strait | Korea Strait | Korea Strait | Korea Strait | Asia | poly | Japan, South Korea | 370
+m1159117373 | strait | Bass Strait | Bass Strait | Bass Strait | Oceania | poly | Australia | 393
+m1159118303 | strait | Torres Strait | Torres Strait | Torres Strait | Oceania | poly | Australia, Papua New Guinea | 410
+m1159119235 | strait | Denmark Strait | Denmark Strait | Denmark Strait | North America | poly | Greenland, Iceland | 412
+m1159116205 | strait | Davis Strait | Davis Strait | Davis Strait | North America | poly | Greenland, Canada | 436
+m1159118281 | strait | Cook Strait | Cook Strait | Cook Strait | Oceania | poly | New Zealand | 444
+m1159117845 | strait | Palk Strait | Palk Strait | Palk Strait | Asia | poly | Sri Lanka, India | 483
+m1159116881 | strait | Makassar Strait | Makassar Strait | Makassar Strait | Asia | poly | Indonesia | 498
+m1159115891 | strait | Bristol Channel | Bristol Channel | Bristol Channel | Europe | poly | United Kingdom | 515
+m1159116625 | strait | Straits of Florida | Straits of Florida | Straits of Florida | North America | poly | Cuba, The Bahamas, United States of America | 516
+m1159117919 | strait | Tsugaru Strait | Tsugaru Strait | Tsugaru Strait | Asia | poly | Japan | 517
+m1159116661 | strait | Northwest Passage | Northwest Passage | The North Western Passages | North America | poly | Canada | 523
+m1159116501 | strait | Hudson Strait | Hudson Strait | Hudson Strait | North America | poly | Canada | 559
+m1159117937 | strait | Strait of Tartary | Strait of Tartary | Tatar Strait | Europe | poly | Russia | 561
+m1159118231 | strait | La Pérouse Strait | La Pérouse Strait | La Pérouse Strait | Asia | poly | Japan, Russia | 586
+m1159117301 | strait | Yucatán Channel | Yucatán Channel | Yucatan Channel | North America | poly | Mexico, Cuba | 602
+m1159116861 | strait | Singapore Strait | Singapore Strait | Strait of Singapore | Asia | poly | Malaysia, Indonesia, Singapore | 705
+m1159115729 | strait | Luzon Strait | Luzon Strait | Luzon Strait | Asia | poly | Taiwan | 881
+m1159120015 | strait | Matochkin Strait | Matochkin Strait | Matochkin Shar Strait | Europe | poly | Russia | 964
+m1159118213 | strait | Dmitry Laptev Strait | Dmitry Laptev Strait | Dmitriy Laptev Strait | Europe | poly | Russia | 1007
+m1159118261 | strait | Qiongzhou Strait | Qiongzhou Strait | Qiongzhou Strait | Asia | poly | China | 1021
+m1159120135 | strait | Bali Strait | Bali Strait | Selat Bali | Asia | poly | Indonesia | 1024
+m1159117427 | strait | M'Clure Strait | M'Clure Strait | M'Clure Strait | North America | poly | Canada | 1055
+m1159120519 | strait | Kennedy Channel | Kennedy Channel | Kennedy Channel | North America | poly | Greenland, Canada | 1057
+m1159118511 | strait | Strait of Belle Isle | Strait of Belle Isle | Strait of Belle Isle | North America | poly | Canada | 1074
+m1159117561 | strait | Bransfield Strait | Bransfield Strait | Bransfield Strait | Antarctica | poly | Antarctica | 1098
+p1159105019 | waterfall | Niagara Falls | Niagara Falls | Niagara Falls | North America | pt | Canada, United States of America | 107
+p1159104887 | waterfall | Victoria Falls | Victoria Falls | Victoria Falls | Africa | pt | Zambia, Zimbabwe | 164
+p1159105053 | waterfall | Iguazu Falls | Iguazu Falls | Iguazu Falls | South America | pt | Brazil, Paraguay, Argentina | 227
+p1159105051 | waterfall | Angel Falls | Angel Falls | Salto Angel | South America | pt | Venezuela | 266
+xQ189849 | waterfall | Plitvice Lakes National Park | Plitvice Lakes National Park | Plitvice Lakes National Park | Europe | pt | Croatia | 465
+xQ214924 | waterfall | Rhine Falls | Rhine Falls | Rhine Falls | Europe | pt | Switzerland, Germany | 795
+xQ38519 | waterfall | Gullfoss | Gullfoss | Gullfoss | Europe | pt | Iceland | 826
+xQ210280 | waterfall | Dettifoss | Dettifoss | Dettifoss | Europe | pt | Iceland | 827
+xQ38417 | waterfall | Boyoma Falls | Boyoma Falls | Boyoma Falls | Africa | pt | Democratic Republic of the Congo | 865
+xQ223649 | waterfall | Tugela Falls | Tugela Falls | Tugela Falls | Africa | pt | South Africa, Lesotho | 905
+xQ672241 | waterfall | Jog Falls | Jog Falls | Jog Falls | Asia | pt | India | 915
+xQ491677 | waterfall | Yosemite Falls | Yosemite Falls | Yosemite Falls | North America | pt | United States of America | 927
+xQ38161 | waterfall | Khone Phapheng Falls | Khone Phapheng Falls | Khone Phapheng Falls | Asia | pt | Laos, Cambodia | 942
+xQ38120 | waterfall | Kaieteur Falls | Kaieteur Falls | Kaieteur Falls | South America | pt | Guyana | 950
+xQ1130718 | waterfall | Skógafoss | Skógafoss | Skógafoss | Europe | pt | Iceland | 961
+xQ639731 | waterfall | Krimml Waterfalls | Krimml Waterfalls | Krimml Waterfalls | Europe | pt | Austria | 962
+xQ183395 | waterfall | Reichenbach Falls | Reichenbach Falls | Reichenbach Falls | Europe | pt | Switzerland | 963
+xQ495475 | waterfall | Murchison Falls | Murchison Falls | Murchison Falls | Africa | pt | Uganda | 996
+xQ38432 | waterfall | Huangguoshu Waterfall | Huangguoshu Waterfall | Huangguoshu Waterfall | Asia | pt | China | 1018
+xQ38580 | waterfall | Cascata delle Marmore | Cascata delle Marmore | Cascata delle Marmore | Europe | pt | Italy | 1019
+xQ1266055 | waterfall | Blue Nile Falls | Blue Nile Falls | Blue Nile Falls | Africa | pt | Ethiopia | 1035
+xQ983252 | waterfall | Ban Gioc–Detian Falls | Ban Gioc–Detian Falls | Ban Gioc–Detian Falls | Asia | pt | China, Vietnam | 1078
+xQ512389 | waterfall | Gocta Cataracts | Gocta Cataracts | Gocta Cataracts | South America | pt | Peru | 1079
+xQ798283 | waterfall | Kalambo Falls | Kalambo Falls | Kalambo Falls | Africa | pt | United Republic of Tanzania, Zambia | 1087
+xQ1101379 | waterfall | Ruacana Falls | Ruacana Falls | Ruacana Falls | Africa | pt | Angola, Namibia | 1088
+xQ37545 | waterfall | Dudhsagar Falls | Dudhsagar Falls | Dudhsagar Falls | Asia | pt | India | 1089
+xQ3361971 | waterfall | Vinnufossen | Vinnufossen | Vinnufossen | Europe | pt | Norway | 1095
+xQ686835 | waterfall | Staubbach Falls | Staubbach Falls | Staubbach Falls | Europe | pt | Switzerland | 1102
+xQ38408 | waterfall | Sutherland Falls | Sutherland Falls | Sutherland Falls | Oceania | pt | New Zealand | 1104
+xQ37319 | waterfall | Multnomah Falls | Multnomah Falls | Multnomah Falls | North America | pt | United States of America | 1105
+xQ19558 | waterfall | Inga Falls | Inga Falls | Inga Falls | Africa | pt | Democratic Republic of the Congo | 1112
+xQ602973 | waterfall | Hukou Waterfalls | Hukou Waterfalls | Hukou Waterfall | Asia | pt | China | 1114
+xQ40417 | waterfall | Wallaman Falls | Wallaman Falls | Wallaman Falls | Oceania | pt | Australia | 1123
+xQ5683183 | waterfall | Havasu Falls | Havasu Falls | Havasu Falls | North America | pt | United States of America | 1125
+xQ1635297 | waterfall | Shoshone Falls | Shoshone Falls | Shoshone Falls | North America | pt | United States of America | 1130
