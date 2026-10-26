@@ -1,4 +1,5 @@
 import { $, $$, esc, norm, fmtPop, fmtInt, flag, fmtTime, dark, isPhone, haversine, toast, pickCard, LEVELS, levelStart } from './lib/util.js';
+import { bindSheet, expandSheet, sheetPadding } from './lib/sheet.js';
 import { store, loadState, save, watchVisibility } from './lib/store.js';
 import { maplibregl, COL, PAL, empty, DEFAULT_LAYERS, createMap, applyBaseLayers, layersPopover, bindLayers } from './lib/mapbase.js';
 
@@ -167,16 +168,13 @@ function flyToCity(c, zoom) {
   const z = zoom ?? Math.max(map.getZoom(), 6);
   map.flyTo({ center: [c.lon, c.lat], zoom: z, speed: 1.6, padding: mapPadding() });
 }
-function mapPadding() {
-  if (isPhone()) return { top: 20, bottom: 20, left: 20, right: 20 };
-  return { top: 40, bottom: 40, left: 40, right: 40 };
-}
+function mapPadding() { return sheetPadding(isPhone() ? 20 : 40); }
 function fitCities(list, maxZoom = 6) {
   if (!list.length) return;
   let w = 180, e = -180, s = 90, n = -90;
   for (const c of list) { w = Math.min(w, c.lon); e = Math.max(e, c.lon); s = Math.min(s, c.lat); n = Math.max(n, c.lat); }
-  if (e - w > 200) { map.flyTo({ center: [30, 22], zoom: isPhone() ? 0.6 : 1.6 }); return; }
-  map.fitBounds([[w, s], [e, n]], { padding: isPhone() ? 40 : 90, maxZoom, duration: 900 });
+  if (e - w > 200) { map.flyTo({ center: [30, 22], zoom: isPhone() ? 0.6 : 1.6, padding: sheetPadding(0) }); return; }
+  map.fitBounds([[w, s], [e, n]], { padding: sheetPadding(isPhone() ? 40 : 90), maxZoom, duration: 900 });
 }
 
 
@@ -483,7 +481,7 @@ function findCard(c, pool) {
     setOutlines([c.id]);
     if (ll) {
       const b = new maplibregl.LngLatBounds([ll.lng, ll.lat], [ll.lng, ll.lat]).extend([c.lon, c.lat]);
-      map.fitBounds(b, { padding: 80, maxZoom: 6.5, duration: 700 });
+      map.fitBounds(b, { padding: sheetPadding(80), maxZoom: 6.5, duration: 700 });
     } else flyToCity(c, 5.5);
     $('#pracCard').innerHTML = resultBlock(c, ok, extra);
     bindNext(c);
@@ -630,13 +628,13 @@ function selectCity(c, fly) {
   renderAtlas();
   if (fly) flyToCity(c, Math.max(map.getZoom(), 6.5));
   $('#panel').scrollTo({ top: 0, behavior: 'smooth' });
-  if (isPhone()) $('#panel').classList.remove('short');
+  expandSheet();
 }
 // quiz: open the info box of a found (or revealed) city without leaving the quiz
 function quizInfo(c) {
   showCityInfo($('#qDetail'), c);
   $('#qDetail').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-  if (isPhone()) $('#panel').classList.remove('short');
+  expandSheet();
 }
 
 // ------------------------------------------------------------------ map interaction
@@ -660,27 +658,7 @@ map.on('mouseenter', 'cities', e => {
 });
 map.on('mouseleave', 'cities', () => { map.getCanvas().style.cursor = ''; });
 
-// phone: drag the grip to resize the bottom sheet
-$('#grip').onclick = () => {
-  const p = $('#panel');
-  if (p.classList.contains('tall')) { p.classList.remove('tall'); p.classList.add('short'); }
-  else if (p.classList.contains('short')) p.classList.remove('short');
-  else p.classList.add('tall');
-  setTimeout(() => map.resize(), 250);
-};
-let dragY = null;
-$('#grip').addEventListener('touchstart', e => { dragY = e.touches[0].clientY; }, { passive: true });
-$('#grip').addEventListener('touchend', e => {
-  if (dragY == null) return;
-  const dy = e.changedTouches[0].clientY - dragY, p = $('#panel');
-  dragY = null;
-  if (Math.abs(dy) < 20) return;
-  e.preventDefault();
-  if (dy < 0) { if (p.classList.contains('short')) p.classList.remove('short'); else p.classList.add('tall'); }
-  else { if (p.classList.contains('tall')) p.classList.remove('tall'); else p.classList.add('short'); }
-  setTimeout(() => map.resize(), 250);
-});
-
+bindSheet();
 $('#aboutBtn').onclick = () => $('#about').showModal();
 $('#about').addEventListener('click', e => { if (e.target === $('#about')) $('#about').close(); });
 

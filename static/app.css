@@ -204,15 +204,21 @@ dialog::backdrop { background: rgba(0,0,0,.4); }
   .brand small { display: none; }
   .brand b { font-size: 14px; }
   .modes button { padding: 6px 10px; }
-  main { flex-direction: column; }
+  main { --sheet: 46%; }
+  #map { position: absolute; inset: 0; }
+  /* bottom sheet over the map (lib/sheet.js) */
   .panel {
-    width: auto; height: 46%; border-left: 0; border-top: 1px solid var(--line);
-    padding: 6px 16px 20px; border-radius: 14px 14px 0 0; margin-top: -12px; box-shadow: 0 -4px 16px rgba(0,0,0,.1);
-    transition: height .2s;
+    position: absolute; left: 0; right: 0; bottom: 0; width: auto; height: 46%; border-left: 0; border-top: 1px solid var(--line);
+    padding: 0 16px 20px; border-radius: 14px 14px 0 0; box-shadow: 0 -4px 16px rgba(0,0,0,.12);
+    transition: height .25s cubic-bezier(.2, .8, .2, 1); overscroll-behavior: contain; will-change: height;
   }
-  .panel.tall { height: 82%; }
-  .panel.short { height: 150px; }
-  .grip { display: block; width: 44px; height: 5px; border-radius: 3px; background: var(--line); margin: 2px auto 10px; cursor: grab; }
+  .panel.dragging { transition: none; }
+  .grip {
+    display: block; position: sticky; top: 0; z-index: 3; height: 26px; margin: 0 -16px 4px; background: var(--panel);
+    touch-action: none; cursor: grab; border-radius: 14px 14px 0 0;
+  }
+  .grip::before { content: ""; position: absolute; left: 50%; top: 9px; width: 44px; height: 5px; margin-left: -22px; border-radius: 3px; background: var(--line); }
+  .maplibregl-ctrl-bottom-left, .maplibregl-ctrl-bottom-right { bottom: var(--sheet); transition: bottom .25s; }
   .layers-pop { width: min(290px, calc(100vw - 20px)); }
   .score .big { font-size: 28px; }
   .facts { grid-template-columns: repeat(3, 1fr); }

@@ -2,6 +2,7 @@
 // A set is data/sets/<key>.json (items + metadata, see tools/sets/build_*.py), <key>.geojson (shapes, property id)
 // and <key>.facts.json ({id: [facts]}, loaded when the first info box opens).
 import { $, $$, esc, norm, fmtPop, fmtInt, fmtTime, dark, isPhone, toast, pickCard, LEVELS, levelStart } from './lib/util.js';
+import { bindSheet, expandSheet, sheetPadding } from './lib/sheet.js';
 import { store, loadState, save, watchVisibility } from './lib/store.js';
 import { maplibregl, COL, PAL, empty, DEFAULT_LAYERS, createMap, applyBaseLayers, layersPopover, bindLayers } from './lib/mapbase.js';
 
@@ -228,8 +229,8 @@ function renderMap() {
   });
 }
 function setMark(features) { map.getSource('mark').setData({ type: 'FeatureCollection', features }); }
-function mapPadding() { return isPhone() ? { top: 20, bottom: 20, left: 20, right: 20 } : { top: 50, bottom: 50, left: 50, right: 50 }; }
-const worldView = () => map.flyTo({ center: [20, 20], zoom: isPhone() ? 0.6 : 1.5, duration: 900 });
+function mapPadding() { return sheetPadding(isPhone() ? 20 : 50); }
+const worldView = () => map.flyTo({ center: [20, 20], zoom: isPhone() ? 0.6 : 1.5, duration: 900, padding: sheetPadding(0) });
 function fitItems(list, maxZoom = PLACES ? 9 : 5) {
   if (!list.length) return;
   let w = 180, e = -180, s = 90, n = -90;
@@ -240,7 +241,7 @@ function fitItems(list, maxZoom = PLACES ? 9 : 5) {
   }
   if (e - w > 200) return worldView();
   if (e - w < 0.01) return map.flyTo({ center: [w, s], zoom: maxZoom, padding: mapPadding(), speed: 1.6 });
-  map.fitBounds([[w, s], [e, n]], { padding: isPhone() ? 30 : 70, maxZoom, duration: 900 });
+  map.fitBounds([[w, s], [e, n]], { padding: sheetPadding(isPhone() ? 30 : 70), maxZoom, duration: 900 });
 }
 function flyToItem(it, minZoom) {
   if (it.g === 'pt' || PLACES) map.flyTo({ center: it.ll, zoom: Math.max(map.getZoom(), minZoom ?? (PLACES ? 10 : 6)), speed: 1.6, padding: mapPadding() });
@@ -429,7 +430,7 @@ function renderQuiz(refit) {
   }
   setView(st, lab);
   if (refit) {
-    if (D.bbox && U.where === 'all') map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: 30, duration: 800 });
+    if (D.bbox && U.where === 'all') map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: sheetPadding(30), duration: 800 });
     else if (U.where === 'all') worldView(); else fitItems(pool);
   }
   if (!isPhone()) setTimeout(() => $('#answer').focus(), 0);
@@ -440,7 +441,7 @@ function listRow(it, cls = '') {
 function quizInfo(it) {
   showInfo($('#qDetail'), it);
   $('#qDetail').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-  if (isPhone()) $('#panel').classList.remove('short');
+  expandSheet();
 }
 
 // ------------------------------------------------------------------ PRACTICE
@@ -533,7 +534,7 @@ function nameCard(it) {
 }
 function findCard(it, pool) {
   setView(new Map(), new Set());
-  if (PLACES) map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: 30, duration: 800 });
+  if (PLACES) map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: sheetPadding(30), duration: 800 });
   else if (U.where === 'all') worldView(); else fitItems(pool);
   $('#pracCard').innerHTML = `<div class="q">Where is ${esc(it.name)}?<small>${LANGS ? 'Tap where it is mainly spoken' : PLACES ? `${esc(it.reg)} · ${fmtPop(it.m.pop)}` : esc(catOne(it))} — tap the map</small></div>
     <div class="row"><button class="btn ghost" id="pSkip">Show me</button></div>`;
@@ -631,7 +632,7 @@ function renderAtlas(refit) {
   // languages overlap: in the atlas only the selected one is filled strongly, the rest stays light
   setView(st, new Set(list.filter(it => !U.hideNames || selected === it.id).map(it => it.id)));
   if (refit) {
-    if (PLACES && U.where === 'all') map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: 30, duration: 800 });
+    if (PLACES && U.where === 'all') map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: sheetPadding(30), duration: 800 });
     else if (U.where !== 'all' || k) fitItems(list); else worldView();
   }
 }
@@ -675,7 +676,7 @@ function selectItem(it, fly) {
   renderAtlas();
   if (fly) flyToItem(it);
   $('#panel').scrollTo({ top: 0, behavior: 'smooth' });
-  if (isPhone()) $('#panel').classList.remove('short');
+  expandSheet();
 }
 
 // ------------------------------------------------------------------ languages: phrases + speech
@@ -747,26 +748,7 @@ map.on('mousemove', e => {
   map.getCanvas().style.cursor = ok ? 'pointer' : '';
 });
 
-// phone: drag the grip to resize the bottom sheet
-$('#grip').onclick = () => {
-  const p = $('#panel');
-  if (p.classList.contains('tall')) { p.classList.remove('tall'); p.classList.add('short'); }
-  else if (p.classList.contains('short')) p.classList.remove('short');
-  else p.classList.add('tall');
-  setTimeout(() => map.resize(), 250);
-};
-let dragY = null;
-$('#grip').addEventListener('touchstart', e => { dragY = e.touches[0].clientY; }, { passive: true });
-$('#grip').addEventListener('touchend', e => {
-  if (dragY == null) return;
-  const dy = e.changedTouches[0].clientY - dragY, p = $('#panel');
-  dragY = null;
-  if (Math.abs(dy) < 20) return;
-  e.preventDefault();
-  if (dy < 0) { if (p.classList.contains('short')) p.classList.remove('short'); else p.classList.add('tall'); }
-  else { if (p.classList.contains('tall')) p.classList.remove('tall'); else p.classList.add('short'); }
-  setTimeout(() => map.resize(), 250);
-});
+bindSheet();
 $('#aboutBtn').onclick = () => $('#about').showModal();
 $('#about').addEventListener('click', e => { if (e.target === $('#about')) $('#about').close(); });
 
