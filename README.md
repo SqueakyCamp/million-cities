@@ -2,7 +2,8 @@
 
 Map quizzes: **Million Cities**, **Physical features** (oceans, seas, rivers, lakes, mountains, deserts, islands …),
 **Languages** (where they're spoken, with hello / thank you / goodbye and pronunciation) and, per country,
-**Austria · largest Gemeinden**. Each has a type-in quiz, practice modes with an easier/harder setting and an atlas.
+**Austria** (in German): the 200 largest Gemeinden (practise the top 100, ranks 101–200 or all 200) and Austria's
+rivers, lakes, glaciers, mountain groups, peaks, passes, valleys and gorges. Each has a type-in quiz, practice modes with an easier/harder setting and an atlas.
 
 ## Million Cities
 
@@ -26,7 +27,9 @@ Quiz sets (see each quiz's “?” page):
   lengths/areas/heights and article links from [Wikidata](https://www.wikidata.org/) (CC0).
 - **Languages:** areas built from Natural Earth country/state borders; areas, speaker estimates, phrases and facts compiled with Claude.
 - **Austria:** population by Gemeinde and boundaries © [Statistik Austria](https://data.statistik.gv.at/) (CC BY 4.0).
-- Facts in the info boxes were written with Claude from the English (and for Austria also German) Wikipedia intros (CC BY-SA 4.0).
+  Physical features: rivers, lakes and glaciers © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL),
+  mountain groups from the [GMBA Mountain Inventory v2](https://www.earthenv.org/mountains) (CC BY 4.0), points and figures from Wikidata.
+- Facts in the info boxes were written with Claude from the English (for Austria the German) Wikipedia intros (CC BY-SA 4.0).
 
 Million Cities:
 

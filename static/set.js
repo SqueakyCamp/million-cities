@@ -1,7 +1,7 @@
 // Generic quiz / practice / atlas for one quiz set (set.html?s=<key>): physical features, languages, Austrian Gemeinden …
 // A set is data/sets/<key>.json (items + metadata, see tools/sets/build_*.py), <key>.geojson (shapes, property id)
 // and <key>.facts.json ({id: [facts]}, loaded when the first info box opens).
-import { $, $$, esc, norm, fmtPop, fmtInt, fmtTime, dark, isPhone, toast, pickCard, LEVELS, levelStart } from './lib/util.js';
+import { $, $$, esc, norm, fmtPop, fmtTime, dark, isPhone, pickCard, LEVELS, levelStart } from './lib/util.js';
 import { bindSheet, expandSheet, sheetPadding } from './lib/sheet.js';
 import { store, loadState, save, watchVisibility } from './lib/store.js';
 import { maplibregl, COL, PAL, empty, DEFAULT_LAYERS, createMap, applyBaseLayers, layersPopover, bindLayers } from './lib/mapbase.js';
@@ -15,17 +15,46 @@ const I = D.items, byId = new Map(I.map(it => [it.id, it]));
 const itemOf = v => byId.get(String(v)) ?? byId.get(v);
 const CAT = new Map((D.cats || []).map(c => [c.k, c]));
 const REG = new Map((D.regs || []).map(r => [r.k, r]));
-const PLACES = D.kind === 'places', LANGS = D.kind === 'languages';
+const PLACES = D.kind === 'places', LANGS = D.kind === 'languages', FEAT = D.kind === 'features';
+// sets about one country: map starts on D.bbox, closer zooms, smaller "Find it" tolerances
+const LOCAL = !!D.bbox;
+// German sets (Austria): all texts in German
+const DE = D.lang === 'de';
+const tr = (en, de) => DE ? de : en;
 const noun = n => n === 1 ? D.noun[0] : D.noun[1];
+const LOC = DE ? 'de-AT' : 'en-US';
+const num = (v, d = 0) => v.toLocaleString(LOC, { minimumFractionDigits: d, maximumFractionDigits: d });
+const fmtInt = v => num(Math.round(v));
+// German sets show exact populations ("9.441"), the world sets short ones ("9.4 k")
+const fmtP = p => DE ? (p >= 1e6 ? num(p / 1e6, 2) + ' Mio.' : fmtInt(p)) : fmtPop(p);
+document.documentElement.lang = DE ? 'de' : 'en';
 document.title = `${D.title} · Atlas Quiz`;
 $('#setTitle').textContent = D.title;
 $('#subtitle').textContent = D.sub;
 $('#aboutTitle').textContent = D.title;
 $('#aboutBody').innerHTML = D.about || '';
-$('#whatLabel').textContent = D.catLabel || 'What';
-$('#whereLabel').textContent = D.regLabel || 'Where';
-$('#atlasSearch').placeholder = `Search ${D.noun[1]}…`;
-if (!D.cats) $('#whatSel').parentElement.hidden = true;
+$('#whatLabel').textContent = D.catLabel || tr('What', 'Was');
+$('#whereLabel').textContent = D.regLabel || tr('Where', 'Wo');
+$('#atlasSearch').placeholder = tr(`Search ${D.noun[1]}…`, `${D.noun[1]} suchen…`);
+if (!D.cats && !D.ranks) $('#whatSel').parentElement.hidden = true;
+if (DE) translatePage();
+
+// the static texts of set.html, in German
+function translatePage() {
+  const txt = (sel, t) => { const el = $(sel); if (el) el.textContent = t; };
+  txt('[data-mode=practice]', 'Üben');
+  $('#aboutBtn').title = 'Über die Daten';
+  $('#qPct').nextSibling.textContent = '% gefunden';
+  $('#flyTo').nextSibling.textContent = ' Zu Antworten fliegen';
+  txt('#resetQuiz', 'Neu starten');
+  txt('[data-v=name]', 'Benennen'); txt('[data-v=find]', 'Finden'); txt('#biggerBtn', 'Größer?');
+  txt('#pEasier', '‹ Leichter'); txt('#pHarder', 'Schwerer ›');
+  $('#pEasier').title = 'Bekanntere'; $('#pHarder').title = 'Mit weniger bekannten anfangen';
+  $('.known .small').innerHTML = '<span id="pKnown">0</span> von <span id="pTotal">0</span> gekonnt (zweimal hintereinander richtig) · Runde <span id="pSession">0 / 0</span>';
+  $('#mode-practice > p.small').textContent = 'Was du nicht weißt, kommt öfter dran; was du kannst, seltener. „Schwerer“ überspringt die bekannten, die du schon kannst.';
+  $('#atlasHideNames').parentElement.innerHTML = '<input type="checkbox" id="atlasHideNames"> Namen auf der Karte ausblenden <small>(antippen zeigt sie)</small>';
+  $('#about form + h2 + div + p').innerHTML = 'Grundkarten: Grenzen, Flüsse und Seen von <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>; das Gelände stammt von AWS Terrain Tiles (Mapzen), die physische Karte und das Satellitenbild © Esri.';
+}
 
 // geometry per id (shapes can be several features, e.g. a language's core + secondary areas)
 const SHAPES = new Map();
@@ -47,27 +76,29 @@ const measureOf = it => D.bigger || CAT.get(it.cat)?.m || Object.keys(it.m || {}
 const val = (it, m = measureOf(it)) => it.m?.[m];
 function fmtVal(v, fmt) {
   if (v == null) return '';
-  if (fmt === 'pop') return fmtPop(v);
-  if (fmt === 'popM') return v >= 10 ? Math.round(v) + ' M' : v >= 1 ? v.toFixed(1) + ' M' : Math.round(v * 1000) + ' k';
-  if (fmt === 'km2') return v >= 1e6 ? (v / 1e6).toFixed(1) + ' M km²' : fmtInt(v) + ' km²';
+  if (fmt === 'pop') return fmtP(v);
+  if (fmt === 'popM') return v >= 10 ? Math.round(v) + ' M' : v >= 1 ? num(v, 1) + ' M' : Math.round(v * 1000) + ' k';
+  if (fmt === 'km2') return v >= 1e6 ? num(v / 1e6, 1) + ' M km²' : v < 10 ? num(v, 1) + ' km²' : fmtInt(v) + ' km²';
   if (fmt === 'km') return fmtInt(v) + ' km';
   if (fmt === 'm') return fmtInt(v) + ' m';
-  if (fmt === 'area') return v >= 100 ? fmtInt(v) : v.toFixed(1);
+  if (fmt === 'area') return v >= 100 ? fmtInt(v) : num(v, 1);
   if (fmt === 'dens') return fmtInt(v);
-  if (fmt === 'pct') return (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+  if (fmt === 'pct') return (v >= 0 ? '+' : '') + num(v, 1) + '%';
   if (fmt === 'rank') return '#' + v;
   if (fmt === 'int') return fmtInt(v);
   return String(v);
 }
 const fmtMeasure = (it, m = measureOf(it)) => m && val(it, m) != null ? fmtVal(val(it, m), D.measures[m]?.fmt) : '';
-const ICON = { ocean: '🌊', sea: '🌊', bay: '🌊', strait: '⛴️', river: '〰️', lake: '💧', waterfall: '💦', glacier: '🧊', continent: '🌍', range: '⛰️', peak: '🏔️', desert: '🏜️', plateau: '🗻', lowland: '🌾', peninsula: '🏖️', island: '🏝️', region: '📍' };
+const ICON = { ocean: '🌊', sea: '🌊', bay: '🌊', strait: '⛴️', river: '〰️', lake: '💧', waterfall: '💦', glacier: '🧊', continent: '🌍', range: '⛰️', peak: '🏔️', desert: '🏜️', plateau: '🗻', lowland: '🌾', peninsula: '🏖️', island: '🏝️', region: '📍', pass: '🛣️', valley: '🏞️', gorge: '🕳️' };
 const leftCol = it => PLACES ? String(it.imp) : ICON[it.cat] || '';
 const catLabel = it => CAT.get(it.cat)?.label || it.cat || '';
 const ONE = { ocean: 'Ocean', sea: 'Sea', bay: 'Gulf or bay', strait: 'Strait', river: 'River', lake: 'Lake', waterfall: 'Waterfall', glacier: 'Glacier or ice sheet', continent: 'Continent', range: 'Mountain range', peak: 'Mountain', desert: 'Desert', plateau: 'Plateau or highland', lowland: 'Plain, basin or valley', peninsula: 'Peninsula or cape', island: 'Island', region: 'Region' };
-const catOne = it => ONE[it.cat] || catLabel(it);
+const catOne = it => CAT.get(it.cat)?.one || ONE[it.cat] || catLabel(it);
+// the regions an item touches (countries for world features, Bundesländer for Austria)
+const csLabel = n => n === 1 ? (D.csLabel?.[0] || 'Country') : (D.csLabel?.[1] || 'Countries');
 // short context under a name
 function context(it) {
-  if (PLACES) return `${esc(it.reg)} · ${fmtPop(it.m.pop)} · #${it.imp} in Austria`;
+  if (PLACES) return DE ? `${esc(it.reg)} · ${fmtP(it.m.pop)} Einw. · Platz ${it.imp}` : `${esc(it.reg)} · ${fmtPop(it.m.pop)} · #${it.imp} in Austria`;
   if (LANGS) return `${esc(it.family)}${it.cat2 ? ' · ' + esc(it.cat2) : ''} · ${fmtPop(it.m.l1)} native speakers`;
   const where = it.cs?.length ? it.cs.slice(0, 3).join(', ') + (it.cs.length > 3 ? ' …' : '') : (REG.get(it.reg)?.label || '');
   const mv = fmtMeasure(it);
@@ -76,7 +107,7 @@ function context(it) {
 
 // ------------------------------------------------------------------ state
 // this set's progress: S.sets[KEY] = {quiz: {scope: {found, ms, gaveUp, reset}}, cards: {id: {box, ok, bad, last}}, bigger, ui}
-const UI_DEFAULT = { mode: 'quiz', what: 'all', where: 'all', pracMode: 'name', level: {}, atlasSort: 'imp', hintDots: !PLACES, flyTo: false, hideNames: false };
+const UI_DEFAULT = { mode: 'quiz', what: D.defaultWhat || 'all', where: 'all', pracMode: 'name', level: {}, atlasSort: 'imp', hintDots: !PLACES, flyTo: false, hideNames: false, legend: !isPhone() };
 let S, P, U;
 function adopt() {
   S = store.S;
@@ -85,35 +116,47 @@ function adopt() {
   P = S.sets[KEY] ||= {};
   P.quiz ||= {}; P.cards ||= {}; P.bigger ||= { ok: 0, n: 0 };
   U = P.ui = Object.assign({}, UI_DEFAULT, P.ui);
+  // the set grew (Gemeinden: 100 -> 200): what used to be "all" is now the first rank band
+  if (D.migrateAll && (P.v || 1) < 2) {
+    for (const k of Object.keys(P.quiz)) if (k.startsWith('all|')) { P.quiz[D.migrateAll + k.slice(3)] ||= P.quiz[k]; delete P.quiz[k]; }
+    for (const k of Object.keys(U.level)) if (k.startsWith('all|')) { U.level[D.migrateAll + k.slice(3)] ??= U.level[k]; delete U.level[k]; }
+    if (U.what === 'all') U.what = D.migrateAll;
+    P.v = 2;
+  }
 }
 await loadState();
 adopt();
 store.onRemote = () => { adopt(); renderAll(); };
-$('#storageNote').textContent = store.local ? 'Your progress is saved in this browser only.' : 'Progress is saved on the server, so all your devices share it.';
+$('#storageNote').textContent = store.local ? tr('Your progress is saved in this browser only.', 'Dein Fortschritt wird nur in diesem Browser gespeichert.')
+  : tr('Progress is saved on the server, so all your devices share it.', 'Der Fortschritt wird am Server gespeichert, alle deine Geräte teilen ihn.');
 
 // ------------------------------------------------------------------ scope ("what" × "where")
-// what: all | g:<group> | c:<cat> | b:<branch>; where: all | <region>
+// what: all | g:<group> | c:<cat> | b:<branch> | r:<from>-<to> (rank range); where: all | <region>
 function inWhat(it, w) {
   if (w === 'all') return true;
   if (w.startsWith('g:')) return CAT.get(it.cat)?.grp === w.slice(2);
   if (w.startsWith('c:')) return it.cat === w.slice(2);
   if (w.startsWith('b:')) return it.cat2 === w.slice(2);
+  if (w.startsWith('r:')) { const [a, b] = w.slice(2).split('-').map(Number); return it.imp >= a && it.imp <= b; }
   return true;
 }
 const inWhere = (it, w) => w === 'all' || it.reg === w;
 const scopeItems = (what = U.what, where = U.where) => I.filter(it => inWhat(it, what) && inWhere(it, where));
 const scopeKey = () => `${U.what}|${U.where}`;
+const allLabel = () => tr(`All ${D.noun[1]}`, `Alle ${D.noun[1]}`);
 function scopeLabel() {
-  const w = U.what === 'all' ? `All ${D.noun[1]}` : $('#whatSel').selectedOptions[0]?.textContent.replace(/ \(\d+\)$/, '') || '';
+  const w = U.what === 'all' ? allLabel() : $('#whatSel').selectedOptions[0]?.textContent.replace(/ \(\d+\)$/, '') || '';
   return U.where === 'all' ? w : `${w} · ${REG.get(U.where)?.label || U.where}`;
 }
 function fillScopes() {
   const n = f => I.filter(f).length;
   const opt = (k, label, c) => `<option value="${esc(k)}">${esc(label)} (${c})</option>`;
-  let h = `<option value="all">All ${esc(D.noun[1])} (${I.length})</option>`;
+  let h = '';
+  if (D.ranks) h += D.ranks.map(r => opt(r.k, r.label, n(it => inWhat(it, r.k)))).join('');
+  h += `<option value="all">${esc(D.ranks ? tr(`Top ${I.length} (all)`, `Top ${I.length} (alle)`) : allLabel())}${D.ranks ? '' : ` (${I.length})`}</option>`;
   if (D.cats) {
     const groups = [...new Set(D.cats.map(c => c.grp).filter(Boolean))];
-    if (groups.length > 1) h += `<optgroup label="Groups">${groups.map(g => opt('g:' + g, g === 'Water' ? 'All water' : g === 'Land' ? 'All land' : g, n(it => CAT.get(it.cat)?.grp === g))).join('')}</optgroup>`;
+    if (groups.length > 1) h += `<optgroup label="${tr('Groups', 'Gruppen')}">${groups.map(g => opt('g:' + g, g === 'Water' ? 'All water' : g === 'Land' ? 'All land' : g, n(it => CAT.get(it.cat)?.grp === g))).join('')}</optgroup>`;
     h += `<optgroup label="${esc(D.catLabel || 'Type')}">${D.cats.map(c => opt('c:' + c.k, c.label, n(it => it.cat === c.k))).join('')}</optgroup>`;
     if (D.cat2Label) {
       const br = {};
@@ -123,7 +166,7 @@ function fillScopes() {
     }
   }
   $('#whatSel').innerHTML = h;
-  $('#whereSel').innerHTML = `<option value="all">${PLACES ? 'All of Austria' : 'Whole world'}</option>` + (D.regs || []).map(r => opt(r.k, r.label, n(it => it.reg === r.k))).filter(x => !x.includes('(0)')).join('');
+  $('#whereSel').innerHTML = `<option value="all">${esc(D.allWhere || 'Whole world')}</option>` + (D.regs || []).map(r => opt(r.k, r.label, n(it => it.reg === r.k))).filter(x => !x.includes('(0)')).join('');
   $('#whatSel').value = U.what; $('#whereSel').value = U.where;
   if ($('#whatSel').value !== U.what) U.what = $('#whatSel').value = 'all';
   if ($('#whereSel').value !== U.where) U.where = $('#whereSel').value = 'all';
@@ -135,21 +178,88 @@ function scopeChanged() {
   save(); selected = null; popup?.remove(); recent.length = 0;
   $('#qDetail').hidden = true; $('#detail').hidden = true;
   if (U.mode === 'quiz') renderQuiz(true); else if (U.mode === 'atlas') renderAtlas(true); else startPractice();
+  renderLegend();
+}
+
+// ------------------------------------------------------------------ map styles per set kind
+// Physical features are drawn like in a printed atlas: every type has its own colour and way of drawing,
+// so seas and continents are just names, lakes and glaciers are filled, ranges and deserts only tinted.
+// mode: label (name only, outline on hover) | fill | soft (light tint, no outline) | outline | line | point
+const WATER = dark ? '#7fb6e0' : '#1f6fa8';
+const FS = {
+  ocean: ['label', WATER], sea: ['label', WATER], bay: ['label', WATER], strait: ['label', WATER],
+  river: ['line', WATER], lake: ['fill', WATER], waterfall: ['point', WATER], glacier: ['fill', dark ? '#b9e3f5' : '#3d9cc4'],
+  continent: ['label', dark ? '#d8c7a8' : '#5b4630'], region: ['label', dark ? '#c4a7e7' : '#6b4a9a'],
+  range: ['soft', dark ? '#d29a62' : '#9a5b23'], peak: ['point', dark ? '#e0a26b' : '#8a4b1c'], pass: ['point', dark ? '#f0a3c0' : '#a3285b'],
+  desert: ['soft', dark ? '#e3b65a' : '#c08415'], plateau: ['soft', dark ? '#c9a27a' : '#8d6a45'], lowland: ['soft', dark ? '#93c47d' : '#4d8a34'],
+  valley: ['point', dark ? '#93c47d' : '#3d7a2a'], gorge: ['point', dark ? '#6ad3c4' : '#0f766e'],
+  peninsula: ['outline', dark ? '#b8c0c8' : '#4f5862'], island: ['outline', dark ? '#b8c0c8' : '#4f5862'],
+};
+const fs = it => FS[it.cat] || ['fill', COL.atlas];
+const ITALIC = ['ocean', 'sea', 'bay', 'strait', 'river', 'lake', 'glacier', 'waterfall'];
+
+// Languages: one colour per family (Indo-European split into its big branches), areas drawn as diagonal stripes:
+// dense stripes = main area, thin stripes the other way = also spoken / official. Overlapping languages get
+// stripes at different offsets, so both stay visible.
+const LGROUPS = [
+  ['Germanic', 'Germanic', '#2563eb'], ['Romance', 'Romance', '#dc2626'], ['Slavic', 'Slavic', '#16a34a'], ['IE', 'Other Indo-European', '#0891b2'],
+  ['Indo-Aryan', 'Indo-Aryan', '#ea580c'], ['Iranian', 'Iranian', '#b45309'], ['Sino-Tibetan', 'Sino-Tibetan', '#c026d3'],
+  ['Afroasiatic', 'Afroasiatic', '#8b5a2b'], ['Niger–Congo', 'Niger–Congo', '#65a30d'], ['Austronesian', 'Austronesian', '#7c3aed'],
+  ['Turkic', 'Turkic', '#db2777'], ['Dravidian', 'Dravidian', '#ca8a04'], ['Uralic', 'Uralic', '#4338ca'],
+  ['SEA', 'Austroasiatic & Kra-Dai', '#0d9488'], ['Other', 'Other families & creoles', '#64748b'],
+];
+const LCOL = Object.fromEntries(LGROUPS.map(([k, , c]) => [k, c]));
+function lgroup(it) {
+  if (it.cat === 'Indo-European') return ['Germanic', 'Romance', 'Slavic', 'Indo-Aryan', 'Iranian'].includes(it.cat2) ? it.cat2 : 'IE';
+  if (it.cat === 'Austroasiatic' || it.cat === 'Kra-Dai') return 'SEA';
+  return LCOL[it.cat] ? it.cat : 'Other';
+}
+const PH = 3; // stripe offsets
+if (LANGS) {
+  // greedy offsets: a language takes the offset least used by the (earlier, better-known) languages it overlaps
+  const done = [];
+  for (const it of [...I].sort((a, b) => a.imp - b.imp)) {
+    const used = [0, 0, 0];
+    for (const o of done) {
+      const a = it.bb, b = o.bb;
+      if (a && b && a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a[3]) used[o.ph]++;
+    }
+    it.ph = used.indexOf(Math.min(...used));
+    it.lg = lgroup(it);
+    done.push(it);
+  }
+}
+// per-shape properties the paint expressions use
+const ZBASE = D.z0 ?? 0;
+if (FEAT) {
+  // labels (and point symbols) of less-known features appear only when zoomed in: by rank within the type
+  const rank = {};
+  for (const it of [...I].sort((a, b) => a.imp - b.imp)) { const r = rank[it.cat] = (rank[it.cat] ?? -1) + 1; it.mz = ZBASE + 0.75 * Math.log2(r + 1); }
+}
+for (const f of GEO.features) {
+  const it = byId.get(String(f.properties.id));
+  if (!it) continue;
+  f.properties.c = it.cat;
+  f.properties.mz = it.mz || 0;
+  if (LANGS) { f.properties.lg = it.lg; f.properties.ph = it.ph; }
 }
 
 // ------------------------------------------------------------------ map
 const lineTypes = ['LineString', 'MultiLineString'], polyTypes = ['Polygon', 'MultiPolygon'];
 const isType = types => ['match', ['geometry-type'], types, true, false];
+const none = ['in', ['get', 'id'], ['literal', []]];
 const map = createMap({
   sources: {
-    shapes: { type: 'geojson', data: GEO, attribution: PLACES ? 'Statistik Austria' : 'Natural Earth' },
+    shapes: { type: 'geojson', data: GEO, attribution: D.attribution || (PLACES ? 'Statistik Austria' : 'Natural Earth') },
     anchors: { type: 'geojson', data: empty },
     mark: { type: 'geojson', data: empty },
   },
   middle: [
-    { id: 'sh-fill', type: 'fill', source: 'shapes', filter: ['in', ['get', 'id'], ['literal', []]], paint: { 'fill-color': COL.atlas, 'fill-opacity': 0.25 } },
-    { id: 'sh-line', type: 'line', source: 'shapes', filter: ['in', ['get', 'id'], ['literal', []]], layout: { 'line-join': 'round', 'line-cap': 'round' }, paint: { 'line-color': COL.atlas, 'line-width': 1 } },
-    { id: 'sh-pt', type: 'circle', source: 'shapes', filter: ['in', ['get', 'id'], ['literal', []]], paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 1, 4, 8, 7], 'circle-color': COL.atlas, 'circle-stroke-color': dark ? '#0e1a24' : '#fff', 'circle-stroke-width': 1.5 } },
+    { id: 'sh-fill', type: 'fill', source: 'shapes', filter: none, paint: { 'fill-color': COL.atlas, 'fill-opacity': 0.25 } },
+    ...(LANGS ? [{ id: 'sh-pat', type: 'fill', source: 'shapes', filter: none, paint: { 'fill-opacity': dark ? 0.85 : 0.95 } }] : []),
+    { id: 'sh-line', type: 'line', source: 'shapes', filter: none, layout: { 'line-join': 'round', 'line-cap': 'round' }, paint: { 'line-color': COL.atlas, 'line-width': 1 } },
+    { id: 'sh-hover', type: 'line', source: 'shapes', filter: none, layout: { 'line-join': 'round' }, paint: { 'line-color': COL.target, 'line-width': 2, 'line-opacity': 0.9 } },
+    { id: 'sh-pt', type: 'circle', source: 'shapes', filter: none, paint: { 'circle-radius': ['interpolate', ['linear'], ['zoom'], 1, 4, 8, 7], 'circle-color': COL.atlas, 'circle-stroke-color': dark ? '#0e1a24' : '#fff', 'circle-stroke-width': 1.5 } },
   ],
   top: [
     { id: 'mark-line', type: 'line', source: 'mark', filter: ['==', ['geometry-type'], 'LineString'], paint: { 'line-color': COL.target, 'line-width': 2, 'line-dasharray': [2, 2] } },
@@ -164,25 +274,60 @@ const map = createMap({
     },
     ...[['alabels', false], ['alabels-pt', true]].map(([id, pt]) => ({
       id, type: 'symbol', source: 'anchors', filter: ['all', ['to-boolean', ['get', 'label']], ['==', ['get', 'pt'], pt]], layout: {
-        'text-field': ['get', 'label'], 'text-font': ['Noto Sans Bold'],
-        'text-size': ['interpolate', ['linear'], ['zoom'], 1, ['interpolate', ['linear'], ['get', 'imp'], 1, 13, 300, 10.5], 6, ['interpolate', ['linear'], ['get', 'imp'], 1, 16, 300, 12]],
+        // names of less-known features only from their zoom level (mz) on
+        'text-field': ['step', ['zoom'], ...Array.from({ length: 28 }, (_, i) => [i / 2, ['case', ['<=', ['get', 'mz'], i / 2], ['get', 'label'], '']]).flat().slice(1)],
+        'text-font': FEAT ? ['match', ['get', 'c'], ITALIC, ['literal', ['Noto Sans Italic']], ['literal', ['Noto Sans Bold']]] : ['Noto Sans Bold'],
+        'text-transform': FEAT ? ['match', ['get', 'c'], ['ocean', 'continent'], 'uppercase', 'none'] : 'none',
+        'text-letter-spacing': FEAT ? ['match', ['get', 'c'], ['ocean', 'continent'], 0.18, ['sea', 'region'], 0.06, 0] : 0,
+        'text-size': ['interpolate', ['linear'], ['zoom'],
+          1, ['*', ['interpolate', ['linear'], ['get', 'imp'], 1, 13, 300, 10.5], ['match', ['get', 'c'], ['ocean', 'continent'], 1.1, 1]],
+          6, ['*', ['interpolate', ['linear'], ['get', 'imp'], 1, 16, 300, 12], ['match', ['get', 'c'], ['ocean', 'continent'], 1.15, 1]]],
         // point features (towns, peaks) get the label beside them, areas and rivers in the middle
         'text-variable-anchor': pt ? ['left', 'right', 'top', 'bottom'] : ['center'],
         'text-radial-offset': pt ? 0.7 : 0, 'text-justify': 'auto', 'symbol-sort-key': ['get', 'imp'], 'text-max-width': 8, 'text-padding': 1,
       },
-      paint: { 'text-color': ['match', ['get', 'st'], 'miss', COL.miss, PAL.text], 'text-halo-color': PAL.halo, 'text-halo-width': 1.6 },
+      paint: { 'text-color': PAL.text, 'text-halo-color': PAL.halo, 'text-halo-width': 1.6 },
     })),
   ],
 });
-if (D.bbox) map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: 30, duration: 0 });
+const homeBounds = () => [[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]];
+if (LOCAL) map.fitBounds(homeBounds(), { padding: 30, duration: 0 });
 
-$('#layers').innerHTML = layersPopover(PLACES ? [['setOutlines', 'Municipal boundaries']] : []);
-function applyLayers() {
-  const sat = applyBaseLayers(map, S);
-  for (const id of ['alabels', 'alabels-pt']) {
-    map.setPaintProperty(id, 'text-halo-color', sat ? '#000' : PAL.halo);
-    map.setPaintProperty(id, 'text-color', ['match', ['get', 'st'], 'miss', sat ? '#ff8a8a' : COL.miss, sat ? '#fff' : PAL.text]);
+// stripe patterns for the languages: p-<colour key>-<core|also>-<offset>
+function stripes(color, t, ph) {
+  const R = 2, S = 10 * R, w = (t === 'core' ? 3 : 1.3) * R, off = ph * S / PH;
+  const [r, g, b] = [1, 3, 5].map(i => parseInt(color.slice(i, i + 2), 16));
+  const a = t === 'core' ? 230 : 170;
+  const data = new Uint8Array(S * S * 4);
+  for (let y = 0; y < S; y++) for (let x = 0; x < S; x++) {
+    // core stripes run "/", the others "\"; distance to the stripe centre, anti-aliased by one pixel
+    const u = ((t === 'core' ? x + y : x - y + S) - off + 2 * S) % S;
+    const d = Math.min(Math.abs(u - w / 2), S - Math.abs(u - w / 2));
+    const cov = Math.max(0, Math.min(1, w / 2 + 0.5 - d));
+    const i = (y * S + x) * 4;
+    data[i] = r; data[i + 1] = g; data[i + 2] = b; data[i + 3] = Math.round(a * cov);
   }
+  return { width: S, height: S, data };
+}
+function addPatterns() {
+  const cols = { ...LCOL, miss: COL.miss, hint: COL.hint, found: COL.found };
+  for (const [k, c] of Object.entries(cols)) for (const t of ['core', 'also']) for (let ph = 0; ph < PH; ph++) {
+    const id = `p-${k}-${t}-${ph}`;
+    if (!map.hasImage(id)) map.addImage(id, stripes(c, t, ph), { pixelRatio: 2 });
+  }
+}
+
+const extraLayers = PLACES ? [['setOutlines', tr('Municipal boundaries', 'Gemeindegrenzen')]] : [];
+let layersHtml = layersPopover(extraLayers);
+if (DE) for (const [a, b] of [['Base map', 'Grundkarte'], ['Plain', 'Einfach'], ['Terrain', 'Gelände'], ['Physical', 'Physisch'], ['Satellite', 'Satellit'], ['Overlays', 'Ebenen'],
+  ['Country borders', 'Staatsgrenzen'], ['Subdivision borders', 'Landesgrenzen'], ['States, provinces, regions', 'Bundesländer, Provinzen, Regionen'], ['Thicker, darker lines', 'Dicker und dunkler'],
+  ['> Bold<', '> Fett<'], ['Rivers &amp; lakes', 'Flüsse &amp; Seen'], ['River &amp; lake names', 'Fluss- &amp; Seennamen'], ['Country names', 'Ländernamen'],
+  ['Subdivision names', 'Bundesländernamen'], ['Map layers', 'Kartenebenen']]) layersHtml = layersHtml.split(a).join(b);
+$('#layers').innerHTML = layersHtml;
+let sat = false;
+function applyLayers() {
+  sat = applyBaseLayers(map, S);
+  for (const id of ['alabels', 'alabels-pt']) map.setPaintProperty(id, 'text-halo-color', sat ? '#000' : PAL.halo);
   renderMap();
 }
 bindLayers(map, S, () => { applyLayers(); save(); });
@@ -191,61 +336,116 @@ bindLayers(map, S, () => { applyLayers(); save(); });
 let view = new Map(), labels = new Set();
 function setView(statusById, labelIds) { view = statusById; labels = labelIds; renderMap(); }
 const STATUS_COL = { found: COL.found, miss: COL.miss, hint: COL.hint, target: COL.target, sel: COL.target, atlas: COL.atlas };
-function matchExpr(byStatus, fallback) {
-  const groups = {};
-  for (const [id, st] of view) (groups[st] ||= []).push(id);
+// ['match', id, [ids…], value, …, fallback] from a function id -> value
+function byIdExpr(fn, fallback) {
+  const groups = new Map();
+  for (const id of view.keys()) {
+    const v = fn(id, view.get(id));
+    if (v === fallback) continue;
+    const k = JSON.stringify(v);
+    if (!groups.has(k)) groups.set(k, [v, []]);
+    groups.get(k)[1].push(id);
+  }
+  if (!groups.size) return fallback;
   const e = ['match', ['get', 'id']];
-  for (const [st, ids] of Object.entries(groups)) if (byStatus[st] != null) e.push(ids, byStatus[st]);
-  return e.length > 2 ? [...e, fallback] : fallback;
+  for (const [v, ids] of groups.values()) e.push(ids, v);
+  return [...e, fallback];
+}
+const HI = new Set(['target', 'sel']);
+// how one feature is painted for its status: [colour, fill opacity, line opacity, line width (relative)]
+function featPaint(it, st) {
+  const [mode, c] = fs(it);
+  const color = st === 'atlas' ? c : STATUS_COL[st];
+  if (HI.has(st)) return [color, mode === 'label' ? 0.12 : mode === 'soft' ? 0.3 : 0.45, 1, 2];
+  if (st === 'atlas') return [color, { fill: 0.45, soft: 0.17, outline: 0.06, label: 0 }[mode] ?? 0.3, { fill: 0.8, outline: 0.55, line: 0.9, soft: it.cat === 'range' ? 0.3 : 0 }[mode] ?? 0, 1];
+  if (st === 'hint') return [color, { label: 0, soft: 0.1, outline: 0.06 }[mode] ?? 0.2, { label: 0.35, soft: 0, outline: 0.5 }[mode] ?? 0.8, 1];
+  return [color, { label: 0.05, soft: 0.22, outline: 0.15 }[mode] ?? 0.32, { soft: 0.5 }[mode] ?? 0.9, 1];
 }
 function renderMap() {
   if (!map.getLayer('sh-fill')) return;
-  const ids = [...view.keys()];
+  // features: less-known ones only from their zoom on (unless found / missed / asked)
+  zKey = zNow();
+  const ids = [...view.keys()].filter(id => !FEAT || !['atlas', 'hint'].includes(view.get(id)) || byId.get(id).mz <= zKey + 0.5);
   const showShapes = !PLACES || S.layers.setOutlines;
-  const shapeIds = PLACES ? ids.filter(id => showShapes || view.get(id) === 'target' || view.get(id) === 'sel') : ids;
+  const shapeIds = PLACES ? ids.filter(id => showShapes || HI.has(view.get(id))) : ids;
   const inIds = ['in', ['get', 'id'], ['literal', shapeIds]];
   map.setFilter('sh-fill', ['all', isType(polyTypes), inIds]);
   map.setFilter('sh-line', ['all', ['any', isType(lineTypes), isType(polyTypes)], inIds]);
   map.setFilter('sh-pt', ['all', ['==', ['geometry-type'], 'Point'], inIds]);
-  const color = matchExpr(STATUS_COL, COL.atlas);
-  // fills stay light so the map underneath (and overlapping areas) can be read; secondary language areas lighter still
-  const op = PLACES ? { found: 0.3, miss: 0.25, hint: 0.08, target: 0.4, sel: 0.4, atlas: 0.1 } : LANGS ? { found: 0.4, miss: 0.35, hint: 0.18, target: 0.5, sel: 0.55, atlas: 0.3 } : { found: 0.32, miss: 0.3, hint: 0.2, target: 0.45, sel: 0.5, atlas: 0.25 };
-  const opacity = matchExpr(op, 0.25);
-  map.setPaintProperty('sh-fill', 'fill-color', color);
-  map.setPaintProperty('sh-fill', 'fill-opacity', LANGS ? ['*', opacity, ['case', ['==', ['get', 't'], 'also'], 0.4, 1]] : opacity);
-  map.setPaintProperty('sh-line', 'line-color', color);
-  const hi = ids.filter(id => ['target', 'sel'].includes(view.get(id))).concat(['\u0000']);
-  const lw = (river, riverHi, edge, edgeHi) => ['case', isType(lineTypes), ['match', ['get', 'id'], hi, riverHi, river], PLACES ? edge : ['match', ['get', 'id'], hi, edgeHi, edge]];
-  map.setPaintProperty('sh-line', 'line-width', ['interpolate', ['linear'], ['zoom'], 1, lw(2, 3.5, 0.6, 1.8), 7, lw(3.5, 5, 0.9, 2.4)]);
-  map.setPaintProperty('sh-line', 'line-opacity', LANGS ? ['case', ['==', ['get', 't'], 'also'], 0.45, 0.9] : 0.9);
-  map.setPaintProperty('sh-pt', 'circle-color', color);
+  const hi = ids.filter(id => HI.has(view.get(id))).concat(['\u0000']);
+  if (FEAT) {
+    const P_ = id => featPaint(byId.get(id), view.get(id));
+    const color = byIdExpr(id => P_(id)[0], COL.atlas);
+    map.setPaintProperty('sh-fill', 'fill-color', color);
+    map.setPaintProperty('sh-fill', 'fill-opacity', byIdExpr(id => P_(id)[1], 0.25));
+    map.setPaintProperty('sh-line', 'line-color', color);
+    map.setPaintProperty('sh-line', 'line-opacity', byIdExpr(id => P_(id)[2], 0.9));
+    const lw = (river, riverHi, edge, edgeHi) => ['case', isType(lineTypes), ['match', ['get', 'id'], hi, riverHi, river], ['match', ['get', 'id'], hi, edgeHi, edge]];
+    map.setPaintProperty('sh-line', 'line-width', ['interpolate', ['linear'], ['zoom'], 1, lw(1.6, 3.5, 0.7, 1.8), 7, lw(LOCAL ? 2 : 3, 5, 1.1, 2.4), 11, lw(3.5, 6, 1.5, 3)]);
+    map.setPaintProperty('sh-pt', 'circle-color', color);
+    map.setPaintProperty('sh-pt', 'circle-opacity', byIdExpr((id, st) => st === 'hint' ? 0.6 : 0.95, 0.95));
+    map.setPaintProperty('sh-pt', 'circle-radius', ['interpolate', ['linear'], ['zoom'], 1, ['match', ['get', 'id'], hi, 6, 3.5], 8, ['match', ['get', 'id'], hi, 9, 6]]);
+  } else if (LANGS) {
+    // a faint tint of the family colour under the main areas; solid fill for the selected / asked one
+    const lcol0 = ['match', ['get', 'lg'], ...LGROUPS.flatMap(([g, , c]) => [g, c]), COL.atlas];
+    const solid = byIdExpr((id, st) => HI.has(st) ? 0.4 : st === 'atlas' || st === 'found' ? 0.1 : 0, 0);
+    map.setPaintProperty('sh-fill', 'fill-color', hi.length > 1 ? ['match', ['get', 'id'], hi, COL.target, lcol0] : lcol0);
+    map.setPaintProperty('sh-fill', 'fill-opacity', ['*', solid, ['case', ['==', ['get', 't'], 'also'], ['match', ['get', 'id'], hi, 0.5, 0], 1]]);
+    map.setFilter('sh-pat', ['all', isType(polyTypes), inIds]);
+    // stripe colour: the family's, or red / grey / green for missed, hinted and (practice) right answers
+    const key = byIdExpr((id, st) => st === 'miss' ? 'miss' : st === 'hint' ? 'hint' : st === 'found' && U.mode === 'practice' ? 'found' : '', '');
+    const k = key === '' ? ['get', 'lg'] : ['case', ['==', key, ''], ['get', 'lg'], key];
+    map.setPaintProperty('sh-pat', 'fill-pattern', ['concat', 'p-', k, '-', ['get', 't'], '-', ['to-string', ['get', 'ph']]]);
+    const lcol = ['match', ['get', 'lg'], ...LGROUPS.flatMap(([g, , c]) => [g, c]), COL.atlas];
+    const color = byIdExpr((id, st) => HI.has(st) ? COL.target : st === 'miss' ? COL.miss : st === 'hint' ? COL.hint : '', '');
+    map.setPaintProperty('sh-line', 'line-color', color === '' ? lcol : ['case', ['==', color, ''], lcol, ['to-color', color]]);
+    map.setPaintProperty('sh-line', 'line-width', ['interpolate', ['linear'], ['zoom'], 1, ['match', ['get', 'id'], hi, 1.8, 0.5], 7, ['match', ['get', 'id'], hi, 2.6, 1]]);
+    map.setPaintProperty('sh-line', 'line-opacity', ['case', ['==', ['get', 't'], 'also'], ['match', ['get', 'id'], hi, 0.8, 0], ['match', ['get', 'id'], hi, 1, 0.7]]);
+  } else {
+    const color = byIdExpr((id, st) => STATUS_COL[st], COL.atlas);
+    const op = { found: 0.3, miss: 0.25, hint: 0.08, target: 0.4, sel: 0.4, atlas: 0.1 };
+    map.setPaintProperty('sh-fill', 'fill-color', color);
+    map.setPaintProperty('sh-fill', 'fill-opacity', byIdExpr((id, st) => op[st], 0.25));
+    map.setPaintProperty('sh-line', 'line-color', color);
+    map.setPaintProperty('sh-line', 'line-width', ['interpolate', ['linear'], ['zoom'], 1, ['match', ['get', 'id'], hi, 1.8, 0.6], 7, ['match', ['get', 'id'], hi, 2.4, 0.9]]);
+    map.setPaintProperty('sh-line', 'line-opacity', 0.9);
+    map.setPaintProperty('sh-pt', 'circle-color', color);
+  }
+  // name labels: atlas names in their type's colour (features), the rest dark; red when missed
+  const labelCol = FEAT && !sat ? ['match', ['get', 'c'], ...Object.entries(FS).flatMap(([k, [, c]]) => [k, c]), PAL.text] : sat ? '#fff' : PAL.text;
+  for (const id of ['alabels', 'alabels-pt'])
+    map.setPaintProperty(id, 'text-color', ['match', ['get', 'st'], 'miss', sat ? '#ff8a8a' : COL.miss, 'atlas', labelCol, 'hint', labelCol, sat ? '#fff' : PAL.text]);
   // anchors: dots (places) and name labels
   map.getSource('anchors').setData({
     type: 'FeatureCollection',
     features: ids.map(id => {
       const it = byId.get(id), st = view.get(id);
-      return { type: 'Feature', geometry: { type: 'Point', coordinates: it.ll }, properties: { id, st, imp: it.imp, v: PLACES ? it.m.pop / 1000 : 0, dot: PLACES, pt: PLACES || it.g === 'pt', label: labels.has(id) ? it.name : '' } };
+      return { type: 'Feature', geometry: { type: 'Point', coordinates: it.ll }, properties: { id, st, c: it.cat, imp: it.imp, mz: HI.has(st) ? 0 : it.mz || 0, v: PLACES ? it.m.pop / 1000 : 0, dot: PLACES, pt: PLACES || it.g === 'pt', label: labels.has(id) ? it.name : '' } };
     }),
   });
 }
+let zKey = null;
+const zNow = () => Math.floor(map.getZoom() * 2) / 2;
+map.on('zoom', () => { if (FEAT && zNow() !== zKey) renderMap(); });
 function setMark(features) { map.getSource('mark').setData({ type: 'FeatureCollection', features }); }
 function mapPadding() { return sheetPadding(isPhone() ? 20 : 50); }
-const worldView = () => map.flyTo({ center: [20, 20], zoom: isPhone() ? 0.6 : 1.5, duration: 900, padding: sheetPadding(0) });
-function fitItems(list, maxZoom = PLACES ? 9 : 5) {
+const homeView = () => LOCAL ? map.fitBounds(homeBounds(), { padding: sheetPadding(30), duration: 800 })
+  : map.flyTo({ center: [20, 20], zoom: isPhone() ? 0.6 : 1.5, duration: 900, padding: sheetPadding(0) });
+function fitItems(list, maxZoom = LOCAL ? 9 : 5) {
   if (!list.length) return;
   let w = 180, e = -180, s = 90, n = -90;
   for (const it of list) {
     const b = it.bb || [it.ll[0], it.ll[1], it.ll[0], it.ll[1]];
-    if (!it.bb && !['pt'].includes(it.g)) return worldView();
+    if (!it.bb && !['pt'].includes(it.g)) return homeView();
     w = Math.min(w, b[0]); s = Math.min(s, b[1]); e = Math.max(e, b[2]); n = Math.max(n, b[3]);
   }
-  if (e - w > 200) return worldView();
+  if (e - w > 200) return homeView();
   if (e - w < 0.01) return map.flyTo({ center: [w, s], zoom: maxZoom, padding: mapPadding(), speed: 1.6 });
   map.fitBounds([[w, s], [e, n]], { padding: sheetPadding(isPhone() ? 30 : 70), maxZoom, duration: 900 });
 }
 function flyToItem(it, minZoom) {
-  if (it.g === 'pt' || PLACES) map.flyTo({ center: it.ll, zoom: Math.max(map.getZoom(), minZoom ?? (PLACES ? 10 : 6)), speed: 1.6, padding: mapPadding() });
-  else fitItems([it], 7);
+  if (it.g === 'pt' || PLACES) map.flyTo({ center: it.ll, zoom: Math.max(map.getZoom(), minZoom ?? (LOCAL ? 10 : 6)), speed: 1.6, padding: mapPadding() });
+  else fitItems([it], LOCAL ? 10 : 7);
 }
 let popup = null;
 function showPopup(it, lngLat) {
@@ -268,6 +468,40 @@ function hitsAt(point) {
     if (!best.has(id) || best.get(id) > r) best.set(id, r);
   }
   return [...best.entries()].map(([id, r]) => [byId.get(id), r]).filter(x => x[0]).sort((a, b) => a[1] - b[1] || a[0].size - b[0].size).map(x => x[0]);
+}
+// outline of the area under the mouse (atlas, and found ones in the quiz)
+let hoverId = null;
+function setHover(id) {
+  if (id === hoverId) return;
+  hoverId = id;
+  map.setFilter('sh-hover', id ? ['all', ['==', ['get', 'id'], id], ['!=', ['geometry-type'], 'Point'], ['!=', ['get', 't'], 'also']] : none);
+}
+
+// ------------------------------------------------------------------ legend (atlas colours)
+const legend = document.createElement('div');
+legend.className = 'legend';
+$('main').append(legend);
+legend.onclick = e => { if (e.target.closest('.lg-head')) { U.legend = !U.legend; save(); renderLegend(); } };
+function renderLegend() {
+  if (!FEAT && !LANGS) { legend.hidden = true; return; }
+  const pool = scopeItems();
+  let rows = '';
+  if (FEAT) {
+    const cats = (D.cats || []).filter(c => pool.some(it => it.cat === c.k));
+    rows = cats.map(c => {
+      const [mode, col] = FS[c.k] || ['fill', COL.atlas];
+      const sw = mode === 'line' ? `<i class="sw line" style="--c:${col}"></i>` : mode === 'point' ? `<i class="sw pt" style="--c:${col}"></i>`
+        : mode === 'label' ? `<i class="sw lab" style="--c:${col}">${ITALIC.includes(c.k) ? '<em>Aa</em>' : 'Aa'}</i>` : `<i class="sw ${mode}" style="--c:${col}"></i>`;
+      return `<span>${sw}${esc(c.label)}</span>`;
+    }).join('');
+  } else {
+    const gs = LGROUPS.filter(([g]) => pool.some(it => it.lg === g));
+    rows = gs.map(([, label, c]) => `<span><i class="sw stripe" style="--c:${c}"></i>${esc(label)}</span>`).join('')
+      + `<small class="lg-note"><i class="sw stripe" style="--c:#64748b"></i> main area · <i class="sw stripe thin" style="--c:#64748b"></i> also spoken / official</small>`;
+  }
+  legend.hidden = !rows || U.mode === 'practice' || (FEAT && U.mode !== 'atlas');
+  legend.classList.toggle('open', !!U.legend);
+  legend.innerHTML = `<button class="lg-head" type="button">${tr('Legend', 'Legende')} <span>${U.legend ? '▾' : '▸'}</span></button><div class="lg-body">${rows}</div>`;
 }
 
 // ------------------------------------------------------------------ geometry tests for "Find it"
@@ -314,16 +548,17 @@ function setMode(m) {
   U.mode = m;
   $$('.modes button').forEach(b => b.setAttribute('aria-selected', b.dataset.mode === m));
   $$('.mode').forEach(s => s.classList.toggle('on', s.id === 'mode-' + m));
-  setMark([]); popup?.remove();
+  setMark([]); popup?.remove(); setHover(null);
   $('#qDetail').hidden = true;
   if (findHandler) { map.off('click', findHandler); findHandler = null; }
   if (m === 'quiz') renderQuiz(true);
   if (m === 'practice') startPractice();
   if (m === 'atlas') renderAtlas(true);
+  renderLegend();
   save();
 }
 $$('.modes button').forEach(b => b.onclick = () => setMode(b.dataset.mode));
-function renderAll() { fillScopes(); if (U.mode === 'quiz') renderQuiz(); else if (U.mode === 'atlas') renderAtlas(); else renderPracticeStats(); }
+function renderAll() { fillScopes(); if (U.mode === 'quiz') renderQuiz(); else if (U.mode === 'atlas') renderAtlas(); else renderPracticeStats(); renderLegend(); }
 
 // ------------------------------------------------------------------ QUIZ
 const QZ = () => P.quiz[scopeKey()] ||= { found: {}, ms: 0, gaveUp: false, reset: Date.now() };
@@ -341,11 +576,11 @@ setInterval(() => { if (U.mode === 'quiz') save(); }, 20000);
 watchVisibility(() => quizTick(), () => { lastTick = Date.now(); });
 
 for (const id of ['hintDots', 'flyTo']) $('#' + id).onchange = e => { U[id] = e.target.checked; renderQuiz(); save(); };
-$('#hintLabel').textContent = PLACES ? 'Show dots for the missing ones' : `Show the missing ${D.noun[1]} (unnamed)`;
+$('#hintLabel').textContent = PLACES ? tr('Show dots for the missing ones', 'Punkte für die fehlenden zeigen') : tr(`Show the missing ${D.noun[1]} (unnamed)`, `Fehlende ${D.noun[1]} zeigen (ohne Namen)`);
 $('#giveUp').onclick = () => { const q = QZ(); q.gaveUp = !q.gaveUp; renderQuiz(); save(); };
 $('#resetQuiz').onclick = () => {
   const n = Object.keys(QZ().found).length;
-  if (n && !confirm(`Restart "${scopeLabel()}"? Your ${n} answers for it are cleared.`)) return;
+  if (n && !confirm(tr(`Restart "${scopeLabel()}"? Your ${n} answers for it are cleared.`, `„${scopeLabel()}“ neu starten? Deine ${n} Antworten dafür werden gelöscht.`))) return;
   P.quiz[scopeKey()] = { found: {}, ms: 0, gaveUp: false, reset: Date.now() };
   renderQuiz(true); save(); $('#answer').focus();
 };
@@ -371,17 +606,18 @@ function tryAnswer(final) {
     quizMsg('✓ ' + its.map(it => it.name + (fmtMeasure(it) ? ` (${fmtMeasure(it)})` : '')).join(', '), 'good');
     inp.value = ''; inp.classList.remove('bad'); inp.classList.add('good'); setTimeout(() => inp.classList.remove('good'), 400);
     renderQuiz();
-    if (U.flyTo) flyToItem(its[0], PLACES ? 9 : 4);
+    if (U.flyTo) flyToItem(its[0], LOCAL ? 9 : 4);
     save();
-    if (pool.every(it => q.found[it.id])) quizMsg(`🎉 All ${pool.length} found in ${fmtTime(q.ms)}!`, 'good');
+    if (pool.every(it => q.found[it.id])) quizMsg(tr(`🎉 All ${pool.length} found in ${fmtTime(q.ms)}!`, `🎉 Alle ${pool.length} gefunden, in ${fmtTime(q.ms)}!`), 'good');
     return;
   }
   if (!final) return;
-  let why = 'Not on the list', cls = 'bad';
-  if (ids.length) { why = `Already found: ${ids.map(id => byId.get(id).name).join(', ')}`; cls = 'warn'; }
+  let why = tr('Not on the list', 'Nicht auf der Liste'), cls = 'bad';
+  if (ids.length) { why = tr('Already found: ', 'Schon gefunden: ') + ids.map(id => byId.get(id).name).join(', '); cls = 'warn'; }
   else if ((answers[key] || []).length) {
     const it = byId.get(answers[key][0]);
-    why = `${it.name} is on the list, but not in this selection (${[catLabel(it), REG.get(it.reg)?.label].filter(Boolean).join(' · ')})`;
+    const where = [D.ranks ? (DE ? `Platz ${it.imp}` : `#${it.imp}`) : catLabel(it), REG.get(it.reg)?.label].filter(Boolean).join(' · ');
+    why = tr(`${it.name} is on the list, but not in this selection (${where})`, `${it.name} ist auf der Liste, aber nicht in dieser Auswahl (${where})`);
     cls = 'warn';
   }
   quizMsg(why, cls);
@@ -400,9 +636,9 @@ function renderQuiz(refit) {
   $('#qPct').textContent = pool.length ? Math.floor(100 * found.length / pool.length) : 0;
   $('#qBar').style.width = (pool.length ? 100 * found.length / pool.length : 0) + '%';
   $('#qTimer').textContent = fmtTime(q.ms || 0);
-  $('#giveUp').textContent = q.gaveUp ? 'Hide missing again' : 'Give up & show missing';
+  $('#giveUp').textContent = q.gaveUp ? tr('Hide missing again', 'Fehlende wieder verstecken') : tr('Give up & show missing', 'Aufgeben & Fehlende zeigen');
   $('#answer').disabled = !pool.length;
-  $('#answer').placeholder = pool.length ? `Type ${LANGS ? 'a language' : PLACES ? 'a town' : 'a name'}…` : 'Nothing in this selection';
+  $('#answer').placeholder = pool.length ? (DE ? (PLACES ? 'Gemeinde eintippen…' : 'Namen eintippen…') : `Type ${LANGS ? 'a language' : PLACES ? 'a town' : 'a name'}…`) : tr('Nothing in this selection', 'Nichts in dieser Auswahl');
 
   // progress by region (whole world) or by type (one region)
   const byReg = U.where === 'all' && D.regs?.length > 1;
@@ -411,13 +647,14 @@ function renderQuiz(refit) {
   const groups = new Map();
   for (const it of pool) { const k = keyOf(it); if (!groups.has(k)) groups.set(k, { n: 0, f: 0 }); const g = groups.get(k); g.n++; if (q.found[it.id]) g.f++; }
   const gl = groups.size > 1 ? [...groups.entries()].sort((a, b) => b[1].n - a[1].n) : [];
-  $('#qRegionsTitle').textContent = byReg ? `By ${(D.regLabel || 'region').toLowerCase()}` : `By ${(D.catLabel || 'type').toLowerCase()}`;
+  const by = byReg ? (D.regLabel || 'region') : (D.catLabel || 'type');
+  $('#qRegionsTitle').textContent = DE ? `Nach ${by}` : `By ${by.toLowerCase()}`;
   $('#qRegions').innerHTML = gl.map(([k, g]) => `<div class="region" data-k="${esc(k)}"><b>${esc(labelOf(k))}</b><span>${g.f} / ${g.n}</span><div class="bar"><i style="width:${100 * g.f / g.n}%"></i></div></div>`).join('');
   $$('#qRegions .region').forEach(el => el.onclick = () => fitItems(pool.filter(it => keyOf(it) === el.dataset.k)));
   $('#qRegionsTitle').hidden = !gl.length;
 
   const missing = q.gaveUp ? pool.filter(it => !q.found[it.id]) : [];
-  $('#qListTitle').textContent = q.gaveUp ? `Missing (${missing.length}) and found (${found.length})` : `Found (${found.length})`;
+  $('#qListTitle').textContent = q.gaveUp ? tr(`Missing (${missing.length}) and found (${found.length})`, `Fehlend (${missing.length}) und gefunden (${found.length})`) : tr(`Found (${found.length})`, `Gefunden (${found.length})`);
   const rows = [...missing.map(it => [it, 'miss']), ...found.sort((a, b) => q.found[b.id] - q.found[a.id]).map(it => [it, 'found'])];
   $('#qList').innerHTML = rows.map(([it, cls]) => listRow(it, cls)).join('');
   $$('#qList li').forEach(li => li.onclick = () => { const it = itemOf(li.dataset.id); flyToItem(it); showPopup(it); quizInfo(it); });
@@ -429,10 +666,7 @@ function renderQuiz(refit) {
     else if (U.hintDots) st.set(it.id, 'hint');
   }
   setView(st, lab);
-  if (refit) {
-    if (D.bbox && U.where === 'all') map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: sheetPadding(30), duration: 800 });
-    else if (U.where === 'all') worldView(); else fitItems(pool);
-  }
+  if (refit) { if (U.where === 'all') homeView(); else fitItems(pool); }
   if (!isPhone()) setTimeout(() => $('#answer').focus(), 0);
 }
 function listRow(it, cls = '') {
@@ -463,8 +697,10 @@ const pracLevel = () => Math.min(LEVELS - 1, U.level[scopeKey()] || 0);
 const pick = pool => pickCard(byEase(pool), pracLevel(), it => P.cards[it.id], recent);
 function renderLevel() {
   const pool = byEase(scopeItems()), L = pracLevel(), i = levelStart(pool.length, L), it = pool[i];
-  const what = PLACES ? 'towns' : D.noun[1];
-  $('#pLevel').innerHTML = `<b>Level ${L + 1} of ${LEVELS}</b><small>${L === 0 ? `New ${what} come in ${PLACES ? 'largest' : 'best-known'} first` : it ? `New ${what} from #${i + 1} (${esc(it.name)}) on; easier ones only come back until you know them` : ''}</small>`;
+  const what = PLACES && !DE ? 'towns' : D.noun[1];
+  $('#pLevel').innerHTML = DE
+    ? `<b>Stufe ${L + 1} von ${LEVELS}</b><small>${L === 0 ? `Neue ${what} kommen ${PLACES ? 'nach Größe' : 'nach Bekanntheit'} (die ${PLACES ? 'größten' : 'bekanntesten'} zuerst)` : it ? `Neue ${what} ab Nr. ${i + 1} (${esc(it.name)}); leichtere nur, bis du sie kannst` : ''}</small>`
+    : `<b>Level ${L + 1} of ${LEVELS}</b><small>${L === 0 ? `New ${what} come in ${PLACES ? 'largest' : 'best-known'} first` : it ? `New ${what} from #${i + 1} (${esc(it.name)}) on; easier ones only come back until you know them` : ''}</small>`;
   $('#pEasier').disabled = L === 0; $('#pHarder').disabled = L === LEVELS - 1 || pool.length < LEVELS * 2;
 }
 $('#pEasier').onclick = () => { U.level[scopeKey()] = Math.max(0, pracLevel() - 1); recent.length = 0; save(); renderLevel(); nextCard(); };
@@ -482,10 +718,10 @@ function renderPracticeStats() {
 }
 function startPractice() { session = { ok: 0, n: 0 }; renderPracticeStats(); nextCard(); }
 function resultBlock(it, ok, extra = '') {
-  return `<div class="result ${ok ? 'good' : 'bad'}"><div class="verdict">${ok ? '✓ Right' : '✗ Not quite'}</div>
+  return `<div class="result ${ok ? 'good' : 'bad'}"><div class="verdict">${ok ? tr('✓ Right', '✓ Richtig') : tr('✗ Not quite', '✗ Leider nicht')}</div>
     <div class="nm">${esc(it.name)}${LANGS && it.endonym ? ` <small class="dim">${esc(it.endonym)}</small>` : ''}</div>
     <div class="small">${context(it)}</div>${extra}
-    <div class="row" style="margin-top:10px"><button class="btn" id="pNext">Next ›</button><button class="btn ghost" id="pMore">Details</button></div></div>`;
+    <div class="row" style="margin-top:10px"><button class="btn" id="pNext">${tr('Next ›', 'Weiter ›')}</button><button class="btn ghost" id="pMore">Details</button></div></div>`;
 }
 function bindNext(it) {
   $('#pNext').onclick = () => nextCard();
@@ -496,7 +732,7 @@ function nextCard() {
   setMark([]); popup?.remove();
   if (findHandler) { map.off('click', findHandler); findHandler = null; }
   const pool = scopeItems();
-  if (!pool.length) { $('#pracCard').innerHTML = '<div class="q">Nothing in this selection.</div>'; setView(new Map(), new Set()); return; }
+  if (!pool.length) { $('#pracCard').innerHTML = `<div class="q">${tr('Nothing in this selection.', 'Nichts in dieser Auswahl.')}</div>`; setView(new Map(), new Set()); return; }
   if (U.pracMode === 'bigger') return biggerCard(pool);
   cur = pick(pool);
   if (U.pracMode === 'name') nameCard(cur); else findCard(cur, pool);
@@ -504,13 +740,15 @@ function nextCard() {
 function showTarget(it, st = 'target', label = false) { setView(new Map([[it.id, st]]), label ? new Set([it.id]) : new Set()); }
 function nameCard(it) {
   showTarget(it);
-  if (it.g === 'pt' || PLACES) map.flyTo({ center: it.ll, zoom: PLACES ? 8.5 : 5, speed: 1.8, padding: mapPadding() });
-  else fitItems([it], 6);
-  const what = PLACES ? 'Which town is this?' : LANGS ? 'Which language is spoken here?' : `Which ${catOne(it).toLowerCase().replace(/ or .*|,.*/, '')} is this?`;
-  const sub = PLACES ? `${esc(it.reg)} · about ${fmtPop(it.m.pop)} people` : LANGS ? 'Solid: main language · lighter: also spoken / official' : esc(REG.get(it.reg)?.label || '');
+  if (it.g === 'pt' || PLACES) map.flyTo({ center: it.ll, zoom: LOCAL ? 8.5 : 5, speed: 1.8, padding: mapPadding() });
+  else fitItems([it], LOCAL ? 9 : 6);
+  const what = PLACES ? tr('Which town is this?', 'Welche Gemeinde ist das?') : LANGS ? 'Which language is spoken here?'
+    : CAT.get(it.cat)?.q || `Which ${catOne(it).toLowerCase().replace(/ or .*|,.*/, '')} is this?`;
+  const sub = PLACES ? (DE ? `${esc(it.reg)} · etwa ${fmtP(it.m.pop)} Einwohner` : `${esc(it.reg)} · about ${fmtPop(it.m.pop)} people`)
+    : LANGS ? 'Dense stripes: main language · thin stripes: also spoken / official' : esc(it.cs?.length ? it.cs.join(', ') : REG.get(it.reg)?.label || '');
   $('#pracCard').innerHTML = `<div class="q">${what}<small>${sub}</small></div>
     <input id="pAns" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Name" enterkeyhint="done">
-    <div class="row"><button class="btn" id="pCheck">Check</button><button class="btn ghost" id="pHint">Hint</button><button class="btn ghost" id="pSkip">Don't know</button></div>
+    <div class="row"><button class="btn" id="pCheck">${tr('Check', 'Prüfen')}</button><button class="btn ghost" id="pHint">${tr('Hint', 'Tipp')}</button><button class="btn ghost" id="pSkip">${tr("Don't know", 'Weiß nicht')}</button></div>
     <div id="pHintTxt" class="small dim" style="margin-top:6px"></div>`;
   let hints = 0;
   const check = giveUp => {
@@ -528,16 +766,16 @@ function nameCard(it) {
   $('#pHint').onclick = () => {
     hints++;
     const first = LANGS ? `${esc(it.family)}${it.cat2 ? ' · ' + esc(it.cat2) : ''}` : PLACES ? `Bezirk: ${esc(it.sub.replace(/^Bezirk /, ''))}` : context(it);
-    $('#pHintTxt').innerHTML = hints === 1 ? first : `${first} · starts with “${esc(it.name.slice(0, 2))}…” (${it.name.length} letters)`;
+    $('#pHintTxt').innerHTML = hints === 1 ? first : `${first} · ${tr(`starts with “${esc(it.name.slice(0, 2))}…” (${it.name.length} letters)`, `beginnt mit „${esc(it.name.slice(0, 2))}…“ (${it.name.length} Zeichen)`)}`;
   };
   if (!isPhone()) setTimeout(() => $('#pAns').focus(), 50);
 }
 function findCard(it, pool) {
   setView(new Map(), new Set());
-  if (PLACES) map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: sheetPadding(30), duration: 800 });
-  else if (U.where === 'all') worldView(); else fitItems(pool);
-  $('#pracCard').innerHTML = `<div class="q">Where is ${esc(it.name)}?<small>${LANGS ? 'Tap where it is mainly spoken' : PLACES ? `${esc(it.reg)} · ${fmtPop(it.m.pop)}` : esc(catOne(it))} — tap the map</small></div>
-    <div class="row"><button class="btn ghost" id="pSkip">Show me</button></div>`;
+  if (U.where === 'all') homeView(); else fitItems(pool);
+  const sub = LANGS ? 'Tap where it is mainly spoken' : PLACES ? `${esc(it.reg)} · ${fmtP(it.m.pop)}` : esc(catOne(it));
+  $('#pracCard').innerHTML = `<div class="q">${tr(`Where is ${esc(it.name)}?`, `Wo liegt ${esc(it.name)}?`)}<small>${sub} — ${tr('tap the map', 'tippe auf die Karte')}</small></div>
+    <div class="row"><button class="btn ghost" id="pSkip">${tr('Show me', 'Zeig es mir')}</button></div>`;
   const done = ll => {
     map.off('click', findHandler); findHandler = null;
     let extra = '', ok = false;
@@ -545,14 +783,14 @@ function findCard(it, pool) {
       const d = distanceTo(it, ll.lng, ll.lat);
       // tolerance: a few km for towns / areas, more for points and rivers, and at least ~12 px at the current zoom
       const kmPerPx = 40075 * Math.cos(ll.lat * Math.PI / 180) / (512 * 2 ** map.getZoom());
-      const tol = Math.max(PLACES ? 2 : it.g === 'pt' ? 40 : it.g === 'line' ? 25 : 10, 12 * kmPerPx);
+      const tol = Math.max(PLACES ? 2 : (it.g === 'pt' ? 40 : it.g === 'line' ? 25 : 10) * (LOCAL ? 0.2 : 1), 12 * kmPerPx);
       ok = d <= tol;
-      extra = `<div class="small">${d === 0 ? 'Spot on — inside it' : ok ? `Close enough (${fmtInt(d)} km away)` : `Off by ${fmtInt(d)} km`}</div>`;
+      extra = `<div class="small">${d === 0 ? tr('Spot on — inside it', 'Genau getroffen') : ok ? tr(`Close enough (${fmtInt(d)} km away)`, `Nah genug (${fmtInt(d)} km daneben)`) : tr(`Off by ${fmtInt(d)} km`, `${fmtInt(d)} km daneben`)}</div>`;
       setMark([{ type: 'Feature', geometry: { type: 'Point', coordinates: [ll.lng, ll.lat] } }]);
     }
     grade(it, ok);
     showTarget(it, ok ? 'found' : 'miss', true);
-    if (!ll || !ok) { if (it.g === 'pt' || PLACES) flyToItem(it, PLACES ? 8.5 : 4.5); else fitItems([it], 6); }
+    if (!ll || !ok) { if (it.g === 'pt' || PLACES) flyToItem(it, LOCAL ? 8.5 : 4.5); else fitItems([it], LOCAL ? 9 : 6); }
     $('#pracCard').innerHTML = resultBlock(it, ok, extra);
     bindNext(it);
   };
@@ -566,14 +804,14 @@ function biggerCard(pool) {
   const m = measureOf(a);
   let cands = withM.filter(x => x.id !== a.id && measureOf(x) === m && Math.max(val(x), val(a)) / Math.max(1, Math.min(val(x), val(a))) < 1.8);
   if (!cands.length) cands = withM.filter(x => x.id !== a.id && measureOf(x) === m);
-  if (!cands.length || val(a) == null) { $('#pracCard').innerHTML = '<div class="q">Pick a selection with at least two comparable ones.</div>'; return; }
+  if (!cands.length || val(a) == null) { $('#pracCard').innerHTML = `<div class="q">${tr('Pick a selection with at least two comparable ones.', 'Wähle eine Auswahl mit mindestens zwei vergleichbaren.')}</div>`; return; }
   const b = cands[Math.floor(Math.random() * cands.length)];
   const pair = Math.random() < 0.5 ? [a, b] : [b, a];
   setView(new Map(pair.map(it => [it.id, 'target'])), new Set(pair.map(it => it.id)));
-  fitItems(pair, PLACES ? 9 : 5);
+  fitItems(pair, LOCAL ? 9 : 5);
   const M = D.measures[m];
   $('#pracCard').innerHTML = `<div class="q">${esc(M.q)}<small>${esc(M.label)}${PLACES ? '' : ' · ' + esc(catLabel(a))}</small></div>
-    <div class="pair">${pair.map(it => `<button data-id="${esc(it.id)}"><b>${esc(it.name)}</b><small>${esc(PLACES ? it.reg : LANGS ? it.family : REG.get(it.reg)?.label || '')}</small></button>`).join('')}</div>
+    <div class="pair">${pair.map(it => `<button data-id="${esc(it.id)}"><b>${esc(it.name)}</b><small>${esc(PLACES ? it.reg : LANGS ? it.family : it.cs?.slice(0, 2).join(', ') || REG.get(it.reg)?.label || '')}</small></button>`).join('')}</div>
     <div id="pRes"></div>`;
   $$('#pracCard .pair button').forEach(btn => btn.onclick = () => {
     const chosen = itemOf(btn.dataset.id), other = pair.find(it => it !== chosen);
@@ -587,8 +825,9 @@ function biggerCard(pool) {
       x.classList.add(val(it, m) >= val(o, m) ? 'right' : 'wrong');
       x.insertAdjacentHTML('beforeend', `<span class="pv">${fmtVal(val(it, m), M.fmt)}</span>`);
     });
-    $('#pRes').innerHTML = `<div class="result ${ok ? 'good' : 'bad'}"><span class="verdict">${ok ? '✓ Right' : '✗ The other one'}</span> <span class="small dim">· ${Math.round(100 * P.bigger.ok / P.bigger.n)}% right over ${P.bigger.n} rounds</span>
-      <div class="row" style="margin-top:10px"><button class="btn" id="pNext">Next ›</button></div></div>`;
+    const pct = Math.round(100 * P.bigger.ok / P.bigger.n);
+    $('#pRes').innerHTML = `<div class="result ${ok ? 'good' : 'bad'}"><span class="verdict">${ok ? tr('✓ Right', '✓ Richtig') : tr('✗ The other one', '✗ Die andere')}</span> <span class="small dim">· ${tr(`${pct}% right over ${P.bigger.n} rounds`, `${pct} % richtig in ${P.bigger.n} Runden`)}</span>
+      <div class="row" style="margin-top:10px"><button class="btn" id="pNext">${tr('Next ›', 'Weiter ›')}</button></div></div>`;
     $('#pNext').onclick = () => nextCard();
     $('#pNext').focus();
     renderPracticeStats(); save();
@@ -597,7 +836,9 @@ function biggerCard(pool) {
 
 // ------------------------------------------------------------------ ATLAS
 let selected = null;
-const SORTS = [['imp', PLACES ? 'By population' : LANGS ? 'By speakers' : 'Best known first'], ['name', 'A–Z'], ...(D.cats && !LANGS ? [['cat', 'By type']] : []), ...(LANGS ? [['l1', 'By native speakers'], ['cat', 'By family']] : []), ...(!PLACES && !LANGS ? [['size', 'Largest first (within type)']] : [])];
+const SORTS = [['imp', PLACES ? tr('By population', 'Nach Einwohnern') : LANGS ? 'By speakers' : tr('Best known first', 'Bekannteste zuerst')], ['name', 'A–Z'],
+  ...(D.cats && !LANGS ? [['cat', tr('By type', 'Nach Typ')]] : []), ...(LANGS ? [['l1', 'By native speakers'], ['cat', 'By family']] : []),
+  ...(FEAT ? [['size', tr('Largest first (within type)', 'Größte zuerst (je Typ)')]] : [])];
 $('#atlasSort').innerHTML = SORTS.map(([k, l]) => `<option value="${k}">${esc(l)}</option>`).join('');
 if (!SORTS.some(s => s[0] === U.atlasSort)) U.atlasSort = 'imp';
 $('#atlasSort').onchange = e => { U.atlasSort = e.target.value; renderAtlas(); save(); };
@@ -617,33 +858,30 @@ function renderAtlas(refit) {
   const catOrder = new Map((D.cats || []).map((c, i) => [c.k, i]));
   const sorters = {
     imp: (a, b) => a.imp - b.imp,
-    name: (a, b) => a.name.localeCompare(b.name),
+    name: (a, b) => a.name.localeCompare(b.name, LOC),
     cat: (a, b) => (catOrder.get(a.cat) ?? 99) - (catOrder.get(b.cat) ?? 99) || a.imp - b.imp,
     l1: (a, b) => b.m.l1 - a.m.l1,
     size: (a, b) => (catOrder.get(a.cat) ?? 99) - (catOrder.get(b.cat) ?? 99) || (val(b) ?? -1) - (val(a) ?? -1),
   };
   list.sort(sorters[U.atlasSort] || sorters.imp);
-  const qAll = P.quiz['all|all']?.found || {};
-  $('#atlasCount').textContent = `${list.length} ${noun(list.length)}` + (PLACES ? ` · ${fmtPop(list.reduce((a, it) => a + it.m.pop, 0))} people` : '');
+  const qAll = P.quiz[`${D.defaultWhat || 'all'}|all`]?.found || {};
+  $('#atlasCount').textContent = `${list.length} ${noun(list.length)}` + (PLACES ? ` · ${fmtP(list.reduce((a, it) => a + it.m.pop, 0))} ${tr('people', 'Einwohner')}` : '');
   $('#atlasList').innerHTML = list.map(it => listRow(it, `${selected === it.id ? 'sel' : ''} ${qAll[it.id] ? 'found' : ''}`)).join('');
   $$('#atlasList li').forEach(li => li.onclick = () => selectItem(itemOf(li.dataset.id), true));
   const st = new Map(list.map(it => [it.id, selected === it.id ? 'sel' : 'atlas']));
   if (selected && !st.has(selected)) st.set(selected, 'sel');
-  // languages overlap: in the atlas only the selected one is filled strongly, the rest stays light
   setView(st, new Set(list.filter(it => !U.hideNames || selected === it.id).map(it => it.id)));
-  if (refit) {
-    if (PLACES && U.where === 'all') map.fitBounds([[D.bbox[0], D.bbox[1]], [D.bbox[2], D.bbox[3]]], { padding: sheetPadding(30), duration: 800 });
-    else if (U.where !== 'all' || k) fitItems(list); else worldView();
-  }
+  if (refit) { if (U.where !== 'all' || k) fitItems(list); else homeView(); }
 }
 
 // ------------------------------------------------------------------ info box
 let factsData = null, factsLoading = null;
 const loadFacts = () => factsLoading ||= fetch(`data/sets/${KEY}.facts.json`).then(r => r.json()).then(d => { factsData = d; }).catch(() => { factsData = {}; });
+const WIKI = D.wikiLang || 'en';
 function factsHtml(it) {
   const f = factsData?.[it.id];
-  return `${f?.length ? `<div class="dh">Good to know</div><ul class="cfacts">${f.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
-    ${it.wiki ? `<div class="small dim">${f?.length ? 'From ' : ''}Wikipedia: <a href="https://en.wikipedia.org/wiki/${encodeURIComponent(it.wiki.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(it.wiki)}</a></div>` : ''}`;
+  return `${f?.length ? `<div class="dh">${tr('Good to know', 'Wissenswertes')}</div><ul class="cfacts">${f.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+    ${it.wiki ? `<div class="small dim">${f?.length ? tr('From ', 'Aus ') : ''}Wikipedia: <a href="https://${WIKI}.wikipedia.org/wiki/${encodeURIComponent(it.wiki.replace(/ /g, '_'))}" target="_blank" rel="noopener">${esc(it.wiki)}</a></div>` : ''}`;
 }
 function statTile([v, fmt, label]) {
   if (fmt === 'popM') return `<div><b>${v >= 10 ? Math.round(v) : v >= 1 ? v.toFixed(1) : v.toFixed(2)} M</b><small>${esc(label)}</small></div>`;
@@ -655,18 +893,18 @@ function showInfo(el, it, onClose) {
   const k = P.cards[it.id];
   const sub = PLACES ? `${esc(it.reg)} · ${esc(it.sub)}`
     : LANGS ? `${it.endonym ? esc(it.endonym) + ' · ' : ''}${esc(it.family)}${it.cat2 ? ' › ' + esc(it.cat2) : ''}`
-    : `${esc(catOne(it))} · ${esc(REG.get(it.reg)?.label || '')}`;
+    : `${esc(catOne(it))}${REG.get(it.reg) && !LOCAL ? ' · ' + esc(REG.get(it.reg).label) : ''}`;
   const stats = (it.stats || []).slice(0, 6);
   el.hidden = false;
-  el.innerHTML = `<button class="icon-btn close" aria-label="Close">×</button>
+  el.innerHTML = `<button class="icon-btn close" aria-label="${tr('Close', 'Schließen')}">×</button>
     <h2>${esc(it.name)}</h2>
     <div class="sub">${sub}</div>
     ${stats.length ? `<div class="facts">${stats.map(statTile).join('')}</div>` : ''}
-    ${it.cs?.length ? `<div class="dh">${it.cs.length === 1 ? 'Country' : 'Countries'}</div><div class="chips">${it.cs.map(c => `<span>${esc(c)}</span>`).join('')}${it.ncs > it.cs.length ? `<span>+${it.ncs - it.cs.length} more</span>` : ''}</div>` : ''}
+    ${it.cs?.length ? `<div class="dh">${esc(csLabel(it.cs.length))}</div><div class="chips">${it.cs.map(c => `<span>${esc(c)}</span>`).join('')}${it.ncs > it.cs.length ? `<span>+${it.ncs - it.cs.length} more</span>` : ''}</div>` : ''}
     ${LANGS ? langHtml(it) : ''}
     <div class="cityFacts">${factsHtml(it)}</div>
-    ${it.alias?.length ? `<div class="dh">Also accepted</div><div class="chips">${it.alias.slice(0, 10).map(a => `<span>${esc(a)}</span>`).join('')}</div>` : ''}
-    <div class="small dim">${k ? `Practice: ${k.ok}× right, ${k.bad}× wrong` : 'Not practised yet'}</div>`;
+    ${it.alias?.length ? `<div class="dh">${tr('Also accepted', 'Auch akzeptiert')}</div><div class="chips">${it.alias.slice(0, 10).map(a => `<span>${esc(a)}</span>`).join('')}</div>` : ''}
+    <div class="small dim">${k ? tr(`Practice: ${k.ok}× right, ${k.bad}× wrong`, `Geübt: ${k.ok}× richtig, ${k.bad}× falsch`) : tr('Not practised yet', 'Noch nicht geübt')}</div>`;
   $('.close', el).onclick = () => { el.hidden = true; popup?.remove(); onClose?.(); };
   if (LANGS) bindSpeak(el, it);
 }
@@ -733,7 +971,7 @@ map.on('click', e => {
     selectItem(it);
     popup?.remove();
     popup = new maplibregl.Popup({ closeButton: false, offset: 10, maxWidth: '280px' }).setLngLat(e.lngLat)
-      .setHTML(`<b>${esc(it.name)}</b><br><span class="dim">${context(it)}</span>${hits.length > 1 ? `<div class="also">Also here: ${hits.slice(1, 8).map(h => `<a href="#" data-id="${esc(h.id)}">${esc(h.name)}</a>`).join(', ')}</div>` : ''}`)
+      .setHTML(`<b>${esc(it.name)}</b><br><span class="dim">${context(it)}</span>${hits.length > 1 ? `<div class="also">${tr('Also here:', 'Auch hier:')} ${hits.slice(1, 8).map(h => `<a href="#" data-id="${esc(h.id)}">${esc(h.name)}</a>`).join(', ')}</div>` : ''}`)
       .addTo(map);
     popup.getElement().querySelectorAll('a[data-id]').forEach(a => a.onclick = ev => { ev.preventDefault(); const h = itemOf(a.dataset.id); selectItem(h); showPopup(h, e.lngLat); });
   } else if (U.mode === 'quiz') {
@@ -742,11 +980,12 @@ map.on('click', e => {
   }
 });
 map.on('mousemove', e => {
-  if (U.mode === 'practice') { map.getCanvas().style.cursor = findHandler ? 'crosshair' : ''; return; }
-  const hits = hitsAt(e.point);
-  const ok = U.mode === 'atlas' ? hits.length : hits.some(h => view.get(h.id) === 'found' || view.get(h.id) === 'miss');
-  map.getCanvas().style.cursor = ok ? 'pointer' : '';
+  if (U.mode === 'practice') { map.getCanvas().style.cursor = findHandler ? 'crosshair' : ''; setHover(null); return; }
+  const hits = hitsAt(e.point).filter(h => U.mode === 'atlas' || view.get(h.id) === 'found' || view.get(h.id) === 'miss');
+  map.getCanvas().style.cursor = hits.length ? 'pointer' : '';
+  setHover(!PLACES && hits[0] && hits[0].g !== 'pt' ? hits[0].id : null);
 });
+map.on('mouseout', () => setHover(null));
 
 bindSheet();
 $('#aboutBtn').onclick = () => $('#about').showModal();
@@ -754,6 +993,7 @@ $('#about').addEventListener('click', e => { if (e.target === $('#about')) $('#a
 
 map.on('load', () => {
   $('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show');
+  if (LANGS) addPatterns();
   applyLayers();
   setMode(U.mode);
 });

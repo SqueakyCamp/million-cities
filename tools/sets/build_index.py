@@ -8,6 +8,10 @@ for p in sorted(OUT.glob('*.json')):
     if p.name.endswith('.facts.json') or p.name == 'index.json':
         continue
     d = json.load(open(p, encoding='utf-8'))
-    out[d['key']] = dict(n=len(d['items']), title=d['title'], sub=d['sub'])
+    e = out[d['key']] = dict(n=len(d['items']), title=d['title'], sub=d['sub'])
+    # sets with rank bands: the home page shows progress of the default band
+    if d.get('defaultWhat', '').startswith('r:'):
+        a, b = map(int, d['defaultWhat'][2:].split('-'))
+        e.update(scope=d['defaultWhat'] + '|all', n=sum(1 for it in d['items'] if a <= it['imp'] <= b))
 dump(out, OUT / 'index.json', pretty=True)
 print(out)

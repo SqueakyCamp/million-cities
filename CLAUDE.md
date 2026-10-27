@@ -3,12 +3,16 @@
 Map quizzes with quiz / practice / atlas modes. Home page `static/index.html` (World | Single countries) links to:
 - **Million Cities** (`cities.html` + `cities.js`): the 511 cities ≥ 1M (UN WUP 2025). Built 2026-10-24; described below.
 - **Quiz sets** (`set.html?s=<key>` + `set.js`, generic engine), added 2026-10-26: `physical` (≈1100 physical features),
-  `languages` (158 languages as map areas, with phrases + browser speech), `at-gemeinden` (Austria, 100 largest Gemeinden).
+  `languages` (158 languages as map areas, with phrases + browser speech), `at-gemeinden` (Austria, 200 largest Gemeinden),
+  `at-physical` (Austria: ≈300 rivers, lakes, glaciers, waterfalls, mountain groups, peaks, passes, valleys, gorges, landscapes).
+  Sets with `lang: 'de'` (both Austria sets) show all texts in German (`tr(en, de)` in set.js, `translatePage()` for set.html).
 Shared modules in `static/lib/`: `util.js` (helpers, practice picking with difficulty levels), `store.js` (progress doc,
 server or localStorage), `mapbase.js` (base map style, layers popover).
 
 Progress doc: the cities app uses the top level (quiz, cards, …); each set uses `sets[<key>] = {quiz, cards, bigger, ui}`;
 `basemap`/`layers` are shared. Quiz progress per scope `<what>|<where>` (what: all | g:<group> | c:<cat> | b:<branch>).
+Rank bands: a set with `ranks` ([{k: 'r:1-100', label}…]) gets them as "what" scopes (Gemeinden: Top 100 / Plätze 101–200 /
+Top 200); `defaultWhat` is the start scope, `migrateAll` moves old `all|…` progress (from when the set had 100) there once (P.v = 2).
 Practice "Easier/Harder" (`LEVELS` = 5): the pool sorted easiest-first (cities by population, sets by `imp`) is cut into
 bands; at level L new cards come from band L on, easier ones only while not yet known.
 
@@ -25,9 +29,21 @@ Quiz sets data (`tools/sets/`, run from that folder; `tools/sets/prepare_raw.sh`
 - `build_languages.py`: `src/languages_*.json` (spec in `src/LANG_SPEC.md`: areas as NE admin-0 ADM0_A3 / admin-1 adm1_code
   lists, speakers, phrases, facts; compiled with Claude) dissolved into core/also areas.
 - `build_austria.py`: Statistik Austria population 1 Jan (Vienna's districts summed into Wien), Gemeinde polygons (WFS),
-  Wikidata links; facts in `facts/at-gemeinden.json`.
+  Wikidata links (German Wikipedia); top 200 with rank bands; German facts in `facts/at-gemeinden.json`.
+- Austria physical: list in `src/at_physical.txt` (cat | German Wikipedia title | display name | extra answers; `gmba:<id>` or
+  `title@gmba:<id>` for ranges). `at_physical_fetch.py` resolves titles -> Wikidata, German intros/coordinates, OSM geometry of
+  rivers/lakes/glaciers by wikidata tag (Overpass, by name as fallback), cached in data/raw/atphys/. `build_at_physical.py`: ranges
+  are GMBA Mountain Inventory v2 polygons (SOIUSA-like units; unnamed ones were identified by the summits inside), rivers cut to
+  Austria, Bundesländer from bez.geojson; German facts in `facts/at-physical.json` (from data/raw/atphys/factsrc.json).
+  Check new titles: some resolve to towns/disambiguations (Enns, Mur, Mondsee needed "(Fluss)"/"(See)").
 - Facts for sets: `facts/*.json`, written by Claude from the Wikipedia intros per `src/FACTS_SPEC.md`.
-- `build_index.py` -> data/sets/index.json (counts for the home page). Everything is in `tools/build.sh`.
+- `build_index.py` -> data/sets/index.json (counts for the home page; for sets with rank bands the default band's scope).
+  Everything is in `tools/build.sh`.
+- Map styling (set.js): physical features are drawn per type like a printed atlas (`FS`: seas/continents only as names, lakes and
+  glaciers filled, ranges/deserts tinted, islands outlined, points coloured), with a legend; less-known features (rank within
+  their type, `mz` = z0 + 0.75·log2(rank+1)) only appear from their zoom on (`renderMap` re-filters on zoom). Languages: colour
+  per family/branch (`LGROUPS`), areas as diagonal stripe patterns (canvas images `p-<group>-<core|also>-<offset>`; core = dense
+  "/" stripes, also = thin "\" stripes); overlapping languages get different stripe offsets (`ph`, greedy by bbox overlap).
 
 ## Million Cities
 

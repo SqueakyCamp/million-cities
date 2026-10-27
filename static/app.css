@@ -279,3 +279,28 @@ body.hub { display: block; overflow: auto; }
   .qcard .qp { grid-column: 2; text-align: left; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
   .qcard .qp i { flex-basis: 100%; margin-top: 0; }
 }
+
+/* ---------- map legend (physical features, languages) ---------- */
+.legend {
+  position: absolute; top: 58px; left: 10px; z-index: 1; background: var(--panel); border-radius: 10px; box-shadow: var(--shadow);
+  font-size: 12.5px; max-width: 250px; max-height: calc(100% - 120px); overflow: auto;
+}
+.legend .lg-head {
+  display: flex; justify-content: space-between; gap: 10px; width: 100%; border: 0; background: none; color: var(--ink);
+  font: inherit; font-weight: 600; padding: 7px 10px; cursor: pointer;
+}
+.legend .lg-head span { color: var(--dim); }
+.legend .lg-body { display: none; padding: 0 10px 8px; }
+.legend.open .lg-body { display: grid; gap: 3px; }
+.legend .lg-body > span { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.legend .lg-note { color: var(--dim); margin-top: 4px; white-space: normal; line-height: 1.6; }
+.sw { display: inline-block; flex: none; width: 18px; height: 12px; border-radius: 2px; vertical-align: -1px; font-style: normal; }
+.sw.fill { background: color-mix(in srgb, var(--c) 45%, transparent); border: 1.5px solid var(--c); }
+.sw.soft { background: color-mix(in srgb, var(--c) 22%, transparent); }
+.sw.outline { border: 1.5px solid color-mix(in srgb, var(--c) 70%, transparent); }
+.sw.line { height: 3px; border-radius: 2px; background: var(--c); }
+.sw.pt { width: 9px; height: 9px; border-radius: 50%; background: var(--c); border: 1.5px solid var(--panel); box-shadow: 0 0 0 1px var(--c); margin: 0 4.5px; }
+.sw.lab { width: auto; min-width: 18px; height: auto; color: var(--c); font-weight: 700; font-size: 11px; text-align: center; }
+.sw.stripe { background: repeating-linear-gradient(-45deg, var(--c) 0 2.5px, transparent 2.5px 6px); border: 1px solid color-mix(in srgb, var(--c) 60%, transparent); }
+.sw.stripe.thin { background: repeating-linear-gradient(45deg, color-mix(in srgb, var(--c) 70%, transparent) 0 1.2px, transparent 1.2px 6px); border-style: dashed; }
+@media (max-width: 760px) { .legend { top: 56px; max-width: 200px; max-height: 45vh; } }

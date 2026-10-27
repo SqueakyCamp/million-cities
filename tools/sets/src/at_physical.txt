@@ -1,0 +1,310 @@
+# Austria · physical features. One per line: cat | German Wikipedia title | display name (optional) | extra answers (;-separated)
+# cats: river lake glacier waterfall range peak pass valley gorge region
+# ranges get their polygon from GMBA (title of the GMBA unit's dewiki article, or gmba:<id>), rivers/lakes/glaciers from OSM
+# (wikidata tag), everything else is a point from Wikidata.
+river | Donau
+river | Inn
+river | Mur (Fluss) | Mur
+river | Drau
+river | Enns (Fluss) | Enns
+river | Salzach
+river | Traun (Donau) | Traun
+river | March (Fluss) | March | Morava
+river | Thaya
+river | Leitha
+river | Raab (Fluss) | Raab
+river | Lech | Lech
+river | Alpenrhein | Rhein | Rhine
+river | Ill (Vorarlberg) | Ill
+river | Isel
+river | Möll
+river | Gail | Gail
+river | Lavant (Fluss) | Lavant
+river | Gurk (Fluss) | Gurk
+river | Ybbs | Ybbs
+river | Erlauf (Fluss) | Erlauf
+river | Traisen (Fluss) | Traisen
+river | Kamp (Fluss) | Kamp
+river | Krems (Donau) | Krems
+river | Steyr (Fluss) | Steyr
+river | Ager
+river | Alm (Fluss) | Alm
+river | Saalach
+river | Ziller
+river | Sill | Sill
+river | Ötztaler Ache
+river | Mürz
+river | Lafnitz (Fluss) | Lafnitz
+river | Pinka
+river | Schwechat (Fluss) | Schwechat
+river | Wien (Fluss) | Wienfluss | Wien
+river | Triesting
+river | Große Mühl
+river | Kainach (Mur) | Kainach
+river | Sulm (Mur) | Sulm
+river | Bregenzer Ach
+river | Großache | Großache | Tiroler Ache;Kitzbüheler Ache
+river | Vöckla
+river | Pielach
+river | Schwarza (Leitha) | Schwarza
+river | Lammer
+river | Lieser (Drau) | Lieser
+river | Lainsitz
+river | Gasteiner Ache
+river | Feistritz (Lafnitz) | Feistritz
+lake | Neusiedler See | Neusiedler See | Fertő
+lake | Bodensee | Bodensee | Lake Constance
+lake | Attersee
+lake | Traunsee
+lake | Wörthersee | Wörthersee | Wörther See
+lake | Mondsee (See) | Mondsee
+lake | Millstätter See
+lake | Ossiacher See
+lake | Wolfgangsee | Wolfgangsee | Abersee
+lake | Hallstätter See
+lake | Achensee
+lake | Weißensee (See in Kärnten) | Weißensee | Weissensee
+lake | Zeller See (Salzburg) | Zeller See
+lake | Wallersee
+lake | Plansee (Tirol) | Plansee
+lake | Grundlsee (See) | Grundlsee
+lake | Fuschlsee
+lake | Faaker See
+lake | Altausseer See
+lake | Obertrumer See
+lake | Klopeiner See
+lake | Heiterwanger See
+lake | Erlaufsee
+lake | Lunzer See
+lake | Irrsee | Irrsee | Zeller See (Irrsee)
+lake | Grüner See (Tragöß) | Grüner See
+lake | Vorderer Gosausee | Vorderer Gosausee | Gosausee;Gosauseen
+lake | Haldensee
+lake | Kölnbreinspeicher | Kölnbreinspeicher | Kölnbreinsperre
+lake | Stausee Mooserboden | Mooserboden | Stausee Mooserboden
+lake | Gepatschspeicher | Gepatschspeicher | Gepatsch-Stausee
+lake | Längsee (Kärnten) | Längsee
+lake | Pressegger See
+lake | Silvretta-Stausee
+lake | Lünersee
+lake | Piburger See
+lake | Vilsalpsee
+lake | Turracher See
+glacier | Pasterze
+glacier | Gepatschferner
+glacier | Hintereisferner
+glacier | Gurgler Ferner
+glacier | Schlatenkees
+glacier | Obersulzbachkees
+glacier | Hallstätter Gletscher
+glacier | Mittelbergferner
+glacier | Vernagtferner
+glacier | Taschachferner
+glacier | Umbalkees
+glacier | Simonykees
+waterfall | Krimmler Wasserfälle | Krimmler Wasserfälle | Krimmler Wasserfall
+waterfall | Gollinger Wasserfall
+waterfall | Stuibenfall (Niederthai) | Stuibenfall
+waterfall | Umbalfälle
+waterfall | Myrafälle
+waterfall | Gasteiner Wasserfall
+waterfall | Fallbach (Malta) | Fallbach-Wasserfall | Fallbach
+waterfall | Riesachfälle | Riesachfälle | Riesachwasserfall
+gorge | Liechtensteinklamm
+gorge | Eisriesenwelt
+gorge | Dachstein-Rieseneishöhle
+gorge | Dachstein-Mammuthöhle
+gorge | Lurgrotte
+gorge | Hermannshöhle (Niederösterreich) | Hermannshöhle
+gorge | Lamprechtsofen
+gorge | Bärenschützklamm
+gorge | Seisenbergklamm
+gorge | Kitzlochklamm
+gorge | Wolfsklamm
+gorge | Raggaschlucht
+gorge | Ötschergräben | Ötschergräben
+gorge | Tscheppaschlucht
+range | Hohe Tauern
+range | Ötztaler Alpen
+range | Stubaier Alpen
+range | Zillertaler Alpen
+range | Tuxer Alpen
+range | Kitzbüheler Alpen
+range | Karwendel
+range | Wettersteingebirge | Wettersteingebirge | Wetterstein
+range | Lechtaler Alpen
+range | Lechquellengebirge
+range | Allgäuer Alpen
+range | Rätikon
+range | gmba:10058 | Silvretta, Samnaun und Verwall | Silvretta;Verwall;Samnaungruppe;Verwallgruppe
+range | Bregenzerwaldgebirge
+range | Kaisergebirge | Kaisergebirge | Wilder Kaiser;Kaiser
+range | Brandenberger Alpen | Brandenberger Alpen | Rofan
+range | Loferer und Leoganger Steinberge | Loferer und Leoganger Steinberge | Loferer Steinberge;Leoganger Steinberge
+range | Berchtesgadener Alpen
+range | Tennengebirge
+range | Dachsteingebirge | Dachsteingebirge | Dachstein
+range | Totes Gebirge
+range | Salzkammergut-Berge
+range | Salzburger Schieferalpen
+range | Ennstaler Alpen | Ennstaler Alpen | Gesäuseberge
+range | Oberösterreichische Voralpen
+range | Ybbstaler Alpen
+range | Türnitzer Alpen
+range | gmba:15433 | Hochschwab, Mürzsteger Alpen & Rax-Schneeberg | Hochschwabgruppe;Mürzsteger Alpen;Rax-Schneeberg-Gruppe;Nordöstliche Steirische Alpen
+range | gmba:15436 | Niederösterreichische Voralpen | Gutensteiner Alpen
+range | Radstädter Tauern
+range | Schladminger Tauern
+range | Rottenmanner und Wölzer Tauern | Rottenmanner und Wölzer Tauern | Wölzer Tauern;Rottenmanner Tauern
+range | Seckauer Tauern
+range | Gurktaler Alpen | Gurktaler Alpen | Nockberge
+range | Lavanttaler Alpen | Lavanttaler Alpen | Saualpe;Seetaler Alpen
+range | gmba:15369 | Stub-, Glein- und Packalpe | Gleinalpe;Stubalpe;Packalpe
+range | gmba:15370 | Koralpe | Koralm
+range | gmba:15371 | Grazer Bergland & Fischbacher Alpen | Grazer Bergland;Fischbacher Alpen
+range | gmba:20878 | Wechsel & Joglland | Wechselgebirge;Joglland
+range | Kreuzeckgruppe
+range | gmba:15360 | Rieserfernergruppe & Villgratner Berge | Villgratner Berge;Rieserfernergruppe;Defereggengebirge
+range | Gailtaler Alpen | Gailtaler Alpen | Lienzer Dolomiten
+range | Karnische Alpen
+range | Karawanken
+range | gmba:15483 | Granit- und Gneishochland | Böhmische Masse;Granithochland;Mühlviertel und Waldviertel
+range | Böhmerwald@gmba:19448 | Böhmerwald | Šumava
+peak | Großglockner
+peak | Wildspitze
+peak | Weißkugel
+peak | Großvenediger
+peak | Similaun
+peak | Hochalmspitze
+peak | Ankogel
+peak | Hoher Dachstein | Hoher Dachstein | Dachstein
+peak | Zugspitze
+peak | Parseierspitze
+peak | Hochkönig
+peak | Großer Priel
+peak | Schneeberg (Rax-Schneeberg-Gruppe) | Schneeberg | Klosterwappen
+peak | Rax | Rax | Heukuppe;Raxalpe
+peak | Ötscher
+peak | Hochschwab
+peak | Hochgolling
+peak | Schöckl
+peak | Hohe Veitsch
+peak | Hoher Sonnblick | Hoher Sonnblick | Sonnblick
+peak | Kitzsteinhorn
+peak | Großes Wiesbachhorn
+peak | Piz Buin
+peak | Zuckerhütl
+peak | Olperer
+peak | Hochfeiler
+peak | Hochstuhl
+peak | Dobratsch | Dobratsch | Villacher Alpe
+peak | Gerlitzen
+peak | Patscherkofel
+peak | Hafelekarspitze | Hafelekarspitze | Hafelekar;Nordkette
+peak | Schafberg (Salzkammergut) | Schafberg
+peak | Untersberg
+peak | Gaisberg (Salzburg) | Gaisberg
+peak | Pfänder | Pfänder
+peak | Großer Speikkogel | Großer Speikkogel | Speikkogel
+peak | Zirbitzkogel
+peak | Hochwechsel
+peak | Großer Bösenstein
+peak | Hoher Göll
+peak | Geschriebenstein
+peak | Plöckenstein
+peak | Kahlenberg
+peak | Hermannskogel
+peak | Hohe Munde
+peak | Serles
+peak | Acherkogel
+peak | Hochvogel
+peak | Großer Löffler
+peak | Schesaplana
+peak | Zimba
+peak | Valluga
+peak | Traunstein (Berg) | Traunstein
+peak | Großer Pyhrgas
+peak | Hochtor (Ennstaler Alpen) | Hochtor | Hochtor (Gesäuse)
+peak | Ellmauer Halt
+peak | Großer Buchstein
+peak | Hochobir
+peak | Petzen (Bergmassiv) | Petzen | Feistritzer Spitze
+peak | Hoher Riffler (Verwallgruppe) | Hoher Riffler
+peak | Großer Ödstein
+peak | Krippenstein
+peak | Loser | Loser
+peak | Feuerkogel (Höllengebirge) | Feuerkogel
+pass | Brennerpass | Brenner | Brennerpass
+pass | Arlbergpass | Arlberg | Arlbergpass
+pass | Hochtor (Pass) | Hochtor (Glocknerstraße) | Großglockner-Hochalpenstraße;Glocknerstraße
+pass | Reschenpass | Reschenpass | Reschen
+pass | Fernpass
+pass | Felbertauern | Felber Tauern | Felbertauern
+pass | Radstädter Tauernpass | Radstädter Tauernpass | Obertauern
+pass | Semmering-Pass | Semmering | Semmeringpass
+pass | Timmelsjoch
+pass | Loiblpass | Loibl | Loiblpass
+pass | Wurzenpass
+pass | Plöckenpass
+pass | Pyhrnpass | Pyhrn | Pyhrnpass
+pass | Katschberghöhe | Katschberg | Katschbergpass
+pass | Seebergsattel
+pass | Gerlospass
+pass | Hochtannbergpass
+pass | Flexenpass
+pass | Präbichl
+pass | Packsattel | Pack
+pass | Turracher Höhe
+pass | Sölkpass
+pass | Nassfeldpass | Nassfeld
+pass | Bielerhöhe
+pass | Pötschenpass | Pötschen
+pass | Schoberpass
+pass | Obdacher Sattel
+valley | Wachau
+valley | Ötztal
+valley | Zillertal
+valley | Pitztal
+valley | Stubaital
+valley | Kaunertal
+valley | Montafon
+valley | Paznaun
+valley | Gasteinertal
+valley | Defereggental
+valley | Virgental
+valley | Mölltal
+valley | Lesachtal
+valley | Kleinwalsertal
+valley | Großes Walsertal
+valley | Gesäuse
+valley | Lavanttal
+valley | Rosental (Kärnten) | Rosental
+valley | Gailtal
+valley | Wipptal
+valley | Inntal
+valley | Ennstal (Tal) | Ennstal
+valley | Lungau
+valley | Wiener Becken
+valley | Grazer Becken
+valley | Klagenfurter Becken
+valley | Marchfeld
+valley | Tullnerfeld | Tullner Feld | Tullnerfeld
+valley | Seewinkel
+valley | Aichfeld
+valley | Eferdinger Becken
+valley | Steinfeld (Niederösterreich) | Steinfeld
+region | Waldviertel
+region | Mühlviertel
+region | Weinviertel
+region | Mostviertel
+region | Innviertel
+region | Salzkammergut
+region | Wienerwald
+region | Bucklige Welt
+region | Hausruck
+region | Kobernaußerwald
+region | Leithagebirge
+region | Dunkelsteinerwald
+region | Bregenzerwald
+region | Sauwald
+

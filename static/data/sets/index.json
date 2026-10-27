@@ -1,8 +1,14 @@
 {
  "at-gemeinden": {
   "n": 100,
-  "title": "Austria · largest Gemeinden",
-  "sub": "100 largest municipalities · 2026"
+  "title": "Österreich · größte Gemeinden",
+  "sub": "Die 200 größten Gemeinden · 2026",
+  "scope": "r:1-100|all"
+ },
+ "at-physical": {
+  "n": 305,
+  "title": "Österreich · Gewässer, Berge & Landschaften",
+  "sub": "305 Flüsse, Seen, Gletscher, Gebirge, Gipfel, Pässe, Täler …"
  },
  "languages": {
   "n": 158,

@@ -16,4 +16,6 @@ curl -sfLo gem.geojson "$WFS&typeName=GEODATA:STATISTIK_AUSTRIA_GEM_${Y}0101"
 curl -sfLo bez.geojson "$WFS&typeName=GEODATA:STATISTIK_AUSTRIA_POLBEZ_${Y}0101"
 curl -sfG https://query.wikidata.org/sparql -H 'Accept: application/sparql-results+json' -A 'MillionCities/1.0' -o wd_gkz.json --data-urlencode \
   'query=SELECT ?item ?gkz ?en ?de ?elev ?coord WHERE { ?item wdt:P964 ?gkz . OPTIONAL{?en schema:about ?item; schema:isPartOf <https://en.wikipedia.org/>} OPTIONAL{?de schema:about ?item; schema:isPartOf <https://de.wikipedia.org/>} OPTIONAL{?item wdt:P2044 ?elev} OPTIONAL{?item wdt:P625 ?coord} }'
-cd ../../../tools/sets && python3 physical_fetch.py
+# Austria physical features: GMBA mountain inventory (range polygons), then Wikidata/Wikipedia/OSM via at_physical_fetch.py
+mkdir -p ../atphys/gmba && (cd ../atphys/gmba && curl -sfLO https://data.earthenv.org/mountains/standard/GMBA_Inventory_v2.0_standard_basic.zip && unzip -oq GMBA_Inventory_v2.0_standard_basic.zip)
+cd ../../../tools/sets && python3 physical_fetch.py && python3 at_physical_fetch.py
